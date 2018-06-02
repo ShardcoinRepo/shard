@@ -62,54 +62,26 @@ inline int64_t GetCoinYearReward(int nHeight) {
         YearPercent = 600;
     else if (nHeight <= 40000)
         YearPercent = 550;
-    else if (nHeight <= 60000)
+    else if (nHeight <= 50000)
         YearPercent = 500;
-    else if (nHeight <= 80000)
-        YearPercent = 475;
-    else if (nHeight <= 100000)
+    else if (nHeight <= 60000)
         YearPercent = 450;
-    else if (nHeight <= 120000)
-        YearPercent = 425;
-    else if (nHeight <= 140000)
+    else if (nHeight <= 70000)
         YearPercent = 400;
-    else if (nHeight <= 160000)
-        YearPercent = 375;
-    else if (nHeight <= 180000)
+    else if (nHeight <= 80000)
         YearPercent = 350;
-    else if (nHeight <= 200000)
-        YearPercent = 325;
-    else if (nHeight <= 220000)
+    else if (nHeight <= 90000)
         YearPercent = 300;
-    else if (nHeight <= 240000)
-        YearPercent = 275;
-    else if (nHeight <= 260000)
+    else if (nHeight <= 100000)
         YearPercent = 250;
-    else if (nHeight <= 280000)
-        YearPercent = 225;
-    else if (nHeight <= 300000)
+    else if (nHeight <= 110000)
         YearPercent = 200;
-    else if (nHeight <= 320000)
-        YearPercent = 180;
-    else if (nHeight <= 340000)
-        YearPercent = 160;
-    else if (nHeight <= 360000)
-        YearPercent = 140;
-    else if (nHeight <= 380000)
-        YearPercent = 130;
-    else if (nHeight <= 400000)
-        YearPercent = 120;
-    else if (nHeight <= 420000)
-        YearPercent = 110;
-    else if (nHeight <= 440000)
+    else if (nHeight <= 120000)
+        YearPercent = 150;
+    else if (nHeight <= 130000)
         YearPercent = 100;
-    else if (nHeight <= 460000)
-        YearPercent = 90;
-    else if (nHeight <= 480000)
-        YearPercent = 80;
-    else if (nHeight <= 500000)
-        YearPercent = 70;
-    else if (nHeight <= 520000)
-        YearPercent = 60;
+    else if (nHeight <= 140000)
+        YearPercent = 75;
     else
         YearPercent = 50;
 
@@ -118,6 +90,10 @@ inline int64_t GetCoinYearReward(int nHeight) {
 inline int64_t FutureDrift(int64_t nTime) { return nTime + 10 * 60; }
 
 inline unsigned int GetTargetSpacing(int nHeight) {
+	
+    if (nHeight > 45000)
+        return 120;
+
     // defaults to 3 minutes.
     return 180;
 }
