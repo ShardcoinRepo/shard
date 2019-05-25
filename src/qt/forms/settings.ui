@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Settings</class>
+ <widget class="QWidget" name="Settings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>971</width>
+    <height>671</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="horizontalSpacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>220</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">padding:15px;background:#1a2635;color:white;font-size:20px;border-bottom:1px solid #002d3f;</string>
+         </property>
+         <property name="text">
+          <string>&lt;img src=&quot;:/images/res/images/settings.png&quot; /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Settings</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="b_options">
+         <property name="styleSheet">
+          <string notr="true">QPushButton:disabled { color:gray} 
+QPushButton { padding: 10px;width: 100%;color:white;background: '#1a2635'; margin:0px;
+text-align:left; border:none;outline:none } 
+QPushButton:hover{ background: '#1e2b35'} QPushButton:checked{ background: '#1e2b35'; font:bold;padding-left:15px; color:white;border-right:3px solid '#0adbf0'; }</string>
+         </property>
+         <property name="text">
+          <string>OPTIONS</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="b_backup">
+         <property name="styleSheet">
+          <string notr="true">QPushButton:disabled { color:gray} 
+QPushButton { padding: 10px;width: 100%;color:white;background: '#1a2635'; margin:0px;
+text-align:left; border:none;outline:none } 
+QPushButton:hover{ background: '#1e2b35'} QPushButton:checked{ background: '#1e2b35'; font:bold;padding-left:15px; color:white;border-right:3px solid '#0adbf0'; }</string>
+         </property>
+         <property name="text">
+          <string>BACKUP WALLET</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="b_export">
+         <property name="styleSheet">
+          <string notr="true">QPushButton:disabled { color:gray} 
+QPushButton { padding: 10px;width: 100%;color:white;background: '#1a2635'; margin:0px;
+text-align:left; border:none;outline:none } 
+QPushButton:hover{ background: '#1e2b35'} QPushButton:checked{ background: '#1e2b35'; font:bold;padding-left:15px; color:white;border-right:3px solid '#0adbf0'; }</string>
+         </property>
+         <property name="text">
+          <string>EXPORT</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="b_sign">
+         <property name="styleSheet">
+          <string notr="true">QPushButton:disabled { color:gray} 
+QPushButton { padding: 10px;width: 100%;color:white;background: '#1a2635'; margin:0px;
+text-align:left; border:none;outline:none } 
+QPushButton:hover{ background: '#1e2b35'} QPushButton:checked{ background: '#1e2b35'; font:bold;padding-left:15px; color:white;border-right:3px solid '#0adbf0'; }</string>
+         </property>
+         <property name="text">
+          <string>SIGN MESSAGE</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="b_verify">
+         <property name="styleSheet">
+          <string notr="true">QPushButton:disabled { color:gray} 
+QPushButton { padding: 10px;width: 100%;color:white;background: '#1a2635'; margin:0px;
+text-align:left; border:none;outline:none } 
+QPushButton:hover{ background: '#1e2b35'} QPushButton:checked{ background: '#1e2b35'; font:bold;padding-left:15px; color:white;border-right:3px solid '#0adbf0'; }</string>
+         </property>
+         <property name="text">
+          <string>VERIFY MESSAGE</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="b_encrypt">
+         <property name="styleSheet">
+          <string notr="true">QPushButton:disabled { color:gray} 
+QPushButton { padding: 10px;width: 100%;color:white;background: '#1a2635'; margin:0px;
+text-align:left; border:none;outline:none } 
+QPushButton:hover{ background: '#1e2b35'} QPushButton:checked{ background: '#1e2b35'; font:bold;padding-left:15px; color:white;border-right:3px solid '#0adbf0'; }</string>
+         </property>
+         <property name="text">
+          <string>ENCRYPT WALLET</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="b_change">
+         <property name="styleSheet">
+          <string notr="true">QPushButton:disabled { color:gray} 
+QPushButton { padding: 10px;width: 100%;color:white;background: '#1a2635'; margin:0px;
+text-align:left; border:none;outline:none } 
+QPushButton:hover{ background: '#1e2b35'} QPushButton:checked{ background: '#1e2b35'; font:bold;padding-left:15px; color:white;border-right:3px solid '#0adbf0'; }</string>
+         </property>
+         <property name="text">
+          <string>CHANGE PASSPHRASE</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="b_language">
+         <property name="styleSheet">
+          <string notr="true">QPushButton:disabled { color:gray} 
+QPushButton { padding: 10px;width: 100%;color:white;background: '#1a2635'; margin:0px;
+text-align:left; border:none;outline:none } 
+QPushButton:hover{ background: '#1e2b35'} QPushButton:checked{ background: '#1e2b35'; font:bold;padding-left:15px; color:white;border-right:3px solid '#0adbf0'; }</string>
+         </property>
+         <property name="text">
+          <string>LANGUAGE</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="b_network">
+         <property name="styleSheet">
+          <string notr="true">QPushButton:disabled { color:gray} 
+QPushButton { padding: 10px;width: 100%;color:white;background: '#1a2635'; margin:0px;
+text-align:left; border:none;outline:none } 
+QPushButton:hover{ background: '#1e2b35'} QPushButton:checked{ background: '#1e2b35'; font:bold;padding-left:15px; color:white;border-right:3px solid '#0adbf0'; }</string>
+         </property>
+         <property name="text">
+          <string>NETWORK TRAFFIC</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="b_console">
+         <property name="styleSheet">
+          <string notr="true">QPushButton:disabled { color:gray} 
+QPushButton { padding: 10px;width: 100%;color:white;background: '#1a2635'; margin:0px;
+text-align:left; border:none;outline:none } 
+QPushButton:hover{ background: '#1e2b35'} QPushButton:checked{ background: '#1e2b35'; font:bold;padding-left:15px; color:white;border-right:3px solid '#0adbf0'; }</string>
+         </property>
+         <property name="text">
+          <string>CONSOLE</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="b_about">
+         <property name="styleSheet">
+          <string notr="true">QPushButton:disabled { color:gray} 
+QPushButton { padding: 10px;width: 100%;color:white;background: '#1a2635'; margin:0px;
+text-align:left; border:none;outline:none } 
+QPushButton:hover{ background: '#1e2b35'} QPushButton:checked{ background: '#1e2b35'; font:bold;padding-left:15px; color:white;border-right:3px solid '#0adbf0'; }</string>
+         </property>
+         <property name="text">
+          <string>ABOUT</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <property name="styleSheet">
+          <string notr="true">background:#1a2635</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="mainLayout">
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="page"/>
+         <widget class="QWidget" name="page_2"/>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,6 +1,6 @@
 #!/bin/bash
-MXE_INCLUDE_PATH=/opt/mxe/usr/i686-w64-mingw32.static/include
-MXE_LIB_PATH=/opt/mxe/usr/i686-w64-mingw32.static/lib
+MXE_INCLUDE_PATH=/mnt/mxe/usr/i686-w64-mingw32.static/include
+MXE_LIB_PATH=/mnt/mxe/usr/i686-w64-mingw32.static/lib
 
 i686-w64-mingw32.static-qmake-qt5 \
         BOOST_LIB_SUFFIX=-mt \
@@ -13,6 +13,6 @@ i686-w64-mingw32.static-qmake-qt5 \
         BDB_LIB_PATH=$MXE_LIB_PATH/../db4.8.30.NC/lib \
         MINIUPNPC_INCLUDE_PATH=$MXE_INCLUDE_PATH \
         MINIUPNPC_LIB_PATH=$MXE_LIB_PATH \
-        QMAKE_LRELEASE=/opt/mxe/usr/i686-w64-mingw32.static/qt5/bin/lrelease Shard-qt.pro
+        QMAKE_LRELEASE=/mnt/mxe/usr/i686-w64-mingw32.static/qt5/bin/lrelease Shard-qt.pro
 
 make -f Makefile.Release

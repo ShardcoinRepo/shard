@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddressBookPage</class>
+ <widget class="QWidget" name="AddressBookPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>963</width>
+    <height>478</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Address Book</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="recieveTop" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>131</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:'#0a2634';</string>
+     </property>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>131</width>
+        <height>110</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>131</width>
+        <height>110</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:0px;
+background-image:url(:/images/res/images/recieve.png);
+background-repeat:no-repeat;
+background-position: center;
+background-attachment:fixed;
+background-size:cover;
+outline: none;
+background-color:'#003750';</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>120</y>
+        <width>131</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:'#003750';margin-top:5px;
+margin-bottom:20px;
+color:white;
+border:0px</string>
+      </property>
+      <property name="text">
+       <string>Recieve</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>129</x>
+        <y>-1</y>
+        <width>815</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>25</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="newAddressButton">
+           <property name="toolTip">
+            <string>Create a new address</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+	outline: none;
+	padding:10px;
+margin-top:13px;
+margin-bottom:13px;
+}
+
+QPushButton:pressed {
+   background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+	border:1px solid #0adbf0;
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#002d3f&quot;;
+	border:1px solid #0adbf0;
+ }
+QPushButton:checked { 
+     background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid gray;
+ }
+</string>
+           </property>
+           <property name="text">
+            <string>&amp;New Address</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="copyToClipboard">
+           <property name="toolTip">
+            <string>Copy the currently selected address to the system clipboard</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+	outline: none;
+	padding:10px;
+}
+
+QPushButton:pressed {
+   background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+	border:1px solid #0adbf0;
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#002d3f&quot;;
+	border:1px solid #0adbf0;
+ }
+QPushButton:checked { 
+     background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid gray;
+ }
+</string>
+           </property>
+           <property name="text">
+            <string>&amp;Copy Address</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="showQRCode">
+           <property name="styleSheet">
+            <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+	outline: none;
+	padding:10px;
+}
+
+QPushButton:pressed {
+   background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+	border:1px solid #0adbf0;
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#002d3f&quot;;
+	border:1px solid #0adbf0;
+ }
+QPushButton:checked { 
+     background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid gray;
+ }
+</string>
+           </property>
+           <property name="text">
+            <string>Show &amp;QR Code</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="signMessage">
+           <property name="toolTip">
+            <string>Sign a message to prove you own a Shard address</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+	outline: none;
+	padding:10px;
+}
+
+QPushButton:pressed {
+   background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+	border:1px solid #0adbf0;
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#002d3f&quot;;
+	border:1px solid #0adbf0;
+ }
+QPushButton:checked { 
+     background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid gray;
+ }
+</string>
+           </property>
+           <property name="text">
+            <string>Sign &amp;Message</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="verifyMessage">
+           <property name="toolTip">
+            <string>Verify a message to ensure it was signed with a specified Shard address</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+	outline: none;
+	padding:10px;
+}
+
+QPushButton:pressed {
+   background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+	border:1px solid #0adbf0;
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#002d3f&quot;;
+	border:1px solid #0adbf0;
+ }
+QPushButton:checked { 
+     background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid gray;
+ }
+</string>
+           </property>
+           <property name="text">
+            <string>&amp;Verify Message</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="deleteButton">
+           <property name="toolTip">
+            <string>Delete the currently selected address from the list</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+	outline: none;
+	padding:10px;
+}
+
+QPushButton:pressed {
+   background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+	border:1px solid #0adbf0;
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#002d3f&quot;;
+	border:1px solid #0adbf0;
+ }
+QPushButton:checked { 
+     background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid gray;
+ }
+</string>
+           </property>
+           <property name="text">
+            <string>&amp;Delete</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QDialogButtonBox" name="buttonBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+	outline: none;
+	padding:10px;
+}
+
+QPushButton:pressed {
+   background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+	border:1px solid #0adbf0;
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#002d3f&quot;;
+	border:1px solid #0adbf0;
+ }
+QPushButton:checked { 
+     background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid gray;
+ }
+</string>
+           </property>
+           <property name="standardButtons">
+            <set>QDialogButtonBox::Ok</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableView" name="tableView">
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
+     <property name="toolTip">
+      <string>Double-click to edit address or label</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:'#003750';color:white</string>
+     </property>
+     <property name="tabKeyNavigation">
+      <bool>false</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

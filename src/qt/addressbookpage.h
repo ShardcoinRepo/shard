@@ -14,6 +14,7 @@ class QTableView;
 class QItemSelection;
 class QSortFilterProxyModel;
 class QMenu;
+class WalletModel;
 class QModelIndex;
 QT_END_NAMESPACE
 
@@ -33,11 +34,18 @@ public:
         ForSending, /**< Open address book to pick address for sending */
         ForEditing  /**< Open address book for editing */
     };
+    enum ModeAddress {
+        NewReceivingAddress,
+        NewSendingAddress,
+        EditReceivingAddress,
+        EditSendingAddress
+    };
 
     explicit AddressBookPage(Mode mode, Tabs tab, QWidget *parent = 0);
     ~AddressBookPage();
 
     void setModel(AddressTableModel *model);
+    void setWalletModel(WalletModel *model);
     void setOptionsModel(OptionsModel *optionsModel);
     const QString &getReturnValue() const { return returnValue; }
 
@@ -50,12 +58,15 @@ private:
     AddressTableModel *model;
     OptionsModel *optionsModel;
     Mode mode;
+    WalletModel *walletModel;
     Tabs tab;
     QString returnValue;
     QSortFilterProxyModel *proxyModel;
     QMenu *contextMenu;
     QAction *deleteAction; // to be able to explicitly disable it
     QString newAddressToSelect;
+    QString address;
+
 
 private slots:
     /** Delete currently selected address entry */

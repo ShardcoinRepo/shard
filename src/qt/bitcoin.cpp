@@ -26,7 +26,7 @@
 #include <QTranslator>
 #include <QSplashScreen>
 #include <QLibraryInfo>
-
+#include "overviewpage.h"
 #if defined(BITCOIN_NEED_QT_PLUGINS) && !defined(_BITCOIN_QT_PLUGINS_INCLUDED)
 #define _BITCOIN_QT_PLUGINS_INCLUDED
 #define __INSURE__
@@ -82,7 +82,7 @@ static void InitMessage(const std::string &message)
 {
     if(splashref)
     {
-        splashref->showMessage(QString::fromStdString(message), Qt::AlignBottom|Qt::AlignHCenter, QColor(0,0,0));
+        splashref->showMessage(QString::fromStdString(message), Qt::AlignBottom|Qt::AlignHCenter, QColor(255,255,255));
         QApplication::instance()->processEvents();
     }
     LogPrintf("init message: %s\n", message);
@@ -279,6 +279,7 @@ int main(int argc, char *argv[])
                 else
                 {
                     window.show();
+
                 }
 
                 // Now that initialization/startup is done, process any command-line

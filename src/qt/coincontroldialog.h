@@ -9,12 +9,14 @@
 #include <QPoint>
 #include <QString>
 #include <QTreeWidgetItem>
+#include <QWidget>
 
 namespace Ui {
     class CoinControlDialog;
 }
 class WalletModel;
 class CCoinControl;
+class SendCoinsDialog;
 
 class CoinControlDialog : public QDialog
 {
@@ -27,7 +29,8 @@ public:
     void setModel(WalletModel *model);
 
     // static because also called from sendcoinsdialog
-    static void updateLabels(WalletModel*, QDialog*);
+    void updateLabels(WalletModel*, SendCoinsDialog*);
+    void updateLabelsCoinControl();
 
     static QList<qint64> payAmounts;
     static CCoinControl *coinControl;

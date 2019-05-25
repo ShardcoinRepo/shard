@@ -3,11 +3,12 @@ TARGET = Shard-qt
 VERSION = 1.0.1.0
 INCLUDEPATH += src src/json src/qt
 QT += network
+QT += printsupport
 DEFINES += ENABLE_WALLET
 DEFINES += BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
 CONFIG += thread
-
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 greaterThan(QT_MAJOR_VERSION, 4) {
     QT += widgets
     DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0
@@ -127,7 +128,27 @@ contains(BITCOIN_NEED_QT_PLUGINS, 1) {
 
 INCLUDEPATH += src/leveldb/include src/leveldb/helpers
 LIBS += $$PWD/src/leveldb/libleveldb.a $$PWD/src/leveldb/libmemenv.a
-SOURCES += src/txdb-leveldb.cpp
+SOURCES += src/txdb-leveldb.cpp \
+    src/qt/listtransactions.cpp \
+    src/qt/graphthread.cpp \
+    src/qt/qcustomplot.cpp \
+    src/qt/txviewdelegate.cpp \
+    src/qt/forms/settings.cpp \
+    src/qt/forms/about.cpp \
+    src/qt/forms/rpcconsole_widget.cpp \
+    src/qt/forms/changepass.cpp \
+    src/qt/forms/encryptwallet.cpp \
+    src/qt/forms/exportpage.cpp \
+    src/qt/forms/networktraffic.cpp \
+    src/qt/forms/signmessage.cpp \
+    src/qt/forms/transactionpage.cpp \
+    src/qt/forms/verifymessage.cpp \
+    src/qt/forms/optionspage.cpp \
+    src/qt/forms/languagepage.cpp \
+    src/qt/addressbookpage.cpp \
+    src/qt/titlebar.cpp \
+    src/qt/custombutton.cpp
+
 !win32 {
     # we use QMAKE_CXXFLAGS_RELEASE even without RELEASE=1 because we use RELEASE to indicate linking preferences not -O preferences
     genleveldb.commands = cd $$PWD/src/leveldb && CC=$$QMAKE_CC CXX=$$QMAKE_CXX $(MAKE) OPT=\"$$QMAKE_CXXFLAGS $$QMAKE_CXXFLAGS_RELEASE\" libleveldb.a libmemenv.a
@@ -175,7 +196,10 @@ QMAKE_CXXFLAGS_WARN_ON = -fdiagnostics-show-option -Wall -Wextra -Wno-ignored-qu
 
 # Input
 DEPENDPATH += src src/json src/qt
-HEADERS += src/qt/bitcoingui.h \
+HEADERS += src/qt/rpcexecutor.h \
+    src/qt/overviewpage.h \
+    src/qt/bitcoingui.h \
+    src/qt/rpcconsole.h \
     src/qt/transactiontablemodel.h \
     src/qt/addresstablemodel.h \
     src/qt/optionsdialog.h \
@@ -244,7 +268,6 @@ HEADERS += src/qt/bitcoingui.h \
     src/rpcprotocol.h \
     src/rpcserver.h \
     src/timedata.h \
-    src/qt/overviewpage.h \
     src/qt/csvmodelwriter.h \
     src/crypter.h \
     src/qt/sendcoinsentry.h \
@@ -257,21 +280,42 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/paymentserver.h \
     src/allocators.h \
     src/ui_interface.h \
-    src/qt/rpcconsole.h \
     src/version.h \
     src/netbase.h \
     src/clientversion.h \
     src/threadsafety.h \
-    src/tinyformat.h
+    src/tinyformat.h \
+    src/qt/listtransactions.h \
+    src/qt/graphthread.h \
+    src/qt/qcustomplot.h \
+    src/qt/qcustomplot.h \
+    src/qt/txviewdelegate.h \
+    src/qt/forms/settings.h \
+    src/qt/forms/about.h \
+    src/qt/forms/rpcconsole_widget.h \
+    src/qt/forms/changepass.h \
+    src/qt/forms/encryptwallet.h \
+    src/qt/forms/exportpage.h \
+    src/qt/forms/networktraffic.h \
+    src/qt/forms/signmessage.h \
+    src/qt/forms/transactionpage.h \
+    src/qt/forms/verifymessage.h \
+    src/qt/forms/optionspage.h \
+    src/qt/forms/languagepage.h \
+    src/qt/titlebar.h \
+    src/qt/custombutton.h
 
-SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
+
+SOURCES += src/qt/rpcexecutor.cpp \
+    src/qt/bitcoin.cpp \
+    src/qt/bitcoingui.cpp \
+    src/qt/rpcconsole.cpp \
     src/qt/transactiontablemodel.cpp \
     src/qt/addresstablemodel.cpp \
     src/qt/optionsdialog.cpp \
     src/qt/sendcoinsdialog.cpp \
     src/qt/coincontroldialog.cpp \
     src/qt/coincontroltreewidget.cpp \
-    src/qt/addressbookpage.cpp \
     src/qt/signverifymessagedialog.cpp \
     src/qt/aboutdialog.cpp \
     src/qt/editaddressdialog.cpp \
@@ -332,22 +376,21 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/protocol.cpp \
     src/qt/notificator.cpp \
     src/qt/paymentserver.cpp \
-    src/qt/rpcconsole.cpp \
     src/noui.cpp \
     src/kernel.cpp \
     src/scrypt-arm.S \
     src/scrypt-x86.S \
     src/scrypt-x86_64.S \
     src/scrypt.cpp \
-    src/pbkdf2.cpp
+    src/pbkdf2.cpp \
 
 RESOURCES += \
     src/qt/bitcoin.qrc
 
 FORMS += \
+    src/qt/forms/rpcconsole.ui \
     src/qt/forms/coincontroldialog.ui \
     src/qt/forms/sendcoinsdialog.ui \
-    src/qt/forms/addressbookpage.ui \
     src/qt/forms/signverifymessagedialog.ui \
     src/qt/forms/aboutdialog.ui \
     src/qt/forms/editaddressdialog.ui \
@@ -355,8 +398,20 @@ FORMS += \
     src/qt/forms/overviewpage.ui \
     src/qt/forms/sendcoinsentry.ui \
     src/qt/forms/askpassphrasedialog.ui \
-    src/qt/forms/rpcconsole.ui \
-    src/qt/forms/optionsdialog.ui
+    src/qt/forms/optionsdialog.ui \
+    src/qt/forms/addressbookpage.ui \
+    src/qt/forms/settings.ui \
+    src/qt/forms/about.ui \
+    src/qt/forms/rpcconsole_widget.ui \
+    src/qt/forms/changepass.ui \
+    src/qt/forms/encryptwallet.ui \
+    src/qt/forms/exportpage.ui \
+    src/qt/forms/networktraffic.ui \
+    src/qt/forms/signmessage.ui \
+    src/qt/forms/transactionpage.ui \
+    src/qt/forms/verifymessage.ui \
+    src/qt/forms/optionspage.ui \
+    src/qt/forms/languagepage.ui
 
 contains(USE_QRCODE, 1) {
 HEADERS += src/qt/qrcodedialog.h
@@ -465,3 +520,12 @@ contains(RELEASE, 1) {
 }
 
 system($$QMAKE_LRELEASE -silent $$_PRO_FILE_)
+
+DISTFILES += \
+    src/qt/res/images/dropdown.png \
+    src/qt/res/images/checkbox_checked_hover.png \
+    src/qt/res/images/checkbox_checked_pressed.png \
+    src/qt/res/images/checkbox_checked.png \
+    src/qt/res/images/checkbox_unchecked_hover.png \
+    src/qt/res/images/checkbox_unchecked_pressed.png \
+    src/qt/res/images/checkbox_unchecked.png

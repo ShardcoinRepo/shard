@@ -1010,39 +1010,6 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
     return path;
 }
 
-// DS: auto create conf file
-string randomStrGen(int length) {
-    static string charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-    string result;
-    result.resize(length);
-    for (int32_t i = 0; i < length; i++)
-        result[i] = charset[rand() % charset.length()];
-
-    return result;
-}
-
-// DS: auto create conf file
-void createConf()       //Automatic Shard.conf generation
-{
-    srand(time(NULL));
-
-    ofstream pConf;
-    pConf.open(GetConfigFile().generic_string().c_str());
-    const char* nodes = "\nrpcport=48210"                  //List of known nodes, to be periodically updated
-                        "\nrpcallowip=127.0.0.1"
-                        "\ndaemon=1"
-                        "\nserver=1"
-                        "\nlistenonion=0";
-
-    pConf   << std::string("rpcuser=")
-            +  randomStrGen(5)
-            + std::string("\nrpcpassword=") 
-            + randomStrGen(15)
-            + std::string(nodes);
-
-    pConf.close();
-}
-
 void ClearDatadirCache()
 {
     std::fill(&pathCached[0], &pathCached[CChainParams::MAX_NETWORK_TYPES+1],
@@ -1059,15 +1026,9 @@ boost::filesystem::path GetConfigFile()
 void ReadConfigFile(map<string, string>& mapSettingsRet,
                     map<string, vector<string> >& mapMultiSettingsRet)
 {
-    // DS: auto create conf file
     boost::filesystem::ifstream streamConfig(GetConfigFile());
-    if (!streamConfig.good()) //Shard.conf doesn't exist
-    {
-        createConf();
-        new(&streamConfig) boost::filesystem::ifstream(GetConfigFile());
-        if(!streamConfig.good())
-            return;
-    }
+    if (!streamConfig.good())
+        return; // No bitcoin.conf file is OK
 
     set<string> setOptions;
     setOptions.insert("*");

@@ -21,7 +21,8 @@ public:
 
     enum ColumnIndex {
         Label = 0,   /**< User specified label */
-        Address = 1  /**< Bitcoin address */
+        Address = 1,  /**< Bitcoin address */
+        Amount=2
     };
 
     enum RoleIndex {
@@ -45,12 +46,14 @@ public:
         @{*/
     int rowCount(const QModelIndex &parent) const;
     int columnCount(const QModelIndex &parent) const;
+    void refresh();
     QVariant data(const QModelIndex &index, int role) const;
     bool setData(const QModelIndex &index, const QVariant &value, int role);
     QVariant headerData(int section, Qt::Orientation orientation, int role) const;
     QModelIndex index(int row, int column, const QModelIndex &parent) const;
     bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex());
     Qt::ItemFlags flags(const QModelIndex &index) const;
+    void updateEntry(const QString &address, const QString &label, bool isMine, int status);
     /*@}*/
 
     /* Add an address to the model.
@@ -69,6 +72,8 @@ public:
 
     EditStatus getEditStatus() const { return editStatus; }
 
+    void refreshWallet(const QString &hash);
+
 private:
     WalletModel *walletModel;
     CWallet *wallet;
@@ -85,7 +90,6 @@ signals:
 public slots:
     /* Update address list from core.
      */
-    void updateEntry(const QString &address, const QString &label, bool isMine, int status);
 
     friend class AddressTablePriv;
 };

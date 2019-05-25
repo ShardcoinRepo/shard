@@ -41,7 +41,7 @@
 #include "shlobj.h"
 #include "shellapi.h"
 #endif
-
+#include <QDesktopWidget>
 namespace GUIUtil {
 
 QString dateTimeStr(const QDateTime &date)
@@ -184,7 +184,12 @@ QString getSaveFileName(QWidget *parent, const QString &caption,
     {
         myDir = dir;
     }
-    QString result = QFileDialog::getSaveFileName(parent, caption, myDir, filter, &selectedFilter);
+    QWidget* dt = new QWidget();
+    QRect screenGeometry = QApplication::desktop()->screenGeometry();
+            int x = (screenGeometry.width() - dt->width()) / 2;
+            int y = (screenGeometry.height() - dt->height()) / 2;
+            dt->move(x, y);
+    QString result = QFileDialog::getSaveFileName(dt, caption, myDir, filter, &selectedFilter);
 
     /* Extract first suffix from filter pattern "Description (*.foo)" or "Description (*.foo *.bar ...) */
     QRegExp filter_re(".* \\(\\*\\.(.*)[ \\)]");

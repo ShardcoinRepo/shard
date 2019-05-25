@@ -1,22 +1,26 @@
 #ifndef SENDCOINSDIALOG_H
 #define SENDCOINSDIALOG_H
 
-#include <QDialog>
+#include <QWidget>
 #include <QString>
+
 
 namespace Ui {
     class SendCoinsDialog;
+
 }
 class WalletModel;
 class SendCoinsEntry;
 class SendCoinsRecipient;
+class CoinControlDialog;
 
 QT_BEGIN_NAMESPACE
 class QUrl;
+
 QT_END_NAMESPACE
 
 /** Dialog for sending bitcoins */
-class SendCoinsDialog : public QDialog
+class SendCoinsDialog : public QWidget
 {
     Q_OBJECT
 
@@ -34,6 +38,24 @@ public:
     bool handleURI(const QString &uri);
     bool fSplitBlock;
 
+
+
+
+    void setAmount(QString amount);
+    void setControlChangeText(bool en);
+    void setCoinControlChange(QString text,QString style,bool en);
+
+    // stats
+
+
+    void setPayFee(QString text);
+
+    void setCoinControlAfterFee(QString text);
+    // After Fee
+
+    void setCoinControlInsuffFunds(bool en);
+
+
 public slots:
     void clear();
     void reject();
@@ -46,6 +68,7 @@ private:
     Ui::SendCoinsDialog *ui;
     WalletModel *model;
     bool fNewRecipientAllowed;
+    CoinControlDialog* dlg;
 
 private slots:
     void on_sendButton_clicked();
@@ -60,8 +83,9 @@ private slots:
     void coinControlClipboardAmount();
     void coinControlClipboardFee();
     void coinControlClipboardAfterFee();
-    void coinControlClipboardBytes();
-    void coinControlClipboardLowOutput();
+
+
+
     void coinControlClipboardChange();
     void coinControlSplitBlockChecked(int);
     void splitBlockLineEditChanged(const QString & text);

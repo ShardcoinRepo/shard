@@ -17,6 +17,7 @@
 #include "key.h"
 #include "keystore.h"
 #include "script.h"
+#include <qglobal.h>
 #include "ui_interface.h"
 #include "util.h"
 
@@ -113,6 +114,7 @@ public:
     CWallet()
     {
         SetNull();
+        mapAddressBookAmount= std::map<std::string, qint64>();
     }
     CWallet(std::string strWalletFileIn)
     {
@@ -138,7 +140,7 @@ public:
     std::map<uint256, int> mapRequestCount;
 
     std::map<CTxDestination, std::string> mapAddressBook;
-
+    std::map<std::string, qint64> mapAddressBookAmount;
     CPubKey vchDefaultKey;
     int64_t nTimeFirstKey;
 

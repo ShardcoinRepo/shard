@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RPCConsole_Widget</class>
+ <widget class="QWidget" name="RPCConsole_Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>676</width>
+    <height>627</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QTabWidget{border:0px solid #0a2634;color:white;}
+QTabBar{color:white;background:#0a2634;}
+QTabBar::tab {
+    background: #002d3f;
+    border: 1px solid #002d3f;
+    padding: 2px;
+}
+
+QTabBar::tab:selected{
+    background: #0a2634;
+
+}
+
+QTabBar::tab:hover {
+    background: #003750;border:0px;color:white;
+}
+QTabBar::tab:selected:hover {
+    background: #0a2634;border:0px;
+}
+QTabBar::tab:selected {
+    border-color: #0a2634;
+
+}
+
+QTabBar::tab:!selected {
+    margin-top: 2px; /* make non-selected tabs look smaller */
+color:gray;
+}
+QTabBar::tab:hover:!selected {
+    margin-top: 2px; /* make non-selected tabs look smaller */
+color:white;
+}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QTextEdit" name="messagesWidget">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit {
+    background:#102537;
+    color:#FFFFEE;
+    padding:15px;
+}
+QScrollArea{border:0px;margin:0px;}
+
+QScrollBar
+{
+background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+       stop: 0 rgb(3, 32, 52), stop: 0.5 rgb(4, 35, 58), stop:1 rgb(3, 32, 52));
+width:9px;
+}
+QScrollBar::handle
+{
+background: rgb(0, 51, 78);
+width:9px;
+
+}
+QScrollBar::handle:hover
+{
+background: rgb(0, 67, 97);
+width:9px;
+
+}
+QScrollBar::add-line
+{
+
+height: 0px;
+}
+QScrollBar::sub-line
+{
+height: 0px;
+}
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="tabKeyNavigation" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="columnCount" stdset="0">
+         <number>2</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="styleSheet">
+           <string notr="true">background:#102537;
+color:white;
+padding:6px;
+border:1px solid #003750;
+border-radius:0px;
+font: 10pt 'Ubuntu';</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="clearButton">
+          <property name="maximumSize">
+           <size>
+            <width>99999</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Clear console</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:5px;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0b1d2c';
+color:gray;
+border:2px solid #102537;
+ }
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../bitcoin.qrc">
+            <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
+          </property>
+          <property name="shortcut">
+           <string notr="true">Ctrl+L</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../bitcoin.qrc"/>
+ </resources>
+ <connections/>
+</ui>

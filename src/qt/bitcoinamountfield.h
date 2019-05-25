@@ -37,7 +37,7 @@ public:
         in these cases we have to set it up manually.
     */
     QWidget *setupTabChain(QWidget *prev);
-
+    QValueComboBox *unit;
 signals:
     void textChanged();
 
@@ -47,7 +47,7 @@ protected:
 
 private:
     QDoubleSpinBox *amount;
-    QValueComboBox *unit;
+
     int currentUnit;
 
     void setText(const QString &text);

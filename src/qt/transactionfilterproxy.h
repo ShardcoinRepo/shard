@@ -4,6 +4,8 @@
 #include <QSortFilterProxyModel>
 #include <QDateTime>
 
+
+
 /** Filter the transaction list according to pre-specified rules. */
 class TransactionFilterProxy : public QSortFilterProxyModel
 {
@@ -21,7 +23,7 @@ public:
 
     static quint32 TYPE(int type) { return 1<<type; }
 
-    void setDateRange(const QDateTime &from, const QDateTime &to);
+    void setDateRange(qint64 from, qint64 to);
     void setAddressPrefix(const QString &addrPrefix);
     /**
       @note Type filter takes a bit field created with TYPE() or ALL_TYPES
@@ -29,25 +31,31 @@ public:
     void setTypeFilter(quint32 modes);
     void setMinAmount(qint64 minimum);
 
+    void setPage(qint64 page);
+
     /** Set maximum number of rows returned, -1 if unlimited. */
     void setLimit(int limit);
+
 
     /** Set whether to show conflicted transactions. */
     void setShowInactive(bool showInactive);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const;
 
+
+
 protected:
     bool filterAcceptsRow(int source_row, const QModelIndex & source_parent) const;
 
 private:
-    QDateTime dateFrom;
-    QDateTime dateTo;
-    QString addrPrefix;
-    quint32 typeFilter;
-    qint64 minAmount;
+
     int limitRows;
     bool showInactive;
+
+signals:
+    void filterApplied();
+
+
 };
 
 #endif // TRANSACTIONFILTERPROXY_H
