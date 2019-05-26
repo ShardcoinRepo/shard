@@ -75,6 +75,19 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 - be as convincing as possible as to why we need this feature and how everybody can benefit from it.
 
 
+## Specifications
+<table>
+<tr><td>Coin Name</td><td>Shard Coin</td></tr>
+<tr><td>Abbreviation</td><td>SHARD</td></tr>
+<tr><td>Coin Type</td><td>PoS (Proof of Stake)</td></tr>
+<tr><td>Max Supply</td><td>210,000,000</td></tr>
+<tr><td>Block Time</td><td>120 Seconds</td></tr>
+<tr><td>Minimum Stake Age</td><td>9 Hours</td></tr>
+<tr><td>Maximum Stake Age</td><td>72 Hours</td></tr>
+<tr><td>Masternode Port</td><td>33820</td></tr>
+<tr><td>RPC Port</td><td>33821</td></tr>
+</table>
+
 
 ## Current PoS Rewards Breakdown ##
 
