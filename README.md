@@ -108,6 +108,14 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 <th>ID</th><th>Date</th><th>Amount</th><th>Txid</th>
 <tr><td>Initial 1</td><td>22nd Mar 2018</td><td>1,000,000</td><td>ed661dda74380037c035f1f6b60194095d584a0c36399a06a615b6b7c39b0028</td></tr>
 <tr><td>Initial 2</td><td>24th Apr 2018</td><td>14,000,000</td><td>a1e158e3ee3f98fe891f7a729a8a97b9c3d36378e47998ebdf40edf0df3318c4</td></tr>
+<tr><td>Burn #1</td><td>1st Jun 2018</td><td>75,000</td><td>d011fc62b481b3e8bea7958cdcedf27b9001bccc04846198bb95566c6db651fa</td></tr>
+<tr><td>Burn #2</td><td>1st Jul 2018</td><td>115,000</td><td>f7ace4c4486d92b39bf0670f288c8d5b7c926eb0975db1ef08f203917451013f</td></tr>
+<tr><td>Burn #3</td><td></td><td></td><td></td></tr>
+<tr><td>Burn #4</td><td></td><td></td><td></td></tr>
+<tr><td>Burn #5</td><td></td><td></td><td></td></tr>
+<tr><td>Burn #6</td><td></td><td></td><td></td></tr>
+<tr><td>Burn #7</td><td></td><td></td><td></td></tr>
+<tr><td>Burn #8</td><td></td><td></td><td></td></tr>
 </table>
 
 
