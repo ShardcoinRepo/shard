@@ -31,6 +31,18 @@ Shard can be used not only as a cryptocurrency, but also as a utility coin in mu
 [Shardax Discord](https://discord.gg/Sj3xU6Z)
 
 
+## Development Process
+
+The `master` branch is regularly built and tested, but is not guaranteed to be
+completely stable. [Tags](https://github.com/ShardcoinRepo/shard/tags) are created
+regularly to indicate new official, stable release versions of Shard.
+
+The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Developers can join the official [Shard Discord](https://discordapp.com/invite/SFqSd3U)
+
+
+
 ## Contributing
 
 We strongly recommend that the community help make improvements and determine the future direction of Shard and the Shard protocol. We expect every contributor to be respectful and constructive so that everyone has a positive experience
@@ -57,6 +69,7 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 - be as convincing as possible as to why we need this feature and how everybody can benefit from it.
 
 
+
 ## Current PoS Rewards Breakdown ##
 
 <table>
@@ -73,6 +86,7 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 <tr><td>4 Years</td><td>4,340,001</td><td>5,340,000</td><td>3%</td></tr>
 <tr><td>Infinity</td><td>5,340,001</td><td>+</td><td>2%</td></tr>
 </table>
+
 
 
 ### Nodes List (If you have low connections)
