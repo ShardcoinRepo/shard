@@ -1,9 +1,13 @@
 
-# Shard Coin
-Shard is designed to be a secure and decentralised open source proof of stake digital currency, focusing on performance, security and fast low-cost transactions. The Shard Community Reserve assists with market liquidity and reducing volatility. With the community we are looking to revolutionise the cryptocurrency experience allowing users easy access and usability, bringing it to the mainstream for day to day life.
+<img src="https://shardcoin.io/images/8680493537c30f81917d034613b289e9.png" width="150px" > Shard Coin
+
+--- 
+
+[Shard Coin][website-url] is designed to be a secure and decentralised open source proof of stake digital currency, focusing on performance, security and fast low-cost transactions. The Shard Community Reserve assists with market liquidity and reducing volatility. With the community we are looking to revolutionise the cryptocurrency experience allowing users easy access and usability, bringing it to the mainstream for day to day life.
 
 Shard can be used not only as a cryptocurrency, but also as a utility coin in multiple Shardax projects. Such as the Shardax Digital Asset Exchange & Staking Platform, Universal Infinity Wallet and the Quantum Project. In addition to the extra benefits when using Shard on these platforms; Shardax uses 20% of profits for liquidity, buying and burning Shard. This will decrease the existing supply, while coin holders can continuously stake without excessive inflation.
 
+[website-url]: https://shardcoin.io/
 
 
 Shard development tree
