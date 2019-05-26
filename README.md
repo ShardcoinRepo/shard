@@ -93,5 +93,13 @@ Issues with no commits will be given a similar warning, and closed after
 labeled 'stale'.
 
 
+##License
+
+Shard Coin is released under the terms of the MIT license. See [COPYING](COPYING) for more
+information or see https://opensource.org/licenses/MIT.
+
+By forking Shard and in using our UI you are required to include the Shard logo and name within the about section of the wallet clearly informing users that the UI is made by Shard.
+
+
 [website-url]: https://shardcoin.io/
 [issues-url]: https://github.com/ShardcoinRepo/Shard/issues
