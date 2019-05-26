@@ -78,13 +78,11 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 
 ## Specifications
 
-It will take around 90 years if the entire current supply was staking to reach the max supply. However currently only around 50%-60% of current supply is staking meaning it will most likely take around 135-180 years to reach the max supply.
-
 <table>
 <tr><td>Coin Name</td><td>Shard Coin</td></tr>
 <tr><td>Abbreviation</td><td>SHARD</td></tr>
 <tr><td>Coin Type</td><td>PoS (Proof of Stake)</td></tr>
-<tr><td>Max Supply</td><td>210,000,000</td></tr>
+<tr><td>Max Supply</td><td>210,000,000*</td></tr>
 <tr><td>Block Time</td><td>120 Seconds</td></tr>
 <tr><td>Minimum Stake Age</td><td>9 Hours</td></tr>
 <tr><td>Maximum Stake Age</td><td>72 Hours</td></tr>
@@ -92,11 +90,13 @@ It will take around 90 years if the entire current supply was staking to reach t
 <tr><td>Default Port</td><td>48200</td></tr>
 <tr><td>RPC Port</td><td>48210</td></tr>
 <tr><td>Current Version</td><td>2.0.0.0</td></tr>
-<tr><td>BIP-0044 Registered Index</td><td>[325](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)</td></tr>
+<tr><td>BIP-0044 Registered Index</td><td> [325](https://github.com/satoshilabs/slips/blob/master/slip-0044.md) </td></tr>
 <tr><td>Pubkey Address</td><td>0x3f (S)</td></tr>
 <tr><td>Scriptkey Address</td><td>0x7d (s)</td></tr>
 <tr><td>Wif</td><td>0x2d (K)</td></tr>
 </table>
+
+*It will take around 90 years if the entire current supply was staking to reach the max supply. However currently only around 50%-60% of current supply is staking meaning it will most likely take around 135-180 years to reach the max supply.
 
 
 
