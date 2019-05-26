@@ -1,5 +1,5 @@
 
-<img src="https://shardcoin.io/images/8680493537c30f81917d034613b289e9.png" width="150px" > Shard Coin
+<img src="https://i.gyazo.com/dbd8d11cd910b4c675c2489b0abbbe4e.png" width="80px" > Shard Coin
 
 --- 
 
@@ -8,6 +8,7 @@
 Shard can be used not only as a cryptocurrency, but also as a utility coin in multiple Shardax projects. Such as the Shardax Digital Asset Exchange & Staking Platform, Universal Infinity Wallet and the Quantum Project. In addition to the extra benefits when using Shard on these platforms; Shardax uses 20% of profits for liquidity, buying and burning Shard. This will decrease the existing supply, while coin holders can continuously stake without excessive inflation.
 
 [website-url]: https://shardcoin.io/
+
 
 
 Shard development tree
