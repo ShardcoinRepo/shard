@@ -59,11 +59,6 @@ We strongly recommend that the community help make improvements and determine th
 </table>
 
 
-
-Shard development tree
-
-Shard is a PoS-based cryptocurrency.
-
 Development process
 ===========================
 
