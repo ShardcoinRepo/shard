@@ -20,14 +20,15 @@
 using namespace std;
 
 extern int nStakeMaxAge;
+double GetPoSKernelPS();
 
 // Settings
 int64_t nTransactionFee = MIN_TX_FEE;
 int64_t nReserveBalance = 0;
 int64_t nMinimumInputValue = 0;
 
-static int64_t GetStakeCombineThreshold() { return 1000 * COIN; }
-static int64_t GetStakeSplitThreshold() { return 2 * GetStakeCombineThreshold(); }
+static int64_t GetStakeSplitThreshold() { return GetPoSKernelPS() / (5 * (nStakeMinAge / GetTargetSpacing(nBestHeight))); }
+static int64_t GetStakeCombineThreshold() { return GetStakeSplitThreshold() / 2; }
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -1748,7 +1749,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
             int64_t nTimeWeight = GetWeight((int64_t)pcoin.first->nTime, (int64_t)txNew.nTime);
 
             // Stop adding more inputs if already too many inputs
-            if (txNew.vin.size() >= 10)
+            if (txNew.vin.size() >= 2)
                 break;
             // Stop adding inputs if reached reserve limit
             if (nCredit + pcoin.first->vout[pcoin.second].nValue > nBalance - nReserveBalance)

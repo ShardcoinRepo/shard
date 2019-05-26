@@ -1,6 +1,4 @@
 #!/bin/bash
-rm -r src/leveldb/*
-cp -a src/leveldb_bck/* src/leveldb
 export PATH=/mnt/mxe/usr/bin:$PATH
 MXE_INCLUDE_PATH=/mnt/mxe/usr/i686-w64-mingw32.static/include
 MXE_LIB_PATH=/mnt/mxe/usr/i686-w64-mingw32.static/lib
@@ -19,6 +17,4 @@ i686-w64-mingw32.static-qmake-qt5 \
 	QMAKE_LRELEASE=/mnt/mxe/usr/i686-w64-mingw32.static/qt5/bin/lrelease Shard-qt.pro
 
 make -f Makefile.Release
-rm -r src/leveldb/*
-cp -a src/leveldb_bck/* src/leveldb
 
