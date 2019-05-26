@@ -96,7 +96,7 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 <tr><td>Wif</td><td>0x2d (K)</td></tr>
 </table>
 
-*It will take around 90 years if the entire current supply was staking to reach the max supply. However currently only around 50%-60% of current supply is staking meaning it will most likely take around 135-180 years to reach the max supply.
+* It will take around 90 years if the entire current supply was staking to reach the max supply. However currently only around 50%-60% of current supply is staking meaning it will most likely take around 135-180 years to reach the max supply.
 
 
 
