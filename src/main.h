@@ -54,7 +54,7 @@ static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20
 
 //Code to reduce block reward after 10% block reduces every 2 years and after 5% block reduces every 4 years.
 inline int64_t GetCoinYearReward(int nHeight) {
-    int64_t YearPercent = 10;
+    int64_t YearPercent = 2;
 
     if (!TestNet() && nHeight <= 4000)
         YearPercent = 50;
@@ -103,7 +103,7 @@ inline int64_t GetCoinYearReward(int nHeight) {
     else if (nHeight <= 5340000)
         YearPercent = 3;
     else
-        YearPercent = 2.5;
+        YearPercent = 2;
 
     return YearPercent * CENT; // per year
 }
