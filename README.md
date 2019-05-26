@@ -10,7 +10,7 @@ Shard can be used not only as a cryptocurrency, but also as a utility coin in mu
 
 ## Contributing
 
-We strongly recommend that the community help make improvements and determine the future direction of Shard and the Shard protocol. To report bugs please create an issue in this [repository][issues-url].
+We strongly recommend that the community help make improvements and determine the future direction of Shard and the Shard protocol. To report bugs please create an issue [here][issues-url].
 
 #### Read our [contribution guidelines]().
 
