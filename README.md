@@ -38,7 +38,7 @@ We strongly recommend that the community help make improvements and determine th
 #### Read our [contribution guidelines]().
 
 
-## PoS Rewards Breakdown ##
+## Current PoS Rewards Breakdown ##
 
 <table>
 <th>Time</th><th>Block Start</th><th>Block End</th><th>Reward</th>
