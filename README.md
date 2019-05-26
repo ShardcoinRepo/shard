@@ -1,5 +1,5 @@
 
-<img src="https://i.gyazo.com/dbd8d11cd910b4c675c2489b0abbbe4e.png" width="80px" > <h1 style="display: inline-block;border-bottom: none;vertical-align: middle;font-size: 50px;padding: 0px;margin: 0px;margin-left: 12px;"> Shard Coin</h1>
+<img src="https://shardcoin.io/images/SHARD2.png" height="80px" >
 
 --- 
 
