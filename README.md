@@ -53,7 +53,7 @@ Developers can join the official [Shard Discord](https://discordapp.com/invite/S
 
 We strongly recommend that the community help make improvements and determine the future direction of Shard and the Shard protocol. We expect every contributor to be respectful and constructive so that everyone has a positive experience
 
-#### Read our [contribution guidelines]().
+#### Read our [contribution guidelines](CONTRIBUTING.md).
 
 ### Reporting an issue
 
