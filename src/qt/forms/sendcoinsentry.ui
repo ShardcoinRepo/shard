@@ -135,7 +135,7 @@
             </font>
            </property>
            <property name="toolTip">
-            <string>The address to send the payment to (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</string>
+            <string>The address to send the payment to (e.g. SNZ3SxusyhLVUGc4uQJiGcBTrtBbyQbLJV)</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background:#1d2e3f;
