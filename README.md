@@ -33,6 +33,12 @@ Shard can be used not only as a cryptocurrency, but also as a utility coin in mu
 
 ## Development Process
 
+Developers work in their own trees, then submit pull requests when
+they think their feature or bug fix is ready.
+
+The patch will be accepted if there is broad consensus that it is a
+good thing. Developers should expect to rework and resubmit patches.
+
 The `master` branch is regularly built and tested, but is not guaranteed to be
 completely stable. [Tags](https://github.com/ShardcoinRepo/shard/tags) are created
 regularly to indicate new official, stable release versions of Shard.
