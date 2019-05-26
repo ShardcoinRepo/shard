@@ -6,12 +6,8 @@
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/shardcoinrepo/shard.svg">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg">
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/shardcoin.svg?label=shardcoin&style=social">
-  ![GitHub language count](https://img.shields.io/github/languages/count/shardcoinrepo/shard.svg)
-  ![GitHub language count](https://img.shields.io/github/languages/count/shardcoinrepo/shard.svg)
 </p>
 
-![GitHub language count](https://img.shields.io/github/languages/count/shardcoinrepo/shard.svg)
-![GitHub language count](https://img.shields.io/github/languages/count/shardcoinrepo/shard.svg)
 
 
 [Shard Coin][website-url] is designed to be a secure and decentralised open source proof of stake digital currency, focusing on performance, security and fast low-cost transactions. The Shard Community Reserve assists with market liquidity and reducing volatility. With the community we are looking to revolutionise the cryptocurrency experience allowing users easy access and usability, bringing it to the mainstream for day to day life.
