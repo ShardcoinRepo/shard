@@ -52,7 +52,7 @@ inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MO
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 
-//Code to reduce block reward yearly by 10%
+//Code to reduce block reward after 10% block reduces every 2 years and after 5% block reduces every 4 years.
 inline int64_t GetCoinYearReward(int nHeight) {
     int64_t YearPercent = 10;
 
