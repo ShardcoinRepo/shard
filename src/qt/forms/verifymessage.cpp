@@ -21,7 +21,7 @@ VerifyMessage::VerifyMessage(QWidget *parent) :
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
 
-    ui->addressIn_VM->setPlaceholderText(tr("Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)"));
+    ui->addressIn_VM->setPlaceholderText(tr("Enter a Shard address (e.g. SNZ3SxusyhLVUGc4uQJiGcBTrtBbyQbLJV)"));
     ui->signatureIn_VM->setPlaceholderText(tr("Enter Shard signature"));
 #endif
 
