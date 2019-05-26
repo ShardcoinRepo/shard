@@ -44,7 +44,7 @@ We strongly recommend that the community help make improvements and determine th
 <th>Time</th><th>Block Start</th><th>Block End</th><th>Reward</th>
 <tr><td>5.5 Days</td><td>0</td><td>4,000</td><td>50%</td></tr>
 <tr><td>21 Days</td><td>4,001</td><td>20,000</td><td>600%</td></tr>
-<tr><td>27.7 Days</td><td>20,001</td><td>40,000</td><td>550%</td></tr>
+<tr><td>28 Days</td><td>20,001</td><td>40,000</td><td>550%</td></tr>
 <tr><td>14 Days</td><td>40,001</td><td>50,000</td><td>500%</td></tr>
 <tr><td>14 Days</td><td>50,001</td><td>60,000</td><td>450%</td></tr>
 <tr><td>14 Days</td><td>60,001</td><td>70,000</td><td>400%</td></tr>
