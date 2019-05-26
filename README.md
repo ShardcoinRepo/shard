@@ -90,7 +90,7 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 <tr><td>Default Port</td><td>48200</td></tr>
 <tr><td>RPC Port</td><td>48210</td></tr>
 <tr><td>Current Version</td><td>2.0.0.0</td></tr>
-<tr><td>BIP-0044 Registered Index</td><td> [325](https://github.com/satoshilabs/slips/blob/master/slip-0044.md) </td></tr>
+<tr><td>BIP-0044 Registered Index</td><td>325 (https://github.com/satoshilabs/slips/blob/master/slip-0044.md)</td></tr>
 <tr><td>Pubkey Address</td><td>0x3f (S)</td></tr>
 <tr><td>Scriptkey Address</td><td>0x7d (s)</td></tr>
 <tr><td>Wif</td><td>0x2d (K)</td></tr>
