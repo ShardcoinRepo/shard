@@ -1,5 +1,6 @@
 
 <img src="https://shardcoin.io/images/SHARD2.png" height="80px" >
+
 --- 
 
 [Shard Coin][website-url] is designed to be a secure and decentralised open source proof of stake digital currency, focusing on performance, security and fast low-cost transactions. The Shard Community Reserve assists with market liquidity and reducing volatility. With the community we are looking to revolutionise the cryptocurrency experience allowing users easy access and usability, bringing it to the mainstream for day to day life.
