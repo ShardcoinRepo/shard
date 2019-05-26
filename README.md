@@ -38,6 +38,36 @@ We strongly recommend that the community help make improvements and determine th
 #### Read our [contribution guidelines]().
 
 
+## PoS Rewards Breakdown ##
+
+<table>
+<th>Time</th><th>Block Start</th><th>Block End</th><th>Reward</th>
+<tr><td>5.5 Days</td><td>0</td><td>4,000</td><td>50%</td></tr>
+<tr><td>21 Days</td><td>4,001</td><td>20,000</td><td>600%</td></tr>
+<tr><td>27.7 Days</td><td>20,001</td><td>40,000</td><td>550%</td></tr>
+<tr><td>14 Days</td><td>40,001</td><td>50,000</td><td>500%</td></tr>
+<tr><td>14 Days</td><td>50,001</td><td>60,000</td><td>450%</td></tr>
+<tr><td>14 Days</td><td>60,001</td><td>70,000</td><td>400%</td></tr>
+<tr><td>14 Days</td><td>70,001</td><td>80,000</td><td>350%</td></tr>
+<tr><td>14 Days</td><td>80,001</td><td>90,000</td><td>300%</td></tr>
+<tr><td>14 Days</td><td>90,001</td><td>100,000</td><td>250%</td></tr>
+<tr><td>14 Days</td><td>100,001</td><td>110,000</td><td>200%</td></tr>
+<tr><td>14 Days</td><td>110,001</td><td>120,000</td><td>150%</td></tr>
+<tr><td>14 Days</td><td>120,001</td><td>130,000</td><td>100%</td></tr>
+<tr><td>14 Days</td><td>130,001</td><td>140,000</td><td>75%</td></tr>
+<tr><td>194 Days</td><td>140,001</td><td>280,000</td><td>50%</td></tr>
+<tr><td>27 Days</td><td>280,001</td><td>300,000</td><td>25%</td></tr>
+<tr><td>1 Year</td><td>300,001</td><td>560,000</td><td>10%</td></tr>
+<tr><td>2 Years</td><td>560,001</td><td>1,100,000</td><td>9%</td></tr>
+<tr><td>2 Years</td><td>1,100,001</td><td>1,660,000</td><td>8%</td></tr>
+<tr><td>2 Years</td><td>1,660,001</td><td>2,220,000</td><td>7%</td></tr>
+<tr><td>2 Years</td><td>2,220,001</td><td>2,780,000</td><td>6%</td></tr>
+<tr><td>2 Years</td><td>2,780,001</td><td>3,340,000</td><td>5%</td></tr>
+<tr><td>4 Years</td><td>3,340,001</td><td>4,340,000</td><td>4%</td></tr>
+<tr><td>4 Years</td><td>4,340,001</td><td>5,340,000</td><td>3%</td></tr>
+<tr><td>Infinity</td><td>5,340,001</td><td>+</td><td>2%</td></tr>
+</table>
+
 
 ### Nodes List (If you have low connections)
 
