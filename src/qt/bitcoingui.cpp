@@ -741,10 +741,10 @@ void BitcoinGUI::setNumBlocks(int count)
 #if defined(Q_OS_WIN)
 
     // windows code goes here
-    labelEncryptionText->setStyleSheet("color:#00FF00;font-size:12px;margin-left:12px");
+    labelEncryptionText->setStyleSheet("color:#46c93f;font-size:12px;margin-left:12px");
 #else
     //linux code goes here
-    labelEncryptionText->setStyleSheet("color:#00FF00;font-size:12px;margin-left:10px");
+    labelEncryptionText->setStyleSheet("color:#46c93f;font-size:12px;margin-left:5px");
 #endif
 
         labelEncryptionText->setText(tr("Synced"));
