@@ -2,9 +2,9 @@
 <p align="center"><img src="https://raw.githubusercontent.com/ShardcoinRepo/shard/Shard-V2-Development/doc/header.png" alt="Shard Coin Source Code"></p>
 <p align="center">
   <img src="https://img.shields.io/badge/version-2.0.0.0-yellow.svg">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg">
   <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/Shardcoinrepo/shard.svg?color=green">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/shardcoinrepo/shard.svg">
-  <img src="https://img.shields.io/badge/license-MIT-blue.svg">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/shardcoinrepo/shard.svg?color=orange">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/shardcoinrepo/shard.svg?color=dargreen">
   <img alt="GitHub platforms" src="https://img.shields.io/badge/platform-windows%20%7C%20macos%20%7C%20linux-lightgrey.svg">
