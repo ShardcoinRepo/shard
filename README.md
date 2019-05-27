@@ -5,7 +5,9 @@
   <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/Shardcoinrepo/shard.svg?color=green">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/shardcoinrepo/shard.svg">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/shardcoin.svg?label=shardcoin&style=social">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/shardcoinrepo/shard.svg?color=orange">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/shardcoinrepo/shard.svg?color=dargreen">
+  <img alt="GitHub platforms" src="https://img.shields.io/badge/platform-windows%20%7C%20macos%20%7C%20linux-lightgrey.svg">
 </p>
 
 
