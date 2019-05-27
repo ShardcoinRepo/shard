@@ -35,14 +35,34 @@ void TxViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option
 
     QDateTime date = index.data(TransactionTableModel::DateRole).toDateTime();
     QString address = index.data(TransactionTableModel::AddressRole).toString();
+    QString label = index.data(TransactionTableModel::LabelRole).toString();
     qint64 amount = index.data(TransactionTableModel::AmountRole).toLongLong();
     bool confirmed = index.data(TransactionTableModel::ConfirmedRole).toBool();
     QVariant value = index.data(Qt::ForegroundRole);
+    QString labelORaddressOverview;
+    QString labelORaddressTransactions;
     QColor foreground = option.palette.color(QPalette::Text);
     if(qVariantCanConvert<QColor>(value))
     {
         foreground = qvariant_cast<QColor>(value);
     }
+
+    //Check if label empty or not
+    if(!label.isEmpty())
+        {
+
+            labelORaddressOverview = address;
+            labelORaddressTransactions = label;
+
+
+        } else {
+
+            labelORaddressOverview = address;
+            labelORaddressTransactions = address;
+
+        }
+
+
 
     painter->setPen(foreground);
     QString type = getTypeString(index.data(TransactionTableModel::TypeRole).toInt());
@@ -54,7 +74,7 @@ void TxViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option
     {
         QRect addressRect1(119,mainRect.top(),400,63);
         if(address.length() > 0)
-        painter->drawText(addressRect1, Qt::AlignLeft|Qt::AlignVCenter, address);
+        painter->drawText(addressRect1, Qt::AlignLeft|Qt::AlignVCenter, labelORaddressTransactions);
         else
         painter->drawText(addressRect1, Qt::AlignLeft|Qt::AlignVCenter, tr("Internal Transaction"));
     }
@@ -119,7 +139,7 @@ void TxViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option
         painter->setFont(f);
         if(address.length() > 0)
         {
-            painter->drawText(addressRectValue2, Qt::AlignLeft|Qt::AlignTop, address);
+            painter->drawText(addressRectValue2, Qt::AlignLeft|Qt::AlignTop, labelORaddressOverview);
         }else{
             painter->drawText(addressRectValue2, Qt::AlignLeft|Qt::AlignTop, tr("Internal transaction"));
 
