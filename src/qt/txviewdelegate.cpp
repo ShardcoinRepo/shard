@@ -39,7 +39,6 @@ void TxViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option
     qint64 amount = index.data(TransactionTableModel::AmountRole).toLongLong();
     bool confirmed = index.data(TransactionTableModel::ConfirmedRole).toBool();
     QVariant value = index.data(Qt::ForegroundRole);
-    QString labelORaddressOverview;
     QString labelORaddressTransactions;
     QColor foreground = option.palette.color(QPalette::Text);
     if(qVariantCanConvert<QColor>(value))
@@ -47,21 +46,17 @@ void TxViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option
         foreground = qvariant_cast<QColor>(value);
     }
 
-    //Check if label empty or not
+    //Check if label empty or not and then set label instead of address
     if(!label.isEmpty())
         {
 
-            labelORaddressOverview = address;
             labelORaddressTransactions = label;
-
 
         } else {
 
-            labelORaddressOverview = address;
             labelORaddressTransactions = address;
 
         }
-
 
 
     painter->setPen(foreground);
@@ -139,7 +134,7 @@ void TxViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option
         painter->setFont(f);
         if(address.length() > 0)
         {
-            painter->drawText(addressRectValue2, Qt::AlignLeft|Qt::AlignTop, labelORaddressOverview);
+            painter->drawText(addressRectValue2, Qt::AlignLeft|Qt::AlignTop, address);
         }else{
             painter->drawText(addressRectValue2, Qt::AlignLeft|Qt::AlignTop, tr("Internal transaction"));
 
