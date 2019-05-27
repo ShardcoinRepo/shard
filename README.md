@@ -187,8 +187,26 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 <tr><td>addnode=159.89.113.69</td></tr>
 <tr><td>addnode=84.145.116.189</td></tr>
 <tr><td>addnode=178.128.226.47</td></tr>
-
 </table>
+
+
+
+## Testing
+
+Testing and code review is the bottleneck/delay for any development. Please be patient and help out by testing
+other people's pull requests to provide feedback, and remember this is a security-critical project where any mistake might cost people
+lots of money.
+
+### Automated Testing
+
+The Travis CI system makes sure that every pull request is built for Windows, Linux, and OS X, and that unit/sanity tests are run automatically.
+
+### Manual Quality Assurance (QA) Testing
+
+Changes should be tested by somebody other than the developer who wrote the
+code. This is especially important for large or high-risk changes. It is useful
+to add a test plan to the pull request description if testing the changes is
+not straightforward.
 
 
 
