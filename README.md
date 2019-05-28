@@ -17,27 +17,34 @@
 Shard can be used not only as a cryptocurrency, but also as a utility coin in multiple Shardax projects. Such as the Shardax Digital Asset Exchange & Staking Platform, Universal Infinity Wallet and the Quantum Project. In addition to the extra benefits when using Shard on these platforms; Shardax uses 20% of profits for liquidity, buying and burning Shard. This will decrease the existing supply, while coin holders can continuously stake without excessive inflation.
 
 
-## Resources
+
+## Getting Started & Resources
+
+Please see our [Faq](https://help.shardcoin.io/) if you have any questions or need help to understand how to install or use the Shard Wallet.
 
 :package: For Wallet software downloads, please see [Downloads](https://shardcoin.io/wallet.php)
 
-[Whitepaper](https://shardcoin.io/shard_whitepaper_Original.pdf)
+* [Website](https://shardcoin.io/)
 
-[Bitcointalk](https://bitcointalk.org/index.php?topic=2965061.0)
+* [Block Explorer](http://shardexplorer.com/)
 
-[Developments](https://shardcoin.io/roadmap.php)
+* [Whitepaper](https://shardcoin.io/shard_whitepaper_Original.pdf)
 
-[Shard FAQ](https://help.shardcoin.io/)
+* [Bitcointalk](https://bitcointalk.org/index.php?topic=2965061.0)
 
-[Twitter](https://twitter.com/shardcoin)
+* [Developments](https://shardcoin.io/roadmap.php)
 
-[Discord](https://discordapp.com/invite/SFqSd3U)
+* [Shard FAQ](https://help.shardcoin.io/)
 
-[Shardax](https://shardax.com/)
+* [Twitter](https://twitter.com/shardcoin)
 
-[Shardax Twitter](https://twitter.com/ShardaxOfficial)
+* [Discord](https://discordapp.com/invite/SFqSd3U)
 
-[Shardax Discord](https://discord.gg/Sj3xU6Z)
+* [Shardax](https://shardax.com/)
+
+* [Shardax Twitter](https://twitter.com/ShardaxOfficial)
+
+* [Shardax Discord](https://discord.gg/Sj3xU6Z)
 
 
 ## Development Process
@@ -93,6 +100,9 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 <tr><td>Coin Type</td><td>PoS (Proof of Stake)</td></tr>
 <tr><td>Max Supply</td><td>210,000,000*</td></tr>
 <tr><td>Block Time</td><td>120 Seconds</td></tr>
+<tr><td>Min Fee</td><td>0.0001 Shard</td></tr>
+<tr><td>Confirmations</td><td>10</td></tr>
+<tr><td>Maturity</td><td>10</td></tr>
 <tr><td>Inital Burn</td><td>15,000,000 Shard</td></tr>
 <tr><td>Shard Burned to date</td><td>1,010,000 Shard</td></tr>
 <tr><td>Minimum Stake Age</td><td>9 Hours</td></tr>
@@ -119,12 +129,12 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 <tr><td>Initial 2</td><td>24th Apr 2018</td><td>14,000,000</td><td>a1e158e3ee3f98fe891f7a729a8a97b9c3d36378e47998ebdf40edf0df3318c4</td></tr>
 <tr><td>Burn #1</td><td>1st Jun 2018</td><td>75,000</td><td>d011fc62b481b3e8bea7958cdcedf27b9001bccc04846198bb95566c6db651fa</td></tr>
 <tr><td>Burn #2</td><td>1st Jul 2018</td><td>115,000</td><td>f7ace4c4486d92b39bf0670f288c8d5b7c926eb0975db1ef08f203917451013f</td></tr>
-<tr><td>Burn #3</td><td></td><td></td><td></td></tr>
-<tr><td>Burn #4</td><td></td><td></td><td></td></tr>
-<tr><td>Burn #5</td><td></td><td></td><td></td></tr>
-<tr><td>Burn #6</td><td></td><td></td><td></td></tr>
-<tr><td>Burn #7</td><td></td><td></td><td></td></tr>
-<tr><td>Burn #8</td><td></td><td></td><td></td></tr>
+<tr><td>Burn #3</td><td></td><td>200,000</td><td></td></tr>
+<tr><td>Burn #4</td><td></td><td>140,000</td><td></td></tr>
+<tr><td>Burn #5</td><td>6th Dec 2018</td><td>175,000</td><td>4f850acbd2ce921d1ac42398a197968ad30b247c28c3c6aa9b2bc03639f4d9d2</td></tr>
+<tr><td>Burn #6</td><td>6th Jan 2019</td><td>100,000</td><td>5bdfc67bad19a11ef37fc87e8d355f123b217f9d075db6da174eb7fccea247d6</td></tr>
+<tr><td>Burn #7</td><td>14th Feb 2019</td><td>120,000</td><td>6c27c62247b82c3aa4298725e2155b05a6b4244db65c4817963ca5e34599cba8</td></tr>
+<tr><td>Burn #8</td><td>11th Apr 2019</td><td>160,000</td><td>1717072d9a6bc7ae88d802289a64484a45c98a785b2cbe2c9b4d90b69f177463</td></tr>
 </table>
 
 
@@ -144,49 +154,6 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 <tr><td>4 Years</td><td>3,340,001</td><td>4,340,000</td><td>4%</td></tr>
 <tr><td>4 Years</td><td>4,340,001</td><td>5,340,000</td><td>3%</td></tr>
 <tr><td>Infinity</td><td>5,340,001</td><td>+</td><td>2%</td></tr>
-</table>
-
-
-
-### Nodes List (If you have low connections)
-
-<table>
-<tr><td>addnode=217.253.77.68</td></tr>
-<tr><td>addnode=176.43.219.69</td></tr>
-<tr><td>addnode=133.18.206.188</td></tr>
-<tr><td>addnode=87.4.42.130</td></tr>
-<tr><td>addnode=64.228.74.180</td></tr>
-<tr><td>addnode=95.179.132.75</td></tr>
-<tr><td>addnode=178.131.200.236</td></tr>
-<tr><td>addnode=35.204.192.27</td></tr>
-<tr><td>addnode=159.203.24.133</td></tr>
-<tr><td>addnode=159.89.114.93</td></tr>
-<tr><td>addnode=18.188.240.73</td></tr>
-<tr><td>addnode=178.128.178.175</td></tr>
-<tr><td>addnode=54.174.89.97</td></tr>
-<tr><td>addnode=185.5.249.40</td></tr>
-<tr><td>addnode=69.73.114.197</td></tr>
-<tr><td>addnode=104.14.148.127</td></tr>
-<tr><td>addnode=89.22.100.119</td></tr>
-<tr><td>addnode=108.39.137.145</td></tr>
-<tr><td>addnode=94.60.71.161</td></tr>
-<tr><td>addnode=66.234.202.193</td></tr>
-<tr><td>addnode=94.130.25.217</td></tr>
-<tr><td>addnode=143.48.3.4</td></tr>
-<tr><td>addnode=89.0.235.104</td></tr>
-<tr><td>addnode=167.99.178.39</td></tr>
-<tr><td>addnode=213.93.111.119</td></tr>
-<tr><td>addnode=92.220.203.222</td></tr>
-<tr><td>addnode=185.3.1.145</td></tr>
-<tr><td>addnode=218.108.52.58</td></tr>
-<tr><td>addnode=201.17.64.44</td></tr>
-<tr><td>addnode=159.65.234.130</td></tr>
-<tr><td>addnode=95.47.170.60</td></tr>
-<tr><td>addnode=81.61.164.48</td></tr>
-<tr><td>addnode=120.239.159.172</td></tr>
-<tr><td>addnode=159.89.113.69</td></tr>
-<tr><td>addnode=84.145.116.189</td></tr>
-<tr><td>addnode=178.128.226.47</td></tr>
 </table>
 
 
