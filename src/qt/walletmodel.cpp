@@ -129,7 +129,7 @@ void WalletModel::updateTransaction(const QString &hash, int status)
 {
     if(transactionTableModel)
         transactionTableModel->updateTransaction(hash, status);
-    if(addressTableModel)
+    if(addressTableModel && status == 0)
     {
         addressTableModel->refreshWallet(hash);
        
