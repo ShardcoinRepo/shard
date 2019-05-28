@@ -1028,11 +1028,8 @@ void createConf()       //Automatic Shard.conf generation
 
     ofstream pConf;
     pConf.open(GetConfigFile().generic_string().c_str());
-    const char* nodes = "\nrpcport=48210"                  //List of known nodes, to be periodically updated
-                        "\nrpcallowip=127.0.0.1"
-                        "\ndaemon=1"
-                        "\nserver=1"
-                        "\nlistenonion=0";
+    const char* nodes = "\ndaemon=1"
+                        "\nserver=1";
 
     pConf   << std::string("rpcuser=")
             +  randomStrGen(5)
