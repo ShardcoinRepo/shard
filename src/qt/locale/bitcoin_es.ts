@@ -1865,7 +1865,7 @@ Esto significa que se requiere una cuota de al menos %2.</translation>
     </message>
     <message>
         <location line="+83"/>
-        <source>&lt;img src=&quot;:/images/res/images/transactions.png&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;List Transactions</source>
+        <source>&lt;img src=&quot;:/images/res/images/transactions.png&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Transactions List</source>
         <translation>&lt;img src=&quot;:/images/res/images/transactions.png&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Lista de Transaccciones</translation>
     </message>
     <message>

@@ -1872,7 +1872,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     </message>
     <message>
         <location line="+83"/>
-        <source>&lt;img src=&quot;:/images/res/images/transactions.png&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;List Transactions</source>
+        <source>&lt;img src=&quot;:/images/res/images/transactions.png&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Transactions List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
