@@ -1111,7 +1111,7 @@ margin-top:10px;</string>
 font: 14pt 'Ubuntu';</string>
                 </property>
                 <property name="text">
-                 <string>&lt;img src=&quot;:/images/res/images/transactions.png&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;List Transactions</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/res/images/transactions.png&quot;/&gt;    Transactions List&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="textFormat">
                  <enum>Qt::RichText</enum>
