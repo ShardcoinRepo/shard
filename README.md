@@ -104,7 +104,7 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 <tr><td>Confirmations</td><td>10</td></tr>
 <tr><td>Maturity</td><td>10</td></tr>
 <tr><td>Inital Burn</td><td>15,000,000 Shard</td></tr>
-<tr><td>Shard Burned to date</td><td>1,010,000 Shard</td></tr>
+<tr><td>Shard Burned to date</td><td>1,085,000 Shard</td></tr>
 <tr><td>Minimum Stake Age</td><td>9 Hours</td></tr>
 <tr><td>Maximum Stake Age</td><td>72 Hours</td></tr>
 <tr><td>Last POW Block</td><td>5000</td></tr>
