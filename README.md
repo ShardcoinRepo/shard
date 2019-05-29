@@ -180,12 +180,15 @@ not straightforward.
 ## Translations
 
 Changes to translations as well as new translations can be submitted to
-[Shard Coin Translation Repository](https://www.transifex.com/projects/p/shard-coin/).
+[Shard Coin Core Transifex page](https://www.transifex.com/projects/p/shard-coin/).
 
-Translations should be submitted as pull requests to the Translation Repository and before translating you should reserve the laguange you are looking to translate via our community translation [Discord Channel](https://discordapp.com/invite/SFqSd3U). We will be periodically merge translations into the Shard Coin Core repository. See the
+Translations are periodically pulled from Transifex and merged into the git repository. See the
 [translation process](doc/translation_process.md) for details on how this works.
 
-Translators should remember to join our [Discord](https://discordapp.com/invite/SFqSd3U).
+**Important**: We do not accept translation changes as GitHub pull requests because the next
+pull from Github would automatically overwrite them again.
+
+Translators should also join our [Discord](https://discordapp.com/invite/SFqSd3U).
 
 
 
