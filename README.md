@@ -129,8 +129,8 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 <tr><td>Initial 2</td><td>24th Apr 2018</td><td>14,000,000</td><td>a1e158e3ee3f98fe891f7a729a8a97b9c3d36378e47998ebdf40edf0df3318c4</td></tr>
 <tr><td>Burn #1</td><td>1st Jun 2018</td><td>75,000</td><td>d011fc62b481b3e8bea7958cdcedf27b9001bccc04846198bb95566c6db651fa</td></tr>
 <tr><td>Burn #2</td><td>1st Jul 2018</td><td>115,000</td><td>f7ace4c4486d92b39bf0670f288c8d5b7c926eb0975db1ef08f203917451013f</td></tr>
-<tr><td>Burn #3</td><td></td><td>200,000</td><td></td></tr>
-<tr><td>Burn #4</td><td></td><td>140,000</td><td></td></tr>
+<tr><td>Burn #3</td><td>1st Aug 2018</td><td>200,000</td><td>532731465ad7993bcb521b1841033115d867cf7a7beba949a96229ef8bc956f2</td></tr>
+<tr><td>Burn #4</td><td>2nd Sep 2018</td><td>140,000</td><td>dc97de37456f737966e12172dc04b155d17597437b0fc1a2b6fddd176382ac82</td></tr>
 <tr><td>Burn #5</td><td>6th Dec 2018</td><td>175,000</td><td>4f850acbd2ce921d1ac42398a197968ad30b247c28c3c6aa9b2bc03639f4d9d2</td></tr>
 <tr><td>Burn #6</td><td>6th Jan 2019</td><td>100,000</td><td>5bdfc67bad19a11ef37fc87e8d355f123b217f9d075db6da174eb7fccea247d6</td></tr>
 <tr><td>Burn #7</td><td>14th Feb 2019</td><td>120,000</td><td>6c27c62247b82c3aa4298725e2155b05a6b4244db65c4817963ca5e34599cba8</td></tr>
