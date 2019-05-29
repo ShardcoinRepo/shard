@@ -98,6 +98,7 @@ void TransactionFilterProxy::setShowInactive(bool showInactive)
 {
     this->showInactive = showInactive;
     invalidateFilter();
+     emit filterApplied()
 
 
 }
