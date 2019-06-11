@@ -17,7 +17,6 @@
 Shard can be used not only as a cryptocurrency, but also as a utility coin in multiple Shardax projects. Such as the Shardax Digital Asset Exchange & Staking Platform, Universal Infinity Wallet and the Quantum Project. In addition to the extra benefits when using Shard on these platforms; Shardax uses 20% of profits for liquidity, buying and burning Shard. This will decrease the existing supply, while coin holders can continuously stake without excessive inflation.
 
 
-
 ## Getting Started & Resources
 
 Please see our [Faq](https://help.shardcoin.io/) if you have any questions or need help to understand how to install or use the Shard Wallet.
