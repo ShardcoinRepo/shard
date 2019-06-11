@@ -28,8 +28,6 @@ To contribute a patch, the workflow is as follows:
   - Create topic branch
   - Commit patches
 
-The project coding conventions in the [developer notes](doc/developer-notes.md)
-must be adhered to.
 
 In general [commits should be atomic](https://en.wikipedia.org/wiki/Atomic_commit#Atomic_commit_convention)
 and diffs should be easy to read. For this reason do not mix any formatting
@@ -82,7 +80,7 @@ Examples:
     Trivial: Fix typo in init.cpp
 
 Note that translations should not be submitted as pull requests, please see
-[Translation Process](#) 
+[Translation Process](doc/translation_process.md) 
 for more information on helping with translations.
 
 If a pull request is specifically not to be considered for merging (yet) please
@@ -253,8 +251,7 @@ about:
     contribution, thundering silence is a good sign of widespread (mild) dislike of a given change
     (because people don't assume *others* won't actually like the proposal). Don't take
     that personally, though! Instead, take another critical look at what you are suggesting
-    and see if it: changes too much, is too broad, doesn't adhere to the
-    [developer notes](doc/developer-notes.md), is dangerous or insecure, is messily written, etc.
+    and see if it: changes too much, is too broad, is dangerous or insecure, is messily written, etc.
     Identify and address any of the issues you find. Then ask e.g. on IRC if someone could give
     their opinion on the concept itself.
   - It may be because your code is too complex for all but a few people. And those people
