@@ -143,17 +143,18 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 
 <table>
 <th>Time</th><th>Block Start</th><th>Block End</th><th>Reward</th>
-<tr><td>194 Days</td><td>140,001</td><td>280,000</td><td>50%</td></tr>
-<tr><td>27 Days</td><td>280,001</td><td>300,000</td><td>25%</td></tr>
-<tr><td>1 Year</td><td>300,001</td><td>560,000</td><td>10%</td></tr>
-<tr><td>2 Years</td><td>560,001</td><td>1,100,000</td><td>9%</td></tr>
-<tr><td>2 Years</td><td>1,100,001</td><td>1,660,000</td><td>8%</td></tr>
-<tr><td>2 Years</td><td>1,660,001</td><td>2,220,000</td><td>7%</td></tr>
-<tr><td>2 Years</td><td>2,220,001</td><td>2,780,000</td><td>6%</td></tr>
-<tr><td>2 Years</td><td>2,780,001</td><td>3,340,000</td><td>5%</td></tr>
-<tr><td>4 Years</td><td>3,340,001</td><td>4,340,000</td><td>4%</td></tr>
-<tr><td>4 Years</td><td>4,340,001</td><td>5,340,000</td><td>3%</td></tr>
-<tr><td>Infinity</td><td>5,340,001</td><td>+</td><td>2%</td></tr>
+<tr><td>194 Days</td><td>140,001</td><td>300,000</td><td>50%</td></tr>
+<tr><td>45 Days</td><td>300,001</td><td>330,000</td><td>25%</td></tr>
+<tr><td>2 Years</td><td>330,001</td><td>855,000</td><td>10%</td></tr>
+<tr><td>2 Years</td><td>855,001</td><td>1,380,000</td><td>9%</td></tr>
+<tr><td>2 Years</td><td>1,380,001</td><td>1,906,000</td><td>8%</td></tr>
+<tr><td>3 Years</td><td>1,906,001</td><td>2,695,000</td><td>7%</td></tr>
+<tr><td>3 Years</td><td>2,695,001</td><td>3,483,000</td><td>6%</td></tr>
+<tr><td>3 Years</td><td>3,483,001</td><td>4,272,000</td><td>5%</td></tr>
+<tr><td>4 Years</td><td>4,272,001</td><td>5,340,000</td><td>4%</td></tr>
+<tr><td>4 Years</td><td>5,340,001</td><td>6,340,000</td><td>3%</td></tr>
+<tr><td>8 Years</td><td>6,340,001</td><td>8,340,000</td><td>2%</td></tr>
+<tr><td>Infinity</td><td>8,340,001</td><td>+</td><td>1%</td></tr>
 </table>
 
 
