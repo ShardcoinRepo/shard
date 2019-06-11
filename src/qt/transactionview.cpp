@@ -253,7 +253,7 @@ void TransactionView::setModel(WalletModel *model)
         transactionProxyModel->setLimit(-1);
         transactionProxyModel->setDynamicSortFilter(true);
         transactionProxyModel->setSortRole(Qt::EditRole);
-        transactionProxyModel->setShowInactive(false);
+        transactionProxyModel->setShowInactive(true);
         transactionProxyModel->sort(TransactionTableModel::Date, Qt::DescendingOrder);
 
         transactionProxyModel->setSortRole(Qt::EditRole);
