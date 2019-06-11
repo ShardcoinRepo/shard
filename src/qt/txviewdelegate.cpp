@@ -154,7 +154,11 @@ void TxViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option
 
             painter->drawText(confirmationsRectValue2, Qt::AlignLeft|Qt::AlignTop, tr("Confirmed (%n confirmations)","",index.data(TransactionTableModel::ConfirmationsRole).toInt()));
         }else{
-            painter->drawText(confirmationsRectValue2, Qt::AlignLeft|Qt::AlignTop, tr("Unconfirmed (%n confirmations)","",index.data(TransactionTableModel::ConfirmationsRole).toInt()));
+
+            if((status == TransactionStatus::Conflicted || status == TransactionStatus::NotAccepted))
+                painter->drawText(confirmationsRectValue2, Qt::AlignLeft|Qt::AlignTop, "-");
+            else
+                painter->drawText(confirmationsRectValue2, Qt::AlignLeft|Qt::AlignTop, tr("Unconfirmed (%n confirmations)","",index.data(TransactionTableModel::ConfirmationsRole).toInt()));
 
         }
         QRect idRect2(15,confirmationsRectValue2.bottom()+5, w_main,textDiference);
