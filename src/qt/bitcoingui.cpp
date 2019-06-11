@@ -497,7 +497,7 @@ void BitcoinGUI::createToolBars()
     toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
 
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-    toolbar->setStyleSheet("QToolBar { background: '#15202d';padding:0px }QToolButton:disabled { color:gray} QToolButton { padding: 10px;width: 100%;color:white;background: '#15202d'; margin:0px; border:none } QToolButton:hover{ background: '#1d2e3f'} QToolButton:checked{ background: '#1d2e3f'; font:bold;padding-left:15px; color:white;border-right:3px solid '#0adbf0'; }");
+    toolbar->setStyleSheet("QToolBar { background: '#15202d';padding:0px;spacing:0px; }QToolButton:disabled { color:gray} QToolButton { padding: 10px;width: 100%;color:white;background: '#15202d'; margin:0px; border:none } QToolButton:hover{ background: '#1d2e3f'} QToolButton:checked{ background: '#1d2e3f'; font:bold;padding-left:15px; color:white;border-right:3px solid '#0adbf0'; }");
 
     logoMenu = new QLabel();
 
