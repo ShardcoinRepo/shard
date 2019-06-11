@@ -151,9 +151,9 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 <tr><td>3 Years</td><td>1,906,001</td><td>2,695,000</td><td>7%</td></tr>
 <tr><td>3 Years</td><td>2,695,001</td><td>3,483,000</td><td>6%</td></tr>
 <tr><td>3 Years</td><td>3,483,001</td><td>4,272,000</td><td>5%</td></tr>
-<tr><td>4 Years</td><td>4,272,001</td><td>5,340,000</td><td>4%</td></tr>
-<tr><td>4 Years</td><td>5,340,001</td><td>6,340,000</td><td>3%</td></tr>
-<tr><td>8 Years</td><td>6,340,001</td><td>8,340,000</td><td>2%</td></tr>
+<tr><td>4 Years</td><td>4,272,001</td><td>5,320,000</td><td>4%</td></tr>
+<tr><td>4 Years</td><td>5,340,001</td><td>6,370,000</td><td>3%</td></tr>
+<tr><td>8 Years</td><td>6,340,001</td><td>8,500,000</td><td>2%</td></tr>
 <tr><td>Infinity</td><td>8,340,001</td><td>+</td><td>1%</td></tr>
 </table>
 
