@@ -167,7 +167,7 @@ lots of money.
 
 ### Automated Testing
 
-The Travis CI system makes sure that every pull request is built for Windows, Linux, and OS X, and that unit/sanity tests are run automatically.
+We will be integrating Travis CI system to makes sure that every pull request is built for Windows, Linux, and OS X, and that unit/sanity tests are run automatically.
 
 ### Manual Quality Assurance (QA) Testing
 
