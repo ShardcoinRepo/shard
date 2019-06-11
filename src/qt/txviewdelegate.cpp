@@ -1,6 +1,7 @@
 #include "txviewdelegate.h"
 #include "transactiontablemodel.h"
 #include <QtGlobal>
+#include "transactionrecord.h"
 
 void TxViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
                   const QModelIndex &index ) const
@@ -141,6 +142,8 @@ void TxViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option
         }
         f.setBold(true);
         painter->setFont(f);
+        int status = index.data(TransactionTableModel::StatusRole).toInt();
+
         QRect confirmationsRect2(15,addressRectValue2.bottom()+5, w_main,textDiference);
         QRect confirmationsRectValue2(15,confirmationsRect2.bottom()+2, w_main,textDiference);
         painter->drawText(confirmationsRect2, Qt::AlignLeft|Qt::AlignTop, tr("CONFIRMATIONS"));
