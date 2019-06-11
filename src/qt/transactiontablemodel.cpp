@@ -118,7 +118,7 @@ public:
                 }
                 bal = 0;
                 debit = 0;
-                while(min < QDateTime::currentDateTime()){
+                while(min < QDateTime::currentDateTime().addYears(1)){
                     bal += parent->mapTransactions[min.toMSecsSinceEpoch()/1000];
 
                     parent->mapTransactions[min.toMSecsSinceEpoch()/1000] = bal;
