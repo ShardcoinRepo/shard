@@ -501,23 +501,22 @@ void BitcoinGUI::createToolBars()
 
     logoMenu = new QLabel();
 
-    QPixmap img(":/images/res/images/index.png");
-    img = img.scaled(75,75,Qt::KeepAspectRatio);
-    logoMenu->setPixmap(img);
-    logoMenu->setStyleSheet("QLabel { background: '#15202d';padding:15px; padding-top:45px; } ");
+
+    logoMenu->setStyleSheet("QLabel { background-image:url(':/images/res/images/index.png');background-repeat:no-repeat; background-position: center bottom;background-color: '#15202d';padding:15px; padding-top:85px; } ");
     logoMenu->setAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
-    logoMenu->setFixedWidth(img.width()+100);
+    logoMenu->setFixedWidth(175);
+
     toolbar->addWidget(logoMenu);
     QLabel* bal = new QLabel(tr("SHARD BALANCE"));
-     bal->setStyleSheet("QLabel { background: '#15202d';color:white;padding:5px;font:11pt 'Ubuntu'  } ");
+     bal->setStyleSheet("QLabel { background: '#15202d';color:white;padding:5px;font:11pt 'Ubuntu';padding-top:15px  } ");
     bal->setAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
-    bal->setFixedWidth(img.width()+100);
+    bal->setFixedWidth(175);
     toolbar->addWidget(bal);
-
+    toolbar->setFixedWidth(175);
     balanceTotal= new QLabel("-");
     balanceTotal->setStyleSheet("QLabel { background: '#15202d';color:white;padding-bottom:15px;font:11pt 'Ubuntu'  } ");
     balanceTotal->setAlignment(Qt::AlignHCenter|Qt::AlignVCenter);
-    balanceTotal->setFixedWidth(img.width()+130);
+    balanceTotal->setFixedWidth(175);
     toolbar->addWidget(balanceTotal);
     toolbar->addAction(overviewAction);
     toolbar->addAction(receiveCoinsAction);
