@@ -199,15 +199,8 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     labelStakingIcon->setStyleSheet("QLabel{color:white;margin-left:0px;background-color: #15202d;border:0px} QToolTip {color:white;margin-left:0px;background-color: #15202d;border:0px;padding:5px}");
     labelConnectionsIcon->setStyleSheet("QLabel{color:white;margin-left:0px;background-color: #15202d;border:0px} QToolTip {color:white;margin-left:0px;background-color: #15202d;border:0px;padding:5px}");
 
-#ifdef __linux__
-    //linux code goes here
-    labelEncryptionText->setStyleSheet("color:#dddddd;font-size:12px;margin-left:10px;background-color:transparent");
-#elif _WIN32
-    // windows code goes here
-    labelEncryptionText->setStyleSheet("color:#dddddd;font-size:12px;margin-left:12px;background-color:transparent");
-    labelEncryptionIcon->setFixedWidth(30);
-#else
-#endif
+    labelEncryptionText->setStyleSheet("color:#dddddd;font-size:12px;margin-left:2px;background-color:transparent");
+    labelEncryptionIcon->setFixedWidth(25);
 
     frameBlocksLayout->addWidget(labelEncryptionIcon);
          centralLayout->setMargin(0);
@@ -662,16 +655,7 @@ void BitcoinGUI::createTrayIcon()
     notificator = new Notificator(qApp->applicationName(), trayIcon);
 }
 
-#ifndef Q_OS_MAC
-void BitcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
-{
-    if(reason == QSystemTrayIcon::Trigger)
-    {
-        // Click on system tray icon triggers show/hide of the main window
-        toggleHideAction->trigger();
-    }
-}
-#endif
+
 
 void BitcoinGUI::optionsClicked()
 {
