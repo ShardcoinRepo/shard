@@ -36,7 +36,7 @@
  *
  * Memory locks do not stack, that is, pages which have been locked several times by calls to mlock()
  * will be unlocked by a single call to munlock(). This can result in keying material ending up in swap when
- * those functions are used naively. This class simulates stacking memory locks by keeping a counter per page.
+ * those functions are used naively. This class simulates staking memory locks by keeping a counter per page.
  *
  * @note By using a map from each page base address to lock count, this class is optimized for
  * small objects that span up to a few pages, mostly smaller than a page. To support large allocations,

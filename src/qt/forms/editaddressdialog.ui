@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Edit Address</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background:'#0b1d2c';</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QFormLayout" name="formLayout">
@@ -21,6 +24,9 @@
      </property>
      <item row="0" column="0">
       <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">color:white</string>
+       </property>
        <property name="text">
         <string>&amp;Label</string>
        </property>
@@ -34,10 +40,22 @@
        <property name="toolTip">
         <string>The label associated with this address book entry</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background:#1d2e3f;
+color:white;
+padding:7px;
+border-radius:5px;
+font: 10pt 'Ubuntu';
+margin-bottom:2px;
+</string>
+       </property>
       </widget>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">color:white</string>
+       </property>
        <property name="text">
         <string>&amp;Address</string>
        </property>
@@ -51,12 +69,56 @@
        <property name="toolTip">
         <string>The address associated with this address book entry. This can only be modified for sending addresses.</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background:#1d2e3f;
+color:white;
+padding:7px;
+border-radius:5px;
+font: 10pt 'Ubuntu';
+margin-bottom:2px;
+</string>
+       </property>
       </widget>
      </item>
     </layout>
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="styleSheet">
+      <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:5px 20px;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0b1d2c';
+color:gray;
+border:2px solid #102537;
+ }
+</string>
+     </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
@@ -76,8 +138,8 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
+     <x>257</x>
+     <y>116</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -92,8 +154,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
+     <x>325</x>
+     <y>116</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>

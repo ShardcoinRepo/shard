@@ -3,7 +3,7 @@
 
 #include <QAbstractTableModel>
 #include <QStringList>
-
+#include <QPoint>
 class CWallet;
 class TransactionTablePriv;
 class TransactionRecord;
@@ -24,7 +24,8 @@ public:
         Date = 1,
         Type = 2,
         ToAddress = 3,
-        Amount = 4
+        Amount = 4,
+        Expanded = 5
     };
 
     /** Roles to get specific information from a transaction row.
@@ -50,14 +51,34 @@ public:
         /** Formatted amount, without brackets when unconfirmed */
         FormattedAmountRole,
         /** Transaction status (TransactionRecord::Status) */
-        StatusRole
+        StatusRole,
+        ConfirmationsRole,
+        ExpandedDashboardRole,
+        ExpandedTransactionsRole
+
     };
 
-    int rowCount(const QModelIndex &parent) const;
+    QPoint pos;
+
+    int rowCount(const QModelIndex &parent = QModelIndex()) const;
     int columnCount(const QModelIndex &parent) const;
     QVariant data(const QModelIndex &index, int role) const;
+    virtual bool setData(const QModelIndex &index, const QVariant &value, int role);
     QVariant headerData(int section, Qt::Orientation orientation, int role) const;
     QModelIndex index(int row, int column, const QModelIndex & parent = QModelIndex()) const;
+
+    std::map<qint64, double> mapTransactions;
+    std::map<qint64, double> mapDebit;
+    std::map<std::string, qint64> mapAmounts;
+
+
+
+    void switchExpandDashboard(const QModelIndex &index);
+    void setExpandDashboard(const QModelIndex &index, bool value);
+    void switchExpandTransactions(const QModelIndex &index);
+    void setExpandTransactions(const QModelIndex &index, bool value);
+
+
 
 private:
     CWallet* wallet;
@@ -82,6 +103,8 @@ public slots:
     void updateDisplayUnit();
 
     friend class TransactionTablePriv;
+signals:
+    void filterApplied();
 };
 
 #endif // TRANSACTIONTABLEMODEL_H

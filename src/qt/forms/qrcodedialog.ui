@@ -7,11 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>340</width>
-    <height>530</height>
+    <height>562</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>QR Code Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background:'#0a2634';</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
@@ -69,6 +72,9 @@
         <property name="enabled">
          <bool>true</bool>
         </property>
+        <property name="styleSheet">
+         <string notr="true">color:white</string>
+        </property>
         <property name="text">
          <string>Request Payment</string>
         </property>
@@ -81,6 +87,9 @@
         </property>
         <item row="1" column="0">
          <widget class="QLabel" name="lblLabel">
+          <property name="styleSheet">
+           <string notr="true">color:white</string>
+          </property>
           <property name="text">
            <string>Label:</string>
           </property>
@@ -96,10 +105,20 @@
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLineEdit" name="lnLabel"/>
+         <widget class="QLineEdit" name="lnLabel">
+          <property name="styleSheet">
+           <string notr="true">background:#003750;
+color:white;
+padding:2px;
+border-radius:5px;</string>
+          </property>
+         </widget>
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="lblMessage">
+          <property name="styleSheet">
+           <string notr="true">color:white</string>
+          </property>
           <property name="text">
            <string>Message:</string>
           </property>
@@ -115,7 +134,14 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLineEdit" name="lnMessage"/>
+         <widget class="QLineEdit" name="lnMessage">
+          <property name="styleSheet">
+           <string notr="true">background:#003750;
+color:white;
+padding:2px;
+border-radius:5px;</string>
+          </property>
+         </widget>
         </item>
         <item row="0" column="0">
          <widget class="QLabel" name="lblAmount">
@@ -124,6 +150,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:white</string>
           </property>
           <property name="text">
            <string>Amount:</string>
@@ -171,6 +200,52 @@
         </item>
         <item>
          <widget class="QPushButton" name="btnSaveAs">
+          <property name="styleSheet">
+           <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid #0f3e54;
+	color:white;
+padding:5px;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#003750&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#003750&quot;;
+	border:1px solid #0f3e54;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#003750&quot;;
+	border:1px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#003750&quot;;
+border:1px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid #0f3e54;
+ }
+</string>
+          </property>
           <property name="text">
            <string>&amp;Save As...</string>
           </property>
@@ -188,6 +263,7 @@
    <class>BitcoinAmountField</class>
    <extends>QSpinBox</extends>
    <header>bitcoinamountfield.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources/>

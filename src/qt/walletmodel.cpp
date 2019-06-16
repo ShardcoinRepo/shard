@@ -22,9 +22,9 @@ WalletModel::WalletModel(CWallet *wallet, OptionsModel *optionsModel, QObject *p
 {
     fForceCheckBalanceChanged = false;
 
-    addressTableModel = new AddressTableModel(wallet, this);
-    transactionTableModel = new TransactionTableModel(wallet, this);
 
+    transactionTableModel = new TransactionTableModel(wallet, this);
+ addressTableModel = new AddressTableModel(wallet, this);
     // This timer will be fired repeatedly to update the balance
     pollTimer = new QTimer(this);
     connect(pollTimer, SIGNAL(timeout()), this, SLOT(pollBalanceChanged()));
@@ -36,6 +36,12 @@ WalletModel::WalletModel(CWallet *wallet, OptionsModel *optionsModel, QObject *p
 WalletModel::~WalletModel()
 {
     unsubscribeFromCoreSignals();
+}
+void WalletModel::mapAddressAmount(std::string st, qint64 amount){
+    wallet->mapAddressBookAmount[st] += amount;
+}
+void WalletModel::clearMapAddressAmount(){
+    wallet->mapAddressBookAmount.clear();
 }
 
 qint64 WalletModel::getBalance(const CCoinControl *coinControl) const
@@ -123,7 +129,13 @@ void WalletModel::updateTransaction(const QString &hash, int status)
 {
     if(transactionTableModel)
         transactionTableModel->updateTransaction(hash, status);
+    if(addressTableModel && status == 0)
+    {
+        addressTableModel->refreshWallet(hash);
+       
 
+
+    }
     // Balance and number of transactions might have changed
     fForceCheckBalanceChanged = true;
 }

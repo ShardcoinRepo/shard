@@ -4,7 +4,7 @@
 #include <QObject>
 #include <vector>
 #include <map>
-
+#include <string>
 #include "allocators.h" /* for SecureString */
 
 class OptionsModel;
@@ -52,7 +52,8 @@ public:
         TransactionCommitFailed,
         Aborted
     };
-
+   void clearMapAddressAmount();
+      void mapAddressAmount(std::string addres, qint64 amount);
     enum EncryptionStatus
     {
         Unencrypted,  // !wallet->IsCrypted()
@@ -63,6 +64,7 @@ public:
     OptionsModel *getOptionsModel();
     AddressTableModel *getAddressTableModel();
     TransactionTableModel *getTransactionTableModel();
+
 
     qint64 getBalance(const CCoinControl *coinControl=NULL) const;
     qint64 getStake() const;
@@ -122,6 +124,7 @@ public:
     };
 
     UnlockContext requestUnlock();
+
 
     bool getPubKey(const CKeyID &address, CPubKey& vchPubKeyOut) const;
     void getOutputs(const std::vector<COutPoint>& vOutpoints, std::vector<COutput>& vOutputs);

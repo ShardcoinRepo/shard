@@ -13,11 +13,20 @@
   <property name="windowTitle">
    <string>Transaction details</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background:'#0b1d2c';</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTextEdit" name="detailText">
      <property name="toolTip">
       <string>This pane shows a detailed description of the transaction</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">	border:2px solid #1d2e3f;
+color:white;
+padding 5px;
+</string>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -26,6 +35,41 @@
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="styleSheet">
+      <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:5px 20px;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0b1d2c';
+color:gray;
+border:2px solid #102537;
+ }
+</string>
+     </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SignMessage</class>
+ <widget class="QWidget" name="SignMessage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>526</width>
+    <height>501</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="infoLabel_SM">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:#72909e;</string>
+        </property>
+        <property name="text">
+         <string>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_1_SM">
+        <item>
+         <widget class="QValidatedLineEdit" name="addressIn_SM">
+          <property name="styleSheet">
+           <string notr="true">background:#102537;
+color:white;
+padding:6px;
+border:1px solid #003750;
+border-radius:0px;
+font: 10pt 'Ubuntu';</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="addressBookButton_SM">
+          <property name="styleSheet">
+           <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:5px;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0b1d2c';
+color:gray;
+border:2px solid #102537;
+ }
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../bitcoin.qrc">
+            <normaloff>:/images/res/images/book.png</normaloff>:/images/res/images/book.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pasteButton_SM">
+          <property name="styleSheet">
+           <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:5px;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0b1d2c';
+color:gray;
+border:2px solid #102537;
+ }
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../bitcoin.qrc">
+            <normaloff>:/images/res/images/copy.png</normaloff>:/images/res/images/copy.png</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="messageIn_SM">
+        <property name="styleSheet">
+         <string notr="true">QPlainTextEdit{font: 10pt 'Ubuntu';background:#102537;border:0px;color:white;
+padding:5px;}
+
+QScrollArea{border:0px;margin:0px;background:#102537;}
+
+QScrollBar
+{
+background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+       stop: 0 rgb(3, 32, 52), stop: 0.5 rgb(4, 35, 58), stop:1 rgb(3, 32, 52));
+width:9px;
+}
+QScrollBar::handle
+{
+background: rgb(0, 51, 78);
+width:9px;
+
+}
+QScrollBar::handle:hover
+{
+background: rgb(0, 67, 97);
+width:9px;
+
+}
+QScrollBar::add-line
+{
+
+height: 0px;
+}
+QScrollBar::sub-line
+{
+height: 0px;
+}
+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLineEdit" name="signatureOut_SM">
+          <property name="styleSheet">
+           <string notr="true">background:#102537;
+color:white;
+padding:6px;
+border:1px solid #003750;
+border-radius:0px;
+font: 10pt 'Ubuntu';</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="copySignatureButton_SM">
+          <property name="styleSheet">
+           <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:5px;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0b1d2c';
+color:gray;
+border:2px solid #102537;
+ }
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../bitcoin.qrc">
+            <normaloff>:/images/res/images/pasteicon.png</normaloff>:/images/res/images/pasteicon.png</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="signMessageButton_SM">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:5px;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0b1d2c';
+color:gray;
+border:2px solid #102537;
+ }
+</string>
+          </property>
+          <property name="text">
+           <string>   Sign Message</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../bitcoin.qrc">
+            <normaloff>:/images/res/images/sing.png</normaloff>:/images/res/images/sing.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="clearButton_SM">
+          <property name="minimumSize">
+           <size>
+            <width>120</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:5px;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0b1d2c';
+color:gray;
+border:2px solid #102537;
+ }
+</string>
+          </property>
+          <property name="text">
+           <string>    Clear All</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../bitcoin.qrc">
+            <normaloff>:/images/res/images/clear.png</normaloff>:/images/res/images/clear.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="statusLabel_SM">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QValidatedLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">qvalidatedlineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../bitcoin.qrc"/>
+ </resources>
+ <connections/>
+</ui>

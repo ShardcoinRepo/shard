@@ -20,14 +20,15 @@
 using namespace std;
 
 extern int nStakeMaxAge;
+double GetPoSKernelPS();
 
 // Settings
 int64_t nTransactionFee = MIN_TX_FEE;
 int64_t nReserveBalance = 0;
 int64_t nMinimumInputValue = 0;
 
-static int64_t GetStakeCombineThreshold() { return 1000 * COIN; }
-static int64_t GetStakeSplitThreshold() { return 2 * GetStakeCombineThreshold(); }
+static int64_t GetStakeSplitThreshold() { return GetPoSKernelPS() / (5 * (nStakeMinAge / GetTargetSpacing(nBestHeight))); }
+static int64_t GetStakeCombineThreshold() { return GetStakeSplitThreshold() / 2; }
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -541,7 +542,6 @@ bool CWallet::AddToWallet(const CWalletTx& wtxIn)
         // since AddToWallet is called directly for self-originating transactions, check for consumption of own coins
         WalletUpdateSpent(wtx, (wtxIn.hashBlock != 0));
 
-        // Notify UI of new or updated transaction
         NotifyTransactionChanged(this, hash, fInsertedNew ? CT_NEW : CT_UPDATED);
 
         // notify an external script when a wallet transaction comes in or is updated
@@ -1204,9 +1204,12 @@ int64_t CWallet::GetStake() const
 {
     int64_t nTotal = 0;
     LOCK2(cs_main, cs_wallet);
+
     for (map<uint256, CWalletTx>::const_iterator it = mapWallet.begin(); it != mapWallet.end(); ++it)
     {
         const CWalletTx* pcoin = &(*it).second;
+
+
         if (pcoin->IsCoinStake() && pcoin->GetBlocksToMaturity() > 0 && pcoin->GetDepthInMainChain() > 0)
             nTotal += CWallet::GetCredit(*pcoin);
     }
@@ -1217,9 +1220,11 @@ int64_t CWallet::GetNewMint() const
 {
     int64_t nTotal = 0;
     LOCK2(cs_main, cs_wallet);
+
     for (map<uint256, CWalletTx>::const_iterator it = mapWallet.begin(); it != mapWallet.end(); ++it)
     {
         const CWalletTx* pcoin = &(*it).second;
+
         if (pcoin->IsCoinBase() && pcoin->GetBlocksToMaturity() > 0 && pcoin->GetDepthInMainChain() > 0)
             nTotal += CWallet::GetCredit(*pcoin);
     }
@@ -1744,7 +1749,7 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
             int64_t nTimeWeight = GetWeight((int64_t)pcoin.first->nTime, (int64_t)txNew.nTime);
 
             // Stop adding more inputs if already too many inputs
-            if (txNew.vin.size() >= 10)
+            if (txNew.vin.size() >= 2)
                 break;
             // Stop adding inputs if reached reserve limit
             if (nCredit + pcoin.first->vout[pcoin.second].nValue > nBalance - nReserveBalance)
@@ -1976,6 +1981,7 @@ bool CWallet::SetAddressBookName(const CTxDestination& address, const string& st
         std::map<CTxDestination, std::string>::iterator mi = mapAddressBook.find(address);
         fUpdated = mi != mapAddressBook.end();
         mapAddressBook[address] = strName;
+
     }
     NotifyAddressBookChanged(this, address, strName, ::IsMine(*this, address),
                              (fUpdated ? CT_UPDATED : CT_NEW) );

@@ -5,11 +5,15 @@
 QValidatedLineEdit::QValidatedLineEdit(QWidget *parent) :
     QLineEdit(parent), valid(true)
 {
+    default_style= "background:#1d2e3f;\ncolor:white;\npadding:7px;\nborder-radius:5px;\nfont: 10pt 'Ubuntu';\nmargin-bottom:2px;";
+
     connect(this, SIGNAL(textChanged(QString)), this, SLOT(markValid()));
 }
 
 void QValidatedLineEdit::setValid(bool valid)
 {
+    if(default_style == "")
+        default_style= ((QWidget*)parent())->styleSheet();
     if(valid == this->valid)
     {
         return;
@@ -17,11 +21,11 @@ void QValidatedLineEdit::setValid(bool valid)
 
     if(valid)
     {
-        setStyleSheet("");
+        setStyleSheet(default_style);
     }
     else
     {
-        setStyleSheet(STYLE_INVALID);
+        setStyleSheet(default_style+STYLE_INVALID);
     }
     this->valid = valid;
 }

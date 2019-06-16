@@ -13,12 +13,18 @@
   <property name="windowTitle">
    <string>Options</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background:'#0a2634';</string>
+  </property>
   <property name="modal">
    <bool>true</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTabWidget" name="tabWidget">
+     <property name="styleSheet">
+      <string notr="true">color:white</string>
+     </property>
      <property name="tabPosition">
       <enum>QTabWidget::North</enum>
      </property>
@@ -132,19 +138,6 @@
          </property>
         </widget>
        </item>
-       <item>
-        <spacer name="verticalSpacer_Main">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="tabNetwork">
@@ -198,6 +191,12 @@
            <property name="toolTip">
             <string>IP address of the proxy (e.g. 127.0.0.1)</string>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background:#003750;
+color:white;
+padding:2px;
+border-radius:5px;</string>
+           </property>
           </widget>
          </item>
          <item>
@@ -223,6 +222,12 @@
            </property>
            <property name="toolTip">
             <string>Port of the proxy (e.g. 9050)</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background:#003750;
+color:white;
+padding:2px;
+border-radius:5px;</string>
            </property>
           </widget>
          </item>
@@ -425,6 +430,50 @@
      </item>
      <item>
       <widget class="QPushButton" name="okButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+	outline: none;
+	padding:10px;
+}
+
+QPushButton:pressed {
+   background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+	border:1px solid #0adbf0;
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#002d3f&quot;;
+	border:1px solid #0adbf0;
+ }
+QPushButton:checked { 
+     background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid gray;
+ }
+</string>
+       </property>
        <property name="text">
         <string>&amp;OK</string>
        </property>
@@ -432,6 +481,50 @@
      </item>
      <item>
       <widget class="QPushButton" name="cancelButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+	outline: none;
+	padding:10px;
+}
+
+QPushButton:pressed {
+   background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+	border:1px solid #0adbf0;
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#002d3f&quot;;
+	border:1px solid #0adbf0;
+ }
+QPushButton:checked { 
+     background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid gray;
+ }
+</string>
+       </property>
        <property name="text">
         <string>&amp;Cancel</string>
        </property>
@@ -442,6 +535,50 @@
      </item>
      <item>
       <widget class="QPushButton" name="applyButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+	outline: none;
+	padding:10px;
+}
+
+QPushButton:pressed {
+   background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+	border:1px solid #0adbf0;
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#002d3f&quot;;
+	border:1px solid gray;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#002d3f&quot;;
+	border:1px solid #0adbf0;
+ }
+QPushButton:checked { 
+     background-color: &quot;#002d3f&quot;;
+border:1px solid gray;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid gray;
+ }
+</string>
+       </property>
        <property name="text">
         <string>&amp;Apply</string>
        </property>
@@ -456,19 +593,20 @@
  </widget>
  <customwidgets>
   <customwidget>
+   <class>QValidatedLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">qvalidatedlineedit.h</header>
+  </customwidget>
+  <customwidget>
    <class>BitcoinAmountField</class>
    <extends>QSpinBox</extends>
-   <header>bitcoinamountfield.h</header>
+   <header location="global">bitcoinamountfield.h</header>
+   <container>1</container>
   </customwidget>
   <customwidget>
    <class>QValueComboBox</class>
    <extends>QComboBox</extends>
    <header>qvaluecombobox.h</header>
-  </customwidget>
-  <customwidget>
-   <class>QValidatedLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>qvalidatedlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

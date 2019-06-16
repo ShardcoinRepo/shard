@@ -9,6 +9,7 @@
 #include <QDoubleSpinBox>
 #include <QApplication>
 #include <qmath.h> // for qPow()
+#include <QListView>
 
 BitcoinAmountField::BitcoinAmountField(QWidget *parent):
         QWidget(parent), amount(0), currentUnit(-1)
@@ -17,17 +18,36 @@ BitcoinAmountField::BitcoinAmountField(QWidget *parent):
     amount->setLocale(QLocale::c());
     amount->setDecimals(8);
     amount->installEventFilter(this);
-    amount->setMaximumWidth(170);
+    amount->setMinimumWidth(350);
     amount->setSingleStep(0.001);
+    amount->setButtonSymbols(QAbstractSpinBox::NoButtons);
+    amount->setValue(0.0);
 
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->addWidget(amount);
+    layout->setMargin(0);
+    layout->setSpacing(0);
+
     unit = new QValueComboBox(this);
     unit->setModel(new BitcoinUnits(this));
+
+    unit->setStyleSheet("QComboBox{background:#1d2e3f;height:33px;font-size:10px;\ncolor:white;\n\nborder-radius:5px;border-top-left-radius:0px;border-bottom-left-radius:0px;margin-left:-1px;border-left:3px solid #345270;padding-right:0px}QComboBox::drop-down{border:0px}QComboBox::down-arrow{image:url(:/images/res/images/gray.png);margin-left:-18px;width:14px;height:14px}QComboBox QAbstractItemView {border: 0px solid #0f3e54;selection-background-color: #0f3e54;selection-color:blue;margin:0px;padding:0px;outline:none;}");
+unit->setFixedWidth(82);
+
+
     layout->addWidget(unit);
-    layout->addStretch(1);
+
     layout->setContentsMargins(0,0,0,0);
 
+    QListView* listView = new QListView(unit);
+#if defined(Q_OS_WIN)
+    listView->setStyleSheet("QListView{margin-bottom:0px;}QListView::item{color:#eeeeee;background:#102537;padding:5px} QListView::item:hover{background:#1d2e3f;color:white;}");
+
+#else
+    listView->setStyleSheet("QListView{margin-bottom:-20px;}QListView::item{color:#eeeeee;background:#102537;padding:5px} QListView::item:hover{background:#1d2e3f;color:white;}");
+
+#endif
+    unit->setView(listView);
     setLayout(layout);
 
     setFocusPolicy(Qt::TabFocus);

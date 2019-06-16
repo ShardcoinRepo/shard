@@ -13,14 +13,20 @@
   <property name="windowTitle">
    <string>Signatures - Sign / Verify a Message</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background:'#0a2634';</string>
+  </property>
   <property name="modal">
    <bool>true</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTabWidget" name="tabWidget">
+     <property name="styleSheet">
+      <string notr="true">color:white</string>
+     </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tabSignMessage">
       <attribute name="title">
@@ -48,7 +54,13 @@
          <item>
           <widget class="QValidatedLineEdit" name="addressIn_SM">
            <property name="toolTip">
-            <string>The address to sign the message with (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</string>
+            <string>The address to sign the message with (e.g. SNZ3SxusyhLVUGc4uQJiGcBTrtBbyQbLJV)</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background:#003750;
+color:white;
+padding:2px;
+border-radius:5px;</string>
            </property>
            <property name="maxLength">
             <number>34</number>
@@ -116,6 +128,12 @@
              <italic>true</italic>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background:#003750;
+color:white;
+padding:2px;
+border-radius:5px;</string>
+           </property>
            <property name="readOnly">
             <bool>true</bool>
            </property>
@@ -147,6 +165,52 @@
            <property name="toolTip">
             <string>Sign the message to prove you own this Shard address</string>
            </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid #0f3e54;
+	color:white;
+padding:10px;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#003750&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#003750&quot;;
+	border:1px solid #0f3e54;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#003750&quot;;
+	border:1px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#003750&quot;;
+border:1px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid #0f3e54;
+ }
+</string>
+           </property>
            <property name="text">
             <string>&amp;Sign Message</string>
            </property>
@@ -163,6 +227,52 @@
           <widget class="QPushButton" name="clearButton_SM">
            <property name="toolTip">
             <string>Reset all sign message fields</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid #0f3e54;
+	color:white;
+padding:10px;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#003750&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#003750&quot;;
+	border:1px solid #0f3e54;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#003750&quot;;
+	border:1px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#003750&quot;;
+border:1px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid #0f3e54;
+ }
+</string>
            </property>
            <property name="text">
             <string>Clear &amp;All</string>
@@ -251,7 +361,13 @@
          <item>
           <widget class="QValidatedLineEdit" name="addressIn_VM">
            <property name="toolTip">
-            <string>The address the message was signed with (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</string>
+            <string>The address the message was signed with (e.g. SNZ3SxusyhLVUGc4uQJiGcBTrtBbyQbLJV)</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background:#003750;
+color:white;
+padding:2px;
+border-radius:5px;</string>
            </property>
            <property name="maxLength">
             <number>34</number>
@@ -293,6 +409,52 @@
            <property name="toolTip">
             <string>Verify the message to ensure it was signed with the specified Shard address</string>
            </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid #0f3e54;
+	color:white;
+padding:10px;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#003750&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#003750&quot;;
+	border:1px solid #0f3e54;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#003750&quot;;
+	border:1px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#003750&quot;;
+border:1px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid #0f3e54;
+ }
+</string>
+           </property>
            <property name="text">
             <string>&amp;Verify Message</string>
            </property>
@@ -309,6 +471,52 @@
           <widget class="QPushButton" name="clearButton_VM">
            <property name="toolTip">
             <string>Reset all verify message fields</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { 
+ background-color: &quot;#002d3f&quot;;
+	border:1px solid #0f3e54;
+	color:white;
+padding:10px;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#003750&quot;;
+border:1px solid gray;
+	color:white;
+
+}
+QPushButton:focus:pressed { 
+    background: &quot;#003750&quot;;
+
+	color:white;
+
+ }
+QPushButton:focus { 
+   background-color: &quot;#003750&quot;;
+	border:1px solid #0f3e54;
+	color:white;
+
+}
+QPushButton:hover {
+     background-color: &quot;#003750&quot;;
+	border:1px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#003750&quot;;
+border:1px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0a2634';
+color:gray;
+border:1px solid #0f3e54;
+ }
+</string>
            </property>
            <property name="text">
             <string>Clear &amp;All</string>
@@ -376,7 +584,7 @@
   <customwidget>
    <class>QValidatedLineEdit</class>
    <extends>QLineEdit</extends>
-   <header>qvalidatedlineedit.h</header>
+   <header location="global">qvalidatedlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources>

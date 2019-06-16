@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="fi">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -7,21 +9,28 @@
         <translation>Tietoa Shardista</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+45"/>
         <source>&lt;b&gt;Shard&lt;/b&gt; version</source>
         <translation>&lt;b&gt;Shard&lt;/b&gt;-asiakasohjelman versio</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+47"/>
+        <source>Copyright © 2009-2014 The Bitcoin developers
+Copyright © 2012-2014 The NovaCoin developers
+Copyright © 2014 The BlackCoin developers
+Copyright © 2018 The Shard developers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2018 The Shard developers</source>
-        <translation>Copyright © 2009-2014 The Bitcoin developers
+        <translation type="vanished">Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2018 The Shard developers</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+19"/>
         <source>
 This is experimental software.
 
@@ -45,37 +54,39 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
         <translation>Osoitekirja</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+191"/>
+        <source>Generate Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+389"/>
         <source>Double-click to edit address or label</source>
         <translation>Kaksoisnapauta muokataksesi osoitetta tai nimikettä</translation>
     </message>
     <message>
-        <location line="+24"/>
         <source>Create a new address</source>
-        <translation>Luo uusi osoite</translation>
+        <translation type="vanished">Luo uusi osoite</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-309"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation>Kopioi valittu osoite järjestelmän leikepöydälle</translation>
     </message>
     <message>
-        <location line="-7"/>
         <source>&amp;New Address</source>
-        <translation>&amp;Uusi osoite</translation>
+        <translation type="vanished">&amp;Uusi osoite</translation>
     </message>
     <message>
-        <location line="-43"/>
         <source>These are your Shard addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Nämä ovat Shard-osoitteesi rahansiirtojen vastaanottoa varten. Jos haluat, voit antaa jokaiselle lähettäjälle oman osoitteen jotta voit pitää kirjaa sinulle rahaa siirtäneistä henkilöistä.</translation>
+        <translation type="vanished">Nämä ovat Shard-osoitteesi rahansiirtojen vastaanottoa varten. Jos haluat, voit antaa jokaiselle lähettäjälle oman osoitteen jotta voit pitää kirjaa sinulle rahaa siirtäneistä henkilöistä.</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+39"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;Kopioi osoite</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+43"/>
         <source>Show &amp;QR Code</source>
         <translation>Näytä &amp;QR-koodi</translation>
     </message>
@@ -85,32 +96,48 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
         <translation>Allekirjoita viesti osoittaaksesi Shard-osoitteesi omistajuus</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+39"/>
         <source>Sign &amp;Message</source>
         <translation>Allekirjoita &amp;Viesti</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+53"/>
         <source>Delete the currently selected address from the list</source>
         <translation>Poista valittu osoite listalta</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="-46"/>
         <source>Verify a message to ensure it was signed with a specified Shard address</source>
         <translation>Vahvista viesti varmistaaksesi että kyseinen Shard-osoitteesi on allekirjoittanut sen</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../addressbookpage.cpp" line="+65"/>
+        <source>Generate
+Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/addressbookpage.ui" line="-177"/>
+        <source>Address:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+216"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;Varmista viesti</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+46"/>
         <source>&amp;Delete</source>
         <translation>&amp;Poista</translation>
     </message>
     <message>
-        <location filename="../addressbookpage.cpp" line="+66"/>
+        <location filename="../addressbookpage.cpp" line="-6"/>
+        <source>Address book</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
         <source>Copy &amp;Label</source>
         <translation>Kopioi &amp;nimike</translation>
     </message>
@@ -120,7 +147,7 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
         <translation>&amp;Muokkaa</translation>
     </message>
     <message>
-        <location line="+248"/>
+        <location line="+291"/>
         <source>Export Address Book Data</source>
         <translation>Vie osoitekirja</translation>
     </message>
@@ -143,7 +170,7 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
 <context>
     <name>AddressTableModel</name>
     <message>
-        <location filename="../addresstablemodel.cpp" line="+145"/>
+        <location filename="../addresstablemodel.cpp" line="+205"/>
         <source>Label</source>
         <translation>Nimike</translation>
     </message>
@@ -153,7 +180,12 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
         <translation>Osoite</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+0"/>
+        <source>Amount</source>
+        <translation type="unfinished">Määrä</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>(no label)</source>
         <translation>(ei nimikettä)</translation>
     </message>
@@ -166,22 +198,22 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
         <translation>Tunnuslauseikkuna</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+30"/>
         <source>Enter passphrase</source>
         <translation>Syötä tunnuslause</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+26"/>
         <source>New passphrase</source>
         <translation>Uusi tunnuslause</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+26"/>
         <source>Repeat new passphrase</source>
         <translation>Toista uusi tunnuslause uudelleen</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+29"/>
         <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
         <translation>Tarjoaa estettäväksi yksinkertaisen rahansiirron kun käyttöjärjestelmän käyttäjätunnuksen turvallisuutta on rikottu. Tämä ei takaa aitoa turvallisuutta.</translation>
     </message>
@@ -312,17 +344,17 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+297"/>
+        <location filename="../bitcoingui.cpp" line="+400"/>
         <source>Sign &amp;message...</source>
         <translation>Allekirjoita &amp;viesti...</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-70"/>
         <source>Show general overview of wallet</source>
         <translation>Näytä lompakon yleiskatsaus</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+21"/>
         <source>&amp;Transactions</source>
         <translation>&amp;Rahansiirrot</translation>
     </message>
@@ -332,7 +364,7 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
         <translation>Selaa rahansiirtohistoriaa</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>&amp;Address Book</source>
         <translation>&amp;Osoitekirja</translation>
     </message>
@@ -342,12 +374,12 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
         <translation>Muokkaa tallennettujen osoitteiden ja nimikkeiden listaa</translation>
     </message>
     <message>
-        <location line="-18"/>
+        <location line="-22"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation>Näytä osoitelista vastaanottaaksesi maksuja</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+39"/>
         <source>E&amp;xit</source>
         <translation>L&amp;opeta</translation>
     </message>
@@ -397,12 +429,12 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
         <translation>&amp;Vie...</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-58"/>
         <source>Send coins to a Shard address</source>
         <translation>Lähetä kolikoita Shard-osoitteeseen</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+42"/>
         <source>Modify configuration options for Shard</source>
         <translation>Mukauta asiakasohjelman asetuksia</translation>
     </message>
@@ -442,18 +474,18 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
         <translation>&amp;Vahvista viesti...</translation>
     </message>
     <message>
-        <location line="-214"/>
-        <location line="+555"/>
+        <location line="-300"/>
+        <location line="+706"/>
         <source>Shard</source>
         <translation>Shard</translation>
     </message>
     <message>
-        <location line="-555"/>
+        <location line="-706"/>
         <source>Wallet</source>
         <translation>Lompakko</translation>
     </message>
     <message>
-        <location line="+193"/>
+        <location line="+279"/>
         <source>&amp;About Shard</source>
         <translation>&amp;Tietoa Shardista</translation>
     </message>
@@ -478,12 +510,22 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
         <translation>Lukitse lompakko</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+12"/>
+        <source>&amp;LOCK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;SETTINGS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>&amp;File</source>
         <translation>&amp;Tiedosto</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>&amp;Settings</source>
         <translation>&amp;Asetukset</translation>
     </message>
@@ -498,21 +540,54 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
         <translation>Välilehtipalkki</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+17"/>
+        <source>SHARD BALANCE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+64"/>
         <location line="+9"/>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+58"/>
+        <location line="+65"/>
         <source>Shard client</source>
         <translation>Shard-asiakasohjelma</translation>
     </message>
     <message numerus="yes">
-        <location line="+70"/>
+        <location line="+78"/>
         <source>%n active connection(s) to Shard network</source>
-        <translation><numerusform>%n aktiivinen yhteys Shard-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Shard-verkkoon</numerusform></translation>
+        <translation>
+            <numerusform>%n aktiivinen yhteys Shard-verkkoon</numerusform>
+            <numerusform>%n aktiivista yhteyttä Shard-verkkoon</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Synced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Syncing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+278"/>
+        <source>LOCK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>UNLOCK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+140"/>
+        <source>Staking.&lt;br&gt;Your weight is %1&lt;br&gt;Network weight is %2</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -535,37 +610,37 @@ Tämä tuote sisältää OpenSSL-projektin kehittämää ohjelmistoa OpenSSL-ty�
         <translation>Ei osakkaana koska sinulla ei ole kypsyneitä varoja</translation>
     </message>
     <message>
-        <location line="-812"/>
+        <location line="-893"/>
         <source>&amp;Dashboard</source>
         <translation>&amp;Hallintapaneeli</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>&amp;Receive</source>
         <translation>&amp;Vastaanota</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>&amp;Send</source>
         <translation>&amp;Lähetä</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>&amp;Unlock Wallet...</source>
         <translation>&amp;Aukaise lompakko</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+339"/>
         <source>Up to date</source>
         <translation>Rahansiirtohistoria on ajan tasalla</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Catching up...</source>
         <translation>Saavutetaan verkkoa...</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+114"/>
         <source>Confirm transaction fee</source>
         <translation>Hyväksy rahansiirtopalkkio</translation>
     </message>
@@ -592,7 +667,7 @@ Tyyppi: %3
 Osoite: %4</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <location line="+15"/>
         <source>URI handling</source>
         <translation>URI-merkkijonojen käsittely</translation>
@@ -604,12 +679,12 @@ Osoite: %4</translation>
         <translation>URI-merkkijonoa ei voida jäsentää! Tämä voi johtua väärästä Shard-osoitteesta tai väärässä muodossa olevista URI-parametreistä.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Wallet is &lt;b&gt;not encrypted&lt;/b&gt;</source>
         <translation>Lompakko &lt;b&gt;ei ole salattu&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;avoinna&lt;/b&gt;</translation>
     </message>
@@ -619,7 +694,7 @@ Osoite: %4</translation>
         <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;lukittuna&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+31"/>
         <source>Backup Wallet</source>
         <translation>Varmuuskopioi lompakkosi</translation>
     </message>
@@ -639,37 +714,48 @@ Osoite: %4</translation>
         <translation>Virhe yritettäessä tallentaa lompakkotiedostoa uuteen sijaintiinsa.</translation>
     </message>
     <message numerus="yes">
-        <location line="+91"/>
         <source>%n second(s)</source>
-        <translation><numerusform>%n sekunti</numerusform><numerusform>%n sekuntia</numerusform></translation>
+        <translation type="vanished">
+            <numerusform>%n sekunti</numerusform>
+            <numerusform>%n sekuntia</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
-        <location line="+4"/>
         <source>%n minute(s)</source>
-        <translation><numerusform>%n minuutti</numerusform><numerusform>%n minuuttia</numerusform></translation>
+        <translation type="vanished">
+            <numerusform>%n minuutti</numerusform>
+            <numerusform>%n minuuttia</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
-        <location line="-429"/>
-        <location line="+433"/>
+        <location line="-347"/>
         <source>%n hour(s)</source>
-        <translation><numerusform>%n tunti</numerusform><numerusform>%n tuntia</numerusform></translation>
+        <translation>
+            <numerusform>%n tunti</numerusform>
+            <numerusform>%n tuntia</numerusform>
+        </translation>
     </message>
     <message>
-        <location line="-456"/>
+        <location line="-24"/>
         <source>Processed %1 blocks of transaction history.</source>
         <translation>Käsitelty %1 lohkoa rahansiirtohistoriasta.</translation>
     </message>
     <message numerus="yes">
-        <location line="+27"/>
-        <location line="+433"/>
+        <location line="+28"/>
         <source>%n day(s)</source>
-        <translation><numerusform>%n päivä</numerusform><numerusform>%n päivää</numerusform></translation>
+        <translation>
+            <numerusform>%n päivä</numerusform>
+            <numerusform>%n päivää</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
-        <location line="-429"/>
+        <location line="+4"/>
         <location line="+6"/>
         <source>%n week(s)</source>
-        <translation><numerusform>%n viikko</numerusform><numerusform>%n viikossa</numerusform></translation>
+        <translation>
+            <numerusform>%n viikko</numerusform>
+            <numerusform>%n viikossa</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+0"/>
@@ -679,7 +765,10 @@ Osoite: %4</translation>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n year(s)</source>
-        <translation><numerusform>%n vuosi</numerusform><numerusform>%n vuodessa</numerusform></translation>
+        <translation>
+            <numerusform>%n vuosi</numerusform>
+            <numerusform>%n vuodessa</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+5"/>
@@ -687,7 +776,7 @@ Osoite: %4</translation>
         <translation>%1 takana</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+17"/>
         <source>Last received block was generated %1 ago.</source>
         <translation>Viimeinen vastaanotettu lohko luotiin %1 sitten.</translation>
     </message>
@@ -712,12 +801,12 @@ Osoite: %4</translation>
         <translation>Tietoa</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+70"/>
         <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
         <translation>Tämä rahansiirto on ylikokoinen. Voit silti lähettää sen maksukulua %1 vastaan, joka menee rahansiirtoasi käsitteleville solmukohdille ja auttaa tukemaan verkkoa. Haluatko maksaa rahansiirtokulun?</translation>
     </message>
     <message>
-        <location line="+324"/>
+        <location line="+333"/>
         <source>Not staking</source>
         <translation>Ei osakkaana</translation>
     </message>
@@ -725,6 +814,65 @@ Osoite: %4</translation>
         <location filename="../bitcoin.cpp" line="+104"/>
         <source>A fatal error occurred. Shard can no longer continue safely and will quit.</source>
         <translation>Virhe kohdattu. Shard-asiakasohjelma ei voi enää jatkaa turvallisesti ja se suljetaan.</translation>
+    </message>
+</context>
+<context>
+    <name>ChangePass</name>
+    <message>
+        <location filename="../forms/changepass.ui" line="+26"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>CHANGE WALLET PASSWORD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Current Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>New Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Repeat New Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+133"/>
+        <source>Change Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/changepass.cpp" line="+65"/>
+        <source>Wallet encrypted</source>
+        <translation type="unfinished">Lompakko salattu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;p style=&quot;color:white&quot;&gt;Wallet passphrase was successfully changed.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+6"/>
+        <source>Wallet encryption failed</source>
+        <translation type="unfinished">Lompakon salauksen luonti epäonnistui</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>&lt;p style=&quot;color:white&quot;&gt;The passphrase entered for the wallet decryption was incorrect.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&lt;p style=&quot;color:white&quot;&gt;The supplied passphrases do not match.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -743,64 +891,93 @@ Osoite: %4</translation>
         <translation>Varojenhallinta</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+34"/>
         <source>Quantity:</source>
         <translation>Määrä:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+38"/>
         <source>Bytes:</source>
         <translation>Tavua:</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Amount:</source>
         <translation>Määrä:</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Fee:</source>
         <translation>Kulu:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+41"/>
         <source>Low Output:</source>
         <translation>Heikko ulosanti:</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="+493"/>
         <source>no</source>
-        <translation>ei</translation>
+        <translation type="vanished">ei</translation>
     </message>
     <message>
-        <location filename="../forms/coincontroldialog.ui" line="+51"/>
+        <location line="+54"/>
         <source>After Fee:</source>
         <translation>Rahansiirtopalkkion jälkeen:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+41"/>
         <source>Change:</source>
         <translation>Vaihtoraha:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+104"/>
         <source>(un)select all</source>
         <translation>(tai ei)Valitse kaikki</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+52"/>
         <source>Tree mode</source>
         <translation>Puunäkymä</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+55"/>
         <source>List mode</source>
         <translation>Listanäkymä</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+58"/>
+        <source>Select Coins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+305"/>
+        <source>Select</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Amount</source>
         <translation>Määrä</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Age</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Potential Stake</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Days to Stake (est.)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Weight</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -818,7 +995,7 @@ Osoite: %4</translation>
         <translation>Päivämäärä</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-38"/>
         <source>Confirmations</source>
         <translation>Vahvistukset</translation>
     </message>
@@ -828,12 +1005,11 @@ Osoite: %4</translation>
         <translation>Vahvistettu</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Priority</source>
-        <translation>Tärkeysjärjestys</translation>
+        <translation type="vanished">Tärkeysjärjestys</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="-456"/>
+        <location filename="../coincontroldialog.cpp" line="+40"/>
         <source>Copy address</source>
         <translation>Kopioi osoite</translation>
     </message>
@@ -844,17 +1020,27 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+26"/>
+        <location line="+27"/>
         <source>Copy amount</source>
         <translation>Kopioi määrä</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-26"/>
         <source>Copy transaction ID</source>
         <translation>Kopioi siirtotunnus</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+1"/>
+        <source>Lock unspent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unlock unspent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Copy quantity</source>
         <translation>Kopioi määrä</translation>
     </message>
@@ -884,43 +1070,74 @@ Osoite: %4</translation>
         <translation>Kopioi vaihtoraha</translation>
     </message>
     <message>
-        <location line="+423"/>
+        <location line="+62"/>
+        <source>&lt; Amount</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&gt; Amount</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt; Weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&gt; Weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&gt; Age</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt; Age</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+370"/>
+        <source>(%1 locked)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>DUST</source>
-        <translation>PÖLYÄ</translation>
+        <translation type="vanished">PÖLYÄ</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>yes</source>
-        <translation>kyllä</translation>
+        <translation type="vanished">kyllä</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>This label turns red, if the transaction size is bigger than 10000 bytes.
 
  This means a fee of at least %1 per kb is required.
 
  Can vary +/- 1 Byte per input.</source>
-        <translation>Tämä nimike muuttuu punaiseksi, jos rahansiirron koko on suurempi kuin 10000 tavua.
+        <translation type="vanished">Tämä nimike muuttuu punaiseksi, jos rahansiirron koko on suurempi kuin 10000 tavua.
 
 Tämä tarkoittaa, että ainakin %1 rahansiirtopalkkio per kilotavu tarvitaan.
 
 Voi vaihdella välillä +/- 1 Tavu per syöte.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>This label turns red, if any recipient receives an amount smaller than %1.
 
  This means a fee of at least %2 is required.
 
  Amounts below 0.546 times the minimum relay fee are shown as DUST.</source>
-        <translation>Tämä nimike muuttuu punaiseksi, jos jokin asiakas saa pienemmän määrän kuin %1.
+        <translation type="vanished">Tämä nimike muuttuu punaiseksi, jos jokin asiakas saa pienemmän määrän kuin %1.
 
 Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.
 
 Määrät alle 0.546 kertaa pienimmän rahansiirtokulun verran näytetään pölynä.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+139"/>
         <source>This label turns red, if the change is smaller than %1.
 
  This means a fee of at least %2 is required.</source>
@@ -930,7 +1147,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
     <message>
         <location line="+35"/>
-        <location line="+58"/>
+        <location line="+83"/>
         <source>(no label)</source>
         <translation>(ei nimeä)</translation>
     </message>
@@ -953,7 +1170,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Muokkaa osoitetta</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+17"/>
         <source>&amp;Label</source>
         <translation>&amp;Nimi</translation>
     </message>
@@ -963,7 +1180,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Nimike joka on yhdistetty tässä osoitekirjassa olevan osoitteen kanssa</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+19"/>
         <source>&amp;Address</source>
         <translation>&amp;Osoite</translation>
     </message>
@@ -1014,9 +1231,139 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
 </context>
 <context>
+    <name>EncryptWallet</name>
+    <message>
+        <location filename="../forms/encryptwallet.ui" line="+26"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <location filename="../forms/encryptwallet.cpp" line="+46"/>
+        <source>ENCRYPT WALLET</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <location line="+50"/>
+        <source>Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Repeat Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+116"/>
+        <location filename="../forms/encryptwallet.cpp" line="+1"/>
+        <source>Encrypt Wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/encryptwallet.cpp" line="+9"/>
+        <source>DECRYPT WALLET</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decrypt Wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Confirm wallet encryption</source>
+        <translation type="unfinished">Vahvista, että lompakko salataan</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
+        <translation type="unfinished">Varoitus: Jos salaat lompakkosi ja hukkaat salasanasi, &lt;b&gt;MENETÄT KAIKKI ShardISI&lt;/b&gt;!</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Are you sure you wish to encrypt your wallet?</source>
+        <translation type="unfinished">Haluatko varmasti salata lompakkosi?</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Wallet encrypted</source>
+        <translation type="unfinished">Lompakko salattu</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Shard will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Shard-ohjelma sulkee itsensä päättääkseen salauksen luonnin. Muista, että lompakon salaaminen ei täysin turvaa kolikoitasi haittaohjelmien aiheuttamien varkauksien uhalta.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation type="unfinished">TÄRKEÄÄ: Kaikki vanhat lompakon varmuuskopiot tulisi korvata uusilla suojatuilla varmuuskopioilla. Turvallisuussyistä edelliset varmuuskopiot muuttuvat käyttökelvottomiksi, kun aloitat uuden salatun lompakon käytön.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+7"/>
+        <source>Wallet encryption failed</source>
+        <translation type="unfinished">Lompakon salauksen luonti epäonnistui</translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
+        <translation type="unfinished">Lompakon salaaminen epäonnistui sisäisen virheen vuoksi. Lompakkoasi ei salattu.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>The supplied passphrases do not match.</source>
+        <translation type="unfinished">Syötetyt tunnuslauseet eivät täsmää.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Wallet decryption failed</source>
+        <translation type="unfinished">Lompakon salauksen purku epäonnistui.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The passphrase entered for the wallet decryption was incorrect.</source>
+        <translation type="unfinished">Syötetty tunnuslause lompakon salauksen purkua varten oli väärä.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Wallet decryption sucess</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The wallet was successfully decrypted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ExportPage</name>
+    <message>
+        <location filename="../forms/exportpage.ui" line="+26"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>EXPORT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+194"/>
+        <source>Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/exportpage.cpp" line="+12"/>
+        <source>Export Transactions</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
-        <location filename="../guiutil.cpp" line="+426"/>
+        <location filename="../guiutil.cpp" line="+431"/>
         <location line="+12"/>
         <source>Shard-Qt</source>
         <translation>Shard-Qt</translation>
@@ -1058,6 +1405,94 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
 </context>
 <context>
+    <name>LanguagePage</name>
+    <message>
+        <location filename="../forms/languagepage.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>SEARCH</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/languagepage.cpp" line="+110"/>
+        <source>Warning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>This setting will take effect after restarting Shard.</source>
+        <translation type="unfinished">Tämä asetus tulee voimaan vasta Shard-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
+    </message>
+</context>
+<context>
+    <name>NetworkTraffic</name>
+    <message>
+        <location filename="../forms/networktraffic.ui" line="+32"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+495"/>
+        <source>In:</source>
+        <translation type="unfinished">Sisään:</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <location line="+463"/>
+        <location line="+498"/>
+        <source>0 KB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-509"/>
+        <source>Out:</source>
+        <translation type="unfinished">Ulos:</translation>
+    </message>
+    <message>
+        <location line="+558"/>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/networktraffic.cpp" line="+73"/>
+        <source>%1 B</source>
+        <translation type="unfinished">%1 t</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 KB</source>
+        <translation type="unfinished">%1 Kt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 MB</source>
+        <translation type="unfinished">%1 Mt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 GB</source>
+        <translation type="unfinished">%1 Gt</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>%1 m</source>
+        <translation type="unfinished">%1 m</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 h</source>
+        <translation type="unfinished">%1 h</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 h %2 m</source>
+        <translation type="unfinished">%1 h %2 m</translation>
+    </message>
+</context>
+<context>
     <name>OptionsDialog</name>
     <message>
         <location filename="../forms/optionsdialog.ui" line="+14"/>
@@ -1065,7 +1500,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Asetukset</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+22"/>
         <source>&amp;Main</source>
         <translation>&amp;Yleiset</translation>
     </message>
@@ -1100,7 +1535,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>%Käynnistä Shard-asiakasohjelma kirjautuessasi</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+8"/>
         <source>&amp;Network</source>
         <translation>&amp;Verkko</translation>
     </message>
@@ -1125,7 +1560,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Välityspalvelimen IP-osoite (esim. 127.0.0.1)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>&amp;Port:</source>
         <translation>&amp;Portti</translation>
     </message>
@@ -1135,7 +1570,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Välityspalvelimen portti (esim. 9050)</translation>
     </message>
     <message>
-        <location line="-57"/>
+        <location line="-63"/>
         <source>Connect to the Shard network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
         <translation>Yhdistä Shard-verkkoon SOCKS5-välityspalvelimen kautta (esim. kun yhdistetään Tor:lla).</translation>
     </message>
@@ -1145,7 +1580,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>&amp;Yhdistä SOCKS5-välityspalvelimen kautta:</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+102"/>
         <source>&amp;Window</source>
         <translation>&amp;Ikkuna</translation>
     </message>
@@ -1205,22 +1640,21 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Näytä rahan&amp;hallinnan ominaisuudet (Vain kokeneille käyttäjille!)</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Use black visual theme (requires restart)</source>
-        <translation>Käytä teemana mustaa ulkoasua (vaatii uudelleenkäynnistyksen)</translation>
+        <translation type="vanished">Käytä teemana mustaa ulkoasua (vaatii uudelleenkäynnistyksen)</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+115"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+51"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Peruuta</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+54"/>
         <source>&amp;Apply</source>
         <translation>&amp;Käytä</translation>
     </message>
@@ -1230,7 +1664,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>oletus</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+146"/>
         <location line="+9"/>
         <source>Warning</source>
         <translation>Varoitus</translation>
@@ -1248,83 +1682,312 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
 </context>
 <context>
+    <name>OptionsPage</name>
+    <message>
+        <location filename="../forms/optionspage.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Main</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Optional transaction fee per KB that helps make sure your transactions are processed quickly.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Most transactions are 1KB.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Pay Transaction Fee</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Reserved amount does not participate cin staking and is therefore spendable at any time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Reserve</source>
+        <translation type="unfinished">Varattuna</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Network</source>
+        <translation type="unfinished">Verkko</translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Connect through SOCKS5 proxy</source>
+        <translation type="unfinished">Yhdistä SOCKS5-välityspalvelimen kautta</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Map port using UPnP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Proxy IP:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Port:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+58"/>
+        <source>Display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>Unit to show amounts in:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+132"/>
+        <source>Start Shard on System Login</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Minimize to the tray instead of taskbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Minimize on close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Apply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/optionspage.cpp" line="+144"/>
+        <location line="+9"/>
+        <source>Warning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <location line="+9"/>
+        <source>This setting will take effect after restarting Shard.</source>
+        <translation type="unfinished">Tämä asetus tulee voimaan vasta Shard-asiakasohjelman uudelleenkäynnistyksen jälkeen.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The supplied proxy address is invalid.</source>
+        <translation type="unfinished">Syötetty välityspalvelmen osoite on epäkelpo.</translation>
+    </message>
+</context>
+<context>
     <name>OverviewPage</name>
     <message>
-        <location filename="../forms/overviewpage.ui" line="+14"/>
+        <location filename="../forms/overviewpage.ui" line="+20"/>
         <source>Form</source>
         <translation>Lomake</translation>
     </message>
     <message>
-        <location line="+46"/>
-        <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Shard network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytettävät tiedot voivat olla vanhentuneet. Lompakkosi synkronoituu automaattisesti Shard-verkon kanssa kun yhteys on muodostettu, mutta tätä prosessia ei ole viety vielä päätökseen.</translation>
-    </message>
-    <message>
-        <location line="-173"/>
-        <source>Stake:</source>
-        <translation>Osuus:</translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>Unconfirmed:</source>
-        <translation>Vahvistamatonta:</translation>
-    </message>
-    <message>
-        <location line="-113"/>
-        <source>Wallet</source>
-        <translation>Lompakko</translation>
-    </message>
-    <message>
-        <location line="+49"/>
-        <source>Spendable:</source>
-        <translation>Käytettävissä:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Your current spendable balance</source>
-        <translation>Käytettävissä olevat varat:</translation>
+        <location line="+190"/>
+        <source>Recieve</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+80"/>
+        <source>STAKED</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <location line="+88"/>
+        <location line="+113"/>
+        <source>0</source>
+        <translation type="unfinished">0</translation>
+    </message>
+    <message>
+        <location line="-137"/>
+        <source>BALANCE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>$ 0.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>UNCONFIRMED</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+147"/>
+        <source>Send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+64"/>
+        <source>&lt;img src=&quot;:/images/res/images/graph.png&quot;&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+233"/>
+        <source>SHARD/USD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>$ 0.00 / SHARD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+55"/>
+        <source>MCAP:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <location line="+46"/>
+        <location line="+46"/>
+        <source>0.00 $</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-70"/>
+        <source>Change (24h):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Volume (24h):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+83"/>
+        <source>&lt;img src=&quot;:/images/res/images/transactions.png&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Transactions List</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+63"/>
+        <source>View More</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Shard network after a connection is established, but this process has not completed yet.</source>
+        <translation type="vanished">Näytettävät tiedot voivat olla vanhentuneet. Lompakkosi synkronoituu automaattisesti Shard-verkon kanssa kun yhteys on muodostettu, mutta tätä prosessia ei ole viety vielä päätökseen.</translation>
+    </message>
+    <message>
+        <source>Stake:</source>
+        <translation type="vanished">Osuus:</translation>
+    </message>
+    <message>
+        <source>Unconfirmed:</source>
+        <translation type="vanished">Vahvistamatonta:</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation type="vanished">Lompakko</translation>
+    </message>
+    <message>
+        <source>Spendable:</source>
+        <translation type="vanished">Käytettävissä:</translation>
+    </message>
+    <message>
+        <source>Your current spendable balance</source>
+        <translation type="vanished">Käytettävissä olevat varat:</translation>
+    </message>
+    <message>
         <source>Immature:</source>
-        <translation>Epäkypsää:</translation>
+        <translation type="vanished">Epäkypsää:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Mined balance that has not yet matured</source>
-        <translation>Louhittu saldo, joka ei ole vielä kypsynyt</translation>
+        <translation type="vanished">Louhittu saldo, joka ei ole vielä kypsynyt</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Total:</source>
-        <translation>Yhteensä:</translation>
+        <translation type="vanished">Yhteensä:</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Your current total balance</source>
-        <translation>Tämänhetkinen kokonaissaldosi</translation>
+        <translation type="vanished">Tämänhetkinen kokonaissaldosi</translation>
     </message>
     <message>
-        <location line="+50"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Viimeisimmät rahansiirrot&lt;/b&gt;</translation>
+        <translation type="vanished">&lt;b&gt;Viimeisimmät rahansiirrot&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="-118"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
-        <translation>Kaikki vahvistamattomat rahansiirrot yhteensä, joita ei vielä ole laskettu saldoosi.</translation>
+        <translation type="vanished">Kaikki vahvistamattomat rahansiirrot yhteensä, joita ei vielä ole laskettu saldoosi.</translation>
     </message>
     <message>
-        <location line="-32"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
-        <translation>Osuutena olleiden varojen kokonaismäärä, jotka eivät vielä ole laskettu tämänhetkiseen saldoon.</translation>
+        <translation type="vanished">Osuutena olleiden varojen kokonaismäärä, jotka eivät vielä ole laskettu tämänhetkiseen saldoon.</translation>
     </message>
     <message>
-        <location filename="../overviewpage.cpp" line="+116"/>
-        <location line="+1"/>
         <source>out of sync</source>
-        <translation>ei ajan tasalla</translation>
+        <translation type="vanished">ei ajan tasalla</translation>
+    </message>
+    <message>
+        <location filename="../overviewpage.cpp" line="+75"/>
+        <source>5 minutes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>15 minutes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>30 minutes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1 hour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1 day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1 week</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1 month</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+27"/>
+        <source>Price Graph</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-26"/>
+        <source>Balance Graph</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Staked Graph</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1336,6 +1999,19 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
 </context>
 <context>
+    <name>QMessageBox</name>
+    <message>
+        <location filename="../forms/about.cpp" line="+48"/>
+        <source>&lt;p&gt;This program uses Qt version %1.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems. It is also available for embedded Linux and other embedded and mobile operating systems.&lt;/p&gt;&lt;p&gt;Qt is available under three different licensing options designed to accommodate the needs of our various users.&lt;/p&gt;&lt;p&gt;Qt licensed under our commercial license agreement is appropriate for development of proprietary/commercial software where you do not want to share any source code with third parties or otherwise cannot comply with the terms of the GNU LGPL version 3 or GNU LGPL version 2.1.&lt;/p&gt;&lt;p&gt;Qt licensed under the GNU LGPL version 3 is appropriate for the development of Qt&amp;nbsp;applications provided you can comply with the terms and conditions of the GNU LGPL version 3.&lt;/p&gt;&lt;p&gt;Qt licensed under the GNU LGPL version 2.1 is appropriate for the development of Qt&amp;nbsp;applications provided you can comply with the terms and conditions of the GNU LGPL version 2.1.&lt;/p&gt;&lt;p&gt;Please see &lt;a style=&quot;color:#0adbf0&quot; href=&quot;http://%2/&quot;&gt;%2&lt;/a&gt; for an overview of Qt licensing.&lt;/p&gt;&lt;p&gt;Copyright (C) %1 The Qt Company Ltd and other contributors.&lt;/p&gt;&lt;p&gt;Qt and the Qt logo are trademarks of The Qt Company Ltd.&lt;/p&gt;&lt;p&gt;Qt is The Qt Company Ltd product developed as an open source project. See &lt;a style=&quot;color:#0adbf0&quot; href=&quot;http://%3/&quot;&gt;%3&lt;/a&gt; for more information.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>QRCodeDialog</name>
     <message>
         <location filename="../forms/qrcodedialog.ui" line="+14"/>
@@ -1343,27 +2019,27 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>QR-koodi-ikkuna</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+65"/>
         <source>Request Payment</source>
         <translation>Pyydä rahansiirtoa</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+79"/>
         <source>Amount:</source>
         <translation>Määrä:</translation>
     </message>
     <message>
-        <location line="-44"/>
+        <location line="-64"/>
         <source>Label:</source>
         <translation>Nimike:</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+29"/>
         <source>Message:</source>
         <translation>Viesti:</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+127"/>
         <source>&amp;Save As...</source>
         <translation>&amp;Tallenna nimellä...</translation>
     </message>
@@ -1396,7 +2072,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
 <context>
     <name>RPCConsole</name>
     <message>
-        <location filename="../forms/rpcconsole.ui" line="+46"/>
+        <location filename="../forms/rpcconsole.ui" line="+52"/>
         <source>Client name</source>
         <translation>Asiakasohjelman nimi</translation>
     </message>
@@ -1458,12 +2134,12 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Tämänhetkinen lohkojen määrä</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+293"/>
         <source>&amp;Network Traffic</source>
         <translation>&amp;Verkon liikenne</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+96"/>
         <source>&amp;Clear</source>
         <translation>&amp;Tyhjennä</translation>
     </message>
@@ -1473,24 +2149,24 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Yhteensä</translation>
     </message>
     <message>
-        <location line="+64"/>
-        <location filename="../rpcconsole.cpp" line="+352"/>
+        <location line="+226"/>
+        <location filename="../rpcconsole.cpp" line="+202"/>
         <source>In:</source>
         <translation>Sisään:</translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="+242"/>
         <location filename="../rpcconsole.cpp" line="+1"/>
         <source>Out:</source>
         <translation>Ulos:</translation>
     </message>
     <message>
-        <location line="-383"/>
+        <location line="-847"/>
         <source>Last block time</source>
         <translation>Viimeisimmän lohkon aika</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+98"/>
         <source>&amp;Open</source>
         <translation>&amp;Avaa</translation>
     </message>
@@ -1505,7 +2181,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Näytä Shard-Qt:n avustusohje saadaksesi listan käytettävistä Shardin komentokehotteen määritteistä.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+49"/>
         <source>&amp;Show</source>
         <translation>&amp;Näytä</translation>
     </message>
@@ -1515,17 +2191,17 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>&amp;Konsoli</translation>
     </message>
     <message>
-        <location line="-237"/>
+        <location line="-329"/>
         <source>Build date</source>
         <translation>Koontipäivämäärä</translation>
     </message>
     <message>
-        <location line="-104"/>
+        <location line="-110"/>
         <source>Shard - Debug window</source>
         <translation>Shard - Debug-ikkuna</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Shard Core</source>
         <translation>Shardin ydin</translation>
     </message>
@@ -1540,7 +2216,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Avaa Shard-asiakasohjelman debug-lokitiedosto nykyisestä hakemistostaan. Tämä voi kestää muutaman sekunnin avattaessa suuria lokitiedostoja.</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+198"/>
         <source>Clear console</source>
         <translation>Tyhjennä konsoli</translation>
     </message>
@@ -1596,10 +2272,60 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
 </context>
 <context>
+    <name>RPCConsole_Widget</name>
+    <message>
+        <location filename="../forms/rpcconsole_widget.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+143"/>
+        <source>Clear console</source>
+        <translation type="unfinished">Tyhjennä konsoli</translation>
+    </message>
+    <message>
+        <location filename="../forms/rpcconsole_widget.cpp" line="+151"/>
+        <source>Welcome to the Shard RPC console.</source>
+        <translation type="unfinished">Tervetuloa Shardin RPC-konsoliin.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation type="unfinished">Ylös- ja alas-nuolet selaavat historiaa ja &lt;b&gt;Ctrl-L&lt;/b&gt; tyhjentää ruudun.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
+        <translation type="unfinished">Kirjoita &lt;b&gt;help&lt;/b&gt; nähdäksesi yleiskatsauksen käytettävissä olevista komennoista.</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>%1 B</source>
+        <translation type="unfinished">%1 t</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 KB</source>
+        <translation type="unfinished">%1 Kt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 MB</source>
+        <translation type="unfinished">%1 Mt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 GB</source>
+        <translation type="unfinished">%1 Gt</translation>
+    </message>
+</context>
+<context>
     <name>SendCoinsDialog</name>
     <message>
-        <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+179"/>
+        <location filename="../forms/sendcoinsdialog.ui" line="+17"/>
+        <location filename="../sendcoinsdialog.cpp" line="+133"/>
+        <location line="+35"/>
+        <location line="+68"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1610,118 +2336,150 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Lähetä Shardeja</translation>
     </message>
     <message>
-        <location line="+76"/>
         <source>Coin Control Features</source>
-        <translation>Varojenhallinnan ominaisuudet</translation>
+        <translation type="vanished">Varojenhallinnan ominaisuudet</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+168"/>
         <source>Inputs...</source>
         <translation>Syötteet...</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+23"/>
+        <source>WARNING: Invalid Shard Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>automatically selected</source>
         <translation>automaattisesti valittu</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+459"/>
+        <source>SplitBlock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Block Size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>0.00 SHARD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <source>Change:</source>
+        <translation type="unfinished">Vaihtoraha:</translation>
+    </message>
+    <message>
+        <location line="+115"/>
+        <source>Custom Change Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+157"/>
+        <source>Send Shard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-904"/>
         <source>Insufficient funds!</source>
         <translation>Ei tarpeeksi varoja!</translation>
     </message>
     <message>
-        <location line="+77"/>
         <source>Quantity:</source>
-        <translation>Määrä:</translation>
+        <translation type="vanished">Määrä:</translation>
     </message>
     <message>
-        <location line="+22"/>
-        <location line="+35"/>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="vanished">0</translation>
     </message>
     <message>
-        <location line="-19"/>
         <source>Bytes:</source>
-        <translation>Tavua:</translation>
+        <translation type="vanished">Tavua:</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+169"/>
         <source>Amount:</source>
         <translation>Määrä:</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+93"/>
         <source>Fee:</source>
         <translation>Kulu:</translation>
     </message>
     <message>
-        <location line="+35"/>
         <source>Low Output:</source>
-        <translation>Heikko ulosanti:</translation>
+        <translation type="vanished">Heikko ulosanti:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>no</source>
-        <translation>ei</translation>
+        <translation type="vanished">ei</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+94"/>
         <source>After Fee:</source>
         <translation>Kulujen jälkeen:</translation>
     </message>
     <message>
-        <location line="+35"/>
         <source>Change</source>
-        <translation>Vaihtoraha</translation>
+        <translation type="vanished">Vaihtoraha</translation>
     </message>
     <message>
-        <location line="+50"/>
         <source>custom change address</source>
-        <translation>erikseen määritetty vaihtorahaosoite</translation>
+        <translation type="vanished">erikseen määritetty vaihtorahaosoite</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+659"/>
         <source>Send to multiple recipients at once</source>
         <translation>Lähetä monelle vastaanottajalle samanaikaisesti</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Add &amp;Recipient</source>
-        <translation>Lisää &amp;vastaanottaja</translation>
+        <translation type="vanished">Lisää &amp;vastaanottaja</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="-938"/>
         <source>Remove all transaction fields</source>
         <translation>Tyhjennä kaikki rahansiirtokentät</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+38"/>
         <source>Clear &amp;All</source>
         <translation>Tyhjennnä &amp;kaikki</translation>
     </message>
     <message>
-        <location line="+24"/>
         <source>Balance:</source>
-        <translation>Saldo:</translation>
+        <translation type="vanished">Saldo:</translation>
     </message>
     <message>
-        <location line="+47"/>
         <source>Confirm the send action</source>
-        <translation>Hyväksy lähetystoiminto</translation>
+        <translation type="vanished">Hyväksy lähetystoiminto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>S&amp;end</source>
-        <translation>L&amp;ähetä</translation>
+        <translation type="vanished">L&amp;ähetä</translation>
     </message>
     <message>
-        <location filename="../sendcoinsdialog.cpp" line="-171"/>
+        <location filename="../sendcoinsdialog.cpp" line="-228"/>
         <source>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
         <translation>Syötä Shard-osoite (esim. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+1"/>
+        <source># of Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enable/Disable Block Splitting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Copy quantity</source>
         <translation>Kopioi määrä</translation>
     </message>
@@ -1756,12 +2514,29 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Kopioi vaihtoraha</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+67"/>
+        <source>The split block feature does not work when sending to external addresses. Please try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>The split block feature does not work with multiple addresses. Please try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <location line="+2"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
         <translation>&lt;b&gt;%1&lt;/b&gt;:sta %2 (%3)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <location line="+6"/>
+        <source>&lt;b&gt;%1&lt;/b&gt; in %4 blocks of %5 each to %2 (%3)?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Confirm send coins</source>
         <translation>Hyväksy varojen lähettäminen</translation>
     </message>
@@ -1811,17 +2586,21 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Virhe: Rahansiirto evätty. Tämä voi tapahtua kun jotkut kolikot lompakossasi ovat jo käytetty, kuten myös tilanteessa jos käytit wallet.dat-tiedoston kopiota ja rahat olivat käytetty kopiossa, mutta eivät ole merkitty käytetyiksi tässä.</translation>
     </message>
     <message>
-        <location line="+241"/>
-        <source>WARNING: Invalid Shard address</source>
-        <translation>VAROITUS: Epäkelpo Shard-osoite</translation>
+        <location line="+266"/>
+        <source>WARNING: Invalid shard address!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <source>WARNING: Invalid Shard address</source>
+        <translation type="vanished">VAROITUS: Epäkelpo Shard-osoite</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>(no label)</source>
         <translation>(ei nimeä)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>WARNING: unknown change address</source>
         <translation>VAROITUS: Tuntematon vaihtorahaosoite</translation>
     </message>
@@ -1829,65 +2608,233 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
 <context>
     <name>SendCoinsEntry</name>
     <message>
-        <location filename="../forms/sendcoinsentry.ui" line="+14"/>
+        <location filename="../forms/sendcoinsentry.ui" line="+32"/>
         <source>Form</source>
         <translation>Kaavake</translation>
     </message>
     <message>
-        <location line="+15"/>
         <source>A&amp;mount:</source>
-        <translation>M&amp;äärä:</translation>
+        <translation type="vanished">M&amp;äärä:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Pay &amp;To:</source>
-        <translation>Maksun &amp;saaja:</translation>
+        <translation type="vanished">Maksun &amp;saaja:</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+106"/>
         <source>The address to send the payment to (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
         <translation>Osoite, johon maksu lähetetään (esim. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+93"/>
         <location filename="../sendcoinsentry.cpp" line="+26"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation>Anna nimike tälle osoitteelle, jos haluat lisätä sen osoitekirjaasi</translation>
     </message>
     <message>
-        <location line="-78"/>
         <source>&amp;Label:</source>
-        <translation>&amp;Nimike:</translation>
+        <translation type="vanished">&amp;Nimike:</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-123"/>
+        <source>Pay to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+93"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+79"/>
+        <source>Amount</source>
+        <translation type="unfinished">Määrä</translation>
+    </message>
+    <message>
+        <location line="+94"/>
         <source>Choose address from address book</source>
         <translation>Valitse osoite osoitekirjasta</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+38"/>
+        <source>Address Book</source>
+        <translation type="unfinished">Osoitekirja</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+32"/>
         <source>Paste address from clipboard</source>
         <translation>Liitä osoite leikepöydältä</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+38"/>
+        <source>Paste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+32"/>
         <source>Remove this recipient</source>
         <translation>Poista tämä vastaanottaja</translation>
     </message>
     <message>
-        <location filename="../sendcoinsentry.cpp" line="+1"/>
+        <location line="+38"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
-        <translation>Syötä Shard-osoite (esim. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+        <translation type="vanished">Syötä Shard-osoite (esim. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+    </message>
+    <message>
+        <location filename="../sendcoinsentry.cpp" line="+1"/>
+        <source>Enter a Shard address...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Settings</name>
+    <message>
+        <location filename="../forms/settings.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>&lt;img src=&quot;:/images/res/images/settings.png&quot; /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>OPTIONS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>BACKUP WALLET</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>EXPORT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>SIGN MESSAGE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>VERIFY MESSAGE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>ENCRYPT WALLET</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>CHANGE PASSPHRASE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>LANGUAGE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>NETWORK TRAFFIC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>CONSOLE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>ABOUT</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SignMessage</name>
+    <message>
+        <location filename="../forms/signmessage.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation type="unfinished">Voit allekirjoittaa viestit omalla osoitteellasi todistaaksesi että omistat ne. Ole huolellinen, ettet allekirjoita mitään epämääräistä, sillä phishing-hyökkääjät voivat yrittää huijata sinua allekirjoittamaan henkilöllisyytesi heidän hyväksi. Allekirjoita vain se,  mihin olet sitoutunut.</translation>
+    </message>
+    <message>
+        <location line="+262"/>
+        <source>   Sign Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>    Clear All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/signmessage.cpp" line="+23"/>
+        <source>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation type="unfinished">Syötä Shard-osoite (esim. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Click &quot;Sign Message&quot; to generate signature</source>
+        <translation type="unfinished">Klikkaa &quot;Allekirjoita Viesti luodaksesi allekirjoituksen </translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>The entered address is invalid.</source>
+        <translation type="unfinished">Syötetty osoite on virheellinen.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+8"/>
+        <source>Please check the address and try again.</source>
+        <translation type="unfinished">Tarkista osoite ja yritä uudelleen.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The entered address does not refer to a key.</source>
+        <translation type="unfinished">Syötetty osoite ei täsmää avaimeen.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Wallet unlock was cancelled.</source>
+        <translation type="unfinished">Lompakon avaaminen peruttiin.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Private key for the entered address is not available.</source>
+        <translation type="unfinished">Yksityistä avainta syötetylle osoitteelle ei ole saatavilla.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Message signing failed.</source>
+        <translation type="unfinished">Viestin allekirjoitus epäonnistui.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message signed.</source>
+        <translation type="unfinished">Viesti allekirjoitettu.</translation>
     </message>
 </context>
 <context>
@@ -1898,13 +2845,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Allekirjoitukset - Allekirjoita / Varmista viesti</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+124"/>
+        <location line="+19"/>
+        <location line="+182"/>
         <source>&amp;Sign Message</source>
         <translation>&amp;Allekirjoita viesti</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-176"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Voit allekirjoittaa viestit omalla osoitteellasi todistaaksesi että omistat ne. Ole huolellinen, ettet allekirjoita mitään epämääräistä, sillä phishing-hyökkääjät voivat yrittää huijata sinua allekirjoittamaan henkilöllisyytesi heidän hyväksi. Allekirjoita vain se,  mihin olet sitoutunut.</translation>
     </message>
@@ -1914,19 +2861,19 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Osoite, jolle viesti kirjataan (esim. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <location line="+203"/>
+        <location line="+16"/>
+        <location line="+307"/>
         <source>Choose an address from the address book</source>
         <translation>Valitse osoite osoitekirjasta</translation>
     </message>
     <message>
-        <location line="-193"/>
-        <location line="+203"/>
+        <location line="-297"/>
+        <location line="+307"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location line="-193"/>
+        <location line="-297"/>
         <source>Paste address from clipboard</source>
         <translation>Liitä osoite leikepöydältä</translation>
     </message>
@@ -1941,7 +2888,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Kirjoita viesti jonka haluat allekirjoittaa</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <source>Copy the current signature to the system clipboard</source>
         <translation>Kopioi tämänhetkinen allekirjoitus järjestelmän leikepöydälle</translation>
     </message>
@@ -1951,24 +2898,24 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Allekirjoita viesti vahvistaaksesi, että omistat tämän Shard-osoitteen</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+63"/>
         <source>Reset all sign message fields</source>
         <translation>Tyhjennä kaikki kentät allekirjoituksesta</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+146"/>
+        <location line="+49"/>
+        <location line="+244"/>
         <source>Clear &amp;All</source>
         <translation>Tyhjennä &amp;kaikki</translation>
     </message>
     <message>
-        <location line="-87"/>
-        <location line="+70"/>
+        <location line="-185"/>
+        <location line="+122"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;Varmista viesti</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-116"/>
         <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
         <translation>Syötä allekirjoittava osoite, viesti ja allekirjoitus alla oleviin kenttiin varmistaaksesi allekirjoituksen aitouden. Varmista että kopioit kaikki kentät täsmälleen oikein, myös rivinvaihdot, välilyönnit, tabulaattorit, jne.</translation>
     </message>
@@ -1978,12 +2925,12 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Osoite, jolla viesti on allekirjoitettu (esim. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX) </translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+46"/>
         <source>Verify the message to ensure it was signed with the specified Shard address</source>
         <translation>Vahvista viesti varmistaaksesi että se on allekirjoitettu kyseisellä Shard-osoitteella</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+63"/>
         <source>Reset all verify message fields</source>
         <translation>Tyhjennä kaikki varmista-viesti-kentät</translation>
     </message>
@@ -2113,7 +3060,10 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message numerus="yes">
         <location line="+7"/>
         <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>lähetetty %n noodin läpi</numerusform><numerusform>lähetetty %n solmukohdan läpi</numerusform></translation>
+        <translation>
+            <numerusform>lähetetty %n noodin läpi</numerusform>
+            <numerusform>lähetetty %n solmukohdan läpi</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2166,7 +3116,10 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message numerus="yes">
         <location line="-102"/>
         <source>matures in %n more block(s)</source>
-        <translation><numerusform>kypsyy %n lohkon kuluttua</numerusform><numerusform>kypsyy %n lohkon kuluttua</numerusform></translation>
+        <translation>
+            <numerusform>kypsyy %n lohkon kuluttua</numerusform>
+            <numerusform>kypsyy %n lohkon kuluttua</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2249,7 +3202,10 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message numerus="yes">
         <location line="-36"/>
         <source>Open for %n more block(s)</source>
-        <translation><numerusform>Avoinna vielä %n lohko</numerusform><numerusform>Avoinna vielä %n lohkolle</numerusform></translation>
+        <translation>
+            <numerusform>Avoinna vielä %n lohko</numerusform>
+            <numerusform>Avoinna vielä %n lohkolle</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+67"/>
@@ -2265,15 +3221,23 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Rahansiirron yksityiskohdat</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>This pane shows a detailed description of the transaction</source>
         <translation>Tämä ikkuna näyttää yksityiskohtaiset tiedot rahansiirrosta</translation>
     </message>
 </context>
 <context>
+    <name>TransactionPage</name>
+    <message>
+        <location filename="../forms/transactionpage.ui" line="+20"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>TransactionTableModel</name>
     <message>
-        <location filename="../transactiontablemodel.cpp" line="+231"/>
+        <location filename="../transactiontablemodel.cpp" line="+280"/>
         <source>Date</source>
         <translation>Päivämäärä</translation>
     </message>
@@ -2293,7 +3257,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Määrä</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Open until %1</source>
         <translation>Auki kunnes %1 </translation>
     </message>
@@ -2305,7 +3269,10 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     <message numerus="yes">
         <location line="-15"/>
         <source>Open for %n more block(s)</source>
-        <translation><numerusform>Avoinna %n lohkolle</numerusform><numerusform>Avoinna %n lohkolle</numerusform></translation>
+        <translation>
+            <numerusform>Avoinna %n lohkolle</numerusform>
+            <numerusform>Avoinna %n lohkolle</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2343,19 +3310,26 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Generoitu mutta ei hyväksytty</translation>
     </message>
     <message>
-        <location line="+42"/>
-        <source>Received with</source>
-        <translation>Vastaanotettu osoitteella</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Received from</source>
-        <translation>Vastaanotettu</translation>
+        <location line="+43"/>
+        <source>You received</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
+        <source>You sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Received with</source>
+        <translation type="vanished">Vastaanotettu osoitteella</translation>
+    </message>
+    <message>
+        <source>Received from</source>
+        <translation type="vanished">Vastaanotettu</translation>
+    </message>
+    <message>
         <source>Sent to</source>
-        <translation>Saaja</translation>
+        <translation type="vanished">Saaja</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2368,12 +3342,12 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Louhittu</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+39"/>
         <source>(n/a)</source>
         <translation>(ei saatavilla)</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+203"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
         <translation>Rahansiirron tila. Siirrä osoitin kentän päälle nähdäksesi vahvistusten lukumäärä.</translation>
     </message>
@@ -2401,13 +3375,13 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
 <context>
     <name>TransactionView</name>
     <message>
-        <location filename="../transactionview.cpp" line="+54"/>
-        <location line="+17"/>
+        <location filename="../transactionview.cpp" line="+48"/>
+        <location line="+16"/>
         <source>All</source>
         <translation>Kaikki</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-15"/>
         <source>Today</source>
         <translation>Tänään</translation>
     </message>
@@ -2437,14 +3411,22 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Alue...</translation>
     </message>
     <message>
-        <location line="+12"/>
         <source>Received with</source>
-        <translation>Vastaanotettu osoitteella</translation>
+        <translation type="vanished">Vastaanotettu osoitteella</translation>
+    </message>
+    <message>
+        <source>Sent to</source>
+        <translation type="vanished">Saaja</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>You received</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Sent to</source>
-        <translation>Saaja</translation>
+        <source>You sent</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2462,7 +3444,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Muu</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Enter address or label to search</source>
         <translation>Anna etsittävä osoite tai tunniste</translation>
     </message>
@@ -2472,7 +3454,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Minimimäärä</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+20"/>
         <source>Copy address</source>
         <translation>Kopioi osoite</translation>
     </message>
@@ -2502,7 +3484,7 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
         <translation>Näytä rahansiirron yksityiskohdat</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+193"/>
         <source>Export Transaction Data</source>
         <translation>Vie tiedot rahansiirrosta</translation>
     </message>
@@ -2568,11 +3550,239 @@ Tämä tarkoittaa, että ainakin %2 rahansiirtopalkkio tarvitaan.</translation>
     </message>
 </context>
 <context>
+    <name>TxViewDelegate</name>
+    <message>
+        <location filename="../txviewdelegate.cpp" line="+81"/>
+        <source>Internal Transaction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>ADDRESS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Internal transaction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>CONFIRMATIONS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+6"/>
+        <source>Confirmed (%l confirmations)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+2"/>
+        <source>Unconfirmed (%l confirmations)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>TRANSACTION ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>DATE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>PRICE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+81"/>
+        <location line="+2"/>
+        <source>You received</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>You sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Payment to yourself</source>
+        <translation type="unfinished">Maksu itsellesi</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mined</source>
+        <translation type="unfinished">Louhittu</translation>
+    </message>
+</context>
+<context>
+    <name>VerifyMessage</name>
+    <message>
+        <location filename="../forms/verifymessage.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
+        <translation type="unfinished">Syötä allekirjoittava osoite, viesti ja allekirjoitus alla oleviin kenttiin varmistaaksesi allekirjoituksen aitouden. Varmista että kopioit kaikki kentät täsmälleen oikein, myös rivinvaihdot, välilyönnit, tabulaattorit, jne.</translation>
+    </message>
+    <message>
+        <location line="+225"/>
+        <source>   Verify Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>   Clear All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/verifymessage.cpp" line="+24"/>
+        <source>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation type="unfinished">Syötä Shard-osoite (esim. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter Shard signature</source>
+        <translation type="unfinished">Syötä Shard-allekirjoitus</translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>The entered address is invalid.</source>
+        <translation type="unfinished">Syötetty osoite on virheellinen.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+8"/>
+        <source>Please check the address and try again.</source>
+        <translation type="unfinished">Tarkista osoite ja yritä uudelleen.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The entered address does not refer to a key.</source>
+        <translation type="unfinished">Syötetty osoite ei täsmää avaimeen.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>The signature could not be decoded.</source>
+        <translation type="unfinished">Allekirjoitusta ei pystytty tulkitsemaan.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+13"/>
+        <source>Please check the signature and try again.</source>
+        <translation type="unfinished">Tarkista allekirjoitus ja yritä uudelleen.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The signature did not match the message digest.</source>
+        <translation type="unfinished">Allekirjoitus ei täsmää viestin yhteenvetoon.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Message verification failed.</source>
+        <translation type="unfinished">Viestin vahvistaminen epäonnistui.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message verified.</source>
+        <translation type="unfinished">Viesti vahvistettu.</translation>
+    </message>
+</context>
+<context>
     <name>WalletModel</name>
     <message>
-        <location filename="../walletmodel.cpp" line="+212"/>
+        <location filename="../walletmodel.cpp" line="+218"/>
         <source>Sending...</source>
         <translation>Lähetetään...</translation>
+    </message>
+</context>
+<context>
+    <name>about</name>
+    <message>
+        <location filename="../forms/about.ui" line="+32"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+260"/>
+        <source>Client Name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Satoshi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>On testnet:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>Client Version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Number of connections:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>OpenSSL Version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Build Date:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>Startup time:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;Copyright Shard 2018-2019&lt;/span&gt;, Blackcoin 2014-2018, Novacoin 2012-2014, Bitcoin 2009-2014&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>
+This is experimental software.
+
+Distributed under the MIT/X11 software license, see the accompanying file COPYING or &lt;a style=&quot;color:#0adbf0&quot; href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;http://www.opensource.org/licenses/mit-license.php&lt;/a&gt;.
+
+This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (&lt;a style=&quot;color:#0adbf0&quot; href=&quot;https://www.openssl.org/&quot;&gt;https://www.openssl.org/&lt;/a&gt;) and cryptographic software written by Eric Young (&lt;a style=&quot;color:#0adbf0&quot; href=&quot;mailto:eay@cryptsoft.com&quot;&gt;eay@cryptsoft.com&lt;/a&gt;) and UPnP software written by Thomas Bernard.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/about.cpp" line="-13"/>
+        <source>In:</source>
+        <translation type="unfinished">Sisään:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Out:</source>
+        <translation type="unfinished">Ulos:</translation>
     </message>
 </context>
 <context>

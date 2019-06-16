@@ -87,6 +87,8 @@ void EditAddressDialog::accept()
 {
     if(!model)
         return;
+    QWidget* p = new QWidget(this);
+    p->setStyleSheet("QWidget{color:white;background:'#0b1d2c'}QPushButton { \n background-color: #0d2131;margin-left:10px;\n	border:2px solid #1d2e3f;\ncolor:#eeeeee;\npadding:5px 15px;\n	outline: none;\nborder-radius:2px;\nmargin-right:9px;\n\n}\n\nQPushButton:pressed {\n   background-color: #1d2e3f;\nborder:2px solid gray;\n	color:white;\n\n}\n\nQPushButton:hover {\n     background-color: #102537;\n	border:2px solid #0f3e54;\n }\nQPushButton:checked { \n     background-color: #0d2131;\nborder:2px solid #0f3e54;\n	color:white;\n\n }\nQPushButton:disabled { \n    background:'#0b1d2c';\ncolor:gray;\nborder:2px solid #102537;\n }\n");
 
     if(!saveCurrentRow())
     {
@@ -99,22 +101,22 @@ void EditAddressDialog::accept()
             // No changes were made during edit operation. Just reject.
             break;
         case AddressTableModel::INVALID_ADDRESS:
-            QMessageBox::warning(this, windowTitle(),
+            QMessageBox::warning(p, windowTitle(),
                 tr("The entered address \"%1\" is not a valid Shard address.").arg(ui->addressEdit->text()),
                 QMessageBox::Ok, QMessageBox::Ok);
             break;
         case AddressTableModel::DUPLICATE_ADDRESS:
-            QMessageBox::warning(this, windowTitle(),
+            QMessageBox::warning(p, windowTitle(),
                 tr("The entered address \"%1\" is already in the address book.").arg(ui->addressEdit->text()),
                 QMessageBox::Ok, QMessageBox::Ok);
             break;
         case AddressTableModel::WALLET_UNLOCK_FAILURE:
-            QMessageBox::critical(this, windowTitle(),
+            QMessageBox::critical(p, windowTitle(),
                 tr("Could not unlock wallet."),
                 QMessageBox::Ok, QMessageBox::Ok);
             break;
         case AddressTableModel::KEY_GENERATION_FAILURE:
-            QMessageBox::critical(this, windowTitle(),
+            QMessageBox::critical(p, windowTitle(),
                 tr("New key generation failed."),
                 QMessageBox::Ok, QMessageBox::Ok);
             break;

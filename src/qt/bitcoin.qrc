@@ -1,4 +1,4 @@
-<!DOCTYPE RCC><RCC version="1.0">
+<RCC>
     <qresource prefix="/icons">
         <file alias="bitcoin">res/icons/Shard-80.png</file>
         <file alias="address-book">res/icons/address-book.png</file>
@@ -48,6 +48,54 @@
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
         <file alias="splash">res/images/splash.png</file>
+        <file>res/images/index.png</file>
+        <file>res/images/pixel.png</file>
+        <file>res/images/send.png</file>
+        <file>res/images/recieve.png</file>
+        <file>res/images/details.png</file>
+        <file>res/images/incoming.png</file>
+        <file>res/images/outgoing.png</file>
+        <file>res/images/details2.png</file>
+        <file>res/images/dropdown.png</file>
+        <file>res/images/lock.png</file>
+        <file>res/images/settings.png</file>
+        <file>res/images/exit.png</file>
+        <file>res/images/transactions.png</file>
+        <file>res/images/add.png</file>
+        <file>res/images/graph.png</file>
+        <file>res/images/mined.png</file>
+        <file>res/images/yourself.png</file>
+        <file>res/images/white-down-arrow-png-2.png</file>
+        <file>res/images/gray.png</file>
+        <file>res/images/checkbox_checked_hover.png</file>
+        <file>res/images/checkbox_checked_pressed.png</file>
+        <file>res/images/checkbox_checked.png</file>
+        <file>res/images/checkbox_unchecked_hover.png</file>
+        <file>res/images/checkbox_unchecked_pressed.png</file>
+        <file>res/images/checkbox_unchecked.png</file>
+        <file>res/images/qt-creator.png</file>
+        <file>res/images/close.png</file>
+        <file>res/images/minimize.png</file>
+        <file>res/images/max.png</file>
+        <file>res/images/clear.png</file>
+        <file>res/images/book.png</file>
+        <file>res/images/pasteicon.png</file>
+        <file>res/images/sing.png</file>
+        <file>res/images/copy.png</file>
+        <file>res/images/sync.gif</file>
+        <file>res/images/radio_checked_hover.png</file>
+        <file>res/images/radio_checked.png</file>
+        <file>res/images/radio_unchecked_hover.png</file>
+        <file>res/images/radio_unchecked.png</file>
+        <file>res/images/radio_disabled_checked.png</file>
+        <file>res/images/radio_disabled.png</file>
+        <file>res/images/addressbook.png</file>
+        <file>res/images/conflict.png</file>
+        <file>res/images/question.png</file>
+        <file>res/images/dashboard_recieve.png</file>
+        <file>res/images/dashboard_send.png</file>
+        <file>res/images/window.png</file>
+        <file>res/images/dropright.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
@@ -93,5 +141,17 @@
         <file alias="uk">locale/bitcoin_uk.qm</file>
         <file alias="zh_CN">locale/bitcoin_zh_CN.qm</file>
         <file alias="zh_TW">locale/bitcoin_zh_TW.qm</file>
+    </qresource>
+    <qresource prefix="/documents"/>
+    <qresource prefix="/"/>
+    <qresource prefix="/fonts">
+        <file>res/fonts/Ubuntu-Bold.ttf</file>
+        <file>res/fonts/Ubuntu-BoldItalic.ttf</file>
+        <file>res/fonts/Ubuntu-Italic.ttf</file>
+        <file>res/fonts/Ubuntu-Light.ttf</file>
+        <file>res/fonts/Ubuntu-LightItalic.ttf</file>
+        <file>res/fonts/Ubuntu-Medium.ttf</file>
+        <file>res/fonts/Ubuntu-MediumItalic.ttf</file>
+        <file>res/fonts/Ubuntu-Regular.ttf</file>
     </qresource>
 </RCC>

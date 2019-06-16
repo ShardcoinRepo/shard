@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="sv" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="sv">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -7,28 +9,35 @@
         <translation>Vad du behöver veta om Shard</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+45"/>
         <source>&lt;b&gt;Shard&lt;/b&gt; version</source>
         <translation>&lt;b&gt;Shard&lt;/b&gt; version</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+47"/>
+        <source>Copyright © 2009-2014 The Bitcoin developers
+Copyright © 2012-2014 The NovaCoin developers
+Copyright © 2014 The BlackCoin developers
+Copyright © 2018 The Shard developers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2018 The Shard developers</source>
-        <translation>Copyright © 2009-2014 The Bitcoin developers
+        <translation type="vanished">Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2018 The Shard developers</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+19"/>
         <source>
 This is experimental software.
 
 Distributed under the MIT/X11 software license, see the accompanying file COPYING or &lt;a href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;http://www.opensource.org/licenses/mit-license.php&lt;/a&gt;.
 
 This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (&lt;a href=&quot;https://www.openssl.org/&quot;&gt;https://www.openssl.org/&lt;/a&gt;) and cryptographic software written by Eric Young (&lt;a href=&quot;mailto:eay@cryptsoft.com&quot;&gt;eay@cryptsoft.com&lt;/a&gt;) and UPnP software written by Thomas Bernard.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -39,37 +48,39 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Adressbok</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+191"/>
+        <source>Generate Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+389"/>
         <source>Double-click to edit address or label</source>
         <translation>Dubbel-klicka för att ändra adressen eller etiketten</translation>
     </message>
     <message>
-        <location line="+24"/>
         <source>Create a new address</source>
-        <translation>Skapa ny adress</translation>
+        <translation type="vanished">Skapa ny adress</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-309"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation>Kopiera den markerade adressen till systemets Urklipp</translation>
     </message>
     <message>
-        <location line="-7"/>
         <source>&amp;New Address</source>
-        <translation>Ny adress</translation>
+        <translation type="vanished">Ny adress</translation>
     </message>
     <message>
-        <location line="-43"/>
         <source>These are your Shard addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Dessa är dina Shard adesser för att mottaga betalningsförsändelser. Du kan även använda olika adresser för varje avsändare för att enkelt hålla koll på vem som har skickat en betalning.</translation>
+        <translation type="vanished">Dessa är dina Shard adesser för att mottaga betalningsförsändelser. Du kan även använda olika adresser för varje avsändare för att enkelt hålla koll på vem som har skickat en betalning.</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+39"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;Kopiera adress</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+43"/>
         <source>Show &amp;QR Code</source>
         <translation>Visa &amp;QR kod</translation>
     </message>
@@ -79,32 +90,48 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Signera ett meddelande för att bevisa att du äger Shard adressen</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+39"/>
         <source>Sign &amp;Message</source>
         <translation>Signera &amp;Meddelande</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+53"/>
         <source>Delete the currently selected address from the list</source>
         <translation>Ta bort den valda adressen från listan</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="-46"/>
         <source>Verify a message to ensure it was signed with a specified Shard address</source>
         <translation>Verifiera ett meddelande för att försäkra dig över att det var signerat av en specifik Shard adress</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../addressbookpage.cpp" line="+65"/>
+        <source>Generate
+Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/addressbookpage.ui" line="-177"/>
+        <source>Address:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+216"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;Verifiera meddelande</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+46"/>
         <source>&amp;Delete</source>
         <translation>&amp;Radera</translation>
     </message>
     <message>
-        <location filename="../addressbookpage.cpp" line="+66"/>
+        <location filename="../addressbookpage.cpp" line="-6"/>
+        <source>Address book</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
         <source>Copy &amp;Label</source>
         <translation>Kopiera &amp;etikett</translation>
     </message>
@@ -114,7 +141,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Editera</translation>
     </message>
     <message>
-        <location line="+248"/>
+        <location line="+291"/>
         <source>Export Address Book Data</source>
         <translation>Exportera adressboken</translation>
     </message>
@@ -137,7 +164,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>AddressTableModel</name>
     <message>
-        <location filename="../addresstablemodel.cpp" line="+145"/>
+        <location filename="../addresstablemodel.cpp" line="+205"/>
         <source>Label</source>
         <translation>Etikett</translation>
     </message>
@@ -147,7 +174,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Adress</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+0"/>
+        <source>Amount</source>
+        <translation type="unfinished">Mängd</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>(no label)</source>
         <translation>(Ingen etikett)</translation>
     </message>
@@ -160,22 +192,22 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Lösenords Dialog</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+30"/>
         <source>Enter passphrase</source>
         <translation>Ange lösenord</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+26"/>
         <source>New passphrase</source>
         <translation>Nytt lösenord</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+26"/>
         <source>Repeat new passphrase</source>
         <translation>Upprepa nytt lösenord</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+29"/>
         <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
         <translation>Avaktiverar &quot;sendmoney&quot; om ditt operativsystem har blivit äventyrat. ger ingen verklig säkerhet.</translation>
     </message>
@@ -254,7 +286,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-140"/>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+82"/>
@@ -306,17 +338,17 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+297"/>
+        <location filename="../bitcoingui.cpp" line="+400"/>
         <source>Sign &amp;message...</source>
         <translation>Signera &amp;meddelande...</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-70"/>
         <source>Show general overview of wallet</source>
         <translation>Visa översiktsvy av plånbok</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+21"/>
         <source>&amp;Transactions</source>
         <translation>&amp;Transaktioner</translation>
     </message>
@@ -326,7 +358,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Bläddra i transaktionshistorik</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>&amp;Address Book</source>
         <translation>&amp;Adress bok</translation>
     </message>
@@ -336,12 +368,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Editera listan över sparade adresser och deras namn</translation>
     </message>
     <message>
-        <location line="-18"/>
+        <location line="-22"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation>Visa adresslista för att mottaga betalningar</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+39"/>
         <source>E&amp;xit</source>
         <translation>&amp;Avsluta</translation>
     </message>
@@ -391,12 +423,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Exportera...</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-58"/>
         <source>Send coins to a Shard address</source>
         <translation>Skicka coins till en Shard adress</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+42"/>
         <source>Modify configuration options for Shard</source>
         <translation>Modifiera konfigurations-alternativ för Shard</translation>
     </message>
@@ -436,18 +468,18 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Verifiera meddelande...</translation>
     </message>
     <message>
-        <location line="-214"/>
-        <location line="+555"/>
+        <location line="-300"/>
+        <location line="+706"/>
         <source>Shard</source>
         <translation>Shard</translation>
     </message>
     <message>
-        <location line="-555"/>
+        <location line="-706"/>
         <source>Wallet</source>
         <translation>Plånbok</translation>
     </message>
     <message>
-        <location line="+193"/>
+        <location line="+279"/>
         <source>&amp;About Shard</source>
         <translation>&amp;Om Shard</translation>
     </message>
@@ -472,12 +504,22 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Lås plånbok</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+12"/>
+        <source>&amp;LOCK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;SETTINGS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>&amp;File</source>
         <translation>&amp;Arkiv</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>&amp;Settings</source>
         <translation>&amp;Inställningar</translation>
     </message>
@@ -492,21 +534,54 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Verktygsfält för Tabbar</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+17"/>
+        <source>SHARD BALANCE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+64"/>
         <location line="+9"/>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+58"/>
+        <location line="+65"/>
         <source>Shard client</source>
         <translation>Shard klient</translation>
     </message>
     <message numerus="yes">
-        <location line="+70"/>
+        <location line="+78"/>
         <source>%n active connection(s) to Shard network</source>
-        <translation><numerusform>%n aktiv anslutning till Shard nätverket</numerusform><numerusform>%n aktiva anslutning till Shard nätverket</numerusform></translation>
+        <translation>
+            <numerusform>%n aktiv anslutning till Shard nätverket</numerusform>
+            <numerusform>%n aktiva anslutning till Shard nätverket</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Synced</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Syncing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+278"/>
+        <source>LOCK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>UNLOCK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+140"/>
+        <source>Staking.&lt;br&gt;Your weight is %1&lt;br&gt;Network weight is %2</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -529,37 +604,37 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Ingen staking för att dina coins är ännu inte föråldrade</translation>
     </message>
     <message>
-        <location line="-812"/>
+        <location line="-893"/>
         <source>&amp;Dashboard</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>&amp;Receive</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>&amp;Send</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>&amp;Unlock Wallet...</source>
         <translation>Lås &amp;Upp plånboken</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+339"/>
         <source>Up to date</source>
         <translation>Uppdaterad</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Catching up...</source>
         <translation>Hämtar senaste...</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+114"/>
         <source>Confirm transaction fee</source>
         <translation>Bekräfta transaktionsavgiften</translation>
     </message>
@@ -587,7 +662,7 @@ Adress: %4
 </translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <location line="+15"/>
         <source>URI handling</source>
         <translation>URI hantering</translation>
@@ -599,12 +674,12 @@ Adress: %4
         <translation>URI:n kan inte tolkas! Detta kan bero på en ogiltig Shard adress eller felaktiga URI parametrar.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Wallet is &lt;b&gt;not encrypted&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Denna plånbok är &lt;b&gt;krypterad&lt;/b&gt; och för närvarande &lt;b&gt;olåst&lt;/b&gt;</translation>
     </message>
@@ -614,7 +689,7 @@ Adress: %4
         <translation>Denna plånbok är &lt;b&gt;krypterad&lt;/b&gt; och för närvarande &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+31"/>
         <source>Backup Wallet</source>
         <translation>Säkerhetskopiera plånbok</translation>
     </message>
@@ -634,85 +709,99 @@ Adress: %4
         <translation>Ett fel uppstod vid sparandet av plånboken till den nya platsen.</translation>
     </message>
     <message numerus="yes">
-        <location line="+91"/>
         <source>%n second(s)</source>
-        <translation><numerusform>%n sekund</numerusform><numerusform>%n sekunder</numerusform></translation>
+        <translation type="vanished">
+            <numerusform>%n sekund</numerusform>
+            <numerusform>%n sekunder</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>%n minute(s)</source>
+        <translation type="vanished">
+            <numerusform>%n minut</numerusform>
+            <numerusform>%n minuter</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="-347"/>
+        <source>%n hour(s)</source>
+        <translation>
+            <numerusform>%n timme</numerusform>
+            <numerusform>%n timmar</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="-24"/>
+        <source>Processed %1 blocks of transaction history.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+28"/>
+        <source>%n day(s)</source>
+        <translation>
+            <numerusform>%n dag</numerusform>
+            <numerusform>%n dagar</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
-        <source>%n minute(s)</source>
-        <translation><numerusform>%n minut</numerusform><numerusform>%n minuter</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <location line="-429"/>
-        <location line="+433"/>
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n timme</numerusform><numerusform>%n timmar</numerusform></translation>
-    </message>
-    <message>
-        <location line="-456"/>
-        <source>Processed %1 blocks of transaction history.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message numerus="yes">
-        <location line="+27"/>
-        <location line="+433"/>
-        <source>%n day(s)</source>
-        <translation><numerusform>%n dag</numerusform><numerusform>%n dagar</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <location line="-429"/>
         <location line="+6"/>
         <source>%n week(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <location line="+0"/>
         <source>%1 and %2</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n year(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <location line="+5"/>
         <source>%1 behind</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+17"/>
         <source>Last received block was generated %1 ago.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Transactions after this will not yet be visible.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Error</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished">Fel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Warning</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished">Varning</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Information</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+70"/>
         <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+324"/>
+        <location line="+333"/>
         <source>Not staking</source>
         <translation>Ingen staking</translation>
     </message>
@@ -720,6 +809,65 @@ Adress: %4
         <location filename="../bitcoin.cpp" line="+104"/>
         <source>A fatal error occurred. Shard can no longer continue safely and will quit.</source>
         <translation>Ett fatalt fel uppstod. Shard kan inte fortsätta och stänger programmet.</translation>
+    </message>
+</context>
+<context>
+    <name>ChangePass</name>
+    <message>
+        <location filename="../forms/changepass.ui" line="+26"/>
+        <source>Form</source>
+        <translation type="unfinished">Formulär</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>CHANGE WALLET PASSWORD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Current Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>New Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Repeat New Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+133"/>
+        <source>Change Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/changepass.cpp" line="+65"/>
+        <source>Wallet encrypted</source>
+        <translation type="unfinished">Plånboken är krypterad</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;p style=&quot;color:white&quot;&gt;Wallet passphrase was successfully changed.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+6"/>
+        <source>Wallet encryption failed</source>
+        <translation type="unfinished">Kryptering av plånbok misslyckades</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>&lt;p style=&quot;color:white&quot;&gt;The passphrase entered for the wallet decryption was incorrect.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&lt;p style=&quot;color:white&quot;&gt;The supplied passphrases do not match.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -738,64 +886,93 @@ Adress: %4
         <translation>Coin kontroll</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+34"/>
         <source>Quantity:</source>
         <translation>Antal:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+38"/>
         <source>Bytes:</source>
         <translation>Bytes:</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Amount:</source>
         <translation>Belopp:</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Fee:</source>
         <translation>Avgift:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+41"/>
         <source>Low Output:</source>
         <translation>Låg utskrift:</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="+493"/>
         <source>no</source>
-        <translation>nej</translation>
+        <translation type="vanished">nej</translation>
     </message>
     <message>
-        <location filename="../forms/coincontroldialog.ui" line="+51"/>
+        <location line="+54"/>
         <source>After Fee:</source>
         <translation>Efter avgift:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+41"/>
         <source>Change:</source>
         <translation>Ändra:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+104"/>
         <source>(un)select all</source>
         <translation>välj/avvälj alla</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+52"/>
         <source>Tree mode</source>
         <translation>Träd visning</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+55"/>
         <source>List mode</source>
         <translation>List visning</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+58"/>
+        <source>Select Coins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+305"/>
+        <source>Select</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Amount</source>
         <translation>Mängd</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Age</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Potential Stake</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Days to Stake (est.)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Weight</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -813,7 +990,7 @@ Adress: %4
         <translation>Datum</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-38"/>
         <source>Confirmations</source>
         <translation>Bekräftelser</translation>
     </message>
@@ -823,12 +1000,11 @@ Adress: %4
         <translation>Bekräftad</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Priority</source>
-        <translation>Prioritet</translation>
+        <translation type="vanished">Prioritet</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="-456"/>
+        <location filename="../coincontroldialog.cpp" line="+40"/>
         <source>Copy address</source>
         <translation>Kopiera adress</translation>
     </message>
@@ -839,17 +1015,27 @@ Adress: %4
     </message>
     <message>
         <location line="+1"/>
-        <location line="+26"/>
+        <location line="+27"/>
         <source>Copy amount</source>
         <translation>Kopiera belopp</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-26"/>
         <source>Copy transaction ID</source>
         <translation>Kopiera transaktions ID</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+1"/>
+        <source>Lock unspent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unlock unspent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Copy quantity</source>
         <translation>Kopiera antal</translation>
     </message>
@@ -879,43 +1065,74 @@ Adress: %4
         <translation>Kopiera förändringarna</translation>
     </message>
     <message>
-        <location line="+423"/>
+        <location line="+62"/>
+        <source>&lt; Amount</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&gt; Amount</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt; Weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&gt; Weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&gt; Age</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt; Age</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+370"/>
+        <source>(%1 locked)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>DUST</source>
-        <translation>STOFT</translation>
+        <translation type="vanished">STOFT</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>yes</source>
-        <translation>ja</translation>
+        <translation type="vanished">ja</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>This label turns red, if the transaction size is bigger than 10000 bytes.
 
  This means a fee of at least %1 per kb is required.
 
  Can vary +/- 1 Byte per input.</source>
-        <translation>Denna label blir röd, om storleken på transaktionen är över 10000 bytes.
+        <translation type="vanished">Denna label blir röd, om storleken på transaktionen är över 10000 bytes.
 
  Detta betyder att en avgift på %1 per kb måste betalas.
 
  Kan variera +/- 1 Byte per ingång.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>This label turns red, if any recipient receives an amount smaller than %1.
 
  This means a fee of at least %2 is required.
 
  Amounts below 0.546 times the minimum relay fee are shown as DUST.</source>
-        <translation>Denna label blir röd, om en mottagare får en mängd mindre än %1
+        <translation type="vanished">Denna label blir röd, om en mottagare får en mängd mindre än %1
 
 Detta betyder att en avgift på minst %2 krävs.
 
 Mängder under 0,546 gånger minimiavgiften visas som DUST.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+139"/>
         <source>This label turns red, if the change is smaller than %1.
 
  This means a fee of at least %2 is required.</source>
@@ -925,7 +1142,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
     <message>
         <location line="+35"/>
-        <location line="+58"/>
+        <location line="+83"/>
         <source>(no label)</source>
         <translation>(Ingen etikett)</translation>
     </message>
@@ -948,7 +1165,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Redigera Adress</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+17"/>
         <source>&amp;Label</source>
         <translation>&amp;Etikett</translation>
     </message>
@@ -958,7 +1175,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Namnet som kopplats till denna Shard-adress</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+19"/>
         <source>&amp;Address</source>
         <translation>&amp;Adress</translation>
     </message>
@@ -1009,9 +1226,139 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
 </context>
 <context>
+    <name>EncryptWallet</name>
+    <message>
+        <location filename="../forms/encryptwallet.ui" line="+26"/>
+        <source>Form</source>
+        <translation type="unfinished">Formulär</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <location filename="../forms/encryptwallet.cpp" line="+46"/>
+        <source>ENCRYPT WALLET</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <location line="+50"/>
+        <source>Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Repeat Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+116"/>
+        <location filename="../forms/encryptwallet.cpp" line="+1"/>
+        <source>Encrypt Wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/encryptwallet.cpp" line="+9"/>
+        <source>DECRYPT WALLET</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decrypt Wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Confirm wallet encryption</source>
+        <translation type="unfinished">Bekräfta kryptering av plånbok</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
+        <translation type="unfinished">Varning: Om du krypterar plånboken och glömmer lösenordet, kommer du att &lt;b&gt;FÖRLORA ALLA COINS&lt;/b&gt;!</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Are you sure you wish to encrypt your wallet?</source>
+        <translation type="unfinished">Är du säker på att du vill kryptera din plånbok?</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Wallet encrypted</source>
+        <translation type="unfinished">Plånboken är krypterad</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Shard will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Shard plånboken kommer nu att stängas för att slutföra krypteringen: Kom ihåg att även en krypterad plånboks säkerhet kan äventyras genom keyloggers eller dylika malwares.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation type="unfinished">VIKTIGT: Alla tidigare säkerhetskopior du har gjort av plånbokens fil ska ersättas med den nya genererade, krypterade plånboks filen. Av säkerhetsskäl kommer tidigare säkerhetskopior av den okrypterade plånboks filen blir oanvändbara när du börjar använda en ny, krypterad plånbok.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+7"/>
+        <source>Wallet encryption failed</source>
+        <translation type="unfinished">Kryptering av plånbok misslyckades</translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
+        <translation type="unfinished">Kryptering av plånbok misslyckades på grund av ett internt fel. Din plånbok blev inte krypterad.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>The supplied passphrases do not match.</source>
+        <translation type="unfinished">De angivna lösenorden överensstämmer inte.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Wallet decryption failed</source>
+        <translation type="unfinished">Dekryptering av plånbok misslyckades</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The passphrase entered for the wallet decryption was incorrect.</source>
+        <translation type="unfinished">Lösenordet för dekryptering av plånbok var felaktig.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Wallet decryption sucess</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The wallet was successfully decrypted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ExportPage</name>
+    <message>
+        <location filename="../forms/exportpage.ui" line="+26"/>
+        <source>Form</source>
+        <translation type="unfinished">Formulär</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>EXPORT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+194"/>
+        <source>Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/exportpage.cpp" line="+12"/>
+        <source>Export Transactions</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
-        <location filename="../guiutil.cpp" line="+426"/>
+        <location filename="../guiutil.cpp" line="+431"/>
         <location line="+12"/>
         <source>Shard-Qt</source>
         <translation>Shard-Qt</translation>
@@ -1053,6 +1400,94 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
 </context>
 <context>
+    <name>LanguagePage</name>
+    <message>
+        <location filename="../forms/languagepage.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished">Formulär</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>SEARCH</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/languagepage.cpp" line="+110"/>
+        <source>Warning</source>
+        <translation type="unfinished">Varning</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>This setting will take effect after restarting Shard.</source>
+        <translation type="unfinished">Inställningen börjar gälla efter omstart av Shard.</translation>
+    </message>
+</context>
+<context>
+    <name>NetworkTraffic</name>
+    <message>
+        <location filename="../forms/networktraffic.ui" line="+32"/>
+        <source>Form</source>
+        <translation type="unfinished">Formulär</translation>
+    </message>
+    <message>
+        <location line="+495"/>
+        <source>In:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <location line="+463"/>
+        <location line="+498"/>
+        <source>0 KB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-509"/>
+        <source>Out:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+558"/>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/networktraffic.cpp" line="+73"/>
+        <source>%1 B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 KB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 MB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 GB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>%1 m</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 h</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 h %2 m</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>OptionsDialog</name>
     <message>
         <location filename="../forms/optionsdialog.ui" line="+14"/>
@@ -1060,7 +1495,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Alternativ</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+22"/>
         <source>&amp;Main</source>
         <translation>&amp;Allmänt</translation>
     </message>
@@ -1095,7 +1530,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>&amp;Starta Shard vid inloggning</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+8"/>
         <source>&amp;Network</source>
         <translation>&amp;Nätverk</translation>
     </message>
@@ -1120,7 +1555,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Proxyns IP-adress (t.ex. 127.0.0.1)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>&amp;Port:</source>
         <translation>&amp;Port: </translation>
     </message>
@@ -1130,17 +1565,17 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Proxyns port (t.ex. 9050)</translation>
     </message>
     <message>
-        <location line="-57"/>
+        <location line="-63"/>
         <source>Connect to the Shard network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Connect through SOCKS5 proxy:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+102"/>
         <source>&amp;Window</source>
         <translation>&amp;Fönster</translation>
     </message>
@@ -1200,22 +1635,17 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Visa coin kontrollinställningar (endast avancerade användare!)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Use black visual theme (requires restart)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+71"/>
+        <location line="+115"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+51"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Avbryt</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+54"/>
         <source>&amp;Apply</source>
         <translation>&amp;Verkställ</translation>
     </message>
@@ -1225,7 +1655,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>standard</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+146"/>
         <location line="+9"/>
         <source>Warning</source>
         <translation>Varning</translation>
@@ -1243,83 +1673,312 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
 </context>
 <context>
+    <name>OptionsPage</name>
+    <message>
+        <location filename="../forms/optionspage.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished">Formulär</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Main</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Optional transaction fee per KB that helps make sure your transactions are processed quickly.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Most transactions are 1KB.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Pay Transaction Fee</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Reserved amount does not participate cin staking and is therefore spendable at any time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Reserve</source>
+        <translation type="unfinished">Reservera</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Network</source>
+        <translation type="unfinished">Nätverk</translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Connect through SOCKS5 proxy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Map port using UPnP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Proxy IP:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Port:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+58"/>
+        <source>Display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>Unit to show amounts in:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+132"/>
+        <source>Start Shard on System Login</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Minimize to the tray instead of taskbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Minimize on close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Apply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/optionspage.cpp" line="+144"/>
+        <location line="+9"/>
+        <source>Warning</source>
+        <translation type="unfinished">Varning</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <location line="+9"/>
+        <source>This setting will take effect after restarting Shard.</source>
+        <translation type="unfinished">Inställningen börjar gälla efter omstart av Shard.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The supplied proxy address is invalid.</source>
+        <translation type="unfinished">Den medföljande proxy adressen är ogiltig.</translation>
+    </message>
+</context>
+<context>
     <name>OverviewPage</name>
     <message>
-        <location filename="../forms/overviewpage.ui" line="+14"/>
+        <location filename="../forms/overviewpage.ui" line="+20"/>
         <source>Form</source>
         <translation>Formulär</translation>
     </message>
     <message>
-        <location line="+46"/>
-        <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Shard network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den visade informationen kan vara gammal. Din plånbok synkroniseras automatiskt med Shard nätverket efter att en anslutning skapats, men denna process är inte klar än.</translation>
-    </message>
-    <message>
-        <location line="-173"/>
-        <source>Stake:</source>
-        <translation>Stake:</translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>Unconfirmed:</source>
-        <translation>Obekräftat:</translation>
-    </message>
-    <message>
-        <location line="-113"/>
-        <source>Wallet</source>
-        <translation>Plånbok</translation>
-    </message>
-    <message>
-        <location line="+49"/>
-        <source>Spendable:</source>
-        <translation>Spenderbart:</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Your current spendable balance</source>
-        <translation>Ditt tillgängliga saldo</translation>
+        <location line="+190"/>
+        <source>Recieve</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+80"/>
+        <source>STAKED</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <location line="+88"/>
+        <location line="+113"/>
+        <source>0</source>
+        <translation type="unfinished">0</translation>
+    </message>
+    <message>
+        <location line="-137"/>
+        <source>BALANCE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>$ 0.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>UNCONFIRMED</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+147"/>
+        <source>Send</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+64"/>
+        <source>&lt;img src=&quot;:/images/res/images/graph.png&quot;&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+233"/>
+        <source>SHARD/USD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>$ 0.00 / SHARD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+55"/>
+        <source>MCAP:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <location line="+46"/>
+        <location line="+46"/>
+        <source>0.00 $</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-70"/>
+        <source>Change (24h):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Volume (24h):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+83"/>
+        <source>&lt;img src=&quot;:/images/res/images/transactions.png&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Transactions List</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+63"/>
+        <source>View More</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Shard network after a connection is established, but this process has not completed yet.</source>
+        <translation type="vanished">Den visade informationen kan vara gammal. Din plånbok synkroniseras automatiskt med Shard nätverket efter att en anslutning skapats, men denna process är inte klar än.</translation>
+    </message>
+    <message>
+        <source>Stake:</source>
+        <translation type="vanished">Stake:</translation>
+    </message>
+    <message>
+        <source>Unconfirmed:</source>
+        <translation type="vanished">Obekräftat:</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation type="vanished">Plånbok</translation>
+    </message>
+    <message>
+        <source>Spendable:</source>
+        <translation type="vanished">Spenderbart:</translation>
+    </message>
+    <message>
+        <source>Your current spendable balance</source>
+        <translation type="vanished">Ditt tillgängliga saldo</translation>
+    </message>
+    <message>
         <source>Immature:</source>
-        <translation>Omogen:</translation>
+        <translation type="vanished">Omogen:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Mined balance that has not yet matured</source>
-        <translation>Den genererade balansen som ännu inte har mognat</translation>
+        <translation type="vanished">Den genererade balansen som ännu inte har mognat</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Total:</source>
-        <translation>Totalt:</translation>
+        <translation type="vanished">Totalt:</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Your current total balance</source>
-        <translation>Ditt nuvarande totala saldo</translation>
+        <translation type="vanished">Ditt nuvarande totala saldo</translation>
     </message>
     <message>
-        <location line="+50"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Nyligen genomförda transaktioner&lt;/b&gt;</translation>
+        <translation type="vanished">&lt;b&gt;Nyligen genomförda transaktioner&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="-118"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
-        <translation>Totala antalet transaktioner inte har blivit bekräftade än och därför inte räknas mot det totala saldot</translation>
+        <translation type="vanished">Totala antalet transaktioner inte har blivit bekräftade än och därför inte räknas mot det totala saldot</translation>
     </message>
     <message>
-        <location line="-32"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
-        <translation>Antal coins som var i stake-processen, och räknas ännu inte till nuvarande saldo</translation>
+        <translation type="vanished">Antal coins som var i stake-processen, och räknas ännu inte till nuvarande saldo</translation>
     </message>
     <message>
-        <location filename="../overviewpage.cpp" line="+116"/>
-        <location line="+1"/>
         <source>out of sync</source>
-        <translation>osynkroniserad</translation>
+        <translation type="vanished">osynkroniserad</translation>
+    </message>
+    <message>
+        <location filename="../overviewpage.cpp" line="+75"/>
+        <source>5 minutes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>15 minutes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>30 minutes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1 hour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1 day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1 week</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1 month</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+27"/>
+        <source>Price Graph</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-26"/>
+        <source>Balance Graph</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Staked Graph</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1327,7 +1986,20 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
         <source>Cannot start shard: click-to-pay handler</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QMessageBox</name>
+    <message>
+        <location filename="../forms/about.cpp" line="+48"/>
+        <source>&lt;p&gt;This program uses Qt version %1.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems. It is also available for embedded Linux and other embedded and mobile operating systems.&lt;/p&gt;&lt;p&gt;Qt is available under three different licensing options designed to accommodate the needs of our various users.&lt;/p&gt;&lt;p&gt;Qt licensed under our commercial license agreement is appropriate for development of proprietary/commercial software where you do not want to share any source code with third parties or otherwise cannot comply with the terms of the GNU LGPL version 3 or GNU LGPL version 2.1.&lt;/p&gt;&lt;p&gt;Qt licensed under the GNU LGPL version 3 is appropriate for the development of Qt&amp;nbsp;applications provided you can comply with the terms and conditions of the GNU LGPL version 3.&lt;/p&gt;&lt;p&gt;Qt licensed under the GNU LGPL version 2.1 is appropriate for the development of Qt&amp;nbsp;applications provided you can comply with the terms and conditions of the GNU LGPL version 2.1.&lt;/p&gt;&lt;p&gt;Please see &lt;a style=&quot;color:#0adbf0&quot; href=&quot;http://%2/&quot;&gt;%2&lt;/a&gt; for an overview of Qt licensing.&lt;/p&gt;&lt;p&gt;Copyright (C) %1 The Qt Company Ltd and other contributors.&lt;/p&gt;&lt;p&gt;Qt and the Qt logo are trademarks of The Qt Company Ltd.&lt;/p&gt;&lt;p&gt;Qt is The Qt Company Ltd product developed as an open source project. See &lt;a style=&quot;color:#0adbf0&quot; href=&quot;http://%3/&quot;&gt;%3&lt;/a&gt; for more information.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1338,27 +2010,27 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>QR-Kod Dialog</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+65"/>
         <source>Request Payment</source>
         <translation>Begär Betalning</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+79"/>
         <source>Amount:</source>
         <translation>Belopp:</translation>
     </message>
     <message>
-        <location line="-44"/>
+        <location line="-64"/>
         <source>Label:</source>
         <translation>Etikett:</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+29"/>
         <source>Message:</source>
         <translation>Meddelande:</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+127"/>
         <source>&amp;Save As...</source>
         <translation>&amp;Spara Som...</translation>
     </message>
@@ -1391,7 +2063,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
 <context>
     <name>RPCConsole</name>
     <message>
-        <location filename="../forms/rpcconsole.ui" line="+46"/>
+        <location filename="../forms/rpcconsole.ui" line="+52"/>
         <source>Client name</source>
         <translation>Klientnamn</translation>
     </message>
@@ -1453,39 +2125,39 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Aktuellt antal block</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+293"/>
         <source>&amp;Network Traffic</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+96"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Totals</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+64"/>
-        <location filename="../rpcconsole.cpp" line="+352"/>
+        <location line="+226"/>
+        <location filename="../rpcconsole.cpp" line="+202"/>
         <source>In:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="+242"/>
         <location filename="../rpcconsole.cpp" line="+1"/>
         <source>Out:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-383"/>
+        <location line="-847"/>
         <source>Last block time</source>
         <translation>Sista blocktid</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+98"/>
         <source>&amp;Open</source>
         <translation>&amp;Öppna</translation>
     </message>
@@ -1500,7 +2172,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Visa Shard-Qt hjälp meddelandet för att få en lista över möjliga Shard kommandoradsalternativ.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+49"/>
         <source>&amp;Show</source>
         <translation>&amp;Visa</translation>
     </message>
@@ -1510,17 +2182,17 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>&amp;Konsol</translation>
     </message>
     <message>
-        <location line="-237"/>
+        <location line="-329"/>
         <source>Build date</source>
         <translation>Kompileringsdatum</translation>
     </message>
     <message>
-        <location line="-104"/>
+        <location line="-110"/>
         <source>Shard - Debug window</source>
         <translation>Shard - Felsökningsfönster</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Shard Core</source>
         <translation>Shard Core</translation>
     </message>
@@ -1535,7 +2207,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Öppna Shard felsöknings-loggfilen från nuvarande data mapp. Detta kan kan ta ett par minuter för stora log filer.</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+198"/>
         <source>Clear console</source>
         <translation>Rensa konsollen</translation>
     </message>
@@ -1557,44 +2229,94 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message>
         <location line="+134"/>
         <source>%1 B</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 KB</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 MB</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 GB</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>%1 m</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>%1 h</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 h %2 m</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RPCConsole_Widget</name>
+    <message>
+        <location filename="../forms/rpcconsole_widget.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished">Formulär</translation>
+    </message>
+    <message>
+        <location line="+143"/>
+        <source>Clear console</source>
+        <translation type="unfinished">Rensa konsollen</translation>
+    </message>
+    <message>
+        <location filename="../forms/rpcconsole_widget.cpp" line="+151"/>
+        <source>Welcome to the Shard RPC console.</source>
+        <translation type="unfinished">Välkommen till Shard RPC konsoll.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation type="unfinished">Använd upp- och ner-pilarna för att navigera i historiken, och &lt;b&gt;Ctrl-L&lt;/b&gt; för att rensa skärmen.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
+        <translation type="unfinished">Skriv &lt;b&gt;help&lt;/b&gt; för en översikt av alla kommandon.</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>%1 B</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 KB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 MB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 GB</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>SendCoinsDialog</name>
     <message>
-        <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+179"/>
+        <location filename="../forms/sendcoinsdialog.ui" line="+17"/>
+        <location filename="../sendcoinsdialog.cpp" line="+133"/>
+        <location line="+35"/>
+        <location line="+68"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1605,118 +2327,150 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Skicka pengar</translation>
     </message>
     <message>
-        <location line="+76"/>
         <source>Coin Control Features</source>
-        <translation>Coin kontrollinställningar</translation>
+        <translation type="vanished">Coin kontrollinställningar</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+168"/>
         <source>Inputs...</source>
         <translation>Ingångar...</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+23"/>
+        <source>WARNING: Invalid Shard Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>automatically selected</source>
         <translation>automatiskt vald</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+459"/>
+        <source>SplitBlock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Block Size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>0.00 SHARD</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <source>Change:</source>
+        <translation type="unfinished">Ändra:</translation>
+    </message>
+    <message>
+        <location line="+115"/>
+        <source>Custom Change Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+157"/>
+        <source>Send Shard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-904"/>
         <source>Insufficient funds!</source>
         <translation>Otillräckligt saldo!</translation>
     </message>
     <message>
-        <location line="+77"/>
         <source>Quantity:</source>
-        <translation>Antal:</translation>
+        <translation type="vanished">Antal:</translation>
     </message>
     <message>
-        <location line="+22"/>
-        <location line="+35"/>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="vanished">0</translation>
     </message>
     <message>
-        <location line="-19"/>
         <source>Bytes:</source>
-        <translation>Bytes:</translation>
+        <translation type="vanished">Bytes:</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+169"/>
         <source>Amount:</source>
         <translation>Belopp:</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+93"/>
         <source>Fee:</source>
         <translation>Avgift:</translation>
     </message>
     <message>
-        <location line="+35"/>
         <source>Low Output:</source>
-        <translation>Låg utmatning:</translation>
+        <translation type="vanished">Låg utmatning:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>no</source>
-        <translation>nej</translation>
+        <translation type="vanished">nej</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+94"/>
         <source>After Fee:</source>
         <translation>Efter avgift:</translation>
     </message>
     <message>
-        <location line="+35"/>
         <source>Change</source>
-        <translation>Ändra</translation>
+        <translation type="vanished">Ändra</translation>
     </message>
     <message>
-        <location line="+50"/>
         <source>custom change address</source>
-        <translation>egen ändringsadress</translation>
+        <translation type="vanished">egen ändringsadress</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+659"/>
         <source>Send to multiple recipients at once</source>
         <translation>Skicka till flera mottagare samtidigt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Add &amp;Recipient</source>
-        <translation>Lägg till &amp;mottagare</translation>
+        <translation type="vanished">Lägg till &amp;mottagare</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="-938"/>
         <source>Remove all transaction fields</source>
         <translation>Ta bort alla transaktionsfält</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+38"/>
         <source>Clear &amp;All</source>
         <translation>Rensa &amp;alla</translation>
     </message>
     <message>
-        <location line="+24"/>
         <source>Balance:</source>
-        <translation>Balans:</translation>
+        <translation type="vanished">Balans:</translation>
     </message>
     <message>
-        <location line="+47"/>
         <source>Confirm the send action</source>
-        <translation>Bekräfta sändordern</translation>
+        <translation type="vanished">Bekräfta sändordern</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>S&amp;end</source>
-        <translation>&amp;Skicka</translation>
+        <translation type="vanished">&amp;Skicka</translation>
     </message>
     <message>
-        <location filename="../sendcoinsdialog.cpp" line="-171"/>
+        <location filename="../sendcoinsdialog.cpp" line="-228"/>
         <source>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
         <translation>Fyll i en Shard adress (t.ex. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+1"/>
+        <source># of Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enable/Disable Block Splitting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Copy quantity</source>
         <translation>Kopiera antal</translation>
     </message>
@@ -1751,12 +2505,29 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Kopiera ändring</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+67"/>
+        <source>The split block feature does not work when sending to external addresses. Please try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>The split block feature does not work with multiple addresses. Please try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <location line="+2"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; till %2 (%3)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <location line="+6"/>
+        <source>&lt;b&gt;%1&lt;/b&gt; in %4 blocks of %5 each to %2 (%3)?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Confirm send coins</source>
         <translation>Bekräfta skickade mynt</translation>
     </message>
@@ -1798,7 +2569,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message>
         <location line="+5"/>
         <source>Error: Transaction creation failed!</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1806,17 +2577,21 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Fel: Transaktionen nekades. Detta kan hända om vissa av mynten i din plånbok redan är använda, t.ex om du använder en kopia av wallet.dat och mynten redan var använda i kopia men inte markerade som använda här.</translation>
     </message>
     <message>
-        <location line="+241"/>
-        <source>WARNING: Invalid Shard address</source>
-        <translation>VARNING: Ogiltig Shard adress</translation>
+        <location line="+266"/>
+        <source>WARNING: Invalid shard address!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <source>WARNING: Invalid Shard address</source>
+        <translation type="vanished">VARNING: Ogiltig Shard adress</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>(no label)</source>
         <translation>(Ingen etikett)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>WARNING: unknown change address</source>
         <translation>VARNING: okänd ändringsadress</translation>
     </message>
@@ -1824,65 +2599,233 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
 <context>
     <name>SendCoinsEntry</name>
     <message>
-        <location filename="../forms/sendcoinsentry.ui" line="+14"/>
+        <location filename="../forms/sendcoinsentry.ui" line="+32"/>
         <source>Form</source>
         <translation>Formulär</translation>
     </message>
     <message>
-        <location line="+15"/>
         <source>A&amp;mount:</source>
-        <translation>&amp;Belopp:</translation>
+        <translation type="vanished">&amp;Belopp:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Pay &amp;To:</source>
-        <translation>Betala &amp;Till:</translation>
+        <translation type="vanished">Betala &amp;Till:</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+106"/>
         <source>The address to send the payment to (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+93"/>
         <location filename="../sendcoinsentry.cpp" line="+26"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation>Ange ett namn för den här adressen och lägg till den i din adressbok</translation>
     </message>
     <message>
-        <location line="-78"/>
         <source>&amp;Label:</source>
-        <translation>&amp;Etikett:</translation>
+        <translation type="vanished">&amp;Etikett:</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-123"/>
+        <source>Pay to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+93"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+79"/>
+        <source>Amount</source>
+        <translation type="unfinished">Mängd</translation>
+    </message>
+    <message>
+        <location line="+94"/>
         <source>Choose address from address book</source>
         <translation>Välj adress från adressbok</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+38"/>
+        <source>Address Book</source>
+        <translation type="unfinished">Adressbok</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+32"/>
         <source>Paste address from clipboard</source>
         <translation>Klistra in adress från Urklipp</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+38"/>
+        <source>Paste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+32"/>
         <source>Remove this recipient</source>
         <translation>Ta bort denna mottagare</translation>
     </message>
     <message>
-        <location filename="../sendcoinsentry.cpp" line="+1"/>
+        <location line="+38"/>
+        <source>Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
-        <translation>Fyll i en Shard adress (t.ex. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+        <translation type="vanished">Fyll i en Shard adress (t.ex. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+    </message>
+    <message>
+        <location filename="../sendcoinsentry.cpp" line="+1"/>
+        <source>Enter a Shard address...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Settings</name>
+    <message>
+        <location filename="../forms/settings.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished">Formulär</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>&lt;img src=&quot;:/images/res/images/settings.png&quot; /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>OPTIONS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>BACKUP WALLET</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>EXPORT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>SIGN MESSAGE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>VERIFY MESSAGE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>ENCRYPT WALLET</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>CHANGE PASSPHRASE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>LANGUAGE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>NETWORK TRAFFIC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>CONSOLE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>ABOUT</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SignMessage</name>
+    <message>
+        <location filename="../forms/signmessage.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished">Formulär</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation type="unfinished">Du kan signera meddelanden med dina adresser för att bevisa att du äger dem. Var försiktig med vad du signerar eftersom phising-attacker kan försöka få dig att skriva över din identitet till någon annan. Signera bara väldetaljerade påståenden du kan gå i god för.</translation>
+    </message>
+    <message>
+        <location line="+262"/>
+        <source>   Sign Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>    Clear All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/signmessage.cpp" line="+23"/>
+        <source>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation type="unfinished">Fyll i en Shard adress (t.ex. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Click &quot;Sign Message&quot; to generate signature</source>
+        <translation type="unfinished">Klicka &quot;Signera Meddelande&quot; för att få en signatur</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>The entered address is invalid.</source>
+        <translation type="unfinished">Den angivna adressen är ogiltig.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+8"/>
+        <source>Please check the address and try again.</source>
+        <translation type="unfinished">Vad god kontrollera adressen och försök igen.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The entered address does not refer to a key.</source>
+        <translation type="unfinished">Den angivna adressen refererar inte till en nyckel.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Wallet unlock was cancelled.</source>
+        <translation type="unfinished">Upplåsningen av plånboken avbröts.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Private key for the entered address is not available.</source>
+        <translation type="unfinished">Privata nyckel för den angivna adressen är inte tillgänglig.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Message signing failed.</source>
+        <translation type="unfinished">Signeringen av meddelandet misslyckades.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message signed.</source>
+        <translation type="unfinished">Meddelandet är signerat.</translation>
     </message>
 </context>
 <context>
@@ -1893,13 +2836,13 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Signaturer - Signera / Verifiera ett Meddelande</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+124"/>
+        <location line="+19"/>
+        <location line="+182"/>
         <source>&amp;Sign Message</source>
         <translation>&amp;Signera Meddelande</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-176"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Du kan signera meddelanden med dina adresser för att bevisa att du äger dem. Var försiktig med vad du signerar eftersom phising-attacker kan försöka få dig att skriva över din identitet till någon annan. Signera bara väldetaljerade påståenden du kan gå i god för.</translation>
     </message>
@@ -1909,19 +2852,19 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Adressen att signera meddelandet med (t.ex. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <location line="+203"/>
+        <location line="+16"/>
+        <location line="+307"/>
         <source>Choose an address from the address book</source>
         <translation>Välj en adress från adressboken</translation>
     </message>
     <message>
-        <location line="-193"/>
-        <location line="+203"/>
+        <location line="-297"/>
+        <location line="+307"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location line="-193"/>
+        <location line="-297"/>
         <source>Paste address from clipboard</source>
         <translation>Klistra in adress från Urklipp</translation>
     </message>
@@ -1936,7 +2879,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Skriv in meddelandet du vill signera här</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <source>Copy the current signature to the system clipboard</source>
         <translation>Kopiera signaturen till systemets Urklipp</translation>
     </message>
@@ -1946,24 +2889,24 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Signera meddelandet för att verifiera att du äger denna Shard adressen</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+63"/>
         <source>Reset all sign message fields</source>
         <translation>Rensa alla fält</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+146"/>
+        <location line="+49"/>
+        <location line="+244"/>
         <source>Clear &amp;All</source>
         <translation>Rensa &amp;alla</translation>
     </message>
     <message>
-        <location line="-87"/>
-        <location line="+70"/>
+        <location line="-185"/>
+        <location line="+122"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;Verifiera Meddelande</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-116"/>
         <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
         <translation>Skriv in din adress, meddelande (se till att du kopierar radbrytningar, mellanslag, tabbar, osv. exakt) och signatur nedan för att verifiera meddelandet. Var noga med att inte läsa in mer i signaturen än vad som finns i det signerade meddelandet, för att undvika att luras av en man-in-the-middle attack.</translation>
     </message>
@@ -1973,12 +2916,12 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Adressen meddelandet var signerad med (t.ex. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+46"/>
         <source>Verify the message to ensure it was signed with the specified Shard address</source>
         <translation>Verifiera meddelandet för att vara säker på att det var signerat med den angivna Shard adressen</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+63"/>
         <source>Reset all verify message fields</source>
         <translation>Rensa alla fält</translation>
     </message>
@@ -2070,7 +3013,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message>
         <location filename="../trafficgraphwidget.cpp" line="+75"/>
         <source>KB/s</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2108,7 +3051,10 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message numerus="yes">
         <location line="+7"/>
         <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>, sänd genom %n nod</numerusform><numerusform>, sänd genom %n noder</numerusform></translation>
+        <translation>
+            <numerusform>, sänd genom %n nod</numerusform>
+            <numerusform>, sänd genom %n noder</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2161,7 +3107,10 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message numerus="yes">
         <location line="-102"/>
         <source>matures in %n more block(s)</source>
-        <translation><numerusform>mognar om %n block</numerusform><numerusform>mognar om %n fler block</numerusform></translation>
+        <translation>
+            <numerusform>mognar om %n block</numerusform>
+            <numerusform>mognar om %n fler block</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2244,7 +3193,10 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message numerus="yes">
         <location line="-36"/>
         <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished">
+            <numerusform>Öppet för %n mer block</numerusform>
+            <numerusform>Öppet för %n mer block</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+67"/>
@@ -2260,15 +3212,23 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Transaktionsdetaljer</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>This pane shows a detailed description of the transaction</source>
         <translation>Den här panelen visar en detaljerad beskrivning av transaktionen</translation>
     </message>
 </context>
 <context>
+    <name>TransactionPage</name>
+    <message>
+        <location filename="../forms/transactionpage.ui" line="+20"/>
+        <source>Form</source>
+        <translation type="unfinished">Formulär</translation>
+    </message>
+</context>
+<context>
     <name>TransactionTableModel</name>
     <message>
-        <location filename="../transactiontablemodel.cpp" line="+231"/>
+        <location filename="../transactiontablemodel.cpp" line="+280"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
@@ -2288,7 +3248,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Mängd</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Open until %1</source>
         <translation>Öppet till %1</translation>
     </message>
@@ -2300,7 +3260,10 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     <message numerus="yes">
         <location line="-15"/>
         <source>Open for %n more block(s)</source>
-        <translation><numerusform>Öppet för %n mer block</numerusform><numerusform>Öppet för %n mer block</numerusform></translation>
+        <translation>
+            <numerusform>Öppet för %n mer block</numerusform>
+            <numerusform>Öppet för %n mer block</numerusform>
+        </translation>
     </message>
     <message>
         <location line="+6"/>
@@ -2338,19 +3301,26 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Genererad men inte accepterad</translation>
     </message>
     <message>
-        <location line="+42"/>
-        <source>Received with</source>
-        <translation>Mottagen med</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Received from</source>
-        <translation>Mottaget från</translation>
+        <location line="+43"/>
+        <source>You received</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
+        <source>You sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Received with</source>
+        <translation type="vanished">Mottagen med</translation>
+    </message>
+    <message>
+        <source>Received from</source>
+        <translation type="vanished">Mottaget från</translation>
+    </message>
+    <message>
         <source>Sent to</source>
-        <translation>Skickad till</translation>
+        <translation type="vanished">Skickad till</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2363,12 +3333,12 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Genererade</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+39"/>
         <source>(n/a)</source>
         <translation>(n/a)</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+203"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
         <translation>Transaktionsstatus. Håll muspekaren över för att se antal bekräftelser.</translation>
     </message>
@@ -2396,13 +3366,13 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
 <context>
     <name>TransactionView</name>
     <message>
-        <location filename="../transactionview.cpp" line="+54"/>
-        <location line="+17"/>
+        <location filename="../transactionview.cpp" line="+48"/>
+        <location line="+16"/>
         <source>All</source>
         <translation>Alla</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-15"/>
         <source>Today</source>
         <translation>Idag</translation>
     </message>
@@ -2432,14 +3402,22 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Period...</translation>
     </message>
     <message>
-        <location line="+12"/>
         <source>Received with</source>
-        <translation>Mottagen med</translation>
+        <translation type="vanished">Mottagen med</translation>
+    </message>
+    <message>
+        <source>Sent to</source>
+        <translation type="vanished">Skickad till</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>You received</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Sent to</source>
-        <translation>Skickad till</translation>
+        <source>You sent</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2457,7 +3435,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Övriga</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Enter address or label to search</source>
         <translation>Sök efter adress eller etikett </translation>
     </message>
@@ -2467,7 +3445,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Minsta mängd</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+20"/>
         <source>Copy address</source>
         <translation>Kopiera adress</translation>
     </message>
@@ -2497,7 +3475,7 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
         <translation>Visa transaktionsdetaljer</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+193"/>
         <source>Export Transaction Data</source>
         <translation>Exportera transaktionsdata</translation>
     </message>
@@ -2563,11 +3541,239 @@ Detta betyder att en avgift på minst %2 krävs.</translation>
     </message>
 </context>
 <context>
+    <name>TxViewDelegate</name>
+    <message>
+        <location filename="../txviewdelegate.cpp" line="+81"/>
+        <source>Internal Transaction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>ADDRESS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Internal transaction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>CONFIRMATIONS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+6"/>
+        <source>Confirmed (%l confirmations)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+2"/>
+        <source>Unconfirmed (%l confirmations)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>TRANSACTION ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>DATE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>PRICE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+81"/>
+        <location line="+2"/>
+        <source>You received</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>You sent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Payment to yourself</source>
+        <translation type="unfinished">Betalning till dig själv</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mined</source>
+        <translation type="unfinished">Genererade</translation>
+    </message>
+</context>
+<context>
+    <name>VerifyMessage</name>
+    <message>
+        <location filename="../forms/verifymessage.ui" line="+14"/>
+        <source>Form</source>
+        <translation type="unfinished">Formulär</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
+        <translation type="unfinished">Skriv in din adress, meddelande (se till att du kopierar radbrytningar, mellanslag, tabbar, osv. exakt) och signatur nedan för att verifiera meddelandet. Var noga med att inte läsa in mer i signaturen än vad som finns i det signerade meddelandet, för att undvika att luras av en man-in-the-middle attack.</translation>
+    </message>
+    <message>
+        <location line="+225"/>
+        <source>   Verify Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>   Clear All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/verifymessage.cpp" line="+24"/>
+        <source>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation type="unfinished">Fyll i en Shard adress (t.ex. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter Shard signature</source>
+        <translation type="unfinished">Fyll i Shard signatur</translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>The entered address is invalid.</source>
+        <translation type="unfinished">Den angivna adressen är ogiltig.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+8"/>
+        <source>Please check the address and try again.</source>
+        <translation type="unfinished">Vad god kontrollera adressen och försök igen.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The entered address does not refer to a key.</source>
+        <translation type="unfinished">Den angivna adressen refererar inte till en nyckel.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>The signature could not be decoded.</source>
+        <translation type="unfinished">Signaturen kunde inte avkodas.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+13"/>
+        <source>Please check the signature and try again.</source>
+        <translation type="unfinished">Kontrollera signaturen och försök igen.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The signature did not match the message digest.</source>
+        <translation type="unfinished">Signaturen matchade inte meddelandesammanfattningen.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Message verification failed.</source>
+        <translation type="unfinished">Meddelandet verifikation misslyckades.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message verified.</source>
+        <translation type="unfinished">Meddelandet är verifierad.</translation>
+    </message>
+</context>
+<context>
     <name>WalletModel</name>
     <message>
-        <location filename="../walletmodel.cpp" line="+212"/>
+        <location filename="../walletmodel.cpp" line="+218"/>
         <source>Sending...</source>
         <translation>Skickar...</translation>
+    </message>
+</context>
+<context>
+    <name>about</name>
+    <message>
+        <location filename="../forms/about.ui" line="+32"/>
+        <source>Form</source>
+        <translation type="unfinished">Formulär</translation>
+    </message>
+    <message>
+        <location line="+260"/>
+        <source>Client Name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Satoshi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>On testnet:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>Client Version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Number of connections:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>OpenSSL Version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Build Date:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>Startup time:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;Copyright Shard 2018-2019&lt;/span&gt;, Blackcoin 2014-2018, Novacoin 2012-2014, Bitcoin 2009-2014&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>
+This is experimental software.
+
+Distributed under the MIT/X11 software license, see the accompanying file COPYING or &lt;a style=&quot;color:#0adbf0&quot; href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;http://www.opensource.org/licenses/mit-license.php&lt;/a&gt;.
+
+This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (&lt;a style=&quot;color:#0adbf0&quot; href=&quot;https://www.openssl.org/&quot;&gt;https://www.openssl.org/&lt;/a&gt;) and cryptographic software written by Eric Young (&lt;a style=&quot;color:#0adbf0&quot; href=&quot;mailto:eay@cryptsoft.com&quot;&gt;eay@cryptsoft.com&lt;/a&gt;) and UPnP software written by Thomas Bernard.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../forms/about.cpp" line="-13"/>
+        <source>In:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Out:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2635,7 +3841,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.com
 </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-161"/>
@@ -2675,12 +3881,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="+1"/>
         <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Always query for peer addresses via DNS lookup (default: 0)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2860,32 +4066,32 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="+43"/>
         <source>Error: Wallet locked, unable to create transaction!</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Error: Transaction creation failed!</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-15"/>
         <source>Warning</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished">Varning</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Information</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-7"/>
@@ -2905,7 +4111,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="-47"/>
         <source>Connect through SOCKS5 proxy</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2920,22 +4126,22 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="+6"/>
         <source>Output debugging information (default: 0, supplying &lt;category&gt; is optional)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>If &lt;category&gt; is not supplied, output all debugging information.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&lt;category&gt; can be:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly. This is intended for regression testing tools and app development.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2950,12 +4156,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="+1"/>
         <source>Wait for RPC server to start</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Set the number of threads to service RPC calls (default: 4)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3005,7 +4211,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="+1"/>
         <source>Keep at most &lt;n&gt; MiB of unconnectable blocks in memory (default: %u)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3025,17 +4231,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="+5"/>
         <source>Error: Unsupported argument -socks found. Setting SOCKS version isn&apos;t possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Initialization sanity check failed. Shard is shutting down.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Error loading block database</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+29"/>
@@ -3045,12 +4251,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="-14"/>
         <source>Error: Disk space is low!</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-135"/>
@@ -3160,17 +4366,17 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="+40"/>
         <source>How many blocks to check at startup (default: 500, 0 = all)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Warning: Deprecated argument -debugnet ignored, use -debug=net</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3180,12 +4386,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="+3"/>
         <source>Cannot obtain a lock on data directory %s. Shard is probably already running.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Error initializing wallet database environment %s!</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+15"/>

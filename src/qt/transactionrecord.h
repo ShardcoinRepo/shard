@@ -48,6 +48,8 @@ public:
        @{*/
     Status status;
     int64_t depth;
+    bool hover;
+
     int64_t open_for; /**< Timestamp if status==OpenUntilDate, otherwise number
                        of additional blocks that need to be mined before
                        finalization */
@@ -78,13 +80,13 @@ public:
     static const int RecommendedNumConfirmations = 10;
 
     TransactionRecord():
-            hash(), time(0), type(Other), address(""), debit(0), credit(0), idx(0)
+            hash(), time(0), type(Other), address(""), debit(0), credit(0), idx(0),d_expanded(false),t_expanded(false)
     {
     }
 
     TransactionRecord(uint256 hash, int64_t time):
             hash(hash), time(time), type(Other), address(""), debit(0),
-            credit(0), idx(0)
+            credit(0), idx(0),d_expanded(false),t_expanded(false)
     {
     }
 
@@ -92,7 +94,7 @@ public:
                 Type type, const std::string &address,
                 int64_t debit, int64_t credit):
             hash(hash), time(time), type(type), address(address), debit(debit), credit(credit),
-            idx(0)
+            idx(0),d_expanded(false),t_expanded(false)
     {
     }
 
@@ -108,6 +110,8 @@ public:
     Type type;
     std::string address;
     qint64 debit;
+    bool d_expanded;
+    bool t_expanded;
     qint64 credit;
     /**@}*/
 

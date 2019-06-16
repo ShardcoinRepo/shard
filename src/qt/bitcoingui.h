@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include <QSystemTrayIcon>
-
 #include <stdint.h>
 
 class TransactionTableModel;
@@ -16,12 +15,18 @@ class SendCoinsDialog;
 class SignVerifyMessageDialog;
 class Notificator;
 class RPCConsole;
+class GraphThread;
+class QHBoxLayout;
+class Settings;
+class Titlebar;
 
 QT_BEGIN_NAMESPACE
 class QLabel;
 class QModelIndex;
 class QProgressBar;
 class QStackedWidget;
+class QVBoxLayout;
+class QPushButton;
 QT_END_NAMESPACE
 
 /**
@@ -45,24 +50,28 @@ public:
         functionality.
     */
     void setWalletModel(WalletModel *walletModel);
-
+    OverviewPage *overviewPage;
 protected:
     void changeEvent(QEvent *e);
     void closeEvent(QCloseEvent *event);
     void dragEnterEvent(QDragEnterEvent *event);
     void dropEvent(QDropEvent *event);
 
+
+
 private:
     ClientModel *clientModel;
     WalletModel *walletModel;
-
+    GraphThread* thread = 0;
+    QVBoxLayout *centralLayout;
     QToolBar *toolbar;
+    Titlebar* topWidget;
+
 
     QStackedWidget *centralStackedWidget;
 
-    OverviewPage *overviewPage;
-    QWidget *transactionsPage;
     AddressBookPage *addressBookPage;
+    Settings* settingsPage;
     AddressBookPage *receiveCoinsPage;
     SendCoinsDialog *sendCoinsPage;
     SignVerifyMessageDialog *signVerifyMessageDialog;
@@ -70,8 +79,12 @@ private:
     QLabel *labelEncryptionIcon;
     QLabel *labelStakingIcon;
     QLabel *labelConnectionsIcon;
-    QLabel *labelBlocksIcon;
+    QLabel *labelEncryptionText;
     QLabel *progressBarLabel;
+    QLabel *logoMenu;
+    QLabel *balanceTotal;
+
+
     QProgressBar *progressBar;
 
     QMenuBar *appMenuBar;
@@ -95,6 +108,9 @@ private:
     QAction *aboutQtAction;
     QAction *openRPCConsoleAction;
 
+    QAction *lockActionBar;
+    QAction *settingsActionBar;
+
     QSystemTrayIcon *trayIcon;
     Notificator *notificator;
     TransactionView *transactionView;
@@ -116,6 +132,7 @@ private:
     void createToolBars();
     /** Create system tray (notification) icon */
     void createTrayIcon();
+    void centerAndResize();
 
 public slots:
     /** Set number of connections shown in the UI */
@@ -127,6 +144,11 @@ public slots:
        @see WalletModel::EncryptionStatus
     */
     void setEncryptionStatus(int status);
+    void indexChangeThread(int index);
+    
+    void close();
+    void minimize();
+    void maximize();
 
     /** Notify the user of an event from the core network or transaction handling code.
        @param[in] title     the message box / notification title
@@ -145,6 +167,8 @@ public slots:
       @param[out] payFee            true to pay the fee, false to not pay the fee
     */
     void askFee(qint64 nFeeRequired, bool *payFee);
+
+    void setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBalance, qint64 immatureBalance);
     void handleURI(QString strURI);
 
 private slots:
@@ -168,10 +192,6 @@ private slots:
     void optionsClicked();
     /** Show about dialog */
     void aboutClicked();
-#ifndef Q_OS_MAC
-    /** Handle tray icon clicked */
-    void trayIconActivated(QSystemTrayIcon::ActivationReason reason);
-#endif
     /** Show incoming transaction notification for new transactions.
 
         The new items are those between start and end inclusive, under the given parent item.
@@ -187,7 +207,7 @@ private slots:
     void unlockWallet();
 
     void lockWallet();
-
+    void toggleLock();
     /** Show window if hidden, unminimize when minimized, rise when obscured or show if hidden and fToggleHidden is true */
     void showNormalIfMinimized(bool fToggleHidden = false);
     /** simply calls showNormalIfMinimized(true) for use in SLOT() macro */

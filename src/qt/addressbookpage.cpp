@@ -11,11 +11,16 @@
 #ifdef USE_QRCODE
 #include "qrcodedialog.h"
 #endif
-
+#include <QPalette>
+#include "walletmodel.h"
 #include <QSortFilterProxyModel>
 #include <QClipboard>
 #include <QMessageBox>
 #include <QMenu>
+#include <QScrollBar>
+
+#include "init.h"
+#include "base58.h"
 
 AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     QDialog(parent),
@@ -28,7 +33,7 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     ui->setupUi(this);
 
 #ifdef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
-    ui->newAddressButton->setIcon(QIcon());
+
     ui->copyToClipboard->setIcon(QIcon());
     ui->deleteButton->setIcon(QIcon());
 #endif
@@ -51,11 +56,17 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     switch(tab)
     {
     case SendingTab:
-        ui->labelExplanation->setVisible(false);
+        ui->newAddressButton->setImage(QString("addressbook"));
+        ui->newAddressButton->setName(tr("Address book"));
         ui->deleteButton->setVisible(true);
+
         ui->signMessage->setVisible(false);
         break;
     case ReceivingTab:
+        ui->newAddressButton->setName(tr("Generate Address"));
+        ui->newAddressButton->setImage(QString("recieve"));
+
+
         ui->deleteButton->setVisible(false);
         ui->signMessage->setVisible(true);
         break;
@@ -85,7 +96,6 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
         contextMenu->addAction(signMessageAction);
     else if(tab == SendingTab)
         contextMenu->addAction(verifyMessageAction);
-
     // Connect signals for context menu actions
     connect(copyAddressAction, SIGNAL(triggered()), this, SLOT(on_copyToClipboard_clicked()));
     connect(copyLabelAction, SIGNAL(triggered()), this, SLOT(onCopyLabelAction()));
@@ -99,6 +109,9 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
 
     // Pass through accept action from button box
     connect(ui->buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    ui->tableView->verticalScrollBar()->setStyleSheet("QScrollBar{ width:9px;outline:none;}QScrollBar::handle{background: rgb(0, 51, 78);width:9px;outline:none;}QScrollBar::handle:hover{background: rgb(0, 67, 97);width:9px;}QScrollBar::add-line, QScrollBar::sub-line{height:0px;}QScrollBar::add-page, QScrollBar::sub-page{background:#0d2131;outline:none;}");
+    ui->tableView->horizontalScrollBar()->setStyleSheet("QScrollBar{ width:9px;outline:none;}QScrollBar::handle{background: rgb(0, 51, 78);width:9px;outline:none;}QScrollBar::handle:hover{background: rgb(0, 67, 97);width:9px;}QScrollBar::add-line, QScrollBar::sub-line{height:0px;}QScrollBar::add-page, QScrollBar::sub-page{background:#0d2131;outline:none;}");
+
 }
 
 AddressBookPage::~AddressBookPage()
@@ -121,23 +134,58 @@ void AddressBookPage::setModel(AddressTableModel *model)
     {
     case ReceivingTab:
         // Receive filter
+
         proxyModel->setFilterRole(AddressTableModel::TypeRole);
         proxyModel->setFilterFixedString(AddressTableModel::Receive);
+        ui->tableView->setModel(proxyModel);
+        ui->tableView->sortByColumn(2, Qt::DescendingOrder);
         break;
     case SendingTab:
         // Send filter
         proxyModel->setFilterRole(AddressTableModel::TypeRole);
         proxyModel->setFilterFixedString(AddressTableModel::Send);
+        ui->tableView->setModel(proxyModel);
+        ui->tableView->sortByColumn(0, Qt::AscendingOrder);
         break;
     }
-    ui->tableView->setModel(proxyModel);
-    ui->tableView->sortByColumn(0, Qt::AscendingOrder);
 
+    ui->tableView->horizontalHeader()->setStyleSheet("QHeaderView::section"
+    "{"
+    "spacing: 10px;"
+    "background-color:#0d2131;"
+    "color: white;"
+    "padding:5px;"
+    "font-weight:bold;"
+    "font-size:12px;"
+    "border: 0px;"
+    "text-align: right;"
+    "font-family: arial;"
+
+    "}");
+    switch(tab)
+    {
+    case ReceivingTab:
+        // Receive filter
+
+        ui->tableView->horizontalHeader()->resizeSection(
+                2, 180);
+        break;
+    case SendingTab:
+        // Send filter
+
+        ui->tableView->horizontalHeader()->resizeSection(
+                2, 0);
+        break;
+    }
     // Set column widths
+
     ui->tableView->horizontalHeader()->resizeSection(
-            AddressTableModel::Address, 320);
+            AddressTableModel::Address, 360);
     ui->tableView->horizontalHeader()->setResizeMode(
             AddressTableModel::Label, QHeaderView::Stretch);
+
+
+
 
     connect(ui->tableView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
             this, SLOT(selectionChanged()));
@@ -147,13 +195,20 @@ void AddressBookPage::setModel(AddressTableModel *model)
             this, SLOT(selectNewAddress(QModelIndex,int,int)));
 
     selectionChanged();
+
 }
+
+
 
 void AddressBookPage::setOptionsModel(OptionsModel *optionsModel)
 {
     this->optionsModel = optionsModel;
 }
+void AddressBookPage::setWalletModel(WalletModel *walletModel)
+{
+    this->walletModel = walletModel;
 
+}
 void AddressBookPage::on_copyToClipboard_clicked()
 {
     GUIUtil::copyEntryData(ui->tableView, AddressTableModel::Address);
@@ -222,6 +277,7 @@ void AddressBookPage::on_newAddressButton_clicked()
     }
 }
 
+
 void AddressBookPage::on_deleteButton_clicked()
 {
     QTableView *table = ui->tableView;
@@ -241,6 +297,9 @@ void AddressBookPage::selectionChanged()
     QTableView *table = ui->tableView;
     if(!table->selectionModel())
         return;
+    QModelIndexList index;
+
+    QString add;
 
     if(table->selectionModel()->hasSelection())
     {
@@ -255,6 +314,10 @@ void AddressBookPage::selectionChanged()
             ui->signMessage->setVisible(false);
             ui->verifyMessage->setEnabled(true);
             ui->verifyMessage->setVisible(true);
+            index = table->selectionModel()->selectedRows(AddressTableModel::Address);
+
+            add = index[0].data().toString();
+            ui->addressEdit->setText(add);
             break;
         case ReceivingTab:
             // Deleting receiving addresses, however, is not allowed
@@ -265,6 +328,13 @@ void AddressBookPage::selectionChanged()
             ui->signMessage->setVisible(true);
             ui->verifyMessage->setEnabled(false);
             ui->verifyMessage->setVisible(false);
+
+            index= table->selectionModel()->selectedRows(AddressTableModel::Address);
+
+            add = index[0].data().toString();
+            ui->addressEdit->setText(add);
+
+
             break;
         }
         ui->copyToClipboard->setEnabled(true);
@@ -323,7 +393,7 @@ void AddressBookPage::exportClicked()
     writer.setModel(proxyModel);
     writer.addColumn("Label", AddressTableModel::Label, Qt::EditRole);
     writer.addColumn("Address", AddressTableModel::Address, Qt::EditRole);
-
+    writer.addColumn("Amount", AddressTableModel::Amount, Qt::EditRole);
     if(!writer.write())
     {
         QMessageBox::critical(this, tr("Error exporting"), tr("Could not write to file %1.").arg(filename),

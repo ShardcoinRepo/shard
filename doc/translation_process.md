@@ -7,7 +7,7 @@ handle those translations.
 Files and Folders
 -----------------
 
-### bitcoin-qt.pro
+### Shard-qt.pro
 
 This file takes care of generating `.qm` files from `.ts` files. It is mostly
 automated.
@@ -44,7 +44,7 @@ Syncing with transifex
 
 We are using http://transifex.net as a frontend for translating the client.
 
-https://www.transifex.net/projects/p/bitcoin/resource/tx/
+https://www.transifex.com/projects/p/shard-coin/
 
 The "transifex client" (see: http://help.transifex.net/features/client/)
 will help with fetching new translations from transifex. Use the following

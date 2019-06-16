@@ -9,11 +9,13 @@
 #include "csvmodelwriter.h"
 #include "transactiondescdialog.h"
 #include "editaddressdialog.h"
+#include <QDesktopWidget>
 #include "optionsmodel.h"
 #include "guiutil.h"
-
+#include <QSpacerItem>
 #include <QScrollBar>
 #include <QComboBox>
+#include <QListWidget>
 #include <QDoubleValidator>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
@@ -24,104 +26,88 @@
 #include <QPoint>
 #include <QMenu>
 #include <QLabel>
+#include <QGridLayout>
+#include <QDesktopServices>
 #include <QDateTimeEdit>
 #include <QStyledItemDelegate>
 
+#include "txviewdelegate.h"
+#include <QEvent>
+#include <QJsonDocument>
+#include <QTimer>
+#include <QJsonObject>
+#include "ui_transactionpage.h"
+
+
+const int TRANSACTIONS_PAGE = 50;
+
+
 TransactionView::TransactionView(QWidget *parent) :
     QWidget(parent), model(0), transactionProxyModel(0),
-    transactionView(0)
+    transactionView(0),m_delegate(new TxViewDelegate(true)),ui(new Ui::TransactionPage),page(0)
 {
-    // Build filter row
-    setContentsMargins(0,0,0,0);
+    ui->setupUi(this);
 
-    QHBoxLayout *hlayout = new QHBoxLayout();
-    hlayout->setContentsMargins(0,0,0,0);
 #ifdef Q_OS_MAC
-    hlayout->setSpacing(5);
-    hlayout->addSpacing(26);
+    ui->dateWidget->setFixedWidth(121);
 #else
-    hlayout->setSpacing(0);
-    hlayout->addSpacing(23);
+    ui->dateWidget->setFixedWidth(120);
+#endif
+    ui->dateWidget->addItem(tr("All"), All);
+    ui->dateWidget->addItem(tr("Today"), Today);
+    ui->dateWidget->addItem(tr("This week"), ThisWeek);
+    ui->dateWidget->addItem(tr("This month"), ThisMonth);
+    ui->dateWidget->addItem(tr("Last month"), LastMonth);
+    ui->dateWidget->addItem(tr("This year"), ThisYear);
+    ui->dateWidget->addItem(tr("Range..."), Range);
+
+
+
+#ifdef Q_OS_MAC
+    ui->typeWidget->setFixedWidth(121);
+#else
+    ui->typeWidget->setFixedWidth(120);
 #endif
 
-    dateWidget = new QComboBox(this);
-    dateWidget->setItemDelegate(new QStyledItemDelegate());
-#ifdef Q_OS_MAC
-    dateWidget->setFixedWidth(121);
-#else
-    dateWidget->setFixedWidth(120);
-#endif
-    dateWidget->addItem(tr("All"), All);
-    dateWidget->addItem(tr("Today"), Today);
-    dateWidget->addItem(tr("This week"), ThisWeek);
-    dateWidget->addItem(tr("This month"), ThisMonth);
-    dateWidget->addItem(tr("Last month"), LastMonth);
-    dateWidget->addItem(tr("This year"), ThisYear);
-    dateWidget->addItem(tr("Range..."), Range);
-    hlayout->addWidget(dateWidget);
-
-    typeWidget = new QComboBox(this);
-    typeWidget->setItemDelegate(new QStyledItemDelegate());
-#ifdef Q_OS_MAC
-    typeWidget->setFixedWidth(121);
-#else
-    typeWidget->setFixedWidth(120);
-#endif
-
-    typeWidget->addItem(tr("All"), TransactionFilterProxy::ALL_TYPES);
-    typeWidget->addItem(tr("Received with"), TransactionFilterProxy::TYPE(TransactionRecord::RecvWithAddress) |
+    ui->typeWidget->addItem(tr("All"), TransactionFilterProxy::ALL_TYPES);
+    ui->typeWidget->addItem(tr("You received"), TransactionFilterProxy::TYPE(TransactionRecord::RecvWithAddress) |
                                         TransactionFilterProxy::TYPE(TransactionRecord::RecvFromOther));
-    typeWidget->addItem(tr("Sent to"), TransactionFilterProxy::TYPE(TransactionRecord::SendToAddress) |
+    ui->typeWidget->addItem(tr("You sent"), TransactionFilterProxy::TYPE(TransactionRecord::SendToAddress) |
                                   TransactionFilterProxy::TYPE(TransactionRecord::SendToOther));
-    typeWidget->addItem(tr("To yourself"), TransactionFilterProxy::TYPE(TransactionRecord::SendToSelf));
-    typeWidget->addItem(tr("Mined"), TransactionFilterProxy::TYPE(TransactionRecord::Generated));
-    typeWidget->addItem(tr("Other"), TransactionFilterProxy::TYPE(TransactionRecord::Other));
+    ui->typeWidget->addItem(tr("To yourself"), TransactionFilterProxy::TYPE(TransactionRecord::SendToSelf));
+    ui->typeWidget->addItem(tr("Mined"), TransactionFilterProxy::TYPE(TransactionRecord::Generated));
+    ui->typeWidget->addItem(tr("Other"), TransactionFilterProxy::TYPE(TransactionRecord::Other));
 
-    hlayout->addWidget(typeWidget);
 
-    addressWidget = new QLineEdit(this);
+
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    addressWidget->setPlaceholderText(tr("Enter address or label to search"));
+    ui->addressWidget->setPlaceholderText(tr("Enter address or label to search"));
 #endif
-    hlayout->addWidget(addressWidget);
 
-    amountWidget = new QLineEdit(this);
+
+
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    amountWidget->setPlaceholderText(tr("Min amount"));
+    ui->amountWidget->setPlaceholderText(tr("Min amount"));
 #endif
-#ifdef Q_OS_MAC
-    amountWidget->setFixedWidth(97);
-#else
-    amountWidget->setFixedWidth(100);
-#endif
-    amountWidget->setValidator(new QDoubleValidator(0, 1e20, 8, this));
-    hlayout->addWidget(amountWidget);
 
-    QVBoxLayout *vlayout = new QVBoxLayout(this);
-    vlayout->setContentsMargins(0,0,0,0);
-    vlayout->setSpacing(0);
 
-    QTableView *view = new QTableView(this);
-    vlayout->addLayout(hlayout);
-    vlayout->addWidget(createDateRangeWidget());
-    vlayout->addWidget(view);
-    vlayout->setSpacing(0);
-    int width = view->verticalScrollBar()->sizeHint().width();
-    // Cover scroll bar width with spacing
-#ifdef Q_OS_MAC
-    hlayout->addSpacing(width+2);
-#else
-    hlayout->addSpacing(width);
-#endif
-    // Always show scroll bar
-    view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-    view->setTabKeyNavigation(false);
-    view->setContextMenuPolicy(Qt::CustomContextMenu);
+    ui->amountWidget->setValidator(new QDoubleValidator(0, 1e20, 8, this));
 
-    transactionView = view;
 
+
+
+    transactionView = ui->view;
+    transactionView->setItemDelegate(m_delegate);
+    transactionView->setSizeAdjustPolicy(QListWidget::AdjustToContents);
+    transactionView->setIconSize(QSize(DECORATION_SIZE, DECORATION_SIZE));
+    transactionView->setMinimumHeight(NUM_ITEMS * (DECORATION_SIZE -21));
+    transactionView->setAttribute(Qt::WA_MacShowFocusRect, false);
+    transactionView->setEditTriggers(QAbstractItemView::AnyKeyPressed);
+    transactionView->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
+
+    transactionView->setResizeMode(QListView::Adjust);
     // Actions
     QAction *copyAddressAction = new QAction(tr("Copy address"), this);
     QAction *copyLabelAction = new QAction(tr("Copy label"), this);
@@ -138,14 +124,23 @@ TransactionView::TransactionView(QWidget *parent) :
     contextMenu->addAction(editLabelAction);
     contextMenu->addAction(showDetailsAction);
 
-    // Connect actions
-    connect(dateWidget, SIGNAL(activated(int)), this, SLOT(chooseDate(int)));
-    connect(typeWidget, SIGNAL(activated(int)), this, SLOT(chooseType(int)));
-    connect(addressWidget, SIGNAL(textChanged(QString)), this, SLOT(changedPrefix(QString)));
-    connect(amountWidget, SIGNAL(textChanged(QString)), this, SLOT(changedAmount(QString)));
+    QListView* listView2 = new QListView(ui->dateWidget);
+    listView2->setStyleSheet("QListView::item{color:#eeeeee;background:#102537;padding:5px} QListView::item:hover{background:#1d2e3f;color:white;}");
+    ui->dateWidget->setView(listView2);
 
-    connect(view, SIGNAL(doubleClicked(QModelIndex)), this, SIGNAL(doubleClicked(QModelIndex)));
-    connect(view, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextualMenu(QPoint)));
+    QListView* listView3 = new QListView(ui->typeWidget);
+    listView3->setStyleSheet("QListView::item{color:#eeeeee;background:#102537;padding:5px} QListView::item:hover{background:#1d2e3f;color:white;}");
+    ui->typeWidget->setView(listView3);
+
+
+    // Connect actions
+    connect(ui->dateWidget, SIGNAL(activated(int)), this, SLOT(chooseDate(int)));
+    connect(ui->typeWidget, SIGNAL(activated(int)), this, SLOT(chooseType(int)));
+    connect(ui->addressWidget, SIGNAL(textChanged(QString)), this, SLOT(changedPrefix(QString)));
+    connect(ui->amountWidget, SIGNAL(textChanged(QString)), this, SLOT(changedAmount(QString)));
+
+    connect(ui->view, SIGNAL(doubleClicked(QModelIndex)), this, SIGNAL(doubleClicked(QModelIndex)));
+    connect(ui->view, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(contextualMenu(QPoint)));
 
     connect(copyAddressAction, SIGNAL(triggered()), this, SLOT(copyAddress()));
     connect(copyLabelAction, SIGNAL(triggered()), this, SLOT(copyLabel()));
@@ -153,104 +148,402 @@ TransactionView::TransactionView(QWidget *parent) :
     connect(copyTxIDAction, SIGNAL(triggered()), this, SLOT(copyTxID()));
     connect(editLabelAction, SIGNAL(triggered()), this, SLOT(editLabel()));
     connect(showDetailsAction, SIGNAL(triggered()), this, SLOT(showDetails()));
+
+    createDateRangeWidget();
+    ui->pleft->setVisible(false);
+    ui->p1->setChecked(true);
+
+    ui->p2->setChecked(false);
+    ui->p3->setChecked(false);
+    ui->p4->setChecked(false);
+    ui->p5->setChecked(false);
+    ui->p6->setChecked(false);
+    ui->p7->setChecked(false);
+    ui->p8->setChecked(false);
+    ui->p9->setChecked(false);
+
+    ui->p2->setVisible(false);
+    ui->p3->setVisible(false);
+    ui->p4->setVisible(false);
+    ui->p5->setVisible(false);
+    ui->p6->setVisible(false);
+    ui->p7->setVisible(false);
+    ui->p8->setVisible(false);
+    ui->p9->setVisible(false);
+    ui->pright->setVisible(false);
 }
+
+
+void TransactionView::forceHeightList(){
+    calculateHeight();
+    ui->view->setFixedHeight(ui->view->height()+1);
+    ui->view->setFixedHeight(ui->view->height()-1);
+}
+void TransactionView::slotForceHeightList(){
+    QTimer::singleShot(100,this,SLOT(forceHeightList()));
+}
+void TransactionView::calculateHeight(){
+    int expandidos = 0;
+    int count = transactionProxyModel->rowCount();
+    if(count > (page+1)*TRANSACTIONS_PAGE)
+        count = (page+1)*TRANSACTIONS_PAGE;
+    for(int i = page*TRANSACTIONS_PAGE;i<count;i++)
+    {
+        if(transactionProxyModel->index(i,0).data(TransactionTableModel::ExpandedTransactionsRole).toBool() && !ui->view->isRowHidden(i))
+            expandidos++;
+    }
+    count = transactionProxyModel->rowCount();
+    if(count > TRANSACTIONS_PAGE)
+        count = TRANSACTIONS_PAGE;
+
+    if(transactionProxyModel->rowCount() < (page+1)*TRANSACTIONS_PAGE)
+        count = transactionProxyModel->rowCount()-(page)*TRANSACTIONS_PAGE;
+
+
+
+#if defined(Q_OS_WIN)
+     ui->view->setFixedHeight(((expandidos) * (DECORATION_SIZE*3.0))+((count-expandidos) * (DECORATION_SIZE)));
+#else
+     ui->view->setFixedHeight(((expandidos) * (DECORATION_SIZE*2.75))+((count-expandidos) * (DECORATION_SIZE)));
+#endif
+
+
+}
+void TransactionView::transactionClickedUrl(const QString& st){
+    QString str_txid = st;
+    int string_convert = str_txid.lastIndexOf(QChar('-'));
+    QDesktopServices::openUrl("http://shardexplorer.com/tx/"+str_txid.left(string_convert));
+}
+void TransactionView::forceFilter(){
+    ui->dateWidget->setCurrentIndex(0);
+    ui->typeWidget->setCurrentIndex(0);
+
+    ui->amountWidget->setText("");
+    transactionProxyModel->setAddressPrefix("a");
+     transactionProxyModel->setAddressPrefix("");
+       ui->addressWidget->setText("");
+       page = 0;
+       indexPage = 0;
+      for(int i = 0;i<9;i++)
+      {
+          QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+          ptb->setText(QString::number(i +1));
+
+      }
+      for(int i = 0;i<9;i++)
+      {
+          QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+          ptb->setChecked(false);
+
+      }
+      hideRows();
+       ui->pleft->setVisible(false);
+         ui->p1->setChecked(true);
+}
+
+
 
 void TransactionView::setModel(WalletModel *model)
 {
     this->model = model;
     if(model)
     {
-        transactionProxyModel = new TransactionFilterProxy(this);
+        transactionProxyModel = new TransactionFilterProxy();
         transactionProxyModel->setSourceModel(model->getTransactionTableModel());
+        transactionProxyModel->setLimit(-1);
         transactionProxyModel->setDynamicSortFilter(true);
-        transactionProxyModel->setSortCaseSensitivity(Qt::CaseInsensitive);
-        transactionProxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
+        transactionProxyModel->setSortRole(Qt::EditRole);
+        transactionProxyModel->setShowInactive(true);
+        transactionProxyModel->sort(TransactionTableModel::Date, Qt::DescendingOrder);
 
         transactionProxyModel->setSortRole(Qt::EditRole);
 
         transactionView->setModel(transactionProxyModel);
         transactionView->setSelectionBehavior(QAbstractItemView::SelectRows);
         transactionView->setSelectionMode(QAbstractItemView::ExtendedSelection);
-        transactionView->setSortingEnabled(true);
-        transactionView->sortByColumn(TransactionTableModel::Date, Qt::DescendingOrder);
-        transactionView->verticalHeader()->hide();
 
-        transactionView->horizontalHeader()->resizeSection(TransactionTableModel::Status, 23);
-        transactionView->horizontalHeader()->resizeSection(TransactionTableModel::Date, 120);
-        transactionView->horizontalHeader()->resizeSection(TransactionTableModel::Type, 120);
-        transactionView->horizontalHeader()->setResizeMode(TransactionTableModel::ToAddress, QHeaderView::Stretch);
-        transactionView->horizontalHeader()->resizeSection(TransactionTableModel::Amount, 100);
+
+        connect(model->getTransactionTableModel(),SIGNAL(filterApplied()),this,SLOT(hideRows()));
+
+        connect(m_delegate,SIGNAL(transactionClickedUrl(QString)),this,SLOT(transactionClickedUrl(QString)));
+
+        connect(transactionProxyModel,SIGNAL(filterApplied()),this,SLOT(slotForceHeightList()));
+        connect(m_delegate,SIGNAL(calculateHeight()),this,SLOT(calculateHeight()));
+        connect(model,SIGNAL(balanceChanged(qint64,qint64,qint64,qint64)),this,SLOT(initializeList()));
+
+
+
+
+        connect(ui->p1,SIGNAL(clicked()),this,SLOT(changePage()));
+        connect(ui->p2,SIGNAL(clicked()),this,SLOT(changePage()));
+        connect(ui->p3,SIGNAL(clicked()),this,SLOT(changePage()));
+        connect(ui->p4,SIGNAL(clicked()),this,SLOT(changePage()));
+        connect(ui->p5,SIGNAL(clicked()),this,SLOT(changePage()));
+        connect(ui->p6,SIGNAL(clicked()),this,SLOT(changePage()));
+        connect(ui->p7,SIGNAL(clicked()),this,SLOT(changePage()));
+        connect(ui->p8,SIGNAL(clicked()),this,SLOT(changePage()));
+        connect(ui->p9,SIGNAL(clicked()),this,SLOT(changePage()));
+        connect(ui->pright,SIGNAL(clicked()),this,SLOT(nextPages()));
+         connect(ui->pleft,SIGNAL(clicked()),this,SLOT(previousPages()));
+
+
+
+    }
+}
+void TransactionView::initializeList(){
+    int rowCount = transactionProxyModel->rowCount();
+
+
+    if(((indexPage+1)*9) * TRANSACTIONS_PAGE +1 > rowCount)
+        ui->pright->setVisible(false);
+    else
+        ui->pright->setVisible(true);
+    for(int i = 0;i<9;i++)
+    {
+        QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+        if((ptb->text().toInt()-1)* TRANSACTIONS_PAGE >= rowCount)
+            ptb->setVisible(false);
+        else
+            ptb->setVisible(true);
+    }
+    if(rowCount > TRANSACTIONS_PAGE)
+    {
+        for(int i = TRANSACTIONS_PAGE;i<rowCount;i++)
+        {
+           transactionView->setRowHidden(i,true);
+        }
     }
 }
 
+void TransactionView::nextPages(){
+    ui->pleft->setVisible(true);
+      setVisibilityRows(page,true);
+    indexPage++;
+    page = indexPage*9;
+          setVisibilityRows(page,false);
+    for(int i = 0;i<9;i++)
+    {
+        QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+        ptb->setText(QString::number(indexPage*9 +i +1));
+
+    }
+    for(int i = 0;i<9;i++)
+    {
+        QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+        ptb->setChecked(false);
+
+    }
+    ui->p1->setChecked(true);
+    hideRows();
+
+
+}
+void TransactionView::previousPages(){
+
+    setVisibilityRows(page,true);
+    indexPage--;
+
+    if(indexPage <= 0)
+    {
+        indexPage = 0;
+        ui->pleft->setVisible(false);
+
+    }
+     page = indexPage*9;
+     setVisibilityRows(page,false);
+    for(int i = 0;i<9;i++)
+    {
+        QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+        ptb->setText(QString::number(indexPage*9 +i +1));
+
+    }
+    for(int i = 0;i<9;i++)
+    {
+        QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+        ptb->setChecked(false);
+
+    }
+    ui->p1->setChecked(true);
+
+    hideRows();
+
+}
+void TransactionView::setVisibilityRows(int last_page,bool value)
+{
+    int rowCount = transactionProxyModel->rowCount();
+    if(rowCount > TRANSACTIONS_PAGE * (last_page+1))
+        rowCount = TRANSACTIONS_PAGE * (last_page+1);
+    for(int i = last_page*TRANSACTIONS_PAGE;i<rowCount;i++)
+    {
+       transactionView->setRowHidden(i,value);
+    }
+}
+
+void TransactionView::changePage(){
+    QPushButton* sender = qobject_cast<QPushButton*>(QObject::sender());
+
+    if(sender->text().toInt()-1 == page)
+        return;
+     setVisibilityRows(page,true);
+    page = sender->text().toInt()-1;
+    for(int i = 0;i<9;i++)
+    {
+        QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+        ptb->setChecked(false);
+
+    }
+    sender->setChecked(true);
+    setVisibilityRows(page,false);
+    hideRows();
+}
+void TransactionView::hideRows(){
+
+
+    int rowCount = transactionProxyModel->rowCount();
+    if(((indexPage+1)*9) * TRANSACTIONS_PAGE +1 > rowCount)
+        ui->pright->setVisible(false);
+    else
+        ui->pright->setVisible(true);
+    for(int i = 0;i<9;i++)
+    {
+        QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+        if((ptb->text().toInt()-1)* TRANSACTIONS_PAGE >= rowCount)
+            ptb->setVisible(false);
+        else
+            ptb->setVisible(true);
+    }
+    calculateHeight();
+}
+
+void TransactionView::priceChanged(QString answer){
+    QJsonDocument doc = QJsonDocument::fromJson(answer.toUtf8());
+    if(!doc.isNull()){
+        QJsonObject obj = doc.object();
+        double price  = obj.value("price").toDouble();
+
+        m_delegate->setPrice(price);
+
+
+    }
+}
+int lastIndexDate = 0;
 void TransactionView::chooseDate(int idx)
 {
-    if(!transactionProxyModel)
+    page = 0;
+    if(!transactionProxyModel || lastIndexDate == ui->dateWidget->itemData(idx).toInt())
         return;
     QDate current = QDate::currentDate();
-    dateRangeWidget->setVisible(false);
-    switch(dateWidget->itemData(idx).toInt())
+
+    //ui->dateRangeWidget->setVisible(false);
+    lastIndexDate =ui->dateWidget->itemData(idx).toInt();
+    switch(ui->dateWidget->itemData(idx).toInt())
     {
     case All:
         transactionProxyModel->setDateRange(
-                TransactionFilterProxy::MIN_DATE,
-                TransactionFilterProxy::MAX_DATE);
+                TransactionFilterProxy::MIN_DATE.toMSecsSinceEpoch(),
+                TransactionFilterProxy::MAX_DATE.toMSecsSinceEpoch());
         break;
     case Today:
         transactionProxyModel->setDateRange(
-                QDateTime(current),
-                TransactionFilterProxy::MAX_DATE);
+                QDateTime::currentMSecsSinceEpoch(),
+                TransactionFilterProxy::MAX_DATE.toMSecsSinceEpoch());
         break;
     case ThisWeek: {
         // Find last Monday
         QDate startOfWeek = current.addDays(-(current.dayOfWeek()-1));
         transactionProxyModel->setDateRange(
-                QDateTime(startOfWeek),
-                TransactionFilterProxy::MAX_DATE);
+                QDateTime(startOfWeek).toMSecsSinceEpoch(),
+                TransactionFilterProxy::MAX_DATE.toMSecsSinceEpoch());
 
         } break;
     case ThisMonth:
         transactionProxyModel->setDateRange(
-                QDateTime(QDate(current.year(), current.month(), 1)),
-                TransactionFilterProxy::MAX_DATE);
+                QDateTime(QDate(current.year(), current.month(), 1)).toMSecsSinceEpoch(),
+                TransactionFilterProxy::MAX_DATE.toMSecsSinceEpoch());
         break;
     case LastMonth:
         transactionProxyModel->setDateRange(
-                QDateTime(QDate(current.year(), current.month()-1, 1)),
-                QDateTime(QDate(current.year(), current.month(), 1)));
+                QDateTime(QDate(current.year(), current.month()-1, 1)).toMSecsSinceEpoch(),
+                QDateTime(QDate(current.year(), current.month(), 1)).toMSecsSinceEpoch());
         break;
     case ThisYear:
         transactionProxyModel->setDateRange(
-                QDateTime(QDate(current.year(), 1, 1)),
-                TransactionFilterProxy::MAX_DATE);
+                QDateTime(QDate(current.year(), 1, 1)).toMSecsSinceEpoch(),
+                TransactionFilterProxy::MAX_DATE.toMSecsSinceEpoch());
         break;
     case Range:
         dateRangeWidget->setVisible(true);
         dateRangeChanged();
         break;
     }
-}
+    page = 0;
+    indexPage = 0;
+   for(int i = 0;i<9;i++)
+   {
+       QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+       ptb->setText(QString::number(i +1));
 
+   }
+   hideRows();
+    ui->pleft->setVisible(false);
+      ui->p1->setChecked(true);
+
+    ui->scrollArea->verticalScrollBar()->setValue(ui->scrollArea->verticalScrollBar()->minimum());
+
+}
+int lastIndexType= 0;
 void TransactionView::chooseType(int idx)
 {
-    if(!transactionProxyModel)
+    page=0;
+    if(!transactionProxyModel || lastIndexType == ui->typeWidget->itemData(idx).toInt())
         return;
+    lastIndexType = ui->typeWidget->itemData(idx).toInt();
     transactionProxyModel->setTypeFilter(
-        typeWidget->itemData(idx).toInt());
-}
+        ui->typeWidget->itemData(idx).toInt());
+    page = 0;
+    indexPage = 0;
+   for(int i = 0;i<9;i++)
+   {
+       QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+       ptb->setText(QString::number(i +1));
 
+   }
+   hideRows();
+    ui->pleft->setVisible(false);
+      ui->p1->setChecked(true);
+    ui->scrollArea->verticalScrollBar()->setValue(ui->scrollArea->verticalScrollBar()->minimum());
+
+}
+QString lastAddess = "";
 void TransactionView::changedPrefix(const QString &prefix)
 {
-    if(!transactionProxyModel)
+    page = 0;
+    if(!transactionProxyModel || lastAddess== prefix)
         return;
+    lastAddess = prefix;
     transactionProxyModel->setAddressPrefix(prefix);
-}
+    page = 0;
+    indexPage = 0;
+   for(int i = 0;i<9;i++)
+   {
+       QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+       ptb->setText(QString::number(i +1));
 
+   }
+   hideRows();
+    ui->pleft->setVisible(false);
+      ui->p1->setChecked(true);
+    ui->scrollArea->verticalScrollBar()->setValue(ui->scrollArea->verticalScrollBar()->minimum());
+
+}
+QString lastAmount = "";
 void TransactionView::changedAmount(const QString &amount)
 {
-    if(!transactionProxyModel)
+      page = 0;
+    if(!transactionProxyModel || lastAmount== amount)
         return;
     qint64 amount_parsed = 0;
+    lastAmount = amount;
     if(BitcoinUnits::parse(model->getOptionsModel()->getDisplayUnit(), amount, &amount_parsed))
     {
         transactionProxyModel->setMinAmount(amount_parsed);
@@ -259,6 +552,19 @@ void TransactionView::changedAmount(const QString &amount)
     {
         transactionProxyModel->setMinAmount(0);
     }
+    page = 0;
+    indexPage = 0;
+   for(int i = 0;i<9;i++)
+   {
+       QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+       ptb->setText(QString::number(i +1));
+
+   }
+    ui->pleft->setVisible(false);
+   hideRows();
+     ui->p1->setChecked(true);
+    ui->scrollArea->verticalScrollBar()->setValue(ui->scrollArea->verticalScrollBar()->minimum());
+
 }
 
 void TransactionView::exportClicked()
@@ -367,31 +673,29 @@ void TransactionView::editLabel()
 
 void TransactionView::showDetails()
 {
-    if(!transactionView->selectionModel())
-        return;
-    QModelIndexList selection = transactionView->selectionModel()->selectedRows();
-    if(!selection.isEmpty())
-    {
-        TransactionDescDialog dlg(selection.at(0));
-        dlg.exec();
-    }
+
 }
 
 QWidget *TransactionView::createDateRangeWidget()
 {
     dateRangeWidget = new QFrame();
     dateRangeWidget->setFrameStyle(QFrame::Panel | QFrame::Raised);
-    dateRangeWidget->setContentsMargins(1,1,1,1);
+    dateRangeWidget->setContentsMargins(0,0,0,0);
     QHBoxLayout *layout = new QHBoxLayout(dateRangeWidget);
     layout->setContentsMargins(0,0,0,0);
     layout->addSpacing(23);
     layout->addWidget(new QLabel(tr("Range:")));
-
+    layout->setMargin(15);
+    layout->setSpacing(15);
+    dateRangeWidget->setStyleSheet("background:#15202d;color:white");
     dateFrom = new QDateTimeEdit(this);
     dateFrom->setDisplayFormat("dd/MM/yy");
     dateFrom->setCalendarPopup(true);
     dateFrom->setMinimumWidth(100);
     dateFrom->setDate(QDate::currentDate().addDays(-7));
+    dateFrom->setStyleSheet("QDateTimeEdit{   color:#eeeeee;padding:5px;border:2px solid #1d2e3f;background:#0d2131; selection-background-color: #1d2e3f;color:white;outline:none}QDateTimeEdit::drop-down{border:0px;image: url(\":/images/res/images/dropdown.png\");padding:13px 5px;}QDateTimeEdit:hover {background: #102537; } QDateTimeEdit QAbstractItemView {border: 2px solid #102537;selection-background-color: #003750; background-color: #0d2131;selection-color:white;margin:0px;padding:0px;outline:none;}QCalendarWidget{padding:15px;}QCalendarWidget QWidget {alternate-background-color: #003750}");
+
+
     layout->addWidget(dateFrom);
     layout->addWidget(new QLabel(tr("to")));
 
@@ -399,9 +703,17 @@ QWidget *TransactionView::createDateRangeWidget()
     dateTo->setDisplayFormat("dd/MM/yy");
     dateTo->setCalendarPopup(true);
     dateTo->setMinimumWidth(100);
+    dateTo->setStyleSheet("QDateTimeEdit{   color:#eeeeee;padding:5px;border:2px solid #1d2e3f;background:#0d2131; selection-background-color: #1d2e3f;color:white;outline:none}QDateTimeEdit::drop-down{border:0px;image: url(\":/images/res/images/dropdown.png\");padding:13px 5px;}QDateTimeEdit:hover {background: #102537; } QDateTimeEdit QAbstractItemView {border: 2px solid #102537;selection-background-color: #003750; background-color: #0d2131;selection-color:white;margin:0px;padding:0px;outline:none;}QCalendarWidget{padding:15px;}QCalendarWidget QWidget {alternate-background-color: #003750}");
+
     dateTo->setDate(QDate::currentDate());
     layout->addWidget(dateTo);
     layout->addStretch();
+
+
+    QRect screenGeometry = QApplication::desktop()->screenGeometry();
+            int x = (screenGeometry.width() - 200) / 2;
+            int y = (screenGeometry.height() - 100) / 2;
+            dateRangeWidget->move(x, y);
 
     // Hide by default
     dateRangeWidget->setVisible(false);
@@ -415,11 +727,23 @@ QWidget *TransactionView::createDateRangeWidget()
 
 void TransactionView::dateRangeChanged()
 {
+      page = 0;
     if(!transactionProxyModel)
         return;
     transactionProxyModel->setDateRange(
-            QDateTime(dateFrom->date()),
-            QDateTime(dateTo->date()).addDays(1));
+            QDateTime(dateFrom->date()).toMSecsSinceEpoch(),
+            QDateTime(dateTo->date()).addDays(1).toMSecsSinceEpoch());
+    page = 0;
+    indexPage = 0;
+   for(int i = 0;i<9;i++)
+   {
+       QPushButton* ptb = ((QPushButton*)(ui->listButtons->layout()->itemAt(i)->widget()));
+       ptb->setText(QString::number(i +1));
+
+   }
+    ui->pleft->setVisible(false);
+      ui->p1->setChecked(true);
+   hideRows();
 }
 
 void TransactionView::focusTransaction(const QModelIndex &idx)

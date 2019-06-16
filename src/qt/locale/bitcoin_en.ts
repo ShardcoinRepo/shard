@@ -9,26 +9,27 @@
         <translation>About Shard</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+45"/>
         <source>&lt;b&gt;Shard&lt;/b&gt; version</source>
         <translation>&lt;b&gt;Shard&lt;/b&gt; version</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+47"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
+Copyright © 2014 The BlackCoin developers
 Copyright © 2018 The Shard developers</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+19"/>
         <source>
 This is experimental software.
 
 Distributed under the MIT/X11 software license, see the accompanying file COPYING or &lt;a href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;http://www.opensource.org/licenses/mit-license.php&lt;/a&gt;.
 
 This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (&lt;a href=&quot;https://www.openssl.org/&quot;&gt;https://www.openssl.org/&lt;/a&gt;) and cryptographic software written by Eric Young (&lt;a href=&quot;mailto:eay@cryptsoft.com&quot;&gt;eay@cryptsoft.com&lt;/a&gt;) and UPnP software written by Thomas Bernard.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -39,37 +40,39 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Address Book</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+191"/>
+        <source>Generate Address</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+389"/>
         <source>Double-click to edit address or label</source>
         <translation>Double-click to edit address or label</translation>
     </message>
     <message>
-        <location line="+24"/>
         <source>Create a new address</source>
-        <translation>Create a new address</translation>
+        <translation type="vanished">Create a new address</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-309"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation>Copy the currently selected address to the system clipboard</translation>
     </message>
     <message>
-        <location line="-7"/>
         <source>&amp;New Address</source>
-        <translation>&amp;New Address</translation>
+        <translation type="vanished">&amp;New Address</translation>
     </message>
     <message>
-        <location line="-43"/>
         <source>These are your Shard addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>These are your Shard addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</translation>
+        <translation type="vanished">These are your Shard addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+39"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;Copy Address</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+43"/>
         <source>Show &amp;QR Code</source>
         <translation>Show &amp;QR Code</translation>
     </message>
@@ -79,32 +82,48 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Sign a message to prove you own a Shard address</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+39"/>
         <source>Sign &amp;Message</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+53"/>
         <source>Delete the currently selected address from the list</source>
         <translation></translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="-46"/>
         <source>Verify a message to ensure it was signed with a specified Shard address</source>
         <translation>Verify a message to ensure it was signed with a specified Shard address</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../addressbookpage.cpp" line="+65"/>
+        <source>Generate
+Address</source>
+        <translation>New Address</translation>
+    </message>
+    <message>
+        <location filename="../forms/addressbookpage.ui" line="-177"/>
+        <source>Address:</source>
+        <translation>Address:</translation>
+    </message>
+    <message>
+        <location line="+216"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;Verify Message</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+46"/>
         <source>&amp;Delete</source>
         <translation>&amp;Delete</translation>
     </message>
     <message>
-        <location filename="../addressbookpage.cpp" line="+66"/>
+        <location filename="../addressbookpage.cpp" line="-6"/>
+        <source>Address book</source>
+        <translation>Address book</translation>
+    </message>
+    <message>
+        <location line="+15"/>
         <source>Copy &amp;Label</source>
         <translation>Copy &amp;Label</translation>
     </message>
@@ -114,7 +133,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Edit</translation>
     </message>
     <message>
-        <location line="+248"/>
+        <location line="+291"/>
         <source>Export Address Book Data</source>
         <translation>Export Address Book Data</translation>
     </message>
@@ -137,7 +156,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>AddressTableModel</name>
     <message>
-        <location filename="../addresstablemodel.cpp" line="+145"/>
+        <location filename="../addresstablemodel.cpp" line="+205"/>
         <source>Label</source>
         <translation>Label</translation>
     </message>
@@ -147,7 +166,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Address</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+0"/>
+        <source>Amount</source>
+        <translation>Amount</translation>
+    </message>
+    <message>
+        <location line="+39"/>
         <source>(no label)</source>
         <translation>(no label)</translation>
     </message>
@@ -160,22 +184,22 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Passphrase Dialog</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+30"/>
         <source>Enter passphrase</source>
         <translation>Enter passphrase</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+26"/>
         <source>New passphrase</source>
         <translation>New passphrase</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+26"/>
         <source>Repeat new passphrase</source>
         <translation>Repeat new passphrase</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+29"/>
         <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
         <translation></translation>
     </message>
@@ -254,7 +278,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-140"/>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
-        <translation></translation>
+        <translation>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -306,17 +330,17 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+297"/>
+        <location filename="../bitcoingui.cpp" line="+400"/>
         <source>Sign &amp;message...</source>
         <translation>Sign &amp;message...</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-70"/>
         <source>Show general overview of wallet</source>
         <translation>Show general overview of wallet</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+21"/>
         <source>&amp;Transactions</source>
         <translation>&amp;Transactions</translation>
     </message>
@@ -326,7 +350,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Browse transaction history</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>&amp;Address Book</source>
         <translation>&amp;Address Book</translation>
     </message>
@@ -336,12 +360,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Edit the list of stored addresses and labels</translation>
     </message>
     <message>
-        <location line="-18"/>
+        <location line="-22"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation>Show the list of addresses for receiving payments</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+39"/>
         <source>E&amp;xit</source>
         <translation>E&amp;xit</translation>
     </message>
@@ -391,12 +415,12 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Export...</translation>
     </message>
     <message>
-        <location line="-55"/>
+        <location line="-58"/>
         <source>Send coins to a Shard address</source>
         <translation>Send coins to a Shard address</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+42"/>
         <source>Modify configuration options for Shard</source>
         <translation>Modify configuration options for Shard</translation>
     </message>
@@ -436,18 +460,18 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Verify message...</translation>
     </message>
     <message>
-        <location line="-214"/>
-        <location line="+555"/>
+        <location line="-300"/>
+        <location line="+706"/>
         <source>Shard</source>
         <translation>Shard</translation>
     </message>
     <message>
-        <location line="-555"/>
+        <location line="-706"/>
         <source>Wallet</source>
         <translation>Wallet</translation>
     </message>
     <message>
-        <location line="+193"/>
+        <location line="+279"/>
         <source>&amp;About Shard</source>
         <translation>&amp;About Shard</translation>
     </message>
@@ -472,12 +496,22 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+12"/>
+        <source>&amp;LOCK</source>
+        <translation>&amp;LOCK</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;SETTINGS</source>
+        <translation>&amp;SETTINGS</translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>&amp;File</source>
         <translation>&amp;File</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>&amp;Settings</source>
         <translation>&amp;Settings</translation>
     </message>
@@ -492,24 +526,54 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Tabs toolbar</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+17"/>
+        <source>SHARD BALANCE</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+64"/>
         <location line="+9"/>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+58"/>
+        <location line="+65"/>
         <source>Shard client</source>
         <translation>Shard client</translation>
     </message>
     <message numerus="yes">
-        <location line="+70"/>
+        <location line="+78"/>
         <source>%n active connection(s) to Shard network</source>
         <translation>
             <numerusform>%n active connection to Shard network</numerusform>
             <numerusform>%n active connections to Shard network</numerusform>
         </translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Synced</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Syncing</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+278"/>
+        <source>LOCK</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>UNLOCK</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+140"/>
+        <source>Staking.&lt;br&gt;Your weight is %1&lt;br&gt;Network weight is %2</source>
+        <translation>Staking.&lt;br&gt;Your weight is %1&lt;br&gt;Network weight is %2</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -532,37 +596,37 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation></translation>
     </message>
     <message>
-        <location line="-812"/>
+        <location line="-893"/>
         <source>&amp;Dashboard</source>
-        <translation></translation>
+        <translation>&amp;Dashboard</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>&amp;Receive</source>
-        <translation></translation>
+        <translation>&amp;Receive</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>&amp;Send</source>
-        <translation></translation>
+        <translation>&amp;Send</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>&amp;Unlock Wallet...</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+339"/>
         <source>Up to date</source>
         <translation>Up to date</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+46"/>
         <source>Catching up...</source>
         <translation>Catching up...</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+114"/>
         <source>Confirm transaction fee</source>
         <translation>Confirm transaction fee</translation>
     </message>
@@ -590,7 +654,7 @@ Address: %4
 </translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <location line="+15"/>
         <source>URI handling</source>
         <translation>URI handling</translation>
@@ -602,12 +666,12 @@ Address: %4
         <translation>URI can not be parsed! This can be caused by an invalid Shard address or malformed URI parameters.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Wallet is &lt;b&gt;not encrypted&lt;/b&gt;</source>
-        <translation></translation>
+        <translation>Wallet is &lt;b&gt;not encrypted&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</translation>
     </message>
@@ -617,7 +681,7 @@ Address: %4
         <translation>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+31"/>
         <source>Backup Wallet</source>
         <translation>Backup Wallet</translation>
     </message>
@@ -637,24 +701,21 @@ Address: %4
         <translation>There was an error trying to save the wallet data to the new location.</translation>
     </message>
     <message numerus="yes">
-        <location line="+91"/>
         <source>%n second(s)</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>%n second</numerusform>
             <numerusform>%n seconds</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location line="+4"/>
         <source>%n minute(s)</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>%n minute</numerusform>
             <numerusform>%n minutes</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location line="-429"/>
-        <location line="+433"/>
+        <location line="-347"/>
         <source>%n hour(s)</source>
         <translation>
             <numerusform>%n hour</numerusform>
@@ -662,13 +723,12 @@ Address: %4
         </translation>
     </message>
     <message>
-        <location line="-456"/>
+        <location line="-24"/>
         <source>Processed %1 blocks of transaction history.</source>
-        <translation></translation>
+        <translation>Processed %1 blocks of transaction history.</translation>
     </message>
     <message numerus="yes">
-        <location line="+27"/>
-        <location line="+433"/>
+        <location line="+28"/>
         <source>%n day(s)</source>
         <translation>
             <numerusform>%n day</numerusform>
@@ -676,7 +736,7 @@ Address: %4
         </translation>
     </message>
     <message numerus="yes">
-        <location line="-429"/>
+        <location line="+4"/>
         <location line="+6"/>
         <source>%n week(s)</source>
         <translation>
@@ -700,17 +760,17 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>%1 behind</source>
-        <translation></translation>
+        <translation>%1 behind</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+17"/>
         <source>Last received block was generated %1 ago.</source>
-        <translation></translation>
+        <translation>Last received block was generated %1 ago.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Transactions after this will not yet be visible.</source>
-        <translation></translation>
+        <translation>Transactions after this will not yet be visible.</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -725,22 +785,81 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Information</source>
-        <translation></translation>
+        <translation>Information</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+70"/>
         <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
-        <translation type="unfinished"></translation>
+        <translation>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</translation>
     </message>
     <message>
-        <location line="+324"/>
+        <location line="+333"/>
         <source>Not staking</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
         <source>A fatal error occurred. Shard can no longer continue safely and will quit.</source>
         <translation>A fatal error occurred. Shard can no longer continue safely and will quit.</translation>
+    </message>
+</context>
+<context>
+    <name>ChangePass</name>
+    <message>
+        <location filename="../forms/changepass.ui" line="+26"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>CHANGE WALLET PASSWORD</source>
+        <translation>CHANGE WALLET PASSWORD</translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Current Password</source>
+        <translation>Current Password</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>New Password</source>
+        <translation>New Password</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Repeat New Password</source>
+        <translation>Repeat New Password</translation>
+    </message>
+    <message>
+        <location line="+133"/>
+        <source>Change Password</source>
+        <translation>Change Password</translation>
+    </message>
+    <message>
+        <location filename="../forms/changepass.cpp" line="+65"/>
+        <source>Wallet encrypted</source>
+        <translation>Wallet encrypted</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt;p style=&quot;color:white&quot;&gt;Wallet passphrase was successfully changed.&lt;/p&gt;</source>
+        <translation>&lt;p style=&quot;color:white&quot;&gt;Wallet passphrase was successfully changed.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+6"/>
+        <source>Wallet encryption failed</source>
+        <translation>Wallet encryption failed</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>&lt;p style=&quot;color:white&quot;&gt;The passphrase entered for the wallet decryption was incorrect.&lt;/p&gt;</source>
+        <translation>&lt;p style=&quot;color:white&quot;&gt;The passphrase entered for the wallet decryption was incorrect.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&lt;p style=&quot;color:white&quot;&gt;The supplied passphrases do not match.&lt;/p&gt;</source>
+        <translation>&lt;p style=&quot;color:white&quot;&gt;The supplied passphrases do not match.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -756,199 +875,238 @@ Address: %4
     <message>
         <location filename="../forms/coincontroldialog.ui" line="+14"/>
         <source>Coin Control</source>
-        <translation type="unfinished"></translation>
+        <translation>Coin Control</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+34"/>
         <source>Quantity:</source>
-        <translation type="unfinished"></translation>
+        <translation>Quantity:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+38"/>
         <source>Bytes:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bytes:</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Amount:</source>
-        <translation type="unfinished">Amount:</translation>
+        <translation>Amount:</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Fee:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fee:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+41"/>
         <source>Low Output:</source>
-        <translation type="unfinished"></translation>
+        <translation>Low Output:</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="+493"/>
-        <source>no</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../forms/coincontroldialog.ui" line="+51"/>
+        <location line="+54"/>
         <source>After Fee:</source>
-        <translation type="unfinished"></translation>
+        <translation>After Fee:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+41"/>
         <source>Change:</source>
-        <translation type="unfinished"></translation>
+        <translation>Change:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+104"/>
         <source>(un)select all</source>
-        <translation type="unfinished"></translation>
+        <translation>(un)select all</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Tree mode</source>
+        <translation>Tree mode</translation>
+    </message>
+    <message>
+        <location line="+55"/>
+        <source>List mode</source>
+        <translation>List mode</translation>
+    </message>
+    <message>
+        <location line="+58"/>
+        <source>Select Coins</source>
+        <translation>Select Coins</translation>
+    </message>
+    <message>
+        <location line="+305"/>
+        <source>Select</source>
+        <translation>Select</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Amount</source>
+        <translation>Amount</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Tree mode</source>
-        <translation type="unfinished"></translation>
+        <source>Age</source>
+        <translation>Age</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <source>List mode</source>
-        <translation type="unfinished"></translation>
+        <location line="+5"/>
+        <source>Potential Stake</source>
+        <translation>Potential Stake</translation>
     </message>
     <message>
-        <location line="+45"/>
-        <source>Amount</source>
-        <translation type="unfinished">Amount</translation>
+        <location line="+5"/>
+        <source>Days to Stake (est.)</source>
+        <translation>Days to Stake (est.)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Weight</source>
+        <translation>Weight</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Label</source>
-        <translation type="unfinished">Label</translation>
+        <translation>Label</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Address</source>
-        <translation type="unfinished">Address</translation>
+        <translation>Address</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Date</source>
-        <translation type="unfinished">Date</translation>
+        <translation>Date</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-38"/>
         <source>Confirmations</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmations</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Confirmed</source>
-        <translation type="unfinished">Confirmed</translation>
+        <translation>Confirmed</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Priority</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../coincontroldialog.cpp" line="-456"/>
+        <location filename="../coincontroldialog.cpp" line="+40"/>
         <source>Copy address</source>
-        <translation type="unfinished">Copy address</translation>
+        <translation>Copy address</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy label</source>
-        <translation type="unfinished">Copy label</translation>
+        <translation>Copy label</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+26"/>
+        <location line="+27"/>
         <source>Copy amount</source>
-        <translation type="unfinished">Copy amount</translation>
+        <translation>Copy amount</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-26"/>
         <source>Copy transaction ID</source>
-        <translation type="unfinished">Copy transaction ID</translation>
+        <translation>Copy transaction ID</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+1"/>
+        <source>Lock unspent</source>
+        <translation>Lock unspent</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unlock unspent</source>
+        <translation>Unlock unspent</translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Copy quantity</source>
-        <translation type="unfinished"></translation>
+        <translation>Copy quantity</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Copy fee</source>
-        <translation type="unfinished"></translation>
+        <translation>Copy fee</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy after fee</source>
-        <translation type="unfinished"></translation>
+        <translation>Copy after fee</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy bytes</source>
-        <translation type="unfinished"></translation>
+        <translation>Copy bytes</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy low output</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Copy change</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location line="+423"/>
-        <source>DUST</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>yes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>This label turns red, if the transaction size is bigger than 10000 bytes.
-
- This means a fee of at least %1 per kb is required.
-
- Can vary +/- 1 Byte per input.</source>
-        <translation type="unfinished"></translation>
+        <location line="+62"/>
+        <source>&lt; Amount</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>This label turns red, if any recipient receives an amount smaller than %1.
-
- This means a fee of at least %2 is required.
-
- Amounts below 0.546 times the minimum relay fee are shown as DUST.</source>
-        <translation type="unfinished"></translation>
+        <source>&gt; Amount</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>&lt; Weight</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&gt; Weight</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&gt; Age</source>
+        <translation>&gt; Age</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&lt; Age</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+370"/>
+        <source>(%1 locked)</source>
+        <translation>(%1 locked)</translation>
+    </message>
+    <message>
+        <location line="+139"/>
         <source>This label turns red, if the change is smaller than %1.
 
  This means a fee of at least %2 is required.</source>
-        <translation type="unfinished"></translation>
+        <translation>This label turns red, if the change is smaller than %1.
+
+ This means a fee of at least %2 is required.</translation>
     </message>
     <message>
         <location line="+35"/>
-        <location line="+58"/>
+        <location line="+83"/>
         <source>(no label)</source>
-        <translation type="unfinished">(no label)</translation>
+        <translation>(no label)</translation>
     </message>
     <message>
         <location line="-9"/>
         <source>change from %1 (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>change from %1 (%2)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>(change)</source>
-        <translation type="unfinished"></translation>
+        <translation>(change)</translation>
     </message>
 </context>
 <context>
@@ -959,7 +1117,7 @@ Address: %4
         <translation>Edit Address</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+17"/>
         <source>&amp;Label</source>
         <translation>&amp;Label</translation>
     </message>
@@ -969,7 +1127,7 @@ Address: %4
         <translation>The label associated with this address book entry</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+19"/>
         <source>&amp;Address</source>
         <translation>&amp;Address</translation>
     </message>
@@ -1020,9 +1178,139 @@ Address: %4
     </message>
 </context>
 <context>
+    <name>EncryptWallet</name>
+    <message>
+        <location filename="../forms/encryptwallet.ui" line="+26"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <location filename="../forms/encryptwallet.cpp" line="+46"/>
+        <source>ENCRYPT WALLET</source>
+        <translation>ENCRYPT WALLET</translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <location line="+50"/>
+        <source>Password</source>
+        <translation>Password</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Repeat Password</source>
+        <translation>Repeat Password</translation>
+    </message>
+    <message>
+        <location line="+116"/>
+        <location filename="../forms/encryptwallet.cpp" line="+1"/>
+        <source>Encrypt Wallet</source>
+        <translation>Encrypt Wallet</translation>
+    </message>
+    <message>
+        <location filename="../forms/encryptwallet.cpp" line="+9"/>
+        <source>DECRYPT WALLET</source>
+        <translation>DECRYPT WALLET</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decrypt Wallet</source>
+        <translation>Decrypt Wallet</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Confirm wallet encryption</source>
+        <translation>Confirm wallet encryption</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
+        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Are you sure you wish to encrypt your wallet?</source>
+        <translation>Are you sure you wish to encrypt your wallet?</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Wallet encrypted</source>
+        <translation>Wallet encrypted</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Shard will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Shard will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+7"/>
+        <source>Wallet encryption failed</source>
+        <translation>Wallet encryption failed</translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
+        <translation>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>The supplied passphrases do not match.</source>
+        <translation>The supplied passphrases do not match.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Wallet decryption failed</source>
+        <translation>Wallet decryption failed</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The passphrase entered for the wallet decryption was incorrect.</source>
+        <translation>The passphrase entered for the wallet decryption was incorrect.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Wallet decryption sucess</source>
+        <translation>Wallet decryption sucess</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The wallet was successfully decrypted.</source>
+        <translation>The wallet was successfully decrypted.</translation>
+    </message>
+</context>
+<context>
+    <name>ExportPage</name>
+    <message>
+        <location filename="../forms/exportpage.ui" line="+26"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>EXPORT</source>
+        <translation>EXPORT</translation>
+    </message>
+    <message>
+        <location line="+194"/>
+        <source>Export</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../forms/exportpage.cpp" line="+12"/>
+        <source>Export Transactions</source>
+        <translation>Export Transactions</translation>
+    </message>
+</context>
+<context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
-        <location filename="../guiutil.cpp" line="+426"/>
+        <location filename="../guiutil.cpp" line="+431"/>
         <location line="+12"/>
         <source>Shard-Qt</source>
         <translation>Shard-Qt</translation>
@@ -1064,6 +1352,94 @@ Address: %4
     </message>
 </context>
 <context>
+    <name>LanguagePage</name>
+    <message>
+        <location filename="../forms/languagepage.ui" line="+14"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>SEARCH</source>
+        <translation>SEARCH</translation>
+    </message>
+    <message>
+        <location filename="../forms/languagepage.cpp" line="+110"/>
+        <source>Warning</source>
+        <translation>Warning</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>This setting will take effect after restarting Shard.</source>
+        <translation>This setting will take effect after restarting Shard.</translation>
+    </message>
+</context>
+<context>
+    <name>NetworkTraffic</name>
+    <message>
+        <location filename="../forms/networktraffic.ui" line="+32"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location line="+495"/>
+        <source>In:</source>
+        <translation>In:</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <location line="+463"/>
+        <location line="+498"/>
+        <source>0 KB</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="-509"/>
+        <source>Out:</source>
+        <translation>Out:</translation>
+    </message>
+    <message>
+        <location line="+558"/>
+        <source>Clear</source>
+        <translation>Clear</translation>
+    </message>
+    <message>
+        <location filename="../forms/networktraffic.cpp" line="+73"/>
+        <source>%1 B</source>
+        <translation>%1 B</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 KB</source>
+        <translation>%1 KB</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 MB</source>
+        <translation>%1 MB</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 GB</source>
+        <translation>%1 GB</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>%1 m</source>
+        <translation>%1 m</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 h</source>
+        <translation>%1 h</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 h %2 m</source>
+        <translation>%1 h %2 m</translation>
+    </message>
+</context>
+<context>
     <name>OptionsDialog</name>
     <message>
         <location filename="../forms/optionsdialog.ui" line="+14"/>
@@ -1071,7 +1447,7 @@ Address: %4
         <translation>Options</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+22"/>
         <source>&amp;Main</source>
         <translation>&amp;Main</translation>
     </message>
@@ -1106,7 +1482,7 @@ Address: %4
         <translation>&amp;Start Shard on system login</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+8"/>
         <source>&amp;Network</source>
         <translation>&amp;Network</translation>
     </message>
@@ -1131,7 +1507,7 @@ Address: %4
         <translation>IP address of the proxy (e.g. 127.0.0.1)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+13"/>
         <source>&amp;Port:</source>
         <translation>&amp;Port:</translation>
     </message>
@@ -1141,17 +1517,17 @@ Address: %4
         <translation>Port of the proxy (e.g. 9050)</translation>
     </message>
     <message>
-        <location line="-57"/>
+        <location line="-63"/>
         <source>Connect to the Shard network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
-        <translation type="unfinished"></translation>
+        <translation>Connect to the Shard network through a SOCKS5 proxy (e.g. when connecting through Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Connect through SOCKS5 proxy:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Connect through SOCKS5 proxy:</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+102"/>
         <source>&amp;Window</source>
         <translation>&amp;Window</translation>
     </message>
@@ -1208,25 +1584,20 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Display coin &amp;control features (experts only!)</source>
-        <translation></translation>
+        <translation>Display coin &amp;control features (experts only!)</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Use black visual theme (requires restart)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+71"/>
+        <location line="+115"/>
         <source>&amp;OK</source>
         <translation>&amp;OK</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+51"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Cancel</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+54"/>
         <source>&amp;Apply</source>
         <translation>&amp;Apply</translation>
     </message>
@@ -1236,7 +1607,117 @@ Address: %4
         <translation>default</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+146"/>
+        <location line="+9"/>
+        <source>Warning</source>
+        <translation>Warning</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <location line="+9"/>
+        <source>This setting will take effect after restarting Shard.</source>
+        <translation>This setting will take effect after restarting Shard.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The supplied proxy address is invalid.</source>
+        <translation>The supplied proxy address is invalid.</translation>
+    </message>
+</context>
+<context>
+    <name>OptionsPage</name>
+    <message>
+        <location filename="../forms/optionspage.ui" line="+14"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Main</source>
+        <translation>Main</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Optional transaction fee per KB that helps make sure your transactions are processed quickly.</source>
+        <translation>Optional transaction fee per KB that helps make sure your transactions are processed quickly.</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Most transactions are 1KB.</source>
+        <translation>Most transactions are 1KB.</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Pay Transaction Fee</source>
+        <translation>Pay Transaction Fee</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Reserved amount does not participate cin staking and is therefore spendable at any time.</source>
+        <translation>Reserved amount does not participate cin staking and is therefore spendable at any time.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Reserve</source>
+        <translation>Reserve</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Network</source>
+        <translation>Network</translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Connect through SOCKS5 proxy</source>
+        <translation>Connect through SOCKS5 proxy</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Map port using UPnP</source>
+        <translation>Map port using UPnP</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Proxy IP:</source>
+        <translation>Proxy IP:</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Port:</source>
+        <translation>Port:</translation>
+    </message>
+    <message>
+        <location line="+58"/>
+        <source>Display</source>
+        <translation>Display</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>Unit to show amounts in:</source>
+        <translation>Unit to show amounts in:</translation>
+    </message>
+    <message>
+        <location line="+132"/>
+        <source>Start Shard on System Login</source>
+        <translation>Start Shard on System Login</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Minimize to the tray instead of taskbar</source>
+        <translation>Minimize to the tray instead of taskbar</translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Minimize on close</source>
+        <translation>Minimize on close</translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Apply</source>
+        <translation>Apply</translation>
+    </message>
+    <message>
+        <location filename="../forms/optionspage.cpp" line="+144"/>
         <location line="+9"/>
         <source>Warning</source>
         <translation>Warning</translation>
@@ -1256,81 +1737,184 @@ Address: %4
 <context>
     <name>OverviewPage</name>
     <message>
-        <location filename="../forms/overviewpage.ui" line="+14"/>
+        <location filename="../forms/overviewpage.ui" line="+20"/>
         <source>Form</source>
         <translation>Form</translation>
     </message>
     <message>
-        <location line="+46"/>
-        <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Shard network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Shard network after a connection is established, but this process has not completed yet.</translation>
-    </message>
-    <message>
-        <location line="-173"/>
-        <source>Stake:</source>
-        <translation>Stake:</translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>Unconfirmed:</source>
-        <translation>Unconfirmed:</translation>
-    </message>
-    <message>
-        <location line="-113"/>
-        <source>Wallet</source>
-        <translation>Wallet</translation>
-    </message>
-    <message>
-        <location line="+49"/>
-        <source>Spendable:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Your current spendable balance</source>
-        <translation type="unfinished"></translation>
+        <location line="+190"/>
+        <source>Recieve</source>
+        <translation>Recieve</translation>
     </message>
     <message>
         <location line="+80"/>
+        <source>STAKED</source>
+        <translation>STAKED</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <location line="+88"/>
+        <location line="+113"/>
+        <source>0</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="-137"/>
+        <source>BALANCE</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>$ 0.0</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>UNCONFIRMED</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+147"/>
+        <source>Send</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+64"/>
+        <source>&lt;img src=&quot;:/images/res/images/graph.png&quot;&gt;</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+233"/>
+        <source>SHARD/USD</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>$ 0.00 / SHARD</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+55"/>
+        <source>MCAP:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <location line="+46"/>
+        <location line="+46"/>
+        <source>0.00 $</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="-70"/>
+        <source>Change (24h):</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Volume (24h):</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+83"/>
+        <source>&lt;img src=&quot;:/images/res/images/transactions.png&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Transactions List</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+63"/>
+        <source>View More</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Shard network after a connection is established, but this process has not completed yet.</source>
+        <translation type="vanished">The displayed information may be out of date. Your wallet automatically synchronizes with the Shard network after a connection is established, but this process has not completed yet.</translation>
+    </message>
+    <message>
+        <source>Stake:</source>
+        <translation type="vanished">Stake:</translation>
+    </message>
+    <message>
+        <source>Unconfirmed:</source>
+        <translation type="vanished">Unconfirmed:</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation type="vanished">Wallet</translation>
+    </message>
+    <message>
         <source>Immature:</source>
-        <translation>Immature:</translation>
+        <translation type="vanished">Immature:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Mined balance that has not yet matured</source>
-        <translation>Mined balance that has not yet matured</translation>
+        <translation type="vanished">Mined balance that has not yet matured</translation>
     </message>
     <message>
-        <location line="+23"/>
-        <source>Total:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Your current total balance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+50"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Recent transactions&lt;/b&gt;</translation>
+        <translation type="vanished">&lt;b&gt;Recent transactions&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="-118"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
-        <translation>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</translation>
+        <translation type="vanished">Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</translation>
     </message>
     <message>
-        <location line="-32"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
-        <translation>Total of coins that was staked, and do not yet count toward the current balance</translation>
+        <translation type="vanished">Total of coins that was staked, and do not yet count toward the current balance</translation>
     </message>
     <message>
-        <location filename="../overviewpage.cpp" line="+116"/>
-        <location line="+1"/>
         <source>out of sync</source>
-        <translation>out of sync</translation>
+        <translation type="vanished">out of sync</translation>
+    </message>
+    <message>
+        <location filename="../overviewpage.cpp" line="+75"/>
+        <source>5 minutes</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>15 minutes</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>30 minutes</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1 hour</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1 day</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1 week</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>1 month</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+27"/>
+        <source>Price Graph</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="-26"/>
+        <source>Balance Graph</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Staked Graph</source>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -1338,7 +1922,20 @@ Address: %4
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
         <source>Cannot start shard: click-to-pay handler</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>QMessageBox</name>
+    <message>
+        <location filename="../forms/about.cpp" line="+48"/>
+        <source>&lt;p&gt;This program uses Qt version %1.&lt;/p&gt;</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;p&gt;Qt is a C++ toolkit for cross-platform application development.&lt;/p&gt;&lt;p&gt;Qt provides single-source portability across all major desktop operating systems. It is also available for embedded Linux and other embedded and mobile operating systems.&lt;/p&gt;&lt;p&gt;Qt is available under three different licensing options designed to accommodate the needs of our various users.&lt;/p&gt;&lt;p&gt;Qt licensed under our commercial license agreement is appropriate for development of proprietary/commercial software where you do not want to share any source code with third parties or otherwise cannot comply with the terms of the GNU LGPL version 3 or GNU LGPL version 2.1.&lt;/p&gt;&lt;p&gt;Qt licensed under the GNU LGPL version 3 is appropriate for the development of Qt&amp;nbsp;applications provided you can comply with the terms and conditions of the GNU LGPL version 3.&lt;/p&gt;&lt;p&gt;Qt licensed under the GNU LGPL version 2.1 is appropriate for the development of Qt&amp;nbsp;applications provided you can comply with the terms and conditions of the GNU LGPL version 2.1.&lt;/p&gt;&lt;p&gt;Please see &lt;a style=&quot;color:#0adbf0&quot; href=&quot;http://%2/&quot;&gt;%2&lt;/a&gt; for an overview of Qt licensing.&lt;/p&gt;&lt;p&gt;Copyright (C) %1 The Qt Company Ltd and other contributors.&lt;/p&gt;&lt;p&gt;Qt and the Qt logo are trademarks of The Qt Company Ltd.&lt;/p&gt;&lt;p&gt;Qt is The Qt Company Ltd product developed as an open source project. See &lt;a style=&quot;color:#0adbf0&quot; href=&quot;http://%3/&quot;&gt;%3&lt;/a&gt; for more information.&lt;/p&gt;</source>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -1349,27 +1946,27 @@ Address: %4
         <translation>QR Code Dialog</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+65"/>
         <source>Request Payment</source>
         <translation>Request Payment</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+79"/>
         <source>Amount:</source>
         <translation>Amount:</translation>
     </message>
     <message>
-        <location line="-44"/>
+        <location line="-64"/>
         <source>Label:</source>
         <translation>Label:</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+29"/>
         <source>Message:</source>
         <translation>Message:</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+127"/>
         <source>&amp;Save As...</source>
         <translation>&amp;Save As...</translation>
     </message>
@@ -1402,7 +1999,7 @@ Address: %4
 <context>
     <name>RPCConsole</name>
     <message>
-        <location filename="../forms/rpcconsole.ui" line="+46"/>
+        <location filename="../forms/rpcconsole.ui" line="+52"/>
         <source>Client name</source>
         <translation>Client name</translation>
     </message>
@@ -1464,39 +2061,39 @@ Address: %4
         <translation>Current number of blocks</translation>
     </message>
     <message>
-        <location line="+197"/>
+        <location line="+293"/>
         <source>&amp;Network Traffic</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+96"/>
         <source>&amp;Clear</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Totals</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location line="+64"/>
-        <location filename="../rpcconsole.cpp" line="+352"/>
+        <location line="+226"/>
+        <location filename="../rpcconsole.cpp" line="+202"/>
         <source>In:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="+242"/>
         <location filename="../rpcconsole.cpp" line="+1"/>
         <source>Out:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location line="-383"/>
+        <location line="-847"/>
         <source>Last block time</source>
         <translation>Last block time</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+98"/>
         <source>&amp;Open</source>
         <translation>&amp;Open</translation>
     </message>
@@ -1511,7 +2108,7 @@ Address: %4
         <translation>Show the Shard-Qt help message to get a list with possible Shard command-line options.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+49"/>
         <source>&amp;Show</source>
         <translation>&amp;Show</translation>
     </message>
@@ -1521,17 +2118,17 @@ Address: %4
         <translation>&amp;Console</translation>
     </message>
     <message>
-        <location line="-237"/>
+        <location line="-329"/>
         <source>Build date</source>
         <translation>Build date</translation>
     </message>
     <message>
-        <location line="-104"/>
+        <location line="-110"/>
         <source>Shard - Debug window</source>
         <translation>Shard - Debug window</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+31"/>
         <source>Shard Core</source>
         <translation>Shard Core</translation>
     </message>
@@ -1546,7 +2143,7 @@ Address: %4
         <translation>Open the Shard debug log file from the current data directory. This can take a few seconds for large log files.</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+198"/>
         <source>Clear console</source>
         <translation>Clear console</translation>
     </message>
@@ -1568,44 +2165,94 @@ Address: %4
     <message>
         <location line="+134"/>
         <source>%1 B</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 KB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>%1 m</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>%1 h</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 h %2 m</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>RPCConsole_Widget</name>
+    <message>
+        <location filename="../forms/rpcconsole_widget.ui" line="+14"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location line="+143"/>
+        <source>Clear console</source>
+        <translation>Clear console</translation>
+    </message>
+    <message>
+        <location filename="../forms/rpcconsole_widget.cpp" line="+151"/>
+        <source>Welcome to the Shard RPC console.</source>
+        <translation>Welcome to the Shard RPC console.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
+        <translation>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>%1 B</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 KB</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 MB</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 GB</source>
+        <translation></translation>
     </message>
 </context>
 <context>
     <name>SendCoinsDialog</name>
     <message>
-        <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+179"/>
+        <location filename="../forms/sendcoinsdialog.ui" line="+17"/>
+        <location filename="../sendcoinsdialog.cpp" line="+133"/>
+        <location line="+35"/>
+        <location line="+68"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1616,118 +2263,110 @@ Address: %4
         <translation>Send Coins</translation>
     </message>
     <message>
-        <location line="+76"/>
-        <source>Coin Control Features</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
+        <location line="+168"/>
         <source>Inputs...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>automatically selected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>Insufficient funds!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+77"/>
-        <source>Quantity:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <location line="+35"/>
-        <source>0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-19"/>
-        <source>Bytes:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+51"/>
-        <source>Amount:</source>
-        <translation type="unfinished">Amount:</translation>
-    </message>
-    <message>
-        <location line="+54"/>
-        <source>Fee:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+35"/>
-        <source>Low Output:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>no</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>After Fee:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+35"/>
-        <source>Change</source>
-        <translation type="unfinished"></translation>
+        <location line="+23"/>
+        <source>WARNING: Invalid Shard Address</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+50"/>
-        <source>custom change address</source>
-        <translation type="unfinished"></translation>
+        <source>automatically selected</source>
+        <translation></translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+459"/>
+        <source>SplitBlock</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Block Size:</source>
+        <translation>Block Size:</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>0.00 SHARD</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <source>Change:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+115"/>
+        <source>Custom Change Address</source>
+        <translation>Custom Change Address</translation>
+    </message>
+    <message>
+        <location line="+157"/>
+        <source>Send Shard</source>
+        <translation>Send Shard</translation>
+    </message>
+    <message>
+        <location line="-904"/>
+        <source>Insufficient funds!</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+169"/>
+        <source>Amount:</source>
+        <translation>Amount:</translation>
+    </message>
+    <message>
+        <location line="+93"/>
+        <source>Fee:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+94"/>
+        <source>After Fee:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+659"/>
         <source>Send to multiple recipients at once</source>
         <translation>Send to multiple recipients at once</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Add &amp;Recipient</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="-938"/>
         <source>Remove all transaction fields</source>
         <translation>Remove all transaction fields</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+38"/>
         <source>Clear &amp;All</source>
         <translation>Clear &amp;All</translation>
     </message>
     <message>
-        <location line="+24"/>
         <source>Balance:</source>
-        <translation>Balance:</translation>
+        <translation type="vanished">Balance:</translation>
     </message>
     <message>
-        <location line="+47"/>
         <source>Confirm the send action</source>
-        <translation>Confirm the send action</translation>
+        <translation type="vanished">Confirm the send action</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>S&amp;end</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../sendcoinsdialog.cpp" line="-171"/>
+        <location filename="../sendcoinsdialog.cpp" line="-228"/>
         <source>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
         <translation>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+1"/>
+        <source># of Blocks</source>
+        <translation># of Blocks</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enable/Disable Block Splitting</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Copy quantity</source>
         <translation></translation>
     </message>
@@ -1762,12 +2401,29 @@ Address: %4
         <translation></translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+67"/>
+        <source>The split block feature does not work when sending to external addresses. Please try again.</source>
+        <translation>The split block feature does not work when sending to external addresses. Please try again.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>The split block feature does not work with multiple addresses. Please try again.</source>
+        <translation>The split block feature does not work with multiple addresses. Please try again.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <location line="+2"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <location line="+6"/>
+        <source>&lt;b&gt;%1&lt;/b&gt; in %4 blocks of %5 each to %2 (%3)?</source>
+        <translation>&lt;b&gt;%1&lt;/b&gt; in %4 blocks of %5 each to %2 (%3)?</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Confirm send coins</source>
         <translation>Confirm send coins</translation>
     </message>
@@ -1809,7 +2465,7 @@ Address: %4
     <message>
         <location line="+5"/>
         <source>Error: Transaction creation failed!</source>
-        <translation type="unfinished"></translation>
+        <translation>Error: Transaction creation failed!</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1817,17 +2473,17 @@ Address: %4
         <translation>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</translation>
     </message>
     <message>
-        <location line="+241"/>
-        <source>WARNING: Invalid Shard address</source>
-        <translation></translation>
+        <location line="+266"/>
+        <source>WARNING: Invalid shard address!</source>
+        <translation>WARNING: Invalid shard address!</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+18"/>
         <source>(no label)</source>
-        <translation type="unfinished">(no label)</translation>
+        <translation>(no label)</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>WARNING: unknown change address</source>
         <translation></translation>
     </message>
@@ -1835,65 +2491,233 @@ Address: %4
 <context>
     <name>SendCoinsEntry</name>
     <message>
-        <location filename="../forms/sendcoinsentry.ui" line="+14"/>
+        <location filename="../forms/sendcoinsentry.ui" line="+32"/>
         <source>Form</source>
         <translation>Form</translation>
     </message>
     <message>
-        <location line="+15"/>
         <source>A&amp;mount:</source>
-        <translation>A&amp;mount:</translation>
+        <translation type="vanished">A&amp;mount:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Pay &amp;To:</source>
-        <translation>Pay &amp;To:</translation>
+        <translation type="vanished">Pay &amp;To:</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+106"/>
         <source>The address to send the payment to (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
-        <translation type="unfinished"></translation>
+        <translation>The address to send the payment to (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+93"/>
         <location filename="../sendcoinsentry.cpp" line="+26"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation>Enter a label for this address to add it to your address book</translation>
     </message>
     <message>
-        <location line="-78"/>
         <source>&amp;Label:</source>
-        <translation>&amp;Label:</translation>
+        <translation type="vanished">&amp;Label:</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-123"/>
+        <source>Pay to</source>
+        <translation>Pay to</translation>
+    </message>
+    <message>
+        <location line="+93"/>
+        <source>Label</source>
+        <translation>Label</translation>
+    </message>
+    <message>
+        <location line="+79"/>
+        <source>Amount</source>
+        <translation>Amount</translation>
+    </message>
+    <message>
+        <location line="+94"/>
         <source>Choose address from address book</source>
         <translation>Choose address from address book</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+38"/>
+        <source>Address Book</source>
+        <translation>Address Book</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+32"/>
         <source>Paste address from clipboard</source>
         <translation>Paste address from clipboard</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+38"/>
+        <source>Paste</source>
+        <translation>Paste</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+32"/>
         <source>Remove this recipient</source>
         <translation>Remove this recipient</translation>
     </message>
     <message>
+        <location line="+38"/>
+        <source>Remove</source>
+        <translation>Remove</translation>
+    </message>
+    <message>
+        <source>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation type="vanished">Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+    </message>
+    <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
+        <source>Enter a Shard address...</source>
+        <translation>Enter a Shard address...</translation>
+    </message>
+</context>
+<context>
+    <name>Settings</name>
+    <message>
+        <location filename="../forms/settings.ui" line="+14"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>&lt;img src=&quot;:/images/res/images/settings.png&quot; /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;Settings</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>OPTIONS</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>BACKUP WALLET</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>EXPORT</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>SIGN MESSAGE</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>VERIFY MESSAGE</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>ENCRYPT WALLET</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>CHANGE PASSPHRASE</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>LANGUAGE</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>NETWORK TRAFFIC</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>CONSOLE</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>ABOUT</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>SignMessage</name>
+    <message>
+        <location filename="../forms/signmessage.ui" line="+14"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
+    </message>
+    <message>
+        <location line="+262"/>
+        <source>   Sign Message</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>    Clear All</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../forms/signmessage.cpp" line="+23"/>
         <source>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
         <translation>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Click &quot;Sign Message&quot; to generate signature</source>
+        <translation>Click &quot;Sign Message&quot; to generate signature</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>The entered address is invalid.</source>
+        <translation>The entered address is invalid.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+8"/>
+        <source>Please check the address and try again.</source>
+        <translation>Please check the address and try again.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The entered address does not refer to a key.</source>
+        <translation>The entered address does not refer to a key.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Wallet unlock was cancelled.</source>
+        <translation>Wallet unlock was cancelled.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Private key for the entered address is not available.</source>
+        <translation>Private key for the entered address is not available.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Message signing failed.</source>
+        <translation>Message signing failed.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message signed.</source>
+        <translation>Message signed.</translation>
     </message>
 </context>
 <context>
@@ -1904,13 +2728,13 @@ Address: %4
         <translation>Signatures - Sign / Verify a Message</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+124"/>
+        <location line="+19"/>
+        <location line="+182"/>
         <source>&amp;Sign Message</source>
         <translation>&amp;Sign Message</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-176"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
     </message>
@@ -1920,19 +2744,19 @@ Address: %4
         <translation>The address to sign the message with (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <location line="+203"/>
+        <location line="+16"/>
+        <location line="+307"/>
         <source>Choose an address from the address book</source>
         <translation>Choose an address from the address book</translation>
     </message>
     <message>
-        <location line="-193"/>
-        <location line="+203"/>
+        <location line="-297"/>
+        <location line="+307"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location line="-193"/>
+        <location line="-297"/>
         <source>Paste address from clipboard</source>
         <translation>Paste address from clipboard</translation>
     </message>
@@ -1947,7 +2771,7 @@ Address: %4
         <translation>Enter the message you want to sign here</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+30"/>
         <source>Copy the current signature to the system clipboard</source>
         <translation>Copy the current signature to the system clipboard</translation>
     </message>
@@ -1957,24 +2781,24 @@ Address: %4
         <translation>Sign the message to prove you own this Shard address</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+63"/>
         <source>Reset all sign message fields</source>
         <translation>Reset all sign message fields</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+146"/>
+        <location line="+49"/>
+        <location line="+244"/>
         <source>Clear &amp;All</source>
         <translation>Clear &amp;All</translation>
     </message>
     <message>
-        <location line="-87"/>
-        <location line="+70"/>
+        <location line="-185"/>
+        <location line="+122"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;Verify Message</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-116"/>
         <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
         <translation>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</translation>
     </message>
@@ -1984,12 +2808,12 @@ Address: %4
         <translation>The address the message was signed with (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+46"/>
         <source>Verify the message to ensure it was signed with the specified Shard address</source>
         <translation>Verify the message to ensure it was signed with the specified Shard address</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+63"/>
         <source>Reset all verify message fields</source>
         <translation>Reset all verify message fields</translation>
     </message>
@@ -2081,7 +2905,7 @@ Address: %4
     <message>
         <location filename="../trafficgraphwidget.cpp" line="+75"/>
         <source>KB/s</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2280,15 +3104,23 @@ Address: %4
         <translation>Transaction details</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>This pane shows a detailed description of the transaction</source>
         <translation>This pane shows a detailed description of the transaction</translation>
     </message>
 </context>
 <context>
+    <name>TransactionPage</name>
+    <message>
+        <location filename="../forms/transactionpage.ui" line="+20"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+</context>
+<context>
     <name>TransactionTableModel</name>
     <message>
-        <location filename="../transactiontablemodel.cpp" line="+231"/>
+        <location filename="../transactiontablemodel.cpp" line="+280"/>
         <source>Date</source>
         <translation>Date</translation>
     </message>
@@ -2308,7 +3140,7 @@ Address: %4
         <translation>Amount</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Open until %1</source>
         <translation>Open until %1</translation>
     </message>
@@ -2361,19 +3193,26 @@ Address: %4
         <translation>Generated but not accepted</translation>
     </message>
     <message>
-        <location line="+42"/>
-        <source>Received with</source>
-        <translation>Received with</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Received from</source>
-        <translation>Received from</translation>
+        <location line="+43"/>
+        <source>You received</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+3"/>
+        <source>You sent</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Received with</source>
+        <translation type="vanished">Received with</translation>
+    </message>
+    <message>
+        <source>Received from</source>
+        <translation type="vanished">Received from</translation>
+    </message>
+    <message>
         <source>Sent to</source>
-        <translation>Sent to</translation>
+        <translation type="vanished">Sent to</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2386,12 +3225,12 @@ Address: %4
         <translation>Mined</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+39"/>
         <source>(n/a)</source>
         <translation>(n/a)</translation>
     </message>
     <message>
-        <location line="+194"/>
+        <location line="+203"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
         <translation>Transaction status. Hover over this field to show number of confirmations.</translation>
     </message>
@@ -2419,13 +3258,13 @@ Address: %4
 <context>
     <name>TransactionView</name>
     <message>
-        <location filename="../transactionview.cpp" line="+54"/>
-        <location line="+17"/>
+        <location filename="../transactionview.cpp" line="+48"/>
+        <location line="+16"/>
         <source>All</source>
         <translation>All</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-15"/>
         <source>Today</source>
         <translation>Today</translation>
     </message>
@@ -2455,14 +3294,22 @@ Address: %4
         <translation>Range...</translation>
     </message>
     <message>
-        <location line="+12"/>
         <source>Received with</source>
-        <translation>Received with</translation>
+        <translation type="vanished">Received with</translation>
+    </message>
+    <message>
+        <source>Sent to</source>
+        <translation type="vanished">Sent to</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>You received</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Sent to</source>
-        <translation>Sent to</translation>
+        <source>You sent</source>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2480,7 +3327,7 @@ Address: %4
         <translation>Other</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Enter address or label to search</source>
         <translation>Enter address or label to search</translation>
     </message>
@@ -2490,7 +3337,7 @@ Address: %4
         <translation>Min amount</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+20"/>
         <source>Copy address</source>
         <translation>Copy address</translation>
     </message>
@@ -2520,7 +3367,7 @@ Address: %4
         <translation>Show transaction details</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+193"/>
         <source>Export Transaction Data</source>
         <translation>Export Transaction Data</translation>
     </message>
@@ -2586,11 +3433,239 @@ Address: %4
     </message>
 </context>
 <context>
+    <name>TxViewDelegate</name>
+    <message>
+        <location filename="../txviewdelegate.cpp" line="+81"/>
+        <source>Internal Transaction</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Details</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>ADDRESS</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Internal transaction</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>CONFIRMATIONS</source>
+        <translation></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+6"/>
+        <source>Confirmed (%l confirmations)</source>
+        <translation>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+2"/>
+        <source>Unconfirmed (%l confirmations)</source>
+        <translation>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>TRANSACTION ID</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>DATE</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>PRICE</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+81"/>
+        <location line="+2"/>
+        <source>You received</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>You sent</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Payment to yourself</source>
+        <translation>Payment to yourself</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mined</source>
+        <translation>Mined</translation>
+    </message>
+</context>
+<context>
+    <name>VerifyMessage</name>
+    <message>
+        <location filename="../forms/verifymessage.ui" line="+14"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
+        <translation>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</translation>
+    </message>
+    <message>
+        <location line="+225"/>
+        <source>   Verify Message</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>   Clear All</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../forms/verifymessage.cpp" line="+24"/>
+        <source>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</source>
+        <translation>Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter Shard signature</source>
+        <translation>Enter Shard signature</translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>The entered address is invalid.</source>
+        <translation>The entered address is invalid.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+8"/>
+        <source>Please check the address and try again.</source>
+        <translation>Please check the address and try again.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The entered address does not refer to a key.</source>
+        <translation>The entered address does not refer to a key.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>The signature could not be decoded.</source>
+        <translation>The signature could not be decoded.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+13"/>
+        <source>Please check the signature and try again.</source>
+        <translation>Please check the signature and try again.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The signature did not match the message digest.</source>
+        <translation>The signature did not match the message digest.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Message verification failed.</source>
+        <translation>Message verification failed.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message verified.</source>
+        <translation>Message verified.</translation>
+    </message>
+</context>
+<context>
     <name>WalletModel</name>
     <message>
-        <location filename="../walletmodel.cpp" line="+212"/>
+        <location filename="../walletmodel.cpp" line="+218"/>
         <source>Sending...</source>
         <translation>Sending...</translation>
+    </message>
+</context>
+<context>
+    <name>about</name>
+    <message>
+        <location filename="../forms/about.ui" line="+32"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location line="+260"/>
+        <source>Client Name:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Satoshi</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>On testnet:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>Client Version:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Number of connections:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>OpenSSL Version:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Build Date:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>Startup time:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;Copyright Shard 2018-2019&lt;/span&gt;, Blackcoin 2014-2018, Novacoin 2012-2014, Bitcoin 2009-2014&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>
+This is experimental software.
+
+Distributed under the MIT/X11 software license, see the accompanying file COPYING or &lt;a style=&quot;color:#0adbf0&quot; href=&quot;http://www.opensource.org/licenses/mit-license.php&quot;&gt;http://www.opensource.org/licenses/mit-license.php&lt;/a&gt;.
+
+This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (&lt;a style=&quot;color:#0adbf0&quot; href=&quot;https://www.openssl.org/&quot;&gt;https://www.openssl.org/&lt;/a&gt;) and cryptographic software written by Eric Young (&lt;a style=&quot;color:#0adbf0&quot; href=&quot;mailto:eay@cryptsoft.com&quot;&gt;eay@cryptsoft.com&lt;/a&gt;) and UPnP software written by Thomas Bernard.</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../forms/about.cpp" line="-13"/>
+        <source>In:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Out:</source>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2658,7 +3733,7 @@ If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
 for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.com
 </source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="-161"/>
@@ -2698,12 +3773,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="+1"/>
         <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
-        <translation type="unfinished"></translation>
+        <translation>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Always query for peer addresses via DNS lookup (default: 0)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2883,32 +3958,32 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="+43"/>
         <source>Error: Wallet locked, unable to create transaction!</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Error: Transaction creation failed!</source>
-        <translation type="unfinished"></translation>
+        <translation>Error: Transaction creation failed!</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="-15"/>
         <source>Warning</source>
-        <translation type="unfinished">Warning</translation>
+        <translation>Warning</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Information</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="-7"/>
@@ -2928,12 +4003,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="-47"/>
         <source>Connect through SOCKS5 proxy</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+12"/>
@@ -2943,22 +4018,22 @@ for example: alertnotify=echo %%s | mail -s &quot;Shard Alert&quot; admin@foo.co
     <message>
         <location line="+6"/>
         <source>Output debugging information (default: 0, supplying &lt;category&gt; is optional)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>If &lt;category&gt; is not supplied, output all debugging information.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>&lt;category&gt; can be:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Enter regression test mode, which uses a special chain in which blocks can be solved instantly. This is intended for regression testing tools and app development.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+8"/>

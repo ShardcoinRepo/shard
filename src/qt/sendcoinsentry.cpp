@@ -18,17 +18,14 @@ SendCoinsEntry::SendCoinsEntry(QWidget *parent) :
 {
     ui->setupUi(this);
 
-#ifdef Q_OS_MAC
-    ui->payToLayout->setSpacing(4);
-#endif
+
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
     ui->addAsLabel->setPlaceholderText(tr("Enter a label for this address to add it to your address book"));
-    ui->payTo->setPlaceholderText(tr("Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)"));
+    ui->payTo->setPlaceholderText(tr("Enter a Shard address..."));
 #endif
     setFocusPolicy(Qt::TabFocus);
     setFocusProxy(ui->payTo);
-
     GUIUtil::setupAddressWidget(ui->payTo, this);
 }
 
@@ -49,6 +46,7 @@ void SendCoinsEntry::on_addressBookButton_clicked()
         return;
     AddressBookPage dlg(AddressBookPage::ForSending, AddressBookPage::SendingTab, this);
     dlg.setModel(model->getAddressTableModel());
+    dlg.setStyleSheet("background:'#002d3f'");
     if(dlg.exec())
     {
         ui->payTo->setText(dlg.getReturnValue());
@@ -89,7 +87,7 @@ void SendCoinsEntry::clear()
     ui->addAsLabel->clear();
     ui->payAmount->clear();
     ui->payTo->setFocus();
-    // update the display unit, to not use the default ("BTC")
+    // update the display unit, to not use the default ("SHARD")
     updateDisplayUnit();
 }
 

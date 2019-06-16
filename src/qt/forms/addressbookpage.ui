@@ -6,143 +6,599 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>760</width>
-    <height>380</height>
+    <width>869</width>
+    <height>477</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Address Book</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QLabel" name="labelExplanation">
-     <property name="text">
-      <string>These are your Shard addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</string>
+  <property name="styleSheet">
+   <string notr="true">QHeaderView::section {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #616161, stop: 0.5 #505050,
+                                      stop: 0.6 #434343, stop:1 #656565);
+    color: white;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+
+}
+QWidget{background:'#0b1d2c';}
+
+QHeaderView::section:checked
+{
+    background-color: red;
+}
+
+/* style the sort indicator */
+QHeaderView::down-arrow {
+    image: url(down_arrow.png);
+}
+
+QHeaderView::up-arrow {
+    image: url(up_arrow.png);
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="2" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <property name="spacing">
+      <number>0</number>
      </property>
-     <property name="textFormat">
-      <enum>Qt::PlainText</enum>
+     <property name="leftMargin">
+      <number>10</number>
      </property>
-     <property name="wordWrap">
-      <bool>true</bool>
+     <property name="rightMargin">
+      <number>10</number>
      </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QTableView" name="tableView">
-     <property name="contextMenuPolicy">
-      <enum>Qt::CustomContextMenu</enum>
+     <property name="bottomMargin">
+      <number>10</number>
      </property>
-     <property name="toolTip">
-      <string>Double-click to edit address or label</string>
-     </property>
-     <property name="tabKeyNavigation">
-      <bool>false</bool>
-     </property>
-     <property name="selectionMode">
-      <enum>QAbstractItemView::SingleSelection</enum>
-     </property>
-     <property name="selectionBehavior">
-      <enum>QAbstractItemView::SelectRows</enum>
-     </property>
-     <property name="sortingEnabled">
-      <bool>true</bool>
-     </property>
-     <attribute name="verticalHeaderVisible">
-      <bool>false</bool>
-     </attribute>
-    </widget>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="newAddressButton">
-       <property name="toolTip">
-        <string>Create a new address</string>
-       </property>
-       <property name="text">
-        <string>&amp;New Address</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="copyToClipboard">
-       <property name="toolTip">
-        <string>Copy the currently selected address to the system clipboard</string>
-       </property>
-       <property name="text">
-        <string>&amp;Copy Address</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="showQRCode">
-       <property name="text">
-        <string>Show &amp;QR Code</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="signMessage">
-       <property name="toolTip">
-        <string>Sign a message to prove you own a Shard address</string>
-       </property>
-       <property name="text">
-        <string>Sign &amp;Message</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="verifyMessage">
-       <property name="toolTip">
-        <string>Verify a message to ensure it was signed with a specified Shard address</string>
-       </property>
-       <property name="text">
-        <string>&amp;Verify Message</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="deleteButton">
-       <property name="toolTip">
-        <string>Delete the currently selected address from the list</string>
-       </property>
-       <property name="text">
-        <string>&amp;Delete</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QDialogButtonBox" name="buttonBox">
+      <widget class="QWidget" name="recieveTop" native="true">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <property name="standardButtons">
-        <set>QDialogButtonBox::Ok</set>
+       <property name="minimumSize">
+        <size>
+         <width>131</width>
+         <height>150</height>
+        </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background:'#102537';</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="CustomButton" name="newAddressButton" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>120</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:'#0d2131';border:0px</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="rightMargin">
+             <number>15</number>
+            </property>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <property name="leftMargin">
+               <number>25</number>
+              </property>
+              <property name="rightMargin">
+               <number>25</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_address">
+                <property name="styleSheet">
+                 <string notr="true">color:#72909e;</string>
+                </property>
+                <property name="text">
+                 <string>Address:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="addressEdit">
+                <property name="styleSheet">
+                 <string notr="true">background:#1d2e3f;
+color:white;
+padding:7px;
+border-radius:5px;
+font: 10pt 'Ubuntu';
+margin-bottom:2px;
+</string>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <property name="spacing">
+               <number>10</number>
+              </property>
+              <property name="leftMargin">
+               <number>25</number>
+              </property>
+              <property name="topMargin">
+               <number>15</number>
+              </property>
+              <property name="bottomMargin">
+               <number>15</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="copyToClipboard">
+                <property name="toolTip">
+                 <string>Copy the currently selected address to the system clipboard</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:10px;
+;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0d2131';
+color:gray;
+border:2px solid #0b1d2c;
+ }
+</string>
+                </property>
+                <property name="text">
+                 <string>&amp;Copy Address</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="showQRCode">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:10px;
+;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0d2131';
+color:gray;
+border:2px solid #0b1d2c;
+ }
+</string>
+                </property>
+                <property name="text">
+                 <string>Show &amp;QR Code</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="signMessage">
+                <property name="toolTip">
+                 <string>Sign a message to prove you own a Shard address</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:10px;
+;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0d2131';
+color:gray;
+border:2px solid #0b1d2c;
+ }
+</string>
+                </property>
+                <property name="text">
+                 <string>Sign &amp;Message</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="verifyMessage">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Verify a message to ensure it was signed with a specified Shard address</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:10px;
+;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0d2131';
+color:gray;
+border:2px solid #0b1d2c;
+ }
+</string>
+                </property>
+                <property name="text">
+                 <string>&amp;Verify Message</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="deleteButton">
+                <property name="toolTip">
+                 <string>Delete the currently selected address from the list</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:10px;
+;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0d2131';
+color:gray;
+border:2px solid #0b1d2c;
+ }
+</string>
+                </property>
+                <property name="text">
+                 <string>&amp;Delete</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QDialogButtonBox" name="buttonBox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton { 
+ background-color: &quot;#0d2131&quot;;
+	border:2px solid #1d2e3f;
+color:#eeeeee;
+padding:10px;
+;
+	outline: none;
+border-radius:2px;
+
+}
+
+QPushButton:pressed {
+   background-color: &quot;#1d2e3f&quot;;
+border:2px solid gray;
+	color:white;
+
+}
+
+QPushButton:hover {
+     background-color: &quot;#102537&quot;;
+	border:2px solid #0f3e54;
+ }
+QPushButton:checked { 
+     background-color: &quot;#0d2131&quot;;
+border:2px solid #0f3e54;
+	color:white;
+
+ }
+QPushButton:disabled { 
+    background:'#0d2131';
+color:gray;
+border:2px solid #0b1d2c;
+ }
+</string>
+                </property>
+                <property name="standardButtons">
+                 <set>QDialogButtonBox::Ok</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QTableView" name="tableView">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::CustomContextMenu</enum>
+         </property>
+         <property name="toolTip">
+          <string>Double-click to edit address or label</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTableView{background:'#102537';
+color:white;
+border:0px;
+selection-background-color: '#1d2e3f';
+margin-top:10px;
+font: 10pt 'Ubuntu';
+
+}
+QLineEdit{color:white} QPlatinTextEdit{color:white}
+QTableView::item:selected{
+background-color: '#1d2e3f';
+color:white;
+}
+QScrollArea{border:0px;margin:0px;outline:none;}
+
+QScrollBar
+{
+ width:9px;
+outline:none;
+}
+QScrollBar::handle{
+background: rgb(0, 51, 78);
+width:9px;
+outline:none;}
+QScrollBar::handle:hover{
+background: rgb(0, 67, 97);
+width:9px;}
+QScrollBar::add-line, QScrollBar::sub-line{
+height:0px;}
+QScrollBar::add-page, QScrollBar::sub-page{
+background:#0d2131;
+outline:none;}
+</string>
+         </property>
+         <property name="tabKeyNavigation">
+          <bool>false</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="gridStyle">
+          <enum>Qt::NoPen</enum>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="../bitcoin.qrc"/>
- </resources>
+ <customwidgets>
+  <customwidget>
+   <class>CustomButton</class>
+   <extends>QWidget</extends>
+   <header location="global">custombutton.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
  <connections/>
 </ui>

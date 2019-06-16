@@ -52,6 +52,9 @@ public:
         wallet(wallet),
         parent(parent)
     {
+        parent->mapTransactions = std::map<qint64, double>();
+        parent->mapDebit = std::map<qint64, double>();
+        parent->mapAmounts = std::map<std::string,qint64>();
     }
 
     CWallet *wallet;
@@ -62,21 +65,72 @@ public:
      * this is sorted by sha256.
      */
     QList<TransactionRecord> cachedWallet;
+    int sd = 0;
 
     /* Query entire wallet anew from core.
      */
     void refreshWallet()
     {
         qDebug() << "TransactionTablePriv::refreshWallet";
+        sd = cachedWallet.size();
         cachedWallet.clear();
         {
             LOCK2(cs_main, wallet->cs_wallet);
+
+
+
             for(std::map<uint256, CWalletTx>::iterator it = wallet->mapWallet.begin(); it != wallet->mapWallet.end(); ++it)
             {
+
+
                 if(TransactionRecord::showTransaction(it->second))
                     cachedWallet.append(TransactionRecord::decomposeTransaction(wallet, it->second));
+
+
+
             }
+            if(sd != cachedWallet.size())
+            {
+
+                parent->mapTransactions.clear();
+                parent->mapDebit.clear();
+                double bal,debit = 0;
+                QDateTime min = QDateTime::currentDateTime();
+                for(int i = 0;i<cachedWallet.size();i++){
+
+                    QDateTime dateTrans = QDateTime::fromMSecsSinceEpoch(cachedWallet[i].time*1000);
+                    QTime tt = dateTrans.time();
+                    tt.setHMS(0,0,0);
+                    dateTrans.setTime(tt);
+
+                    parent->mapTransactions[dateTrans.toMSecsSinceEpoch()/1000] += cachedWallet[i].credit + cachedWallet[i].debit;
+
+                    if(cachedWallet[i].type == TransactionRecord::Generated)
+                    {
+                        parent->mapDebit[dateTrans.toMSecsSinceEpoch()/1000] += cachedWallet[i].credit + cachedWallet[i].debit;
+                    }
+
+
+                    if(min > dateTrans)
+                    {
+                        min = dateTrans;
+                    }
+                }
+                bal = 0;
+                debit = 0;
+                while(min < QDateTime::currentDateTime().addYears(1)){
+                    bal += parent->mapTransactions[min.toMSecsSinceEpoch()/1000];
+
+                    parent->mapTransactions[min.toMSecsSinceEpoch()/1000] = bal;
+
+                    min = min.addDays(1);
+                }
+            }
+
+
         }
+
+
     }
 
     /* Update our model of the wallet incrementally, to synchronize our model of the wallet
@@ -143,9 +197,24 @@ public:
                         foreach(const TransactionRecord &rec, toInsert)
                         {
                             cachedWallet.insert(insert_idx, rec);
+                            QDateTime dateTrans = QDateTime::fromMSecsSinceEpoch(rec.time*1000.0);
+                            QTime tt = dateTrans.time();
+                            tt.setHMS(0,0,0);
+                            dateTrans.setTime(tt);
+
+
+
+                            parent->mapTransactions[dateTrans.toMSecsSinceEpoch()/1000.0] += rec.credit + rec.debit;
+
+                            if(rec.type == TransactionRecord::Generated)
+                            {
+                                parent->mapDebit[dateTrans.toMSecsSinceEpoch()/1000.0] += rec.credit + rec.debit;
+                            }
+
                             insert_idx += 1;
                         }
                         parent->endInsertRows();
+                        
                     }
                 }
                 break;
@@ -232,8 +301,11 @@ TransactionTableModel::TransactionTableModel(CWallet* wallet, WalletModel *paren
 
     priv->refreshWallet();
 
+
     connect(walletModel->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(updateDisplayUnit()));
 }
+
+
 
 TransactionTableModel::~TransactionTableModel()
 {
@@ -257,6 +329,7 @@ void TransactionTableModel::updateConfirmations()
     emit dataChanged(index(0, Status), index(priv->size()-1, Status));
     emit dataChanged(index(0, ToAddress), index(priv->size()-1, ToAddress));
 }
+
 
 int TransactionTableModel::rowCount(const QModelIndex &parent) const
 {
@@ -346,12 +419,11 @@ QString TransactionTableModel::formatTxType(const TransactionRecord *wtx) const
     switch(wtx->type)
     {
     case TransactionRecord::RecvWithAddress:
-        return tr("Received with");
     case TransactionRecord::RecvFromOther:
-        return tr("Received from");
+        return tr("You received");
     case TransactionRecord::SendToAddress:
     case TransactionRecord::SendToOther:
-        return tr("Sent to");
+        return tr("You sent");
     case TransactionRecord::SendToSelf:
         return tr("Payment to yourself");
     case TransactionRecord::Generated:
@@ -360,6 +432,7 @@ QString TransactionTableModel::formatTxType(const TransactionRecord *wtx) const
         return QString();
     }
 }
+
 
 QVariant TransactionTableModel::txAddressDecoration(const TransactionRecord *wtx) const
 {
@@ -478,6 +551,23 @@ QString TransactionTableModel::formatTooltip(const TransactionRecord *rec) const
     return tooltip;
 }
 
+bool TransactionTableModel::setData(const QModelIndex &index, const QVariant &value, int role){
+    if(!index.isValid())
+        return false;
+    TransactionRecord *rec = static_cast<TransactionRecord*>(index.internalPointer());
+    if(role == ExpandedDashboardRole)
+    {
+        rec->d_expanded = value.toBool();
+        return true;
+    }
+    if(role == ExpandedTransactionsRole)
+    {
+        rec->t_expanded = value.toBool();
+        return true;
+    }
+    return QAbstractTableModel::setData(index,value,role);
+}
+
 QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
 {
     if(!index.isValid())
@@ -524,8 +614,7 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
             return rec->credit + rec->debit;
         }
         break;
-    case Qt::ToolTipRole:
-        return formatTooltip(rec);
+
     case Qt::TextAlignmentRole:
         return column_alignments[index.column()];
     case Qt::ForegroundRole:
@@ -567,9 +656,17 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
         return formatTxAmount(rec, false);
     case StatusRole:
         return rec->status.status;
+    case ConfirmationsRole:
+        return QString::number(rec->status.depth);
+    case ExpandedDashboardRole:
+        return rec->d_expanded;
+    case ExpandedTransactionsRole:
+        return rec->t_expanded;
     }
     return QVariant();
 }
+
+
 
 QVariant TransactionTableModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
@@ -615,7 +712,38 @@ QModelIndex TransactionTableModel::index(int row, int column, const QModelIndex 
         return QModelIndex();
     }
 }
+void TransactionTableModel::switchExpandDashboard(const QModelIndex &index){
+    TransactionRecord *data = static_cast<TransactionRecord*>(index.internalPointer());
+    if(data)
+    {
+        data->d_expanded =!data->d_expanded ;
+    }
 
+}
+void TransactionTableModel::setExpandDashboard(const QModelIndex &index,bool value){
+    TransactionRecord *data = static_cast<TransactionRecord*>(index.internalPointer());
+    if(data)
+    {
+        data->d_expanded =value ;
+    }
+
+}
+void TransactionTableModel::switchExpandTransactions(const QModelIndex &index){
+    TransactionRecord *data = static_cast<TransactionRecord*>(index.internalPointer());
+    if(data)
+    {
+        data->t_expanded =!data->t_expanded ;
+    }
+
+}
+void TransactionTableModel::setExpandTransactions(const QModelIndex &index,bool value){
+    TransactionRecord *data = static_cast<TransactionRecord*>(index.internalPointer());
+    if(data)
+    {
+        data->t_expanded =value ;
+    }
+
+}
 void TransactionTableModel::updateDisplayUnit()
 {
     // emit dataChanged to update Amount column with the current unit

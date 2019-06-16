@@ -22,7 +22,7 @@
 #include <QClipboard>
 
 SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
-    QDialog(parent),
+    QWidget(parent),
     ui(new Ui::SendCoinsDialog),
     model(0)
 {
@@ -31,18 +31,21 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
 #ifdef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
     ui->addButton->setIcon(QIcon());
     ui->clearButton->setIcon(QIcon());
-    ui->sendButton->setIcon(QIcon());
+    //ui->sendButton->setIcon(QIcon());
 #endif
 
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a Shard address (e.g. DPpauUHW4ksipzUQhKKVAxscM6UonAAjhX)"));
+    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a Shard address (e.g. SNZ3SxusyhLVUGc4uQJiGcBTrtBbyQbLJV)"));
     ui->splitBlockLineEdit->setPlaceholderText(tr("# of Blocks"));
     ui->splitBlockCheckBox->setToolTip(tr("Enable/Disable Block Splitting"));
+
 #endif
-
+    QPalette p = ui->splitBlockCheckBox->palette();
+    p.setColor(QPalette::Active,QPalette::Base, QColor("#003750"));
+    ui->splitBlockCheckBox->setPalette(p);
     addEntry();
-
+  ui->shardAddressInvalid->setVisible(false);
     connect(ui->addButton, SIGNAL(clicked()), this, SLOT(addEntry()));
     connect(ui->clearButton, SIGNAL(clicked()), this, SLOT(clear()));
 
@@ -69,15 +72,18 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     connect(clipboardBytesAction, SIGNAL(triggered()), this, SLOT(coinControlClipboardBytes()));
     connect(clipboardLowOutputAction, SIGNAL(triggered()), this, SLOT(coinControlClipboardLowOutput()));
     connect(clipboardChangeAction, SIGNAL(triggered()), this, SLOT(coinControlClipboardChange()));
-    ui->labelCoinControlQuantity->addAction(clipboardQuantityAction);
+
     ui->labelCoinControlAmount->addAction(clipboardAmountAction);
     ui->labelCoinControlFee->addAction(clipboardFeeAction);
     ui->labelCoinControlAfterFee->addAction(clipboardAfterFeeAction);
-    ui->labelCoinControlBytes->addAction(clipboardBytesAction);
-    ui->labelCoinControlLowOutput->addAction(clipboardLowOutputAction);
+
     ui->labelCoinControlChange->addAction(clipboardChangeAction);
 
     fNewRecipientAllowed = true;
+
+    ui->sendButton->setName(tr("Send Shard"));
+    ui->sendButton->setImage("send");
+
 }
 
 void SendCoinsDialog::setModel(WalletModel *model)
@@ -86,6 +92,8 @@ void SendCoinsDialog::setModel(WalletModel *model)
 
     if(model && model->getOptionsModel())
     {
+        dlg = new CoinControlDialog();
+        dlg->setModel(model);
         for(int i = 0; i < ui->entries->count(); ++i)
         {
             SendCoinsEntry *entry = qobject_cast<SendCoinsEntry*>(ui->entries->itemAt(i)->widget());
@@ -103,8 +111,8 @@ void SendCoinsDialog::setModel(WalletModel *model)
         connect(model->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(coinControlUpdateLabels()));
         connect(model->getOptionsModel(), SIGNAL(coinControlFeaturesChanged(bool)), this, SLOT(coinControlFeatureChanged(bool)));
         connect(model->getOptionsModel(), SIGNAL(transactionFeeChanged(qint64)), this, SLOT(coinControlUpdateLabels()));
-        ui->frameCoinControl->setVisible(model->getOptionsModel()->getCoinControlFeatures());
         coinControlUpdateLabels();
+
     }
 }
 
@@ -203,7 +211,9 @@ void SendCoinsDialog::on_sendButton_clicked()
 
     fNewRecipientAllowed = false;
 
-    QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm send coins"),
+    QWidget* p = new QWidget(this);
+    p->setStyleSheet("QWidget{color:white;background:'#0b1d2c'}QPushButton { \n background-color: #0d2131;margin-left:10px;\n	border:2px solid #1d2e3f;\ncolor:#eeeeee;\npadding:5px 15px;\n	outline: none;\nborder-radius:2px;\nmargin-right:9px;\n\n}\n\nQPushButton:pressed {\n   background-color: #1d2e3f;\nborder:2px solid gray;\n	color:white;\n\n}\n\nQPushButton:hover {\n     background-color: #102537;\n	border:2px solid #0f3e54;\n }\nQPushButton:checked { \n     background-color: #0d2131;\nborder:2px solid #0f3e54;\n	color:white;\n\n }\nQPushButton:disabled { \n    background:'#0b1d2c';\ncolor:gray;\nborder:2px solid #102537;\n }\n");
+    QMessageBox::StandardButton retval = QMessageBox::question(p, tr("Confirm send coins"),
                           tr("Are you sure you want to send %1?").arg(formatted.join(tr(" and "))),
           QMessageBox::Yes|QMessageBox::Cancel,
           QMessageBox::Cancel);
@@ -227,51 +237,52 @@ void SendCoinsDialog::on_sendButton_clicked()
     if (!model->getOptionsModel() || !model->getOptionsModel()->getCoinControlFeatures())
         sendstatus = model->sendCoins(recipients, nSplitBlock);
     else
-        sendstatus = model->sendCoins(recipients, nSplitBlock, CoinControlDialog::coinControl);
+        sendstatus = model->sendCoins(recipients, nSplitBlock, dlg->coinControl);
 
     switch(sendstatus.status)
     {
     case WalletModel::InvalidAddress:
-        QMessageBox::warning(this, tr("Send Coins"),
+        QMessageBox::warning( p, tr("Send Coins"),
             tr("The recipient address is not valid, please recheck."),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::InvalidAmount:
-        QMessageBox::warning(this, tr("Send Coins"),
+        QMessageBox::warning( p, tr("Send Coins"),
             tr("The amount to pay must be larger than 0."),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::AmountExceedsBalance:
-        QMessageBox::warning(this, tr("Send Coins"),
+        QMessageBox::warning( p, tr("Send Coins"),
             tr("The amount exceeds your balance."),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::AmountWithFeeExceedsBalance:
-        QMessageBox::warning(this, tr("Send Coins"),
+        QMessageBox::warning( p, tr("Send Coins"),
             tr("The total exceeds your balance when the %1 transaction fee is included.").
             arg(BitcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), sendstatus.fee)),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::DuplicateAddress:
-        QMessageBox::warning(this, tr("Send Coins"),
+        QMessageBox::warning( p, tr("Send Coins"),
             tr("Duplicate address found, can only send to each address once per send operation."),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::TransactionCreationFailed:
-        QMessageBox::warning(this, tr("Send Coins"),
+        QMessageBox::warning( p, tr("Send Coins"),
             tr("Error: Transaction creation failed!"),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::TransactionCommitFailed:
-        QMessageBox::warning(this, tr("Send Coins"),
+        QMessageBox::warning( p, tr("Send Coins"),
             tr("Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here."),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::Aborted: // User aborted, nothing to do
         break;
     case WalletModel::OK:
+
         accept();
-        CoinControlDialog::coinControl->UnSelectAll();
+        dlg->coinControl->UnSelectAll();
         coinControlUpdateLabels();
         break;
     }
@@ -289,7 +300,6 @@ void SendCoinsDialog::clear()
 
     updateRemoveEnabled();
 
-    ui->sendButton->setDefault(true);
 }
 
 void SendCoinsDialog::reject()
@@ -306,6 +316,7 @@ SendCoinsEntry *SendCoinsDialog::addEntry()
 {
     SendCoinsEntry *entry = new SendCoinsEntry(this);
     entry->setModel(model);
+
     ui->entries->addWidget(entry);
     connect(entry, SIGNAL(removeEntry(SendCoinsEntry*)), this, SLOT(removeEntry(SendCoinsEntry*)));
     connect(entry, SIGNAL(payAmountChanged()), this, SLOT(coinControlUpdateLabels()));
@@ -315,11 +326,15 @@ SendCoinsEntry *SendCoinsDialog::addEntry()
     // Focus the field, so that entry can start immediately
     entry->clear();
     entry->setFocus();
+
+
     ui->scrollAreaWidgetContents->resize(ui->scrollAreaWidgetContents->sizeHint());
     QCoreApplication::instance()->processEvents();
     QScrollBar* bar = ui->scrollArea->verticalScrollBar();
+
     if(bar)
         bar->setSliderPosition(bar->maximum());
+    ui->entries->update();
     return entry;
 }
 
@@ -407,7 +422,7 @@ void SendCoinsDialog::setBalance(qint64 balance, qint64 stake, qint64 unconfirme
 
     if(model && model->getOptionsModel())
     {
-        ui->labelBalance->setText(BitcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), balance));
+        //ui->labelBalance->setText(BitcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), balance));
     }
 }
 
@@ -419,7 +434,7 @@ void SendCoinsDialog::updateDisplayUnit()
 // Coin Control: copy label "Quantity" to clipboard
 void SendCoinsDialog::coinControlClipboardQuantity()
 {
-    QApplication::clipboard()->setText(ui->labelCoinControlQuantity->text());
+    //QApplication::clipboard()->setText(ui->labelCoinControlQuantity->text());
 }
 
 // Coin Control: copy label "Amount" to clipboard
@@ -440,17 +455,7 @@ void SendCoinsDialog::coinControlClipboardAfterFee()
     QApplication::clipboard()->setText(ui->labelCoinControlAfterFee->text().left(ui->labelCoinControlAfterFee->text().indexOf(" ")));
 }
 
-// Coin Control: copy label "Bytes" to clipboard
-void SendCoinsDialog::coinControlClipboardBytes()
-{
-    QApplication::clipboard()->setText(ui->labelCoinControlBytes->text());
-}
 
-// Coin Control: copy label "Low output" to clipboard
-void SendCoinsDialog::coinControlClipboardLowOutput()
-{
-    QApplication::clipboard()->setText(ui->labelCoinControlLowOutput->text());
-}
 
 // Coin Control: copy label "Change" to clipboard
 void SendCoinsDialog::coinControlClipboardChange()
@@ -461,18 +466,17 @@ void SendCoinsDialog::coinControlClipboardChange()
 // Coin Control: settings menu - coin control enabled/disabled by user
 void SendCoinsDialog::coinControlFeatureChanged(bool checked)
 {
-    ui->frameCoinControl->setVisible(checked);
 
     if (!checked && model) // coin control features disabled
-        CoinControlDialog::coinControl->SetNull();
+        dlg->coinControl->SetNull();
 }
 
-// Coin Control: button inputs -> show actual coin control dialog
+// Coin Control: button inputs -> (show actual coin control dialog
 void SendCoinsDialog::coinControlButtonClicked()
 {
-    CoinControlDialog dlg;
-    dlg.setModel(model);
-    dlg.exec();
+    dlg = new CoinControlDialog();
+    dlg->setModel(model);
+    dlg->exec();
     coinControlUpdateLabels();
 }
 
@@ -515,9 +519,9 @@ void SendCoinsDialog::coinControlChangeChecked(int state)
     if (model)
     {
         if (state == Qt::Checked)
-            CoinControlDialog::coinControl->destChange = CBitcoinAddress(ui->lineEditCoinControlChange->text().toStdString()).Get();
+            dlg->coinControl->destChange = CBitcoinAddress(ui->lineEditCoinControlChange->text().toStdString()).Get();
         else
-            CoinControlDialog::coinControl->destChange = CNoDestination();
+            dlg->coinControl->destChange = CNoDestination();
     }
 
     ui->lineEditCoinControlChange->setEnabled((state == Qt::Checked));
@@ -529,7 +533,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString & text)
 {
     if (model)
     {
-        CoinControlDialog::coinControl->destChange = CBitcoinAddress(text.toStdString()).Get();
+        dlg->coinControl->destChange = CBitcoinAddress(text.toStdString()).Get();
 
         // label for the change address
         ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:black;}");
@@ -537,60 +541,106 @@ void SendCoinsDialog::coinControlChangeEdited(const QString & text)
             ui->labelCoinControlChangeLabel->setText("");
         else if (!CBitcoinAddress(text.toStdString()).IsValid())
         {
-            ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:red;}");
-            ui->labelCoinControlChangeLabel->setText(tr("WARNING: Invalid Shard address"));
+            ui->shardAddressInvalid->setText(tr("WARNING: Invalid shard address!"));
+            ui->shardAddressInvalid->setVisible(true);
+
         }
         else
         {
             QString associatedLabel = model->getAddressTableModel()->labelForAddress(text);
             if (!associatedLabel.isEmpty())
+            {
                 ui->labelCoinControlChangeLabel->setText(associatedLabel);
+                       ui->shardAddressInvalid->setVisible(false);
+            }
             else
             {
                 CPubKey pubkey;
                 CKeyID keyid;
                 CBitcoinAddress(text.toStdString()).GetKeyID(keyid);
                 if (model->getPubKey(keyid, pubkey))
-                    ui->labelCoinControlChangeLabel->setText(tr("(no label)"));
+                {                    ui->labelCoinControlChangeLabel->setText(tr("(no label)"));
+                       ui->shardAddressInvalid->setVisible(false);
+                }
                 else
                 {
-                    ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:red;}");
-                    ui->labelCoinControlChangeLabel->setText(tr("WARNING: unknown change address"));
+
+                    ui->shardAddressInvalid->setText(tr("WARNING: unknown change address"));
+                    ui->shardAddressInvalid->setVisible(true);
                 }
             }
         }
     }
 }
+void SendCoinsDialog::setAmount(QString amount){
+    ui->labelCoinControlAmount->setText(amount);
+}
+void SendCoinsDialog::setControlChangeText(bool en){
+      ui->labelCoinControlChangeText->setEnabled(en);
+}
+
+void SendCoinsDialog::setCoinControlChange(QString text,QString style,bool en){
+    ui->labelCoinControlChange->setText(text);
+     ui->labelCoinControlChange->setStyleSheet(style);
+     ui->labelCoinControlChange->setEnabled(en);
+}
+
+// stats
+
+
+void SendCoinsDialog::setPayFee(QString text){
+    ui->labelCoinControlFee->setText(text);
+}
+
+void SendCoinsDialog::setCoinControlAfterFee(QString text){
+    ui->labelCoinControlAfterFee->setText(text);
+}
+// After Fee
+
+void SendCoinsDialog::setCoinControlInsuffFunds(bool en){
+    ui->labelCoinControlInsuffFunds->setVisible(en);
+}
 
 // Coin Control: update labels
 void SendCoinsDialog::coinControlUpdateLabels()
 {
-    if (!model || !model->getOptionsModel() || !model->getOptionsModel()->getCoinControlFeatures())
+
+    if (!model)
         return;
 
     // set pay amounts
-    CoinControlDialog::payAmounts.clear();
+    dlg->payAmounts.clear();
     for(int i = 0; i < ui->entries->count(); ++i)
     {
         SendCoinsEntry *entry = qobject_cast<SendCoinsEntry*>(ui->entries->itemAt(i)->widget());
         if(entry)
-            CoinControlDialog::payAmounts.append(entry->getValue().amount);
+            dlg->payAmounts.append(entry->getValue().amount);
     }
 
-    if (CoinControlDialog::coinControl->HasSelected())
+    if (dlg->coinControl->HasSelected())
     {
         // actual coin control calculation
-        CoinControlDialog::updateLabels(model, this);
+        dlg->updateLabels(model,this);
 
         // show coin control stats
         ui->labelCoinControlAutomaticallySelected->hide();
         ui->widgetCoinControl->show();
+        ui->labelCoinControlAmount->setVisible(true);
+        ui->labelCoinControlAmountText->setVisible(true);
+        ui->labelCoinControlFee->setVisible(true);
+        ui->labelCoinControlFeeText->setVisible(true);
     }
     else
     {
         // hide coin control stats
         ui->labelCoinControlAutomaticallySelected->show();
+
         ui->widgetCoinControl->hide();
+        ui->labelCoinControlAmount->setVisible(false);
+        ui->labelCoinControlAmountText->setVisible(false);
+        ui->labelCoinControlFee->setVisible(false);
+        ui->labelCoinControlFeeText->setVisible(false);
+
         ui->labelCoinControlInsuffFunds->hide();
     }
 }

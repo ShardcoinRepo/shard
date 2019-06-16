@@ -47,14 +47,14 @@ static const int64_t MIN_TX_FEE = 10000;
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying) */
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 /** No amount larger than this (in satoshi) is valid */
-static const int64_t MAX_MONEY = 900000000 * COIN; // 900 Milliion CAP
+static const int64_t MAX_MONEY = 210000000 * COIN; // 210 Milliion CAP
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 
-//Code to reduce block reward yearly by 10%
+//Code to reduce block reward after 5% block reduces every 4 years and after 2% block takes 8 years to finally get down to 1% ROI
 inline int64_t GetCoinYearReward(int nHeight) {
-    int64_t YearPercent = 10;
+    int64_t YearPercent = 1;
 
     if (!TestNet() && nHeight <= 4000)
         YearPercent = 50;
@@ -82,8 +82,30 @@ inline int64_t GetCoinYearReward(int nHeight) {
         YearPercent = 100;
     else if (nHeight <= 140000)
         YearPercent = 75;
-    else
+    else if (nHeight <= 300000)
         YearPercent = 50;
+    else if (nHeight <= 330000)
+        YearPercent = 25;
+    else if (nHeight <= 855000)
+        YearPercent = 10;
+    else if (nHeight <= 1380000)
+        YearPercent = 9;
+    else if (nHeight <= 1906000)
+        YearPercent = 8;
+    else if (nHeight <= 2695000)
+        YearPercent = 7;
+    else if (nHeight <= 3483000)
+        YearPercent = 6;
+    else if (nHeight <= 4272000)
+        YearPercent = 5;
+    else if (nHeight <= 5320000)
+        YearPercent = 4;
+    else if (nHeight <= 6370000)
+        YearPercent = 3;
+    else if (nHeight <= 8500000)
+        YearPercent = 2;
+    else
+        YearPercent = 1;
 
     return YearPercent * CENT; // per year
 }

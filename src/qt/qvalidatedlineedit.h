@@ -19,6 +19,7 @@ protected:
 
 private:
     bool valid;
+    QString default_style;
 
 public slots:
     void setValid(bool valid);
