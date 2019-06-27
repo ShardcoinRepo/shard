@@ -134,7 +134,7 @@ We also use the GitHub issue tracker for features. If you think that some piece 
 <tr><td>Burn #6</td><td>6th Jan 2019</td><td>100,000</td><td>5bdfc67bad19a11ef37fc87e8d355f123b217f9d075db6da174eb7fccea247d6</td></tr>
 <tr><td>Burn #7</td><td>14th Feb 2019</td><td>120,000</td><td>6c27c62247b82c3aa4298725e2155b05a6b4244db65c4817963ca5e34599cba8</td></tr>
 <tr><td>Burn #8</td><td>11th Apr 2019</td><td>160,000</td><td>1717072d9a6bc7ae88d802289a64484a45c98a785b2cbe2c9b4d90b69f177463</td></tr>
-<tr><td>Burn #9</td><td>11th Apr 2019</td><td>450,000</td><td>75819017ef8bc986639add96f0fa2865ca483470653f4706128d49ffba1c74f5</td></tr>
+<tr><td>Burn #9</td><td>27th Jun 2019</td><td>450,000</td><td>75819017ef8bc986639add96f0fa2865ca483470653f4706128d49ffba1c74f5</td></tr>
 </table>
 
 
