@@ -113,7 +113,6 @@ public:
     CWallet()
     {
         SetNull();
-        mapAddressBookAmount= std::map<std::string, int64_t>();
     }
     CWallet(std::string strWalletFileIn)
     {
@@ -133,13 +132,12 @@ public:
         nTimeFirstKey = 0;
         fSplitBlock = false;
     }
-
+    CTxDestination GetSpendAddress(COutPoint prevout);
     std::map<uint256, CWalletTx> mapWallet;
     int64_t nOrderPosNext;
     std::map<uint256, int> mapRequestCount;
 
     std::map<CTxDestination, std::string> mapAddressBook;
-    std::map<std::string, int64_t> mapAddressBookAmount;
     CPubKey vchDefaultKey;
     int64_t nTimeFirstKey;
 
@@ -334,7 +332,7 @@ public:
     /** Address book entry changed.
      * @note called with lock cs_wallet held.
      */
-    boost::signals2::signal<void (CWallet *wallet, const CTxDestination &address, const std::string &label, bool isMine, ChangeType status)> NotifyAddressBookChanged;
+    boost::signals2::signal<void (CWallet *wallet, const std::string &address, const uint256 &hashTx, const std::string &label, bool isMine, ChangeType status)> NotifyAddressBookChanged;
 
     /** Wallet transaction added, removed or updated.
      * @note called with lock cs_wallet held.

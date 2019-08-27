@@ -394,6 +394,7 @@ void CWallet::WalletUpdateSpent(const CTransaction &tx, bool fBlock)
                     wtx.MarkSpent(txin.prevout.n);
                     wtx.WriteToDisk();
                     NotifyTransactionChanged(this, txin.prevout.hash, CT_UPDATED);
+                    NotifyAddressBookChanged(this,"",txin.prevout.hash,"",wtx.fFromMe,CT_UPDATED);
                 }
             }
         }
@@ -411,6 +412,7 @@ void CWallet::WalletUpdateSpent(const CTransaction &tx, bool fBlock)
                     wtx.MarkUnspent(&txout - &tx.vout[0]);
                     wtx.WriteToDisk();
                     NotifyTransactionChanged(this, hash, CT_UPDATED);
+                    NotifyAddressBookChanged(this,"",hash,"",true,CT_UPDATED);
                 }
             }
         }
@@ -443,6 +445,7 @@ bool CWallet::AddToWallet(const CWalletTx& wtxIn)
             wtx.nOrderPos = IncOrderPosNext();
 
             wtx.nTimeSmart = wtx.nTimeReceived;
+
             if (wtxIn.hashBlock != 0)
             {
                 if (mapBlockIndex.count(wtxIn.hashBlock))
@@ -544,6 +547,10 @@ bool CWallet::AddToWallet(const CWalletTx& wtxIn)
 
         NotifyTransactionChanged(this, hash, fInsertedNew ? CT_NEW : CT_UPDATED);
 
+       NotifyAddressBookChanged(this,"",hash,"",wtx.fFromMe,CT_UPDATED);
+
+
+
         // notify an external script when a wallet transaction comes in or is updated
         std::string strCmd = GetArg("-walletnotify", "");
 
@@ -640,6 +647,7 @@ int64_t CWallet::GetDebit(const CTxIn &txin) const
     }
     return 0;
 }
+
 
 bool CWallet::IsChange(const CTxOut& txout) const
 {
@@ -1866,6 +1874,7 @@ bool CWallet::CommitTransaction(CWalletTx& wtxNew, CReserveKey& reservekey)
                 coin.MarkSpent(txin.prevout.n);
                 coin.WriteToDisk();
                 NotifyTransactionChanged(this, coin.GetHash(), CT_UPDATED);
+                NotifyAddressBookChanged(this,"", coin.GetHash(),"",coin.fFromMe,CT_UPDATED);
             }
 
             if (fFileBacked)
@@ -1982,8 +1991,11 @@ bool CWallet::SetAddressBookName(const CTxDestination& address, const string& st
         fUpdated = mi != mapAddressBook.end();
         mapAddressBook[address] = strName;
 
+
+
     }
-    NotifyAddressBookChanged(this, address, strName, ::IsMine(*this, address),
+    uint256 hash = 0;
+    NotifyAddressBookChanged(this, CBitcoinAddress(address).ToString(), hash,strName, ::IsMine(*this, address),
                              (fUpdated ? CT_UPDATED : CT_NEW) );
     if (!fFileBacked)
         return false;
@@ -1997,8 +2009,9 @@ bool CWallet::DelAddressBookName(const CTxDestination& address)
 
         mapAddressBook.erase(address);
     }
+    uint256 hash = 0;
 
-    NotifyAddressBookChanged(this, address, "", ::IsMine(*this, address), CT_DELETED);
+    NotifyAddressBookChanged(this, CBitcoinAddress(address).ToString(),hash, "", ::IsMine(*this, address), CT_DELETED);
 
     if (!fFileBacked)
         return false;
@@ -2167,6 +2180,33 @@ int64_t CWallet::GetOldestKeyPoolTime()
     ReturnKey(nIndex);
     return keypool.nTime;
 }
+CTxDestination CWallet::GetSpendAddress(COutPoint prevout)
+{
+    CWalletTx* lastTransaction = &(mapWallet[prevout.hash]);
+
+    CTxDestination res;
+    if (IsMine(lastTransaction->vin[0]))
+    {
+        std::map<CTxDestination, std::string>::iterator mi = mapAddressBook.find(res);
+        if(mi == mapAddressBook.end())
+        {
+            res=GetSpendAddress(lastTransaction->vin[0].prevout);
+        }
+        else{
+            return res;
+        }
+
+
+    }
+    else{
+        CTxOut prev_out = lastTransaction->vout[prevout.n];
+        ExtractDestination(prev_out.scriptPubKey, res);
+    }
+    return res;
+
+}
+
+
 
 std::map<CTxDestination, int64_t> CWallet::GetAddressBalances()
 {
@@ -2187,6 +2227,8 @@ std::map<CTxDestination, int64_t> CWallet::GetAddressBalances()
             int nDepth = pcoin->GetDepthInMainChain();
             if (nDepth < (pcoin->IsFromMe() ? 0 : 1))
                 continue;
+            bool isSending = false;
+               COutPoint cc;
 
             for (unsigned int i = 0; i < pcoin->vout.size(); i++)
             {
@@ -2195,7 +2237,6 @@ std::map<CTxDestination, int64_t> CWallet::GetAddressBalances()
                     continue;
                 if(!ExtractDestination(pcoin->vout[i].scriptPubKey, addr))
                     continue;
-
                 int64_t n = pcoin->IsSpent(i) ? 0 : pcoin->vout[i].nValue;
 
                 if (!balances.count(addr))
@@ -2428,7 +2469,11 @@ void CWallet::UpdatedTransaction(const uint256 &hashTx)
         // Only notify UI if this transaction is in this wallet
         map<uint256, CWalletTx>::const_iterator mi = mapWallet.find(hashTx);
         if (mi != mapWallet.end())
+        {
             NotifyTransactionChanged(this, hashTx, CT_UPDATED);
+            NotifyAddressBookChanged(this,"",hashTx,"",mapWallet[hashTx].fFromMe,CT_UPDATED);
+
+        }
     }
 }
 
