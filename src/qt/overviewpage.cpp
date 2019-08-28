@@ -179,18 +179,19 @@ void OverviewPage::indexChangedBalance(int index){
         double starta = min;
         double inc = (max - min)/6;
         for(int i = 0;i<7;i++){
+			double inits = BitcoinUnits::format(txdelegate->unit, starta).toDouble();
             if(max== 0)
-                textTicker->addTick(starta, QString("0"));
+                textTicker->addTick(inits, QString("0"));
             else if(max/100000000.0 < 1)
-                textTicker->addTick(starta, QString::number(starta/(100000000.0),'f',8));
+                textTicker->addTick(inits, QString::number(inits,'f',8));
             else if(max/100000000.0 < 100)
-                textTicker->addTick(starta, QString::number(starta/(100000000.0),'f',4));
+                textTicker->addTick(inits, QString::number(inits,'f',4));
             else if(max/100000000.0 < 1000)
-                textTicker->addTick(starta, QString::number(starta/(100000000.0),'f',3));
+                textTicker->addTick(inits, QString::number(inits,'f',3));
             else if(max/100000000.0 < 10000)
-                textTicker->addTick(starta, QString::number(starta/(100000000.0),'f',2));
+                textTicker->addTick(inits, QString::number(inits,'f',2));
             else
-                textTicker->addTick(starta, QString::number(starta/(100000000.0),'f',0));
+                textTicker->addTick(inits, QString::number(inits,'f',0));
             starta+= inc;
         }
 
@@ -258,12 +259,14 @@ void OverviewPage::indexChangedBalance(int index){
         double starta = min;
         double inc = (max - min)/6;
         for(int i = 0;i<7;i++){
+            double inits = BitcoinUnits::format(txdelegate->unit, starta).toDouble();
+
             if(max== 0)
-                textTicker->addTick(starta, QString("0"));
+                textTicker->addTick(inits, QString("0"));
             else if(max/100000000.0 < 100)
-                textTicker->addTick(starta, QString::number(starta/(100000000.0),'f',4));
+                textTicker->addTick(inits, QString::number(inits,'f',4));
             else
-                textTicker->addTick(starta, QString::number(starta/(100000000.0),'f',2));
+                textTicker->addTick(inits, QString::number(inits,'f',2));
 
             starta+= inc;
         }
@@ -534,21 +537,30 @@ void OverviewPage::setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBa
     }
     else
     {
-        ui->labelBalance->setText(QString::number(currentBalance/100000000.0,'f',4));
-        ui->balanceLabel->setText("$ "+QString::number((currentBalance/100000000.0)*priceAux,'f',3));
+
+        double inits = BitcoinUnits::format(txdelegate->unit, currentBalance).toDouble();
+        ui->labelBalance->setText(QString::number(inits,'f',4));
+        ui->balanceLabel->setText("$ "+QString::number(inits*priceAux,'f',3));
     }
 
 
     if(stake == 0)
        ui->labelStake->setText("00.00");
     else
-        ui->labelStake->setText(QString::number(currentStake/100000000.0,'f',4));
+    {
+        double inits = BitcoinUnits::format(txdelegate->unit, currentStake).toDouble();
+        ui->labelStake->setText(QString::number(inits,'f',4));
+    }
 
 
     if(currentUnconfirmedBalance == 0)
        ui->labelUnconfirmed->setText("00.00");
     else
-        ui->labelUnconfirmed->setText(QString::number(currentUnconfirmedBalance/100000000.0,'f',4));
+    {
+        double inits = BitcoinUnits::format(txdelegate->unit, currentUnconfirmedBalance).toDouble();
+        ui->labelUnconfirmed->setText(QString::number(inits,'f',4));
+    }
+	
     QDateTime start = QDateTime::currentDateTime();
     QTime tt = start.time();
     tt.setHMS(0,0,0);
