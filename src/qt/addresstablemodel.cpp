@@ -9,6 +9,7 @@
 #include <QFont>
 #include <QDebug>
 #include "bitcoinunits.h"
+#include "optionsmodel.h"
 
 const QString AddressTableModel::Send = "S";
 const QString AddressTableModel::Receive = "R";
@@ -53,9 +54,11 @@ public:
     CWallet *wallet;
     QList<AddressTableEntry> cachedAddressTable;
     AddressTableModel *parent;
-
+    std::map<QString,double> aux_dic;
     AddressTablePriv(CWallet *wallet, AddressTableModel *parent):
-        wallet(wallet), parent(parent) {}
+        wallet(wallet), parent(parent) {
+
+    }
 
     bool getLabel(QString address, QString& label)
     {
@@ -70,83 +73,104 @@ public:
 
     void refreshAddressTable()
     {
+        std::map<CTxDestination, std::vector<COutput> > mapCoins;
+        parent->walletModel->listCoinsDestination(mapCoins);
+
+
         cachedAddressTable.clear();
         {
             LOCK(wallet->cs_wallet);
-            map<QString, vector<COutput> > mapCoins;
-            listCoins(mapCoins);
-            wallet->mapAddressBookAmount.clear();
 
-            BOOST_FOREACH(PAIRTYPE(QString, vector<COutput>) coins, mapCoins)
+            BOOST_FOREACH(PAIRTYPE(CTxDestination, vector<COutput>) item, mapCoins)
             {
-                QString sWalletAddress = coins.first;
-
-                qint64 nSum = 0;
-
-
-                BOOST_FOREACH(const COutput& out, coins.second)
-                {
-
-                    nSum += out.tx->vout[out.i].nValue;
-
+                const CBitcoinAddress& address = item.first;
+                std::string strName = "";
+                if(getAddressBookLabel(item.first,strName)){
+                    int64_t nSum = 0;
+                    BOOST_FOREACH(const COutput& out, item.second)
+                    {
+                        nSum += out.tx->vout[out.i].nValue;
+                    }
+                    double amount = BitcoinUnits::format(parent->getDisplayUnit(), nSum).toDouble();
+                    aux_dic[QString::fromStdString(address.ToString())] = amount;
+                    cachedAddressTable.append(AddressTableEntry(AddressTableEntry::Receiving,
+                                      QString::fromStdString(strName),
+                                      QString::fromStdString(address.ToString()),amount ));
                 }
-                wallet->mapAddressBookAmount[sWalletAddress.toStdString()]=nSum;
-
-
             }
             BOOST_FOREACH(const PAIRTYPE(CTxDestination, std::string)& item, wallet->mapAddressBook)
             {
+                std::map<CTxDestination, std::vector<COutput> >::const_iterator mi = mapCoins.find(item.first);
+                if(mi != mapCoins.end())
+                    continue;
+
                 const CBitcoinAddress& address = item.first;
                 const std::string& strName = item.second;
-                bool fMine = IsMine(*wallet, address.Get());
-
-
-                double amount = wallet->mapAddressBookAmount[address.ToString()]/(100000000.0);
-                cachedAddressTable.append(AddressTableEntry(fMine ? AddressTableEntry::Receiving : AddressTableEntry::Sending,
+                aux_dic[QString::fromStdString(address.ToString())] = 0.0;
+                cachedAddressTable.append(AddressTableEntry(parent->walletModel->isMine(address) ? AddressTableEntry::Receiving : AddressTableEntry::Sending,
                                   QString::fromStdString(strName),
-                                  QString::fromStdString(address.ToString()),amount ));
+                                  QString::fromStdString(address.ToString()),0.0 ));
             }
+
         }
         // qLowerBound() and qUpperBound() require our cachedAddressTable list to be sorted in asc order
         qSort(cachedAddressTable.begin(), cachedAddressTable.end(), AddressTableEntryLessThan());
     }
-    void listCoins(std::map<QString, std::vector<COutput> >& mapCoins) const
+	
+	
+	bool getAddressBookLabel(CTxDestination dt, std::string &label)
     {
-        std::vector<COutput> vCoins;
-        wallet->AvailableCoins(vCoins);
-
-        LOCK2(cs_main, wallet->cs_wallet); // ListLockedCoins, mapWallet
-        std::vector<COutPoint> vLockedCoins;
-
-        // add locked coins
-        BOOST_FOREACH(const COutPoint& outpoint, vLockedCoins)
+        std::map<CTxDestination, std::string>::const_iterator mi = wallet->mapAddressBook.find(dt);
+        if(mi == wallet->mapAddressBook.end())
         {
-            if (!wallet->mapWallet.count(outpoint.hash)) continue;
-            int nDepth = wallet->mapWallet[outpoint.hash].GetDepthInMainChain();
-            if (nDepth < 0) continue;
-            COutput out(&wallet->mapWallet[outpoint.hash], outpoint.n, nDepth);
-            vCoins.push_back(out);
-        }
-
-        BOOST_FOREACH(const COutput& out, vCoins)
-        {
-            COutput cout = out;
-
-            while (wallet->IsChange(cout.tx->vout[cout.i]) && cout.tx->vin.size() > 0 && wallet->IsMine(cout.tx->vin[0]))
-            {
-                if (!wallet->mapWallet.count(cout.tx->vin[0].prevout.hash)) break;
-                cout = COutput(&wallet->mapWallet[cout.tx->vin[0].prevout.hash], cout.tx->vin[0].prevout.n, 0);
-            }
-
-            CTxDestination address;
-            if(!ExtractDestination(cout.tx->vout[cout.i].scriptPubKey, address)) continue;
-            mapCoins[CBitcoinAddress(address).ToString().c_str()].push_back(out);
+            return false;
+        } else{
+            label = wallet->mapAddressBook[dt];
+            return true;
         }
     }
 
-    void updateEntry(const QString &address, const QString &label, bool isMine, int status)
+    void checkUpdateAddressBook(){
+        std::map<CTxDestination, std::vector<COutput> > mapCoins;
+        parent->walletModel->listCoinsDestination(mapCoins);
+        BOOST_FOREACH(PAIRTYPE(CTxDestination, vector<COutput>) item, mapCoins)
+        {
+            const CBitcoinAddress& address = item.first;
+            std::string strName = "";
+            if(getAddressBookLabel(item.first,strName)){
+                int64_t nSum = 0;
+                BOOST_FOREACH(const COutput& out, item.second)
+                {
+                    nSum += out.tx->vout[out.i].nValue;
+                }
+                QString address_s = QString::fromStdString(address.ToString());
+                double amount = BitcoinUnits::format(parent->getDisplayUnit(), nSum).toDouble();
+                std::map<QString,double>::const_iterator mi = aux_dic.find(address_s);
+                if(aux_dic.end() != mi && aux_dic[address_s] != amount){
+
+                    QString label_s =QString::fromStdString(strName);
+                    QList<AddressTableEntry>::iterator lower = qLowerBound(
+                        cachedAddressTable.begin(), cachedAddressTable.end(), address_s, AddressTableEntryLessThan());
+                    QList<AddressTableEntry>::iterator upper = qUpperBound(
+                        cachedAddressTable.begin(), cachedAddressTable.end(), address_s, AddressTableEntryLessThan());
+                    int lowerIndex = (lower - cachedAddressTable.begin());
+                    if(lower != upper){
+                        lower->type = AddressTableEntry::Receiving;
+                        lower->label = label_s;
+                        lower->amount = amount;
+                        parent->emitDataChanged(lowerIndex);
+                    }
+
+                }
+            }
+        }
+
+    }
+    
+
+     void updateEntry(const QString &address,const QString &hash, const QString &label, bool isMine, int status)
     {
-        // Find address / label in model
+
         QList<AddressTableEntry>::iterator lower = qLowerBound(
             cachedAddressTable.begin(), cachedAddressTable.end(), address, AddressTableEntryLessThan());
         QList<AddressTableEntry>::iterator upper = qUpperBound(
@@ -155,7 +179,7 @@ public:
         int upperIndex = (upper - cachedAddressTable.begin());
         bool inModel = (lower != upper);
         AddressTableEntry::Type newEntryType = isMine ? AddressTableEntry::Receiving : AddressTableEntry::Sending;
-        double amount = wallet->mapAddressBookAmount[address.toStdString()]/(100000000.0);
+
         switch(status)
         {
         case CT_NEW:
@@ -166,7 +190,7 @@ public:
             }
 
             parent->beginInsertRows(QModelIndex(), lowerIndex, lowerIndex);
-            cachedAddressTable.insert(lowerIndex, AddressTableEntry(newEntryType, label, address,amount));
+            cachedAddressTable.insert(lowerIndex, AddressTableEntry(newEntryType, label, address,0.0));
             parent->endInsertRows();
             break;
         case CT_UPDATED:
@@ -175,9 +199,9 @@ public:
                 qDebug() << "AddressTablePriv::updateEntry : Warning: Got CT_UPDATED, but entry is not in model";
                 break;
             }
+
             lower->type = newEntryType;
             lower->label = label;
-            lower->amount = amount;
             parent->emitDataChanged(lowerIndex);
             break;
         case CT_DELETED:
@@ -227,15 +251,12 @@ AddressTableModel::~AddressTableModel()
     delete priv;
 }
 
-void AddressTableModel::refreshWallet(const QString &hash)
-{
-
-
-    priv = new AddressTablePriv(wallet, this);
-    priv->refreshAddressTable();
-
-
-
+int AddressTableModel::getDisplayUnit(){
+    if(walletModel && walletModel->getOptionsModel()){
+        return walletModel->getOptionsModel()->getDisplayUnit();
+    } else{
+        return 0;
+    }
 }
 
 int AddressTableModel::rowCount(const QModelIndex &parent) const
@@ -294,6 +315,9 @@ QVariant AddressTableModel::data(const QModelIndex &index, int role) const
         }
     }
     return QVariant();
+}
+void AddressTableModel::checkUpdateAddressBook(){
+    priv->checkUpdateAddressBook();
 }
 
 bool AddressTableModel::setData(const QModelIndex &index, const QVariant &value, int role)
@@ -401,10 +425,10 @@ QModelIndex AddressTableModel::index(int row, int column, const QModelIndex &par
     }
 }
 
-void AddressTableModel::updateEntry(const QString &address, const QString &label, bool isMine, int status)
+void AddressTableModel::updateEntry(const QString &address, const QString &hash,const QString &label, bool isMine, int status)
 {
     // Update address book model from Bitcoin core
-    priv->updateEntry(address, label, isMine, status);
+    priv->updateEntry(address, hash,label, isMine, status);
 }
 
 QString AddressTableModel::addRow(const QString &type, const QString &label, const QString &address)

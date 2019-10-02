@@ -5,6 +5,7 @@
 #include <vector>
 #include <map>
 #include <string>
+#include <boost/variant.hpp>
 #include "allocators.h" /* for SecureString */
 
 class OptionsModel;
@@ -18,10 +19,15 @@ class COutPoint;
 class uint256;
 class CCoinControl;
 class CBitcoinAddress;
+class CNoDestination;
+class CKeyID;
+class CScriptID;
 
 QT_BEGIN_NAMESPACE
 class QTimer;
 QT_END_NAMESPACE
+
+typedef boost::variant<CNoDestination, CKeyID, CScriptID> CTxDestination;
 
 class SendCoinsRecipient
 {
@@ -52,8 +58,7 @@ public:
         TransactionCommitFailed,
         Aborted
     };
-   void clearMapAddressAmount();
-      void mapAddressAmount(std::string addres, qint64 amount);
+  
     enum EncryptionStatus
     {
         Unencrypted,  // !wallet->IsCrypted()
@@ -129,6 +134,7 @@ public:
     bool getPubKey(const CKeyID &address, CPubKey& vchPubKeyOut) const;
     void getOutputs(const std::vector<COutPoint>& vOutpoints, std::vector<COutput>& vOutputs);
     void listCoins(std::map<QString, std::vector<COutput> >& mapCoins) const;
+	void listCoinsDestination(std::map<CTxDestination, std::vector<COutput> >& mapCoins) const;
     bool isLockedCoin(uint256 hash, unsigned int n) const;
     void lockCoin(COutPoint& output);
     void unlockCoin(COutPoint& output);
@@ -167,7 +173,7 @@ public slots:
     /* New transaction, or transaction changed status */
     void updateTransaction(const QString &hash, int status);
     /* New, updated or removed address book entry */
-    void updateAddressBook(const QString &address, const QString &label, bool isMine, int status);
+    void updateAddressBook(const QString &address,const QString &hash, const QString &label, bool isMine, int status);
     /* Current, immature or unconfirmed balance might have changed - emit 'balanceChanged' if so */
     void pollBalanceChanged();
 

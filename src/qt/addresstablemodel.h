@@ -53,7 +53,8 @@ public:
     QModelIndex index(int row, int column, const QModelIndex &parent) const;
     bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex());
     Qt::ItemFlags flags(const QModelIndex &index) const;
-    void updateEntry(const QString &address, const QString &label, bool isMine, int status);
+    void checkUpdateAddressBook();
+    void updateEntry(const QString &address,const QString &hash, const QString &label, bool isMine, int status);
     /*@}*/
 
     /* Add an address to the model.
@@ -72,7 +73,7 @@ public:
 
     EditStatus getEditStatus() const { return editStatus; }
 
-    void refreshWallet(const QString &hash);
+    int getDisplayUnit();
 
 private:
     WalletModel *walletModel;
