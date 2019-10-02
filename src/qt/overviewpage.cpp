@@ -157,7 +157,7 @@ void OverviewPage::indexChangedBalance(int index){
         double val = 0;
         for(int i = 0;i<30;i++){
             if(walletModel->getTransactionTableModel()->mapTransactions.find(start.toMSecsSinceEpoch()/1000.0) != walletModel->getTransactionTableModel()->mapTransactions.end())
-                val = BitcoinUnits::format(txdelegate->unit, walletModel->getTransactionTableModel()->mapTransactions[start.toMSecsSinceEpoch()/1000.0]).toDouble();
+                val = walletModel->getTransactionTableModel()->mapTransactions[start.toMSecsSinceEpoch()/1000.0];
             if(i == 0)
             {
                 max = min = val;
@@ -179,26 +179,27 @@ void OverviewPage::indexChangedBalance(int index){
         double starta = min;
         double inc = (max - min)/6;
         for(int i = 0;i<7;i++){
+			double inits = BitcoinUnits::format(txdelegate->unit, starta).toDouble();
             if(max== 0)
-                textTicker->addTick(starta, QString("0"));
-            else if(max < 1)
-                textTicker->addTick(starta, QString::number(starta,'f',8));
-            else if(max < 100)
-                textTicker->addTick(starta, QString::number(starta,'f',4));
-            else if(max < 1000)
-                textTicker->addTick(starta, QString::number(starta,'f',3));
-            else if(max < 10000)
-                textTicker->addTick(starta, QString::number(starta,'f',2));
+                textTicker->addTick(inits, QString("0"));
+            else if(max/100000000.0 < 1)
+                textTicker->addTick(inits, QString::number(inits,'f',8));
+            else if(max/100000000.0 < 100)
+                textTicker->addTick(inits, QString::number(inits,'f',4));
+            else if(max/100000000.0 < 1000)
+                textTicker->addTick(inits, QString::number(inits,'f',3));
+            else if(max/100000000.0 < 10000)
+                textTicker->addTick(inits, QString::number(inits,'f',2));
             else
-                textTicker->addTick(starta, QString::number(starta,'f',0));
+                textTicker->addTick(inits, QString::number(inits,'f',0));
             starta+= inc;
         }
 
         ui->graphView->yAxis->setTicker(textTicker);
         if(min == 0)
-            ui->graphView->yAxis->setRange(0,max);
+            ui->graphView->yAxis->setRange(0,max+inc);
         else
-            ui->graphView->yAxis->setRange(min-inc,max);
+            ui->graphView->yAxis->setRange(min-inc,max+inc);
 
         ui->graphView->replot();
     }
@@ -230,11 +231,12 @@ void OverviewPage::indexChangedBalance(int index){
             {
                 if(start.date().daysTo(QDate::currentDate()) == 0)
                 {
-                     val += BitcoinUnits::format(txdelegate->unit, walletModel->getStake()).toDouble();
+
+                     val += walletModel->getStake();
 
                 }
                 else{
-                    val += BitcoinUnits::format(txdelegate->unit, walletModel->getTransactionTableModel()->mapDebit[start.toMSecsSinceEpoch()/1000.0]).toDouble();
+                    val += walletModel->getTransactionTableModel()->mapDebit[start.toMSecsSinceEpoch()/1000.0];
                 }
 
                 start = start.addDays(1);
@@ -257,22 +259,23 @@ void OverviewPage::indexChangedBalance(int index){
         double starta = min;
         double inc = (max - min)/6;
         for(int i = 0;i<7;i++){
+            double inits = BitcoinUnits::format(txdelegate->unit, starta).toDouble();
 
             if(max== 0)
-                textTicker->addTick(starta, QString("0"));
-            else if(max < 100)
-                textTicker->addTick(starta, QString::number(starta,'f',4));
+                textTicker->addTick(inits, QString("0"));
+            else if(max/100000000.0 < 100)
+                textTicker->addTick(inits, QString::number(inits,'f',4));
             else
-                textTicker->addTick(starta, QString::number(starta,'f',2));
+                textTicker->addTick(inits, QString::number(inits,'f',2));
 
             starta+= inc;
         }
 
         ui->graphView->yAxis->setTicker(textTicker);
         if(min == 0)
-            ui->graphView->yAxis->setRange(0,max);
+            ui->graphView->yAxis->setRange(0,max+inc);
         else
-            ui->graphView->yAxis->setRange(min-inc,max);
+            ui->graphView->yAxis->setRange(min-inc,max+inc);
 
 
         ui->graphView->replot();

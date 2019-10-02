@@ -394,7 +394,7 @@ void CWallet::WalletUpdateSpent(const CTransaction &tx, bool fBlock)
                     wtx.MarkSpent(txin.prevout.n);
                     wtx.WriteToDisk();
                     NotifyTransactionChanged(this, txin.prevout.hash, CT_UPDATED);
-                    //NotifyAddressBookChanged(this,"",txin.prevout.hash,"",true,CT_UPDATED);
+					NotifyAddressBookChanged(this,"",txin.prevout.hash,"",true,CT_UPDATED);
                 }
             }
         }
@@ -412,7 +412,7 @@ void CWallet::WalletUpdateSpent(const CTransaction &tx, bool fBlock)
                     wtx.MarkUnspent(&txout - &tx.vout[0]);
                     wtx.WriteToDisk();
                     NotifyTransactionChanged(this, hash, CT_UPDATED);
-                    //NotifyAddressBookChanged(this,"",hash,"",true,CT_UPDATED);
+					NotifyAddressBookChanged(this,"",hash,"",true,CT_UPDATED);
                 }
             }
         }
@@ -546,7 +546,7 @@ bool CWallet::AddToWallet(const CWalletTx& wtxIn)
 
         NotifyTransactionChanged(this, hash, fInsertedNew ? CT_NEW : CT_UPDATED);
 		
-        //NotifyAddressBookChanged(this,"",hash,"",true,CT_UPDATED);
+		NotifyAddressBookChanged(this,"",hash,"",true,CT_UPDATED);
 
         // notify an external script when a wallet transaction comes in or is updated
         std::string strCmd = GetArg("-walletnotify", "");
@@ -1870,7 +1870,7 @@ bool CWallet::CommitTransaction(CWalletTx& wtxNew, CReserveKey& reservekey)
                 coin.MarkSpent(txin.prevout.n);
                 coin.WriteToDisk();
                 NotifyTransactionChanged(this, coin.GetHash(), CT_UPDATED);
-                //NotifyAddressBookChanged(this,"", coin.GetHash(),"",IsMine(txin),CT_UPDATED);
+				NotifyAddressBookChanged(this,"", coin.GetHash(),"",true,CT_UPDATED);
             }
 
             if (fFileBacked)

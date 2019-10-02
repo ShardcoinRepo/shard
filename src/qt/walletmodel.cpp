@@ -116,7 +116,6 @@ void WalletModel::checkBalanceChanged()
         cachedStake = newStake;
         cachedUnconfirmedBalance = newUnconfirmedBalance;
         cachedImmatureBalance = newImmatureBalance;
-        addressTableModel->checkUpdateAddressBook();
         emit balanceChanged(newBalance, newStake, newUnconfirmedBalance, newImmatureBalance);
     }
 }

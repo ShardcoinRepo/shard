@@ -53,7 +53,6 @@ public:
     QModelIndex index(int row, int column, const QModelIndex &parent) const;
     bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex());
     Qt::ItemFlags flags(const QModelIndex &index) const;
-    void checkUpdateAddressBook();
     void updateEntry(const QString &address,const QString &hash, const QString &label, bool isMine, int status);
     /*@}*/
 
