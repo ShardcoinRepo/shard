@@ -167,17 +167,18 @@ void AddressBookPage::setModel(AddressTableModel *model)
     case ReceivingTab:
         // Receive filter
 
-        ui->tableView->setColumnHidden(AddressTableModel::Amount,false);
+        ui->tableView->horizontalHeader()->resizeSection(
+                2, 180);
         break;
     case SendingTab:
         // Send filter
 
-        ui->tableView->setColumnHidden(AddressTableModel::Amount,true);
+        ui->tableView->horizontalHeader()->resizeSection(
+                2, 0);
         break;
     }
     // Set column widths
-	ui->tableView->horizontalHeader()->resizeSection(
-            2, 180);
+
     ui->tableView->horizontalHeader()->resizeSection(
             AddressTableModel::Address, 360);
     ui->tableView->horizontalHeader()->setResizeMode(
