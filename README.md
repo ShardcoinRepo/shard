@@ -25,7 +25,7 @@ Please see our [Faq](https://help.shardcoin.io/) if you have any questions or ne
 
 * [Website](https://shardcoin.io/)
 
-* [Block Explorer](http://shardexplorer.com/)
+* [Block Explorer](https://explorer.shardcoin.io/)
 
 * [Whitepaper](https://shardcoin.io/shard_whitepaper_Original.pdf)
 
