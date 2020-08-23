@@ -1,5 +1,5 @@
 
-<p align="center"><img src="https://raw.githubusercontent.com/ShardcoinRepo/shard/Shard-V2-Development/doc/header.png" alt="Shard Coin Source Code"></p>
+<p align="center"><img src="https://github.com/ShardcoinRepo/shard/blob/master/doc/header.png?raw=true" alt="Shard Coin Source Code"></p>
 <p align="center">
   <img src="https://img.shields.io/badge/version-2.0.0.0-yellow.svg">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg">
@@ -21,29 +21,21 @@ Shard can be used not only as a cryptocurrency, but also as a utility coin in mu
 
 Please see our [Faq](https://help.shardcoin.io/) if you have any questions or need help to understand how to install or use the Shard Wallet.
 
-:package: For Wallet software downloads, please see [Downloads](https://shardcoin.io/wallet.php)
+:package: For Wallet software downloads, please see [Downloads](https://shardcoin.io/wallets)
 
 * [Website](https://shardcoin.io/)
 
-* [Block Explorer](http://shardexplorer.com/)
+* [Block Explorer](https://explorer.shardcoin.io/)
 
-* [Whitepaper](https://shardcoin.io/shard_whitepaper_Original.pdf)
+* [Whitepaper](https://shardcoin.io/docs/whitepaper.pdf)
 
 * [Bitcointalk](https://bitcointalk.org/index.php?topic=2965061.0)
-
-* [Developments](https://shardcoin.io/roadmap.php)
 
 * [Shard FAQ](https://help.shardcoin.io/)
 
 * [Twitter](https://twitter.com/shardcoin)
 
-* [Discord](https://discordapp.com/invite/SFqSd3U)
-
-* [Shardax](https://shardax.com/)
-
-* [Shardax Twitter](https://twitter.com/ShardaxOfficial)
-
-* [Shardax Discord](https://discord.gg/Sj3xU6Z)
+* [Discord](https://discord.gg/ZnjfuAB)
 
 
 ## Development Process

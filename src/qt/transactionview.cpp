@@ -212,7 +212,7 @@ void TransactionView::calculateHeight(){
 void TransactionView::transactionClickedUrl(const QString& st){
     QString str_txid = st;
     int string_convert = str_txid.lastIndexOf(QChar('-'));
-    QDesktopServices::openUrl("http://shardexplorer.com/tx/"+str_txid.left(string_convert));
+    QDesktopServices::openUrl("https://explorer.shardcoin.io/tx/"+str_txid.left(string_convert));
 }
 void TransactionView::forceFilter(){
     ui->dateWidget->setCurrentIndex(0);
