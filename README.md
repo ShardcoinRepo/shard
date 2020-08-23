@@ -1,5 +1,5 @@
 
-<p align="center"><img src="https://raw.githubusercontent.com/ShardcoinRepo/shard/Shard-V2-Development/doc/header.png" alt="Shard Coin Source Code"></p>
+<p align="center"><img src="https://github.com/ShardcoinRepo/shard/blob/master/doc/header.png?raw=true" alt="Shard Coin Source Code"></p>
 <p align="center">
   <img src="https://img.shields.io/badge/version-2.0.0.0-yellow.svg">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg">
