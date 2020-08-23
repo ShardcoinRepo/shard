@@ -27,23 +27,15 @@ Please see our [Faq](https://help.shardcoin.io/) if you have any questions or ne
 
 * [Block Explorer](https://explorer.shardcoin.io/)
 
-* [Whitepaper](https://shardcoin.io/shard_whitepaper_Original.pdf)
+* [Whitepaper](https://shardcoin.io/docs/whitepaper.pdf)
 
 * [Bitcointalk](https://bitcointalk.org/index.php?topic=2965061.0)
-
-* [Developments](https://shardcoin.io/roadmap.php)
 
 * [Shard FAQ](https://help.shardcoin.io/)
 
 * [Twitter](https://twitter.com/shardcoin)
 
-* [Discord](https://discordapp.com/invite/SFqSd3U)
-
-* [Shardax](https://shardax.com/)
-
-* [Shardax Twitter](https://twitter.com/ShardaxOfficial)
-
-* [Shardax Discord](https://discord.gg/Sj3xU6Z)
+* [Discord](https://discord.gg/ZnjfuAB)
 
 
 ## Development Process
