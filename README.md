@@ -21,7 +21,7 @@ Shard can be used not only as a cryptocurrency, but also as a utility coin in mu
 
 Please see our [Faq](https://help.shardcoin.io/) if you have any questions or need help to understand how to install or use the Shard Wallet.
 
-:package: For Wallet software downloads, please see [Downloads](https://shardcoin.io/wallet.php)
+:package: For Wallet software downloads, please see [Downloads](https://shardcoin.io/wallets)
 
 * [Website](https://shardcoin.io/)
 
